@@ -1,0 +1,14 @@
+source: .
+url: http://localhost/firstmove-foundation
+exclude: [
+	'bower_components',
+	'node_modules',
+	'scss',
+	'css',
+	'js',
+	'bower.json',
+	'Gemfile',
+	'Gemfile.lock',
+	'Gruntfile.js',
+	'package.json'
+]

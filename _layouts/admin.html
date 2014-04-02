@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LCF FirstMove - Front End Templates</title>
+    <link rel="stylesheet" href="{{ site.url }}/css/app.css" />
+    <script src="{{ site.url }}/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div class="contain-to-grid">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">FirstMove</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="has-dropdown">
+              <a href="#">Templates</a>
+              <ul class="dropdown">
+              	{% for p in site.pages %}
+			    <li>
+			      <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}/_site{{ p.url }}">
+			        {{ p.title }}
+			      </a>
+			    </li>
+			  	{% endfor %}
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    
+    <header class="admin-header">
+	    <div class="row">
+	      <div class="large-12 columns">
+	        <h2>{{ page.title }}</h2>
+	      </div>
+	    </div>
+	</header>
+
+	<div class="row">
+		<div class="large-12 columns">
+
+		{{ content }}
+		
+		</div>
+	</div>
+
+	<footer class="admin-footer dark-bg">
+		<div class="row">
+			<div class="large-12 columns">
+				<p><small>&copy; London College of Fashion 2014</small></p>
+			</div>
+		</div>	
+	</footer>
+
+    <script src="{{ site.url }}/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{{ site.url }}/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="{{ site.url }}/js/app.js"></script>
+  </body>
+</html>
