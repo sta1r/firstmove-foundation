@@ -11,8 +11,19 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          'css/app.css': 'scss/app.scss'
+          'source/css/app.css': 'source/scss/app.scss'
         }        
+      }
+    },
+
+    // copy selected Foundation JS files from bower_components into the theme's JS folder
+    // only run after modifying what is being copied or if bower is updated
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'bower_components',
+        src: ['jquery/dist/jquery.min.js', 'foundation/js/vendor/modernizr.js', 'foundation/js/foundation.min.js'],
+        dest: 'source/js'
       }
     },
 
@@ -25,8 +36,8 @@ module.exports = function(grunt) {
         auto : true
       },
       dev: {
-        src: 'templates',
-        dest: 'dev'
+        // src: 'templates',
+        // dest: 'dev'
       },
       prod: {
         src: 'templates',
@@ -38,12 +49,12 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
 
       jekyll: {
-        files: ['templates/*.html', '_layouts/*.html', '_includes/*.html'],
+        files: ['source/**'],
         tasks: ['jekyll:dev']
       },
 
       sass: {
-        files: 'scss/**/*.scss',
+        files: 'source/scss/app.scss',
         tasks: ['sass']
       }
     }
@@ -52,7 +63,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('build', ['sass', 'jekyll:dev']);
+  grunt.registerTask('build', ['jekyll:dev', 'sass']);
   grunt.registerTask('default', ['build','watch']);
 }

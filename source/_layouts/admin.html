@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LCF FirstMove - Front End Templates</title>
-    <link rel="stylesheet" href="{{ site.url }}/css/app.css" />
-    <script src="{{ site.url }}/bower_components/modernizr/modernizr.js"></script>
+    <link rel="stylesheet" href="../css/app.css" />
+    <script src="../js/foundation/js/vendor/modernizr.js"></script>
   </head>
   <body>
     <div class="contain-to-grid">
@@ -25,7 +25,7 @@
               <ul class="dropdown">
               	{% for p in site.pages %}
 			    <li>
-			      <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}/_site{{ p.url }}">
+			      <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">
 			        {{ p.title }}
 			      </a>
 			    </li>
@@ -61,8 +61,8 @@
 		</div>	
 	</footer>
 
-    <script src="{{ site.url }}/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="{{ site.url }}/bower_components/foundation/js/foundation.min.js"></script>
-    <script src="{{ site.url }}/js/app.js"></script>
+  <script src="../js/jquery/dist/jquery.min.js"></script>
+  <script src="../js/foundation/js/foundation.min.js"></script>
+  <script src="../js/app.js"></script>
   </body>
 </html>
