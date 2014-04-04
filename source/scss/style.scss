@@ -1,0 +1,31 @@
+$light-blue: #12a4e0;
+$navbar-inverse-bg: $light-blue;
+$navbar-inverse-link-color: #FFF;
+
+
+@import "bootstrap";
+
+body {
+	padding-top: 70px;
+}
+
+ul.no-bullet {
+	margin-left: 0;
+	list-style: none;
+}
+
+.dark-bg {
+	background-color: #292929;
+	color: #FFF;
+}
+
+.admin-header {
+	background-color: $gray-darker;
+	padding: 20px 0;
+	margin-bottom: 40px;
+}
+
+.admin-footer {
+	padding: 40px 0;
+	margin-top: 60px;
+}

@@ -4,14 +4,15 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        includePaths: ['bower_components/foundation/scss']
+        //includePaths: ['bower_components/foundation/scss']
+        includePaths: ['bower_components/bootstrap-sass/vendor/assets/stylesheets']
       },
       dist: {
         options: {
           outputStyle: 'compressed'
         },
         files: {
-          'source/css/app.css': 'source/scss/app.scss'
+          'source/css/style.css': 'source/scss/style.scss'
         }        
       }
     },
@@ -22,7 +23,7 @@ module.exports = function(grunt) {
       main: {
         expand: true,
         cwd: 'bower_components',
-        src: ['jquery/dist/jquery.min.js', 'foundation/js/vendor/modernizr.js', 'foundation/js/foundation.min.js'],
+        src: ['jquery/dist/jquery.min.js', 'foundation/js/vendor/modernizr.js'],
         dest: 'source/js'
       }
     },
@@ -49,12 +50,12 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
 
       jekyll: {
-        files: ['source/**'],
+        files: ['source/_includes/**', 'source/_layouts/**', 'source/js/**', 'source/css/**', 'source/templates/**'],
         tasks: ['jekyll:dev']
       },
 
       sass: {
-        files: 'source/scss/app.scss',
+        files: 'source/scss/*.scss',
         tasks: ['sass']
       }
     }

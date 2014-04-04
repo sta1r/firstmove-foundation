@@ -1,148 +1,154 @@
 ---
-layout: admin
+layout: admin-bootstrap
 title: New Job
 ---
 
+<div class="row">
+	<div class="col-md-6">
 
-<form>
-	<fieldset>
-		<legend>Job details</legend>
-			<div class="row">
-				<div class="large-6 columns">
-					<label>Job title
-						<input type="text" placeholder="" />
-					</label>
+		<form role="form">
+			<fieldset>
+				<legend>Job details</legend>
+				<div class="form-group">
+					<label>Job title</label>
+					<input type="text" class="form-control" placeholder="" />
+					
 				</div>
-			</div>
-			<div class="row">
-				<div class="large-6 columns">
-					<label>Job location
-						<input type="text" placeholder="" />
-					</label>
+				<div class="form-group">
+					<label>Job location</label>
+					<input type="text" class="form-control" placeholder="" />
 				</div>
-			</div>
-			<div class="row">
-				<div class="large-6 columns">
-					<label>Description
-						<textarea placeholder=""></textarea>
-					</label>
+				<div class="form-group">
+					<label>Description</label>
+					<textarea class="form-control" rows="3"></textarea>
 				</div>
-			</div>
-			<div class="row">
-				<div class="large-6 columns">
-					<label>Job type
-						<select>
-							<option value="husker">Short term work experience</option>
-							<option value="starbuck">Long term work placement</option>
-							<option value="hotdog">Graduate job</option>
-							<option value="apollo">Graduate freelance</option>
-						</select>
-					</label>
+				<div class="form-group">
+					<label>Job type</label>
+					<select class="form-control">
+						<option value="husker">Short term work experience</option>
+						<option value="starbuck">Long term work placement</option>
+						<option value="hotdog">Graduate job</option>
+						<option value="apollo">Graduate freelance</option>
+					</select>
 				</div>
-			</div>
-			<div class="row">
-				<div class="large-6 columns">
-					<label>Length of contract
-						<select>
-							<option value="apollo">Negotiable</option>
-							<option value="apollo">Permanent</option>
-							<option value="husker">4 weeks</option>
-							<option value="hotdog">3 months</option>
-							<option value="apollo">6 months</option>
-							<option value="apollo">12 months</option>
-						</select>
-					</label>
+				<div class="form-group">
+					<label>Length of contract</label>
+					<select class="form-control">
+						<option value="apollo">Negotiable</option>
+						<option value="apollo">Permanent</option>
+						<option value="husker">4 weeks</option>
+						<option value="hotdog">3 months</option>
+						<option value="apollo">6 months</option>
+						<option value="apollo">12 months</option>
+					</select>
 				</div>
-			</div>
-			<div class="row">
-				<div class="large-6 columns">
-					<label>Salary range
-						<select>
-							<option value="11">Negotiable</option>
-							<option value="12">£13k (NMW)</option>
-							<option value="13">£14k - £16k</option>
-							<option value="14">£16k - £18k</option>
-							<option value="5">£18K - £20K</option>
-							<option value="15">£20k - £22k</option>
-							<option value="16">£22k - £24k</option>
-							<option value="17">£25k+ (Please specify)</option>
-						</select>
-					</label>
+				
+				<div class="form-group">
+					<label>Salary range</label>
+					<select class="form-control">
+						<option value="11">Negotiable</option>
+						<option value="12">£13k (NMW)</option>
+						<option value="13">£14k - £16k</option>
+						<option value="14">£16k - £18k</option>
+						<option value="5">£18K - £20K</option>
+						<option value="15">£20k - £22k</option>
+						<option value="16">£22k - £24k</option>
+						<option value="17">£25k+ (Please specify)</option>
+					</select>
 				</div>
-			</div>
-			<div class="row">
-				<div class="large-6 columns">
-					<label>Salary (specific)
-						<input type="text" placeholder="" />
-					</label>
+
+				<div class="form-group">
+					<label>Salary (specific)</label>
+					<input type="text" class="form-control" placeholder="" />
 				</div>
-			</div>
-			<div class="row">
-				<div class="large-6 columns">
+
+				<div class="form-group">
 					<label>Categories</label>
-					<div>
-						<input id="checkbox1" type="checkbox"><label for="checkbox1">Administration</label>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Administration
+						</label>
 					</div>
-					<div>
-						<input id="checkbox2" type="checkbox"><label for="checkbox2">Buying</label>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Buying
+						</label>
 					</div>
-					<div>
-						<input id="checkbox3" type="checkbox"><label for="checkbox2">Design</label>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Design
+						</label>
 					</div>
-					<div>  
-						<input id="checkbox4" type="checkbox"><label for="checkbox2">Marketing</label>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Marketing
+						</label>
 					</div>
-					<div>
-						<input id="checkbox5" type="checkbox"><label for="checkbox2">Photography</label>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Photography
+						</label>
 					</div>
-					<div>
-						<input id="checkbox6" type="checkbox"><label for="checkbox2">Product development</label>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Product development
+						</label>
 					</div>
-					<div>
-						<input id="checkbox7" type="checkbox"><label for="checkbox2">Public relations</label>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Public relations
+						</label>
 					</div>
-					<div>
-						<input id="checkbox8" type="checkbox"><label for="checkbox2">Retail</label>
-					</div>  
-					<div>
-						<input id="checkbox9" type="checkbox"><label for="checkbox2">Sales</label>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Retail
+						</label>
 					</div>
-					<div>  
-						<input id="checkbox10" type="checkbox"><label for="checkbox2">Visual merchandising</label>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Sales
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Visual merchandising
+						</label>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="large-6 columns">
-					<label>Company name
-						<input type="text" placeholder="" />
-					</label>
+				
+				<div class="form-group">
+					<label>Company name</label>
+					<input type="text" class="form-control" placeholder="" />
 				</div>
-			</div>
-			<div class="row">
-				<div class="large-6 columns">
-					<label>Company URL
-						<input type="text" placeholder="http://" />
-					</label>
-				</div>
-			</div>
-	</fieldset>
 
-	<div class="row">
-		<div class="large-12 columns">
-			<div class="panel callout radius">
+				<div class="form-group">
+					<label>Company URL</label>
+					<input type="text" class="form-control" placeholder="http://" />
+				</div>
+			</fieldset>
+
+
+			<div class="alert alert-info">
 				<p>Already signed up? <a href="#">Log in</a> now to speed things up.</p>
 			</div>
-		</div>
+
+			{% include _personal-details.html %}
+
+			{% include _accept-terms.html %}
+
+			<button type="submit" class="btn btn-default">Save draft</button>
+			<button type="submit" class="btn btn-default">Preview job</button>
+			<button type="submit" class="btn btn-primary">Post job</button>
+
+		</form>
 	</div>
 
-	{% include _personal-details.html %}
-
-	<div class="row">
-		<div class="large-6 columns">
-			<button type="submit" class="button">Save draft</button>
-			<button type="submit" class="button">Preview job</button>
-			<button type="submit" class="button">Post job</button>
+	<div class="col-md-5 col-md-offset-1">
+		<div class="alert alert-warning">
+			<h4>PLEASE NOTE</h4>
+			<p>Any opportunities advertised on the LCF FirstMove website which are unpaid and not part of student accredited short term work experience and long term work placements will be removed immediately by the LCF Careers team.</p>
+			<p>All other opportunities must be paid at a rate of at least National Minimum Wage (NMW). For more information on the current NMW rate please go to - <a href="https://www.gov.uk/national-minimum-wage-rates" target="_blank">https://www.gov.uk/national-minimum-wage-rates</a>. By registering you are agreeing to cooperate with this guideline whilst recruiting through <a href="http://www.lcffirstmove.co.uk">www.lcffirstmove.co.uk</a>.</p>
 		</div>
+
 	</div>
-</form>
+</div>

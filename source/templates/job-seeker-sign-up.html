@@ -1,133 +1,16 @@
 ---
-layout: admin
+layout: admin-bootstrap
 title: Job Seeker - Sign Up
 ---
 
-<form>
-	{% include _personal-details.html %}
+<div class="row">
+	<div class="col-md-6">
 
-	<div class="row">
-		<div class="large-6 columns">
-			<label>Job title
-				<input type="text" placeholder="" />
-			</label>
-		</div>
+		<form>
+			{% include _personal-details.html %}
+
+			
+		</form>
+
 	</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<label>Job location
-				<input type="text" placeholder="" />
-			</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<label>Description
-				<textarea placeholder=""></textarea>
-			</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<label>Job type
-				<select>
-					<option value="husker">Short term work experience</option>
-					<option value="starbuck">Long term work placement</option>
-					<option value="hotdog">Graduate job</option>
-					<option value="apollo">Graduate freelance</option>
-				</select>
-			</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<label>Length of contract
-				<select>
-					<option value="apollo">Negotiable</option>
-					<option value="apollo">Permanent</option>
-					<option value="husker">4 weeks</option>
-					<option value="hotdog">3 months</option>
-					<option value="apollo">6 months</option>
-					<option value="apollo">12 months</option>
-				</select>
-			</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<label>Salary range
-				<select>
-					<option value="11">Negotiable</option>
-					<option value="12">£13k (NMW)</option>
-					<option value="13">£14k - £16k</option>
-					<option value="14">£16k - £18k</option>
-					<option value="5">£18K - £20K</option>
-					<option value="15">£20k - £22k</option>
-					<option value="16">£22k - £24k</option>
-					<option value="17">£25k+ (Please specify)</option>
-				</select>
-			</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<label>Salary (specific)
-				<input type="text" placeholder="" />
-			</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<label>Categories</label>
-			<div>
-				<input id="checkbox1" type="checkbox"><label for="checkbox1">Administration</label>
-			</div>
-			<div>
-				<input id="checkbox2" type="checkbox"><label for="checkbox2">Buying</label>
-			</div>
-			<div>
-				<input id="checkbox3" type="checkbox"><label for="checkbox2">Design</label>
-			</div>
-			<div>  
-				<input id="checkbox4" type="checkbox"><label for="checkbox2">Marketing</label>
-			</div>
-			<div>
-				<input id="checkbox5" type="checkbox"><label for="checkbox2">Photography</label>
-			</div>
-			<div>
-				<input id="checkbox6" type="checkbox"><label for="checkbox2">Product development</label>
-			</div>
-			<div>
-				<input id="checkbox7" type="checkbox"><label for="checkbox2">Public relations</label>
-			</div>
-			<div>
-				<input id="checkbox8" type="checkbox"><label for="checkbox2">Retail</label>
-			</div>  
-			<div>
-				<input id="checkbox9" type="checkbox"><label for="checkbox2">Sales</label>
-			</div>
-			<div>  
-				<input id="checkbox10" type="checkbox"><label for="checkbox2">Visual merchandising</label>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<label>Company name
-				<input type="text" placeholder="" />
-			</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<label>Company URL
-				<input type="text" placeholder="http://" />
-			</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<button type="submit" class="button">Save draft</button>
-		</div>
-	</div>
-</form>
+</div>
