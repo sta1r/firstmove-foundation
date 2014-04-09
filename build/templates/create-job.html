@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+	<title>LCF FirstMove - Front End Templates</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="../css/style.css" rel="stylesheet">
+	<!-- Bootstrap theme 
+	<link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
+
+	<!-- Custom styles for this template 
+	<link href="theme.css" rel="stylesheet">-->
+
+	<!-- Just for debugging purposes. Don't actually copy this line! -->
+	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+  </head>
+
+  <body role="document">
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">FirstMove</a>
+		</div>
+		<div class="navbar-collapse collapse">
+		  <ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
+			  <ul class="dropdown-menu">
+				
+				<li>
+				  <a class="active" href="http://localhost/firstmove-foundation/build/templates/create-job.html">
+					New Job
+				  </a>
+				</li>
+				
+				<li>
+				  <a  href="http://localhost/firstmove-foundation/build/templates/job-seeker-sign-up.html">
+					Job Seeker - Sign Up
+				  </a>
+				</li>
+				
+				<li>
+				  <a  href="http://localhost/firstmove-foundation/build/templates/jobs-list.html">
+					Jobs List
+				  </a>
+				</li>
+				
+			  </ul>
+			</li>
+		  </ul>
+		</div><!--/.nav-collapse -->
+	  </div>
+	</div>
+
+	<div class="container" role="main">
+
+	  	<div class="page-header">
+			<h1>New Job</h1>
+	  	</div>
+
+	  	<div class="row">
+			<div class="col-md-12">
+		  		<div class="row">
+	<div class="col-md-6">
+
+		<form role="form">
+			<fieldset>
+				<legend>Job details</legend>
+				<div class="form-group">
+					<label>Job title</label>
+					<input type="text" class="form-control" placeholder="" />
+					
+				</div>
+				<div class="form-group">
+					<label>Job location</label>
+					<input type="text" class="form-control" placeholder="" />
+				</div>
+				<div class="form-group">
+					<label>Description</label>
+					<textarea class="form-control" rows="3"></textarea>
+				</div>
+				<div class="form-group">
+					<label>Job type</label>
+					<select class="form-control">
+						<option value="husker">Short term work experience</option>
+						<option value="starbuck">Long term work placement</option>
+						<option value="hotdog">Graduate job</option>
+						<option value="apollo">Graduate freelance</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Length of contract</label>
+					<select class="form-control">
+						<option value="apollo">Negotiable</option>
+						<option value="apollo">Permanent</option>
+						<option value="husker">4 weeks</option>
+						<option value="hotdog">3 months</option>
+						<option value="apollo">6 months</option>
+						<option value="apollo">12 months</option>
+					</select>
+				</div>
+				
+				<div class="form-group">
+					<label>Salary range</label>
+					<select class="form-control">
+						<option value="11">Negotiable</option>
+						<option value="12">£13k (NMW)</option>
+						<option value="13">£14k - £16k</option>
+						<option value="14">£16k - £18k</option>
+						<option value="5">£18K - £20K</option>
+						<option value="15">£20k - £22k</option>
+						<option value="16">£22k - £24k</option>
+						<option value="17">£25k+ (Please specify)</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label>Salary (specific)</label>
+					<input type="text" class="form-control" placeholder="" />
+				</div>
+
+				<div class="form-group">
+					<label>Categories</label>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Administration
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Buying
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Design
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Marketing
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Photography
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Product development
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Public relations
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Retail
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Sales
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="checkbox1" type="checkbox">Visual merchandising
+						</label>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label>Company name</label>
+					<input type="text" class="form-control" placeholder="" />
+				</div>
+
+				<div class="form-group">
+					<label>Company URL</label>
+					<input type="text" class="form-control" placeholder="http://" />
+				</div>
+			</fieldset>
+
+
+			<div class="alert alert-info">
+				<p>Already signed up? <a href="#">Log in</a> now to speed things up.</p>
+			</div>
+
+						<fieldset class="form-horizontal">
+				<legend>Your details</legend>
+				<div class="form-group">
+					<div class="col-sm-6">
+						<label>First name</label>
+						<input type="text" class="form-control" placeholder="" />	
+					</div>
+					<div class="col-sm-6">
+						<label>Last name</label>
+						<input type="text" class="form-control" placeholder="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">				
+						<label>Address line 1</label>
+						<input type="text" class="form-control" placeholder="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">				
+						<label>Address line 2</label>
+						<input type="text" class="form-control" placeholder="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">				
+						<label>Town or city</label>
+						<input type="text" class="form-control" placeholder="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">				
+						<label>County or region</label>
+						<input type="text" class="form-control" placeholder="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-5">				
+						<label>Postcode</label>
+						<input type="text" class="form-control" placeholder="" />
+					</div>
+					<div class="col-sm-7">				
+						<label>Country</label>
+						<select class="form-control">
+						  <option>United Kingdom</option>
+						</select>
+					</div>
+				</div>
+			</fieldset>
+
+
+							<div class="panel panel-default">
+  					<div class="panel-body">
+  						<div class="checkbox">
+				  			<label>
+				    			<input type="checkbox" value="">
+				    			I have read and accepted the <a href="http://www.lcffirstmove.co.uk/terms/" target="_blank" title="View T&amp;C in a new window or tab">terms and conditions</a> and <a href="http://www.lcffirstmove.co.uk/terms#privacy"  target="_blank">privacy policy</a>.
+				  			</label>
+						</div>
+  					</div>
+				</div>
+
+			<button type="submit" class="btn btn-default">Save draft</button>
+			<button type="submit" class="btn btn-default">Preview job</button>
+			<button type="submit" class="btn btn-primary">Post job</button>
+
+		</form>
+	</div>
+
+	<div class="col-md-5 col-md-offset-1">
+		<div class="alert alert-warning">
+			<h4>PLEASE NOTE</h4>
+			<p>Any opportunities advertised on the LCF FirstMove website which are unpaid and not part of student accredited short term work experience and long term work placements will be removed immediately by the LCF Careers team.</p>
+			<p>All other opportunities must be paid at a rate of at least National Minimum Wage (NMW). For more information on the current NMW rate please go to - <a href="https://www.gov.uk/national-minimum-wage-rates" target="_blank">https://www.gov.uk/national-minimum-wage-rates</a>. By registering you are agreeing to cooperate with this guideline whilst recruiting through <a href="http://www.lcffirstmove.co.uk">www.lcffirstmove.co.uk</a>.</p>
+		</div>
+
+	</div>
+</div>
+
+			</div>
+	  	</div>
+
+	</div> <!-- /container -->
+
+	<footer class="admin-footer dark-bg">
+		<div class="container">
+			<div class="row">
+	  			<div class="col-md-12">
+					<p><small>&copy; London College of Fashion 2014</small></p>
+	  			</div>
+			</div>
+		</div>  
+	</footer>
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="../js/bootstrap-sass/vendor/assets/javascripts/bootstrap.min.js"></script>
+  </body>
+</html>
