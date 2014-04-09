@@ -1,6 +1,5 @@
-source: source/
 destination: build/
-url: http://localhost/firstmove-foundation/build
+#url: http://localhost/firstmove-foundation/build
 exclude: [
 	'bower_components',
 	'node_modules',

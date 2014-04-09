@@ -12,7 +12,7 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          'source/css/style.css': 'source/scss/style.scss'
+          'css/style.css': 'scss/style.scss'
         }        
       }
     },
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'bower_components',
         src: ['jquery/dist/jquery.min.js', 'foundation/js/vendor/modernizr.js'],
-        dest: 'source/js'
+        dest: 'js'
       }
     },
 
@@ -50,12 +50,12 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
 
       jekyll: {
-        files: ['source/_includes/**', 'source/_layouts/**', 'source/js/**', 'source/css/**', 'source/templates/**'],
+        files: ['_includes/**', '_layouts/**', 'sjs/**', 'css/**', 'templates/**'],
         tasks: ['jekyll:dev']
       },
 
       sass: {
-        files: 'source/scss/*.scss',
+        files: 'scss/*.scss',
         tasks: ['sass']
       }
     }
