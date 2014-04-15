@@ -45,27 +45,41 @@
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
 			<li class="dropdown">
-			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
-			  <ul class="dropdown-menu">
-				
-				<li>
-				  <a  href="/templates/create-job.html">
-					New Job
-				  </a>
-				</li>
-				
-				<li>
-				  <a class="active" href="/templates/job-seeker-sign-up.html">
-					Job Seeker - Sign Up
-				  </a>
-				</li>
-				
-				<li>
-				  <a  href="/templates/jobs-list.html">
-					Jobs List
-				  </a>
-				</li>
-				
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
+			  	<ul class="dropdown-menu">
+					
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/job-create.html">New Job</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a class="active" href="http://localhost:4000/templates/job-seeker-sign-up.html">Job Seeker - Sign Up</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/job-single.html">Job Page</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/jobs-list.html">Jobs List</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/sign-in.html">Sign In</a>
+						</li>
+						
+					
 			  </ul>
 			</li>
 		  </ul>
@@ -75,13 +89,18 @@
 
 	<div class="container" role="main">
 
-	  	<div class="page-header">
-			<h1>Job Seeker - Sign Up</h1>
-	  	</div>
+		
+		<ol class="breadcrumb">
+			<li><a href="http://localhost:4000">Home</a></li>
+		  	<li class="active">Job Seeker - Sign Up</li>
+		</ol>
+		
+		
+		<div class="page-header">
+	<h1>Create your account</h1>
+</div>
 
-	  	<div class="row">
-			<div class="col-md-12">
-		  		<div class="row">
+<div class="row">
 	<div class="col-md-6">
 
 		<form>
@@ -138,8 +157,8 @@
 
 			<fieldset class="form-horizontal">
 				<legend>About you</legend>
-				<div class="form-group">
-					<label class="control-label col-sm-3">Date of birth</label>
+				<div class="form-group clearfix">
+					<label class="col-sm-12">Date of birth</label>
 					<div class="col-sm-2">
 					    <input id="day" type="tel" maxlength="2" class="form-control" placeholder="DD"/>
 					</div>
@@ -148,6 +167,12 @@
 					</div>
 					<div class="col-sm-2">
 					    <input id="year" type="tel" maxlength="4" class="form-control" placeholder="YYYY" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label>Biography</label>
+						<textarea class="form-control" rows="6"></textarea>
 					</div>
 				</div>
 			</fieldset>
@@ -178,15 +203,26 @@
 				</div>
 				<div class="form-group">
 					<label>Graduation date</label>
-					<input type="datetime" class="form-control" placeholder="e.g. ABC123456" />
+					<input type="datetime" class="form-control" placeholder="" />
 				</div>
 			</fieldset>
+
+							<div class="panel panel-default">
+  					<div class="panel-body">
+  						<div class="checkbox">
+				  			<label>
+				    			<input type="checkbox" value="">
+				    			I have read and accepted the <a href="http://www.lcffirstmove.co.uk/terms/" target="_blank" title="View T&amp;C in a new window or tab">terms and conditions</a> and <a href="http://www.lcffirstmove.co.uk/terms#privacy"  target="_blank">privacy policy</a>.
+				  			</label>
+						</div>
+  					</div>
+				</div>
+
+			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 
 	</div>
 </div>
-			</div>
-	  	</div>
 
 	</div> <!-- /container -->
 

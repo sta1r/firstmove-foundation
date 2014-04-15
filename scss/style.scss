@@ -9,9 +9,19 @@ body {
 	padding-top: 70px;
 }
 
+// Utils
 ul.no-bullet {
 	margin-left: 0;
+	padding-left: 0;
 	list-style: none;
+}
+
+.add-top {
+	margin-top: 20px;
+}
+
+.add-bottom {
+	margin-bottom: 20px;
 }
 
 .dark-bg {
@@ -29,3 +39,14 @@ ul.no-bullet {
 	padding: 40px 0;
 	margin-top: 60px;
 }
+
+.full-width {
+	float: left;
+	width: 100%;
+}
+
+// Jobs list
+.job-item {
+	border-top: 1px solid $gray-lighter;
+}
+

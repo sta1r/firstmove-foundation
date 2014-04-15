@@ -38,24 +38,3 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
-
-
-ul.no-bullet {
-	margin-left: 0;
-	list-style: none;
-}
-
-.dark-bg {
-	background-color: #292929;
-	color: #FFF;
-}
-
-.admin-header {
-	background-color: $secondary-color;
-	padding: 20px 0;
-	margin-bottom: 40px;
-}
-
-.admin-footer {
-	padding: 40px 0;
-}

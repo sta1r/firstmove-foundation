@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          outputStyle: 'compressed'
+          outputStyle: 'expanded'
         },
         files: {
           'css/style.css': 'scss/style.scss'
@@ -29,20 +29,12 @@ module.exports = function(grunt) {
     },
 
     jekyll: {
-      server : {
-        src : 'templates',
-        dest: 'dev',
-        server : true,
-        server_port : 8000,
-        auto : true
-      },
-      dev: {
-        // src: 'templates',
-        // dest: 'dev'
-      },
-      prod: {
-        src: 'templates',
-        dest: 'prod'
+      serve : {
+        options: {
+          serve : true,
+          watch: true
+        }
+        
       }
     },
 
@@ -50,8 +42,8 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
 
       jekyll: {
-        files: ['_includes/**', '_layouts/**', 'sjs/**', 'css/**', 'templates/**'],
-        tasks: ['jekyll:dev']
+        files: ['_includes/**', '_layouts/**', 'js/**', 'css/**', 'templates/**'],
+        tasks: ['jekyll:serve']
       },
 
       sass: {
@@ -61,11 +53,12 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.registerTask('build', ['jekyll:serve', 'sass']);
+  grunt.registerTask('default', ['build','watch']);
+
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('build', ['jekyll:dev', 'sass']);
-  grunt.registerTask('default', ['build','watch']);
 }

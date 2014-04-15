@@ -45,27 +45,41 @@
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
 			<li class="dropdown">
-			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
-			  <ul class="dropdown-menu">
-				
-				<li>
-				  <a class="active" href="/templates/create-job.html">
-					New Job
-				  </a>
-				</li>
-				
-				<li>
-				  <a  href="/templates/job-seeker-sign-up.html">
-					Job Seeker - Sign Up
-				  </a>
-				</li>
-				
-				<li>
-				  <a  href="/templates/jobs-list.html">
-					Jobs List
-				  </a>
-				</li>
-				
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
+			  	<ul class="dropdown-menu">
+					
+						
+					
+						
+						<li>
+				  			<a class="active" href="http://localhost:4000/templates/job-create.html">New Job</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/job-seeker-sign-up.html">Job Seeker - Sign Up</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/job-single.html">Job Page</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/jobs-list.html">Jobs List</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/sign-in.html">Sign In</a>
+						</li>
+						
+					
 			  </ul>
 			</li>
 		  </ul>
@@ -75,13 +89,18 @@
 
 	<div class="container" role="main">
 
-	  	<div class="page-header">
-			<h1>New Job</h1>
-	  	</div>
+		
+		<ol class="breadcrumb">
+			<li><a href="http://localhost:4000">Home</a></li>
+		  	<li class="active">New Job</li>
+		</ol>
+		
+		
+		<div class="page-header">
+	<h1>Create your job listing</h1>
+</div>
 
-	  	<div class="row">
-			<div class="col-md-12">
-		  		<div class="row">
+<div class="row">
 	<div class="col-md-6">
 
 		<form role="form">
@@ -195,6 +214,11 @@
 				</div>
 				
 				<div class="form-group">
+					<label>Application deadline</label>
+					<input type="datetime" class="form-control" placeholder="" />
+				</div>
+
+				<div class="form-group">
 					<label>Company name</label>
 					<input type="text" class="form-control" placeholder="" />
 				</div>
@@ -289,8 +313,6 @@
 	</div>
 </div>
 
-			</div>
-	  	</div>
 
 	</div> <!-- /container -->
 

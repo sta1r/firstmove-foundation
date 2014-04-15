@@ -1,5 +1,5 @@
 destination: build/
-#url: http://localhost/firstmove-foundation/build
+url: http://localhost:4000
 exclude: [
 	'bower_components',
 	'node_modules',
