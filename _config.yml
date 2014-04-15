@@ -1,5 +1,7 @@
 destination: build/
-url: http://localhost:4000
+#url: http://strangerpixel.com/firstmove-foundation # for live github pages
+url: http://localhost:4000 # for local dev
+#baseurl: /firstmove-foundation
 exclude: [
 	'bower_components',
 	'node_modules',

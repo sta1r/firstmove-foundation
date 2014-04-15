@@ -31,10 +31,9 @@ module.exports = function(grunt) {
     jekyll: {
       serve : {
         options: {
-          serve : true,
+          serve: true,
           watch: true
         }
-        
       }
     },
 

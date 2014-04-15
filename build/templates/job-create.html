@@ -10,7 +10,7 @@
 	<title>LCF FirstMove - Front End Templates</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="../css/style.css" rel="stylesheet">
+	<link href="http://localhost:4000/css/style.css" rel="stylesheet">
 	<!-- Bootstrap theme 
 	<link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
 
@@ -51,31 +51,37 @@
 					
 						
 						<li>
-				  			<a class="active" href="/templates/job-create.html">New Job</a>
+				  			<a class="active" href="http://localhost:4000/templates/job-create.html">New Job</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="/templates/job-seeker-sign-up.html">Job Seeker - Sign Up</a>
+				  			<a  href="http://localhost:4000/templates/job-seeker-account.html">Job Seeker - Account</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="/templates/job-single.html">Job Page</a>
+				  			<a  href="http://localhost:4000/templates/job-seeker-sign-up.html">Job Seeker - Sign Up</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="/templates/jobs-list.html">Jobs List</a>
+				  			<a  href="http://localhost:4000/templates/job-single.html">Job Page</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="/templates/sign-in.html">Sign In</a>
+				  			<a  href="http://localhost:4000/templates/jobs-list.html">Jobs List</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/sign-in.html">Sign In</a>
 						</li>
 						
 					
@@ -237,45 +243,45 @@
 				<legend>Your details</legend>
 				<div class="form-group">
 					<div class="col-sm-6">
-						<label>First name</label>
-						<input type="text" class="form-control" placeholder="" />	
+						<label for="firstName">First name</label>
+						<input type="text" class="form-control" id="firstName" placeholder="" />	
 					</div>
 					<div class="col-sm-6">
-						<label>Last name</label>
-						<input type="text" class="form-control" placeholder="" />
+						<label for="lastName">Last name</label>
+						<input type="text" class="form-control" id="lastName" placeholder="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label for="addressLine1">Address line 1</label>
+						<input type="text" class="form-control" id="addressLine1" placeholder="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label for="addressLine2">Address line 2</label>
+						<input type="text" class="form-control" id="addressLine2" placeholder="" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label for="townOrCity">Town or city</label>
+						<input type="text" class="form-control" id="townOrCity" placeholder="" />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-sm-12">				
-						<label>Address line 1</label>
-						<input type="text" class="form-control" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">				
-						<label>Address line 2</label>
-						<input type="text" class="form-control" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">				
-						<label>Town or city</label>
-						<input type="text" class="form-control" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">				
-						<label>County or region</label>
-						<input type="text" class="form-control" placeholder="" />
+						<label for="countyOrRegion">County or region</label>
+						<input type="text" class="form-control" id="countyOrRegion" placeholder="" />
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-sm-5">				
-						<label>Postcode</label>
-						<input type="text" class="form-control" placeholder="" />
+						<label for="postcode">Postcode</label>
+						<input type="text" class="form-control" id="postcode" placeholder="" />
 					</div>
 					<div class="col-sm-7">				
-						<label>Country</label>
+						<label for="country">Country</label>
 						<select class="form-control">
 						  <option>United Kingdom</option>
 						</select>
@@ -329,6 +335,8 @@
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="../js/bootstrap-sass/vendor/assets/javascripts/bootstrap.min.js"></script>
+	<script src="http://localhost:4000/js/bootstrap-sass/vendor/assets/javascripts/bootstrap.min.js"></script>
+	<script src="http://localhost:4000/js/job-seeker.js"></script>
+	<script src="http://localhost:4000/js/app.js"></script>
   </body>
 </html>

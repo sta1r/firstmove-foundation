@@ -12,7 +12,7 @@ title: Home
 <ul>
   {% for p in site.pages %}
   <li>
-    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
+    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">
     {{ p.title }}
     </a>
   </li>
