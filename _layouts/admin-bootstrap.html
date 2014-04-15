@@ -6,12 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
 	<title>LCF FirstMove - Front End Templates</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="../css/style.css" rel="stylesheet">
+	<link href="{% if page.path != true %}../{% endif %}css/style.css" rel="stylesheet">
 	<!-- Bootstrap theme 
 	<link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
 
@@ -50,7 +49,7 @@
 					{% for p in site.pages %}
 						{% if p.menu != false %}
 						<li>
-				  			<a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">{{ p.title }}</a>
+				  			<a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">{{ p.title }}</a>
 						</li>
 						{% endif %}
 					{% endfor %}
