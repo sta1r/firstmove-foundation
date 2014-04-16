@@ -1,9 +1,10 @@
 $light-blue: #12a4e0;
 $navbar-inverse-bg: $light-blue;
 $navbar-inverse-link-color: #FFF;
+$icon-font-path: "../fonts/bootstrap/";
 
 
-@import "bootstrap";
+@import "stylesheets/bootstrap";
 
 body {
 	padding-top: 70px;

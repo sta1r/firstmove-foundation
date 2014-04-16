@@ -1,0 +1,38 @@
+---
+layout: admin-bootstrap
+title: Apply
+---
+
+<div class="page-header">
+	<h1>Apply for a job</h1>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		
+		<form role="form" action="job-apply-preview.html">
+			<fieldset>
+				<legend>Your application</legend>
+				<div class="form-group">
+					<label>Cover letter</label>
+					<textarea class="form-control" rows="12"></textarea>
+				</div>
+			</fieldset>
+
+			<button type="submit" class="btn btn-primary">Preview application</button>
+
+		</form>
+	</div>
+
+	<div class="col-md-5 col-md-offset-1">
+		<div class="personal-details-widget">
+			<p>The following details will be submitted with your application:</p>
+				<table class="table populate">
+					<tr><td>Name</td><td data-id="fullName"></td></tr>
+					<tr><td>Email address</td><td data-id="emailAddress"></td></tr>
+				</table>
+			<p>Not correct? <a href="job-seeker-account.html">Edit</a>
+		</div>
+
+	</div>
+</div>

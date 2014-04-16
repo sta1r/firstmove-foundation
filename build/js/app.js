@@ -1,24 +1,54 @@
 jQuery(document).ready( function($) {
 
-	console.log(job_seeker);
-	var _form = $('form');
+	
+	function scanDomAndPopulate(DOMnode) {
 
-	if (_form.data('fill')) {
-		console.log($(this));
-		// loop thru input elements, populating with job-seeker data
+		// cache
+		var node = $(DOMnode);
 
-		input_array = $(this).find('input');
-		input_array.each( function(i, item) {
-			_id = $(item).attr('id');
-			console.log(_id);
-			
-			$('#' + _id).val(job_seeker._id);
+		// loop
+		for (var key in job_seeker){
+		    if (job_seeker.hasOwnProperty(key)) {
 
-		});
+		        if (node.find('#' + key).length) {
+
+		        	node.find('#' + key).val(job_seeker[key]);
+		        	
+		        } else if (node.find('*[data-id="' + key + '"]').length) {
+
+		        	node.find('*[data-id="' + key + '"]').text(job_seeker[key]);
+
+		        }
+		    }
+		}
+
 	}
+
+	$('.populate').each( function(i) {
+		scanDomAndPopulate($(this));
+	});
+	
+
+	// ALERTS
+	$('.hidden-message').hide();
+
+	setTimeout(function() {
+	  if (location.hash) {
+	  	$('#message-updated').show();
+	    window.scrollTo(0, 0);
+	  }
+	}, 1);
+
+	// var hash = window.location.hash;
+	// console.log(hash);
+	// $(hash+':first').show();
+
 
 	//$('#firstName').val(job_seeker.firstName);
 
 	//console.log(_form);
-
+	// $('.personal-details-widget').find('.populate').append(
+	// 	'<p>Name: ' + job_seeker.firstName + ' ' + job_seeker.lastName + '</p>' +
+	// 	'<p>Email address: ' + job_seeker.emailAddress + '</p>'
+	// );
 });

@@ -1,11 +1,13 @@
+// Job Seeker Object
 var job_seeker = {
     "firstName": "Dmitri",
     "lastName": "Stavrou",
+    "emailAddress": "dmitri@gmail.com",
     "addressLine1": "29 Acacia Road",
     "addressLine2": "",
     "townOrCity": "Southampton",
     "countyOrRegion": 2009,
-    "postcode": "Product Developer",
+    "postcode": "E8 5DE",
     "country": "United Kingdom",
     "currentJobLocation": "London",
     "currentJobStartdate": 2010,
@@ -57,3 +59,6 @@ var job_seeker = {
         }
     ]
 }
+
+// Custom Properties
+job_seeker.fullName = job_seeker.firstName + ' ' + job_seeker.lastName;

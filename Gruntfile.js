@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     sass: {
       options: {
         //includePaths: ['bower_components/foundation/scss']
-        includePaths: ['bower_components/bootstrap-sass/vendor/assets/stylesheets']
+        includePaths: ['bower_components/bootstrap-sass/vendor/assets']
       },
       dist: {
         options: {
@@ -25,6 +25,12 @@ module.exports = function(grunt) {
         cwd: 'bower_components',
         src: ['jquery/dist/jquery.min.js', 'foundation/js/vendor/modernizr.js'],
         dest: 'js'
+      },
+      fonts: {
+        expand: true,
+        cwd: 'bower_components/bootstrap-sass/vendor/assets/fonts',
+        src: ['bootstrap/*'],
+        dest: 'fonts'
       }
     },
 
