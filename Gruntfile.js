@@ -2,6 +2,15 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    shell: {
+      jekyllBuild: {
+          command: 'jekyll build'
+      },
+      jekyllServe: {
+          command: 'jekyll serve'
+      }
+    },
+
     sass: {
       options: {
         //includePaths: ['bower_components/foundation/scss']
@@ -34,21 +43,32 @@ module.exports = function(grunt) {
       }
     },
 
-    jekyll: {
-      serve : {
-        options: {
-          serve: true,
-          watch: true
-        }
-      }
-    },
-
     watch: {
-      grunt: { files: ['Gruntfile.js'] },
-
+      configFiles: {
+        files: [ 'Gruntfile.js', 'config/*.js' ],
+        options: {
+          reload: true
+        }
+      },
+      
       jekyll: {
-        files: ['_includes/**', '_layouts/**', 'js/**', 'css/**', 'templates/**'],
-        tasks: ['jekyll:serve']
+        files: [
+          '_includes/*.html',
+          '_layouts/*.html',
+          'js/*.js',
+          'css/*.css',
+          'templates/*.html',
+          '_config.yml',
+          'index.html'
+        ],
+        tasks: ['shell:jekyllBuild', 'shell:jekyllServe'],
+        options: {
+          interrupt: true,
+          atBegin: true,
+          livereload: {
+            port: 9000
+          }
+        }
       },
 
       sass: {
@@ -58,11 +78,10 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', ['jekyll:serve', 'sass']);
-  grunt.registerTask('default', ['build','watch']);
+  grunt.registerTask('default', ['watch']);
 
+  grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
 

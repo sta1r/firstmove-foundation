@@ -1,0 +1,40 @@
+---
+layout: admin-bootstrap
+title: Recruiter - post new job
+---
+
+<div class="page-header">
+	<h1>Create your job listing</h1>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+
+		<form role="form">
+
+			{% include _job-details.html %}
+
+			<div class="alert alert-info">
+				<p>Already signed up? <a href="sign-in.html">Log in</a> now to speed things up.</p>
+			</div>
+
+			{% include _personal-details.html %}
+
+			{% include _accept-terms.html %}
+
+			<button type="submit" class="btn btn-default">Save draft</button>
+			<button type="submit" class="btn btn-default">Preview job</button>
+			<button type="submit" class="btn btn-primary">Post job</button>
+
+		</form>
+	</div>
+
+	<div class="col-md-5 col-md-offset-1">
+		<div class="alert alert-warning">
+			<h4>PLEASE NOTE</h4>
+			<p>Any opportunities advertised on the LCF FirstMove website which are unpaid and not part of student accredited short term work experience and long term work placements will be removed immediately by the LCF Careers team.</p>
+			<p>All other opportunities must be paid at a rate of at least National Minimum Wage (NMW). For more information on the current NMW rate please go to - <a href="https://www.gov.uk/national-minimum-wage-rates" target="_blank">https://www.gov.uk/national-minimum-wage-rates</a>. By registering you are agreeing to cooperate with this guideline whilst recruiting through <a href="http://www.lcffirstmove.co.uk">www.lcffirstmove.co.uk</a>.</p>
+		</div>
+
+	</div>
+</div>

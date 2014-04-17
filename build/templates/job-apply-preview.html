@@ -43,6 +43,13 @@
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
+		  	<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
+			  	<ul class="dropdown-menu">
+					<li><a href="?logged-in=true">Logged in</a></li>
+					<li><a href="?">Logged out</a></li>
+			  	</ul>
+			</li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
@@ -63,13 +70,7 @@
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/job-apply.html">Apply</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://localhost:4000/templates/job-create.html">New Job</a>
+				  			<a  href="http://localhost:4000/templates/job-apply.html">Apply for a job</a>
 						</li>
 						
 					
@@ -94,6 +95,24 @@
 						
 						<li>
 				  			<a  href="http://localhost:4000/templates/jobs-list.html">Jobs List</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/recruiter-edit-job.html">Recruiter - edit job</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/recruiter-post-job.html">Recruiter - post new job</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/recruiter-view-jobs.html">Recruiter - view my jobs</a>
 						</li>
 						
 					
@@ -125,9 +144,12 @@
 
 <div class="row">
 	<div class="col-md-8">
-		<div class="well">
-
-			<ul class="populate">
+		<header class="populate" data-populate="job">
+			<h2><span data-id="jobTitle"></span> at <span data-id="companyName"></span></h2>
+		</header>
+		<div class="well super-size">
+			
+			<ul class="populate" data-populate="job_seeker">
 				<li>Name: <span data-id="fullName"></span></li>
 				<li>Email address: <span data-id="emailAddress"></span></li>
 			</ul>
@@ -162,7 +184,9 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="http://localhost:4000/js/bootstrap-sass/vendor/assets/javascripts/bootstrap.min.js"></script>
-	<script src="http://localhost:4000/js/job-seeker.js"></script>
+	<script src="http://localhost:4000/js/job-data.js"></script>
 	<script src="http://localhost:4000/js/app.js"></script>
+
+	<script src="http://localhost:9000/livereload.js"></script>
   </body>
 </html>

@@ -43,6 +43,13 @@
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
+		  	<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
+			  	<ul class="dropdown-menu">
+					<li><a href="?logged-in=true">Logged in</a></li>
+					<li><a href="?">Logged out</a></li>
+			  	</ul>
+			</li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
@@ -63,13 +70,7 @@
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/job-apply.html">Apply</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a class="active" href="http://localhost:4000/templates/job-create.html">New Job</a>
+				  			<a  href="http://localhost:4000/templates/job-apply.html">Apply for a job</a>
 						</li>
 						
 					
@@ -99,6 +100,24 @@
 					
 						
 						<li>
+				  			<a class="active" href="http://localhost:4000/templates/recruiter-edit-job.html">Recruiter - edit job</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/recruiter-post-job.html">Recruiter - post new job</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/recruiter-view-jobs.html">Recruiter - view my jobs</a>
+						</li>
+						
+					
+						
+						<li>
 				  			<a  href="http://localhost:4000/templates/sign-in.html">Sign In</a>
 						</li>
 						
@@ -115,32 +134,32 @@
 		
 		<ol class="breadcrumb">
 			<li><a href="http://localhost:4000">Home</a></li>
-		  	<li class="active">New Job</li>
+		  	<li class="active">Recruiter - edit job</li>
 		</ol>
 		
 		
 		<div class="page-header">
-	<h1>Create your job listing</h1>
+	<h1>Edit job</h1>
 </div>
 
 <div class="row">
 	<div class="col-md-6">
 
-		<form role="form">
+		<form role="form" class="populate" data-populate="job">
 			<fieldset>
 				<legend>Job details</legend>
 				<div class="form-group">
 					<label>Job title</label>
-					<input type="text" class="form-control" placeholder="" />
+					<input type="text" class="form-control" id="jobTitle" placeholder="" />
 					
 				</div>
 				<div class="form-group">
 					<label>Job location</label>
-					<input type="text" class="form-control" placeholder="" />
+					<input type="text" class="form-control" id="jobLocation" placeholder="" />
 				</div>
 				<div class="form-group">
 					<label>Description</label>
-					<textarea class="form-control" rows="3"></textarea>
+					<textarea class="form-control" rows="3" id="jobDescription"></textarea>
 				</div>
 				<div class="form-group">
 					<label>Job type</label>
@@ -254,10 +273,10 @@
 
 
 			<div class="alert alert-info">
-				<p>Already signed up? <a href="#">Log in</a> now to speed things up.</p>
+				<p>Already signed up? <a href="sign-in.html">Log in</a> now to speed things up.</p>
 			</div>
 
-						<fieldset class="form-horizontal populate">
+						<fieldset class="form-horizontal">
 				<legend>Your details</legend>
 				<div class="form-group">
 					<div class="col-sm-6">
@@ -360,7 +379,9 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="http://localhost:4000/js/bootstrap-sass/vendor/assets/javascripts/bootstrap.min.js"></script>
-	<script src="http://localhost:4000/js/job-seeker.js"></script>
+	<script src="http://localhost:4000/js/job-data.js"></script>
 	<script src="http://localhost:4000/js/app.js"></script>
+
+	<script src="http://localhost:9000/livereload.js"></script>
   </body>
 </html>

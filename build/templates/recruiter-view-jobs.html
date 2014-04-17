@@ -88,7 +88,7 @@
 					
 						
 						<li>
-				  			<a class="active" href="http://localhost:4000/templates/job-single.html">Job Page</a>
+				  			<a  href="http://localhost:4000/templates/job-single.html">Job Page</a>
 						</li>
 						
 					
@@ -112,7 +112,7 @@
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/recruiter-view-jobs.html">Recruiter - view my jobs</a>
+				  			<a class="active" href="http://localhost:4000/templates/recruiter-view-jobs.html">Recruiter - view my jobs</a>
 						</li>
 						
 					
@@ -134,37 +134,56 @@
 		
 		<ol class="breadcrumb">
 			<li><a href="http://localhost:4000">Home</a></li>
-		  	<li class="active">Job Page</li>
+		  	<li class="active">Recruiter - view my jobs</li>
 		</ol>
 		
 		
-		<div class="page-header populate" data-populate="job">
-	<h1 data-id="jobTitle">Seamstress</h1>
+		<div class="page-header">
+	<h1>All jobs</h1>
 </div>
 
-<div class="row populate" data-populate="job">
-
-	<div class="col-md-7">
-		<p class="lead" data-id="jobSummary"></p>
-		<p data-id="jobDescription"></p>
+<div class="row">
+	<div class="col-md-4 add-bottom">
+		<a href="recruiter-post-job.html" class="btn btn-default">Post a job</a>
 	</div>
+    <div class="col-md-4 pull-right">
+		<div class="input-group">
+  			<input type="text" class="form-control">
+			<span class="input-group-btn">
+			<button class="btn btn-default" type="button">Search</button>
+			</span>
+		</div><!-- /input-group -->
+		</div><!-- /.col-lg-6 -->
+</div>
 
-	<div class="col-md-4 col-md-offset-1">
-		<div class="well">
-		<table class="table">
-			<tr><td>Company</td><td data-id="companyName"><a href=""></a></td></tr>
-			<tr><td>Job type</td><td data-id="jobType"></td></tr>
-			<tr><td>Length of contract</td><td data-id="jobContractLength"></td></tr>
-			<tr><td>Salary</td><td data-id="jobSalary"></td></tr>
-			<tr><td>Deadline</td><td data-id="jobApplicationDeadline"></td></tr>
-		</table>
-		    
-		<a href="job-apply.html" class="btn btn-primary btn-sm btn-block">Apply for this job</a>
-		</div>
-	</div>
+<ul class="job-list no-bullet">
+	
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">Part Time Sales Person</a></h3>
+		<h4>Sweaty Betty</h4>
+
+		<p class="meta"><span class="job-type">Graduate job</span> | <span class="job-contract-length">Contract: Permanent</span> | <span class="salary">Salary: &pound;7.00</span> | <span class="location">West London</span></p>
 		
+		<p class="logged-in"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
+	</li>
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">Photographic & Web Assistant</a></h3>
+		<h4>This Old Thing London (Charli Evans)</h4>
+		
+		<p class="meta"><span class="job-type">Long Term Work Placement</span> | <span class="job-contract-length">Contract: Negotiable</span> | <span class="salary">Salary: Negotiable</span> | West London</p>
+		
+		<p class="logged-in"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>	
+	</li>
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">WGSN Editorial Intern</a></h3>
+		<h4>WGSN</h4>
+		
+		<p class="meta"><span class="job-type">Short Term Work Experience</span> | <span class="job-contract-length">Negotiable</span> | <span class="salary">Salary: Travel and Expenses</span> | <span class="location">Greater London</span></p>
 
-</div>
+		<p class="logged-in"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
+	</li>
+
+</ul>
 
 	</div> <!-- /container -->
 

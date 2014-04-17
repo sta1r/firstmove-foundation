@@ -9,9 +9,12 @@ title: Apply - Preview
 
 <div class="row">
 	<div class="col-md-8">
-		<div class="well">
-
-			<ul class="populate">
+		<header class="populate" data-populate="job">
+			<h2><span data-id="jobTitle"></span> at <span data-id="companyName"></span></h2>
+		</header>
+		<div class="well super-size">
+			
+			<ul class="populate" data-populate="job_seeker">
 				<li>Name: <span data-id="fullName"></span></li>
 				<li>Email address: <span data-id="emailAddress"></span></li>
 			</ul>

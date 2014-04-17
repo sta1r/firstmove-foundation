@@ -46,8 +46,17 @@ ul.no-bullet {
 	width: 100%;
 }
 
+// Hidden elements for alerts 
+.logged-in, .hidden-message {
+	display: none;
+}
+
+// Typography
+.super-size > * {
+	@extend .lead;
+}
+
 // Jobs list
 .job-item {
 	border-top: 1px solid $gray-lighter;
 }
-

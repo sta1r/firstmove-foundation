@@ -43,6 +43,13 @@
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
+		  	<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
+			  	<ul class="dropdown-menu">
+					<li><a href="?logged-in=true">Logged in</a></li>
+					<li><a href="?">Logged out</a></li>
+			  	</ul>
+			</li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
@@ -63,13 +70,7 @@
 					
 						
 						<li>
-				  			<a class="active" href="http://localhost:4000/templates/job-apply.html">Apply</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://localhost:4000/templates/job-create.html">New Job</a>
+				  			<a class="active" href="http://localhost:4000/templates/job-apply.html">Apply for a job</a>
 						</li>
 						
 					
@@ -99,6 +100,24 @@
 					
 						
 						<li>
+				  			<a  href="http://localhost:4000/templates/recruiter-edit-job.html">Recruiter - edit job</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/recruiter-post-job.html">Recruiter - post new job</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://localhost:4000/templates/recruiter-view-jobs.html">Recruiter - view my jobs</a>
+						</li>
+						
+					
+						
+						<li>
 				  			<a  href="http://localhost:4000/templates/sign-in.html">Sign In</a>
 						</li>
 						
@@ -115,17 +134,32 @@
 		
 		<ol class="breadcrumb">
 			<li><a href="http://localhost:4000">Home</a></li>
-		  	<li class="active">Apply</li>
+		  	<li class="active">Apply for a job</li>
 		</ol>
 		
 		
 		<div class="page-header">
-	<h1>Apply for a job</h1>
+	<h1>Apply</h1>
 </div>
 
+
+
+
 <div class="row">
+
 	<div class="col-md-6">
-		
+
+		<div class="panel panel-default personal-details-widget">
+			<div class="panel-heading">
+				<h3 class="panel-title">The following details will be submitted with your application:</h3>
+			</div>
+			<table class="table populate" data-populate="job_seeker">
+				<tr><td>Name</td><td data-id="fullName"></td></tr>
+				<tr><td>Email address</td><td data-id="emailAddress"></td></tr>
+			</table>
+			<div class="panel-footer">Not correct? <a href="job-seeker-account.html">Edit</a></div>
+		</div>
+
 		<form role="form" action="job-apply-preview.html">
 			<fieldset>
 				<legend>Your application</legend>
@@ -140,14 +174,28 @@
 		</form>
 	</div>
 
-	<div class="col-md-5 col-md-offset-1">
-		<div class="personal-details-widget">
-			<p>The following details will be submitted with your application:</p>
-				<table class="table populate">
-					<tr><td>Name</td><td data-id="fullName"></td></tr>
-					<tr><td>Email address</td><td data-id="emailAddress"></td></tr>
-				</table>
-			<p>Not correct? <a href="job-seeker-account.html">Edit</a>
+	<div class="col-md-4 col-md-offset-2 job-details-widget populate" data-populate="job">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Job summary</h3>
+			</div>
+			<div class="panel-body" data-id="jobSummary"></div>
+		</div>
+
+		<div class="panel panel-default personal-details-widget populate" data-populate="job">
+			<div class="panel-heading">
+				<h3 class="panel-title">Job details</h3>
+			</div>
+			<table class="table">
+				<tr><td>Company</td><td data-id="companyName"></td></tr>
+				<tr><td>Job title</td><td data-id="jobTitle"></td></tr>
+				<tr><td>Job type</td><td data-id="jobType"></td></tr>
+				<tr><td>Length of contract</td><td data-id="jobContractLength"></td></tr>
+				<tr><td>Salary</td><td data-id="jobSalary"></td></tr>
+				<tr><td>Location</td><td data-id="jobLocation"></td></tr>
+				<tr><td>Deadline</td><td data-id="jobApplicationDeadline"></td></tr>
+			</table>
+			<div class="panel-footer"><a href="job-single.html">&larr; Return to full listing</a></div>
 		</div>
 
 	</div>
@@ -171,7 +219,9 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="http://localhost:4000/js/bootstrap-sass/vendor/assets/javascripts/bootstrap.min.js"></script>
-	<script src="http://localhost:4000/js/job-seeker.js"></script>
+	<script src="http://localhost:4000/js/job-data.js"></script>
 	<script src="http://localhost:4000/js/app.js"></script>
+
+	<script src="http://localhost:9000/livereload.js"></script>
   </body>
 </html>

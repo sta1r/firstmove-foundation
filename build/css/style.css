@@ -311,7 +311,7 @@ h6, .h6 {
 p {
   margin: 0 0 10px; }
 
-.lead {
+.lead, .super-size > * {
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 200;
@@ -4389,6 +4389,10 @@ ul.no-bullet {
 .full-width {
   float: left;
   width: 100%; }
+
+.logged-in, .hidden-message {
+  display: none; }
+
 
 .job-item {
   border-top: 1px solid #eeeeee; }

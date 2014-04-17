@@ -1,22 +1,25 @@
 jQuery(document).ready( function($) {
 
 	
-	function scanDomAndPopulate(DOMnode) {
+	function scanDomAndPopulate(DOMnode, dataSegment) {
+
+		var object = job_data[dataSegment];
 
 		// cache
 		var node = $(DOMnode);
 
 		// loop
-		for (var key in job_seeker){
-		    if (job_seeker.hasOwnProperty(key)) {
+		for (var key in object){
+		    if (object.hasOwnProperty(key)) {
 
+		console.log(key);
 		        if (node.find('#' + key).length) {
 
-		        	node.find('#' + key).val(job_seeker[key]);
+		        	node.find('#' + key).val(object[key]);
 		        	
 		        } else if (node.find('*[data-id="' + key + '"]').length) {
 
-		        	node.find('*[data-id="' + key + '"]').text(job_seeker[key]);
+		        	node.find('*[data-id="' + key + '"]').html(object[key]);
 
 		        }
 		    }
@@ -24,9 +27,34 @@ jQuery(document).ready( function($) {
 
 	}
 
+	function GetURLParameter(sParam)
+	{
+	    var sPageURL = window.location.search.substring(1);
+	    var sURLVariables = sPageURL.split('&');
+	    for (var i = 0; i < sURLVariables.length; i++) 
+	    {
+	        var sParameterName = sURLVariables[i].split('=');
+	        if (sParameterName[0] == sParam) 
+	        {
+	            return sParameterName[1];
+	        }
+	    }
+	}
+
+
+	if (GetURLParameter('logged-in')) {
+		$('.logged-in').show();
+	}
+
+
+
+
+
+
 	$('.populate').each( function(i) {
-		scanDomAndPopulate($(this));
+		scanDomAndPopulate($(this), $(this).data('populate'));
 	});
+
 	
 
 	// ALERTS
