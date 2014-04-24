@@ -64,13 +64,13 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-jobs-report.html">Jobs Report</a>
+				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/admin-jobs-report.html">Jobs Report</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Job Seeker Account View</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Job Seeker Account View</a>
 						</li>
 						
 					
@@ -158,51 +158,83 @@
 		
 		<ol class="breadcrumb">
 			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-		  	<li class="active">Job Seeker Account View</li>
+		  	<li class="active">Jobs Report</li>
 		</ol>
 		
 		
 		<div class="page-header">
-	<h1>Job seeker detail</h1>
+	<h1>Jobs report</h1>
 </div>
 
-<div class="row populate" data-populate="job_seeker">
-	<div class="col-md-8">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">Personal details</h3>
-		  </div>
-		  <div class="panel-body">
-			<p><strong data-id="fullName"></strong></p>
-			<p><a href="#" data-id="emailAddress"></a></p>
-			<p><strong>Address:</strong></p>	
-			<p>
-				<span data-id="addressLine1"></span><br>
-				<span data-id="addressLine2"></span><br>
-				<span data-id="townOrCity"></span><br>
-				<span data-id="countyOrRegion"></span><br>
-				<span data-id="postcode"></span><br>
-				<span data-id="country"></span>
-			</p>
-			<p><strong>Date of birth:</strong> <span data-id="dobDay"></span>/<span data-id="dobMonth"></span>/<span data-id="dobYear"></span></p>
-		  </div>
-		</div>
+<div class="control-bar row">
+	<div class="col-md-12">
+		<div class="well clearfix">
+			<div class="control pull-left">
+				<p>View:</p>
+				<div class="btn-group">
+					<button class="btn btn-default btn-sm active">Live</button>
+					<button class="btn btn-default btn-sm">Expired</button>
+					<button class="btn btn-default btn-sm">All</button>
+				</div>
 
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">Student information</h3>
-		  </div>
-		  <div class="panel-body">
-		  	<p><strong>LCF student number:</strong> <span data-id="LCFStudentNumber"></span></p>
-			<p>currentJobLocation: <span data-id="currentJobLocation"></span></p>
-		    <p>currentJobStartdate: <span data-id="currentJobStartdate"></span></p>
-		    <p>currentJobStatus: <span data-id="currentJobStatus"></span></p>
-		    <p>currentJobLevel: <span data-id="currentJobLevel"></span></p>
-		    <p>personalStatement: <span data-id="personalStatement"></span></p>
-		  </div>
+			</div>	
+			<div class="control pull-right">
+				<p>With selection:</p>
+				<a href="#" class="btn btn-default btn-sm">Export</a>
+			</div>
 		</div>
 	</div>
 </div>
+
+						<div class="control-bar row-fluid">
+							<div class="span10">
+								<div class="well clearfix">
+									<div class="control pull-left">
+										<label>Sort by:</label>
+										
+									</div>	
+									<div class="control pull-left">
+										<div class="btn-group">
+										  <button class="btn">Company</button>
+										  <button class="btn">Role</button>
+											<button class="btn">Interest</button>
+										</div>
+									</div>	
+									<div class="control pull-left">
+										<form class="form-search inline-form">
+										  <input type="text" class="input-medium search-query">
+										  <button type="submit" class="btn">Search</button>
+										</form>
+									</div>
+									<div class="control pull-right">
+										<button class="btn btn-primary">Add new</button>
+									  
+									</div>	
+								</div>
+							</div>
+						</div>
+						
+						<div class="row-fluid">
+							<div class="span10">
+							
+								<div id="admin-placements-list"></div>
+							
+								<div class="row">
+	<div class="col-md-12">
+		<ul class="pagination">
+		  <li class="disabled"><a href="#">&laquo;</a></li>
+		  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+		  <li><a href="#">2</a></li>
+		  <li><a href="#">3</a></li>
+		  <li><a href="#">4</a></li>
+		  <li><a href="#">5</a></li>
+		  <li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+</div>
+							
+						</div>
+						</div>
 
 	</div> <!-- /container -->
 

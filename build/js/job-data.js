@@ -15,6 +15,7 @@ var job_data = {
         "currentJobStartdate": 2010,
         "currentJobStatus": "F/T",
         "currentJobLevel": "Intermediate",
+        "nationality": "Greek",
         "dobDay": 7,
         "dobMonth": 11,
         "dobYear": 1989,

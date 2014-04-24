@@ -58,7 +58,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-activity-report.html">Activity Report</a>
+				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/admin-activity-report.html">Activity Report</a>
 						</li>
 						
 					
@@ -70,7 +70,7 @@
 					
 						
 						<li>
-				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Job Seeker Account View</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Job Seeker Account View</a>
 						</li>
 						
 					
@@ -158,51 +158,117 @@
 		
 		<ol class="breadcrumb">
 			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-		  	<li class="active">Job Seeker Account View</li>
+		  	<li class="active">Activity Report</li>
 		</ol>
 		
 		
 		<div class="page-header">
-	<h1>Job seeker detail</h1>
+	<h1>Activity report</h1>
 </div>
 
-<div class="row populate" data-populate="job_seeker">
-	<div class="col-md-8">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">Personal details</h3>
-		  </div>
-		  <div class="panel-body">
-			<p><strong data-id="fullName"></strong></p>
-			<p><a href="#" data-id="emailAddress"></a></p>
-			<p><strong>Address:</strong></p>	
-			<p>
-				<span data-id="addressLine1"></span><br>
-				<span data-id="addressLine2"></span><br>
-				<span data-id="townOrCity"></span><br>
-				<span data-id="countyOrRegion"></span><br>
-				<span data-id="postcode"></span><br>
-				<span data-id="country"></span>
-			</p>
-			<p><strong>Date of birth:</strong> <span data-id="dobDay"></span>/<span data-id="dobMonth"></span>/<span data-id="dobYear"></span></p>
-		  </div>
-		</div>
+<div class="control-bar row">
+	<div class="col-md-12">
+		<div class="well clearfix">
+			<div class="control pull-left">
+				<p>View by:</p>
+				<div class="btn-group">
+					<button class="btn btn-default btn-sm">Day</button>
+					<button class="btn btn-default btn-sm active">Month</button>
+				</div>
 
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">Student information</h3>
-		  </div>
-		  <div class="panel-body">
-		  	<p><strong>LCF student number:</strong> <span data-id="LCFStudentNumber"></span></p>
-			<p>currentJobLocation: <span data-id="currentJobLocation"></span></p>
-		    <p>currentJobStartdate: <span data-id="currentJobStartdate"></span></p>
-		    <p>currentJobStatus: <span data-id="currentJobStatus"></span></p>
-		    <p>currentJobLevel: <span data-id="currentJobLevel"></span></p>
-		    <p>personalStatement: <span data-id="personalStatement"></span></p>
-		  </div>
+			</div>	
+			<div class="control col-md-2">
+				<p>From:</p>
+				<div class="input-append date">
+					<div class="input-group" id="dateFrom" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+						<input class="form-control" type="text" value="12-02-2012" readonly="">
+						<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+				  	</div>
+			  	</div>
+			</div>
+			<div class="control col-md-2">
+				<p>To:</p>
+				<div class="input-append date">
+					<div class="input-group" id="dateTo" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+						<input class="form-control" type="text" value="12-03-2012" readonly="">
+						<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+				  	</div>
+			  	</div>
+			</div>
+			<div class="control pull-right">
+				<p>With selection:</p>
+				<a href="#" class="btn btn-default btn-sm">Export</a>
+			</div>
 		</div>
 	</div>
 </div>
+<div class="row">
+	<div class="col-md-12">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Job seeker sign ups</th>
+					<th>Job seeker logins</th>
+					<th>Jobs posted</th>
+					<th>Job applications</th>
+					<th>Vacancies filled</th>
+				</tr>
+			</thead>
+			<tr>
+				<td>April 2014</td>
+				<td>64</td>
+				<td>88</td>
+				<td>34</td>
+				<td>104</td>
+				<td>32</td>
+			</tr>
+			<tr>
+				<td>March 2014</td>
+				<td>44</td>
+				<td>78</td>
+				<td>20</td>
+				<td>88</td>
+				<td>19</td>
+			</tr>
+			<tr>
+				<td>February 2014</td>
+				<td>38</td>
+				<td>68</td>
+				<td>24</td>
+				<td>67</td>
+				<td>18</td>
+			</tr>
+			<tr>
+				<td>January 2014</td>
+				<td>30</td>
+				<td>57</td>
+				<td>12</td>
+				<td>45</td>
+				<td>7</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+
+
+
+
+<div class="row">
+	<div class="col-md-12">
+		<ul class="pagination">
+		  <li class="disabled"><a href="#">&laquo;</a></li>
+		  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+		  <li><a href="#">2</a></li>
+		  <li><a href="#">3</a></li>
+		  <li><a href="#">4</a></li>
+		  <li><a href="#">5</a></li>
+		  <li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+</div>
+
 
 	</div> <!-- /container -->
 

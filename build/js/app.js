@@ -94,4 +94,30 @@ jQuery(document).ready( function($) {
 		
 		
 	}
+
+	// PUSH DUMMY PLACEMENTS INTO TABLE ROWS
+	if ($('#admin-placements-list').length) {
+		
+		var output = '<table class="table table-striped"><thead><tr><th>Status</th><th>Date posted</th><th>Company</th><th>Role</th><th>Duration</th><th>Students interested</th></tr></thead><tbody>';
+		
+		for (i = 0; i < 10; i++) {
+			
+			output += '<tr><td><span class="label label-success">Live</span></td><td>10 October 2012</td><td>Debenhams</td><td>Retail assistant</td><td>6-8 weeks</td><td><span class="badge badge-info">16</span></td>';
+			
+			// Actions and buttons
+			output += '<td><div class="btn-group"><a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#">Status <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="#">Draft</a></li><li><a href="#">Private</a></li></ul></div></td><td><button class="btn btn-small btn-info">View detail</button></td><td><button class="btn btn-small btn-danger" data-role="delete-item">Delete</button></td></tr>';
+			
+		}
+		
+		output += '</table>';
+		
+		$('#admin-placements-list').html(output);
+		
+		
+	}
+
+
+	// DATEPICKER
+	$('#dateFrom').datepicker();
+	$('#dateTo').datepicker();
 });

@@ -1,0 +1,67 @@
+---
+layout: admin-bootstrap
+title: Jobs Report
+persona: admin
+---
+
+<div class="page-header">
+	<h1>Jobs report</h1>
+</div>
+
+<div class="control-bar row">
+	<div class="col-md-12">
+		<div class="well clearfix">
+			<div class="control pull-left">
+				<p>View:</p>
+				<div class="btn-group">
+					<button class="btn btn-default btn-sm active">Live</button>
+					<button class="btn btn-default btn-sm">Expired</button>
+					<button class="btn btn-default btn-sm">All</button>
+				</div>
+
+			</div>	
+			<div class="control pull-right">
+				<p>With selection:</p>
+				<a href="#" class="btn btn-default btn-sm">Export</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+						<div class="control-bar row-fluid">
+							<div class="span10">
+								<div class="well clearfix">
+									<div class="control pull-left">
+										<label>Sort by:</label>
+										
+									</div>	
+									<div class="control pull-left">
+										<div class="btn-group">
+										  <button class="btn">Company</button>
+										  <button class="btn">Role</button>
+											<button class="btn">Interest</button>
+										</div>
+									</div>	
+									<div class="control pull-left">
+										<form class="form-search inline-form">
+										  <input type="text" class="input-medium search-query">
+										  <button type="submit" class="btn">Search</button>
+										</form>
+									</div>
+									<div class="control pull-right">
+										<button class="btn btn-primary">Add new</button>
+									  
+									</div>	
+								</div>
+							</div>
+						</div>
+						
+						<div class="row-fluid">
+							<div class="span10">
+							
+								<div id="admin-placements-list"></div>
+							
+								{% include _pagination.html %}
+							
+						</div>
+						</div>

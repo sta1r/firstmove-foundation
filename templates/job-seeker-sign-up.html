@@ -14,27 +14,7 @@ persona: job-seeker
 		<form>
 			{% include _personal-details.html %}
 
-			<fieldset class="form-horizontal">
-				<legend>About you</legend>
-				<div class="form-group clearfix">
-					<label class="col-sm-12">Date of birth</label>
-					<div class="col-sm-2">
-					    <input id="day" type="tel" maxlength="2" class="form-control" placeholder="DD"/>
-					</div>
-					<div class="col-sm-2">
-					    <input id="month" type="tel" maxlength="2" class="form-control" placeholder="MM"/>
-					</div>
-					<div class="col-sm-2">
-					    <input id="year" type="tel" maxlength="4" class="form-control" placeholder="YYYY" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label>Biography</label>
-						<textarea class="form-control" rows="6"></textarea>
-					</div>
-				</div>
-			</fieldset>
+			{% include _account-about-you.html %}
 
 			<fieldset>
 				<legend>LCF Qualification</legend>
