@@ -12,7 +12,7 @@ var job_data = {
         "postcode": "E8 5DE",
         "country": "United Kingdom",
         "currentJobLocation": "London",
-        "currentJobStartdate": 2010,
+        "graduationYear": 2010,
         "currentJobStatus": "F/T",
         "currentJobLevel": "Intermediate",
         "nationality": "Greek",
