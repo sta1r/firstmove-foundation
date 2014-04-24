@@ -64,7 +64,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seekers.html">Job Seekers List</a>
+				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seekers.html">Job Seekers List</a>
 						</li>
 						
 					
@@ -82,7 +82,7 @@
 					
 						
 						<li>
-				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/job-apply.html">Apply for a job</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply.html">Apply for a job</a>
 						</li>
 						
 					
@@ -146,70 +146,76 @@
 		
 		<ol class="breadcrumb">
 			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-		  	<li class="active">Apply for a job</li>
+		  	<li class="active">Job Seekers List</li>
 		</ol>
 		
 		
 		<div class="page-header">
-	<h1>Apply</h1>
+	<h1>Job seeker report</h1>
 </div>
 
 
+<div class="control-bar row">
+	<div class="col-md-12">
+		<div class="well clearfix">
+			<div class="control pull-left">
+				<p>Sort by:</p>
+				<div class="btn-group">
+					<button class="btn btn-default btn-sm">Name</button>
+					<button class="btn btn-default btn-sm">Course</button>
+					<button class="btn btn-default btn-sm">Last logged in</button>
+				</div>
+			</div>	
+			<div class="control pull-left">
+				<p>Filter by:</p>
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">Filter <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu">
+				  	<li><a href="#">Year 1</a></li>
+					<li><a href="#">Year 2</a></li>
+					<li><a href="#">Year 3</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Alumni</a></li>	
+				  </ul>
+				</div>
+			</div>
+			<div class="control control-search pull-left">
+				<p>Profile search:</p>
 
+			    <div class="input-group input-group-sm">
+			      <input type="text" class="form-control">
+			      <span class="input-group-btn">
+			        <button class="btn btn-default" type="button">Search</button>
+			      </span>
+			    </div><!-- /input-group -->
+			</div>
+			<div class="control pull-right">
+				<p>With selection:</p>
+				<a href="#" class="btn btn-default btn-sm">Export</a>
+				<a href="#" class="btn btn-default btn-sm">Bulk email</a>
+			</div>	
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div id="students-list"></div>
+				
+	</div>
+</div>
 
 <div class="row">
-
-	<div class="col-md-6">
-
-		<div class="panel panel-default personal-details-widget">
-			<div class="panel-heading">
-				<h3 class="panel-title">The following details will be submitted with your application:</h3>
-			</div>
-			<table class="table populate" data-populate="job_seeker">
-				<tr><td>Name</td><td data-id="fullName"></td></tr>
-				<tr><td>Email address</td><td data-id="emailAddress"></td></tr>
-			</table>
-			<div class="panel-footer">Not correct? <a href="job-seeker-account.html">Edit</a></div>
-		</div>
-
-		<form role="form" action="job-apply-preview.html">
-			<fieldset>
-				<legend>Your application</legend>
-				<div class="form-group">
-					<label>Cover letter</label>
-					<textarea class="form-control" rows="12"></textarea>
-				</div>
-			</fieldset>
-
-			<button type="submit" class="btn btn-primary">Preview application</button>
-
-		</form>
-	</div>
-
-	<div class="col-md-4 col-md-offset-2 job-details-widget populate" data-populate="job">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">Job summary</h3>
-			</div>
-			<div class="panel-body" data-id="jobSummary"></div>
-		</div>
-
-		<div class="panel panel-default personal-details-widget populate" data-populate="job">
-			<div class="panel-heading">
-				<h3 class="panel-title">Job details</h3>
-			</div>
-			<table class="table">
-				<tr><td>Company</td><td data-id="companyName"></td></tr>
-				<tr><td>Job title</td><td data-id="jobTitle"></td></tr>
-				<tr><td>Job type</td><td data-id="jobType"></td></tr>
-				<tr><td>Length of contract</td><td data-id="jobContractLength"></td></tr>
-				<tr><td>Salary</td><td data-id="jobSalary"></td></tr>
-				<tr><td>Location</td><td data-id="jobLocation"></td></tr>
-				<tr><td>Deadline</td><td data-id="jobApplicationDeadline"></td></tr>
-			</table>
-			<div class="panel-footer"><a href="job-single.html">&larr; Return to full listing</a></div>
-		</div>
-
+	<div class="col-md-12">
+		<ul class="pagination">
+		  <li class="disabled"><a href="#">&laquo;</a></li>
+		  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+		  <li><a href="#">2</a></li>
+		  <li><a href="#">3</a></li>
+		  <li><a href="#">4</a></li>
+		  <li><a href="#">5</a></li>
+		  <li><a href="#">&raquo;</a></li>
+		</ul>
 	</div>
 </div>
 

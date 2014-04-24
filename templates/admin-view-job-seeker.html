@@ -1,0 +1,47 @@
+---
+layout: admin-bootstrap
+title: Job Seeker Account View
+persona: admin
+---
+
+<div class="page-header">
+	<h1>Job seeker detail</h1>
+</div>
+
+<div class="row populate" data-populate="job_seeker">
+	<div class="col-md-8">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Personal details</h3>
+		  </div>
+		  <div class="panel-body">
+			<p><strong data-id="fullName"></strong></p>
+			<p><a href="#" data-id="emailAddress"></a></p>
+			<p><strong>Address:</strong></p>	
+			<p>
+				<span data-id="addressLine1"></span><br>
+				<span data-id="addressLine2"></span><br>
+				<span data-id="townOrCity"></span><br>
+				<span data-id="countyOrRegion"></span><br>
+				<span data-id="postcode"></span><br>
+				<span data-id="country"></span>
+			</p>
+			<p><strong>Date of birth:</strong> <span data-id="dobDay"></span>/<span data-id="dobMonth"></span>/<span data-id="dobYear"></span></p>
+		  </div>
+		</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Student information</h3>
+		  </div>
+		  <div class="panel-body">
+		  	<p><strong>LCF student number:</strong> <span data-id="LCFStudentNumber"></span></p>
+			<p>currentJobLocation: <span data-id="currentJobLocation"></span></p>
+		    <p>currentJobStartdate: <span data-id="currentJobStartdate"></span></p>
+		    <p>currentJobStatus: <span data-id="currentJobStatus"></span></p>
+		    <p>currentJobLevel: <span data-id="currentJobLevel"></span></p>
+		    <p>personalStatement: <span data-id="personalStatement"></span></p>
+		  </div>
+		</div>
+	</div>
+</div>

@@ -1,6 +1,7 @@
 ---
 layout: admin-bootstrap
-title: Job Seeker - Account
+title: Job Seeker - Account Edit
+persona: job-seeker
 ---
 
 <div class="page-header">
@@ -42,13 +43,13 @@ title: Job Seeker - Account
 								<div class="form-group clearfix">
 									<label class="col-sm-12">Date of birth</label>
 									<div class="col-sm-2">
-									    <input id="day" type="tel" maxlength="2" class="form-control" placeholder="DD"/>
+									    <input id="dobDay" type="tel" maxlength="2" class="form-control" placeholder="DD"/>
 									</div>
 									<div class="col-sm-2">
-									    <input id="month" type="tel" maxlength="2" class="form-control" placeholder="MM"/>
+									    <input id="dobMonth" type="tel" maxlength="2" class="form-control" placeholder="MM"/>
 									</div>
 									<div class="col-sm-2">
-									    <input id="year" type="tel" maxlength="4" class="form-control" placeholder="YYYY" />
+									    <input id="dobYear" type="tel" maxlength="4" class="form-control" placeholder="YYYY" />
 									</div>
 								</div>
 								<div class="form-group">
@@ -60,10 +61,10 @@ title: Job Seeker - Account
 							</fieldset>
 
 							<fieldset>
-								<legend>LCF Qualification</legend>
+								<legend>Student information</legend>
 								<div class="form-group">
-									<label>LCF student number</label>
-									<input type="text" class="form-control" placeholder="e.g. ABC123456" />
+									<label for="LCFStudentNumber">LCF student number</label>
+									<input id="LCFStudentNumber" type="text" class="form-control" placeholder="e.g. ABC12345678" />
 								</div>
 								<div class="form-group">
 									<label>Qualification</label>

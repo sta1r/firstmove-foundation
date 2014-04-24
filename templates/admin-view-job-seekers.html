@@ -1,0 +1,74 @@
+---
+layout: admin-bootstrap
+title: Job Seekers List
+persona: admin
+---
+
+<div class="page-header">
+	<h1>Job seeker report</h1>
+</div>
+
+
+<div class="control-bar row">
+	<div class="col-md-12">
+		<div class="well clearfix">
+			<div class="control pull-left">
+				<p>Sort by:</p>
+				<div class="btn-group">
+					<button class="btn btn-default btn-sm">Name</button>
+					<button class="btn btn-default btn-sm">Course</button>
+					<button class="btn btn-default btn-sm">Last logged in</button>
+				</div>
+			</div>	
+			<div class="control pull-left">
+				<p>Filter by:</p>
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">Filter <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu">
+				  	<li><a href="#">Year 1</a></li>
+					<li><a href="#">Year 2</a></li>
+					<li><a href="#">Year 3</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Alumni</a></li>	
+				  </ul>
+				</div>
+			</div>
+			<div class="control control-search pull-left">
+				<p>Profile search:</p>
+
+			    <div class="input-group input-group-sm">
+			      <input type="text" class="form-control">
+			      <span class="input-group-btn">
+			        <button class="btn btn-default" type="button">Search</button>
+			      </span>
+			    </div><!-- /input-group -->
+			</div>
+			<div class="control pull-right">
+				<p>With selection:</p>
+				<a href="#" class="btn btn-default btn-sm">Export</a>
+				<a href="#" class="btn btn-default btn-sm">Bulk email</a>
+			</div>	
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div id="students-list"></div>
+				
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<ul class="pagination">
+		  <li class="disabled"><a href="#">&laquo;</a></li>
+		  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+		  <li><a href="#">2</a></li>
+		  <li><a href="#">3</a></li>
+		  <li><a href="#">4</a></li>
+		  <li><a href="#">5</a></li>
+		  <li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+</div>

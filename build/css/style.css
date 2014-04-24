@@ -4396,3 +4396,14 @@ ul.no-bullet {
 
 .job-item {
   border-top: 1px solid #eeeeee; }
+
+.control.pull-left {
+  margin-right: 20px; }
+.control.pull-right {
+  margin-left: 20px; }
+
+.control-search {
+  width: 230px; }
+
+.saved {
+  opacity: 0.5; }

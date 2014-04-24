@@ -58,7 +58,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Job Seeker Account View</a>
+				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Job Seeker Account View</a>
 						</li>
 						
 					
@@ -82,7 +82,7 @@
 					
 						
 						<li>
-				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/job-apply.html">Apply for a job</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply.html">Apply for a job</a>
 						</li>
 						
 					
@@ -146,73 +146,51 @@
 		
 		<ol class="breadcrumb">
 			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-		  	<li class="active">Apply for a job</li>
+		  	<li class="active">Job Seeker Account View</li>
 		</ol>
 		
 		
 		<div class="page-header">
-	<h1>Apply</h1>
+	<h1>Job seeker detail</h1>
 </div>
 
-
-
-
-<div class="row">
-
-	<div class="col-md-6">
-
-		<div class="panel panel-default personal-details-widget">
-			<div class="panel-heading">
-				<h3 class="panel-title">The following details will be submitted with your application:</h3>
-			</div>
-			<table class="table populate" data-populate="job_seeker">
-				<tr><td>Name</td><td data-id="fullName"></td></tr>
-				<tr><td>Email address</td><td data-id="emailAddress"></td></tr>
-			</table>
-			<div class="panel-footer">Not correct? <a href="job-seeker-account.html">Edit</a></div>
-		</div>
-
-		<form role="form" action="job-apply-preview.html">
-			<fieldset>
-				<legend>Your application</legend>
-				<div class="form-group">
-					<label>Cover letter</label>
-					<textarea class="form-control" rows="12"></textarea>
-				</div>
-			</fieldset>
-
-			<button type="submit" class="btn btn-primary">Preview application</button>
-
-		</form>
-	</div>
-
-	<div class="col-md-4 col-md-offset-2 job-details-widget populate" data-populate="job">
+<div class="row populate" data-populate="job_seeker">
+	<div class="col-md-8">
 		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">Job summary</h3>
-			</div>
-			<div class="panel-body" data-id="jobSummary"></div>
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Personal details</h3>
+		  </div>
+		  <div class="panel-body">
+			<p><strong data-id="fullName"></strong></p>
+			<p><a href="#" data-id="emailAddress"></a></p>
+			<p><strong>Address:</strong></p>	
+			<p>
+				<span data-id="addressLine1"></span><br>
+				<span data-id="addressLine2"></span><br>
+				<span data-id="townOrCity"></span><br>
+				<span data-id="countyOrRegion"></span><br>
+				<span data-id="postcode"></span><br>
+				<span data-id="country"></span>
+			</p>
+			<p><strong>Date of birth:</strong> <span data-id="dobDay"></span>/<span data-id="dobMonth"></span>/<span data-id="dobYear"></span></p>
+		  </div>
 		</div>
 
-		<div class="panel panel-default personal-details-widget populate" data-populate="job">
-			<div class="panel-heading">
-				<h3 class="panel-title">Job details</h3>
-			</div>
-			<table class="table">
-				<tr><td>Company</td><td data-id="companyName"></td></tr>
-				<tr><td>Job title</td><td data-id="jobTitle"></td></tr>
-				<tr><td>Job type</td><td data-id="jobType"></td></tr>
-				<tr><td>Length of contract</td><td data-id="jobContractLength"></td></tr>
-				<tr><td>Salary</td><td data-id="jobSalary"></td></tr>
-				<tr><td>Location</td><td data-id="jobLocation"></td></tr>
-				<tr><td>Deadline</td><td data-id="jobApplicationDeadline"></td></tr>
-			</table>
-			<div class="panel-footer"><a href="job-single.html">&larr; Return to full listing</a></div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Student information</h3>
+		  </div>
+		  <div class="panel-body">
+		  	<p><strong>LCF student number:</strong> <span data-id="LCFStudentNumber"></span></p>
+			<p>currentJobLocation: <span data-id="currentJobLocation"></span></p>
+		    <p>currentJobStartdate: <span data-id="currentJobStartdate"></span></p>
+		    <p>currentJobStatus: <span data-id="currentJobStatus"></span></p>
+		    <p>currentJobLevel: <span data-id="currentJobLevel"></span></p>
+		    <p>personalStatement: <span data-id="personalStatement"></span></p>
+		  </div>
 		</div>
-
 	</div>
 </div>
-
 
 	</div> <!-- /container -->
 

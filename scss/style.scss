@@ -60,3 +60,22 @@ ul.no-bullet {
 .job-item {
 	border-top: 1px solid $gray-lighter;
 }
+
+// Control bar
+.control {
+	&.pull-left {
+		margin-right: 20px;
+	}
+	&.pull-right {
+		margin-left: 20px;
+	}
+}
+
+.control-search {
+	width: 230px;
+}
+
+// LISTS
+.saved {
+	opacity: 0.5;
+}

@@ -48,9 +48,6 @@ jQuery(document).ready( function($) {
 
 
 
-
-
-
 	$('.populate').each( function(i) {
 		scanDomAndPopulate($(this), $(this).data('populate'));
 	});
@@ -79,4 +76,22 @@ jQuery(document).ready( function($) {
 	// 	'<p>Name: ' + job_seeker.firstName + ' ' + job_seeker.lastName + '</p>' +
 	// 	'<p>Email address: ' + job_seeker.emailAddress + '</p>'
 	// );
+
+	// PUSH DUMMY STUDENTS INTO TABLE ROWS
+	if ($('#students-list').length) {
+		
+		var output = '<table class="table table-striped"><thead><tr><th>Flag</th><th>Name</th><th>Course</th><th>Email address</th><th>Actions</th></tr></thead><tbody>';
+		
+		for (i = 0; i < 20; i++) {
+			
+			output += '<tr><td><span class="glyphicon glyphicon-flag"></i></td><td>Dave Jones</td><td>BA Fashion Management</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td><a class="btn btn-primary btn-xs" href="admin-view-job-seeker.html">View detail</a></td></tr>';
+			
+		}
+		
+		output += '</table>';
+		
+		$('#students-list').html(output);
+		
+		
+	}
 });
