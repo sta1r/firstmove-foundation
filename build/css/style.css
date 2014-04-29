@@ -4544,8 +4544,13 @@ ul.no-bullet {
   float: left;
   width: 100%; }
 
-.logged-in, .hidden-message {
+.hidden-message, .hidden-control, .admin-control {
   display: none; }
+
+.logged-in {
+  display: block; }
+  .logged-in.btn {
+    display: inline-block; }
 
 
 .job-item {

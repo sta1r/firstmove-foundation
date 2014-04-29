@@ -8,24 +8,94 @@ jQuery(document).ready( function($) {
 		// cache
 		var node = $(DOMnode);
 
-		// loop
-		for (var key in object){
-		    if (object.hasOwnProperty(key)) {
+		if (node.hasClass('form-categories')) {
 
-		console.log(key);
-		        if (node.find('#' + key).length) {
+			var checkboxes = '';
 
-		        	node.find('#' + key).val(object[key]);
-		        	
-		        } else if (node.find('*[data-id="' + key + '"]').length) {
+        	object.forEach(function(item) {
 
-		        	node.find('*[data-id="' + key + '"]').html(object[key]);
+        		checkboxes += '<div class="checkbox"><label><input type="checkbox">' + item.name + '</label></div>';
+
+        	});
+
+        	node.append(checkboxes);
+
+        }
+
+        else if (node.hasClass('form-categories-inline')) {
+
+        	var inlineCheckboxes = '';
+
+        	object.forEach(function(item) {
+
+        		inlineCheckboxes += '<div class="col-md-3"><div class="checkbox-inline"><label><input type="checkbox">' + item.name + '</label></div></div>';
+
+        	});
+
+        	node.append(inlineCheckboxes);
+
+        }
+
+        else if (node.hasClass('dropdown-categories')) {
+
+        	var ddItems = '';
+
+        	object.forEach(function(item) {
+
+        		ddItems += '<li><a href="#">' + item.name + '</a></li>';
+
+        	});
+
+        	node.append(ddItems);
+
+        }
+
+        else if (node.hasClass('list-categories')) {
+
+        	var listItems = '';
+
+        	object.forEach(function(item) {
+
+        		listItems += '<a href="#" class="list-group-item"><span class="badge">' + item.total + '</span>' + item.name + '</a>';
+        	
+        	});
+
+        	node.append(listItems);
+
+        } 
+
+
+
+
+
+
+
+        else {
+
+			// loop
+			for (var key in object){
+			    if (object.hasOwnProperty(key)) {
+
+			        if (node.find('#' + key).length) {
+
+			        	node.find('#' + key).val(object[key]);
+			        	
+			        } else if (node.find('*[data-id="' + key + '"]').length) {
+
+			        	node.find('*[data-id="' + key + '"]').html(object[key]);
+
+			        }
 
 		        }
-		    }
+
+			}
+
 		}
 
 	}
+
+	//console.log(job_data['job_categories']);
+
 
 	function GetURLParameter(sParam)
 	{
@@ -43,9 +113,12 @@ jQuery(document).ready( function($) {
 
 
 	if (GetURLParameter('logged-in')) {
-		$('.logged-in').show();
+		$('.hidden-control').addClass('logged-in');
 	}
 
+	if (GetURLParameter('logged-in') == 'admin') {
+		$('.admin-control').addClass('logged-in');
+	}
 
 
 	$('.populate').each( function(i) {
@@ -92,26 +165,25 @@ jQuery(document).ready( function($) {
 		
 		$('#students-list').html(output);
 		
-		
 	}
 
 	// PUSH DUMMY PLACEMENTS INTO TABLE ROWS
-	if ($('#admin-placements-list').length) {
+	if ($('#admin-jobs-list').length) {
 		
-		var output = '<table class="table table-striped"><thead><tr><th>Status</th><th>Date posted</th><th>Company</th><th>Role</th><th>Duration</th><th>Students interested</th></tr></thead><tbody>';
+		var output = '<table class="table table-striped"><thead><tr><th>Status</th><th>Date posted</th><th>Company</th><th>Role</th><th>Views</th><th>Actions</th></tr></thead><tbody>';
 		
 		for (i = 0; i < 10; i++) {
 			
-			output += '<tr><td><span class="label label-success">Live</span></td><td>10 October 2012</td><td>Debenhams</td><td>Retail assistant</td><td>6-8 weeks</td><td><span class="badge badge-info">16</span></td>';
+			output += '<tr><td><span class="label label-success">Live</span></td><td>10 October 2012</td><td>Debenhams</td><td>Retail assistant</td><td><span class="badge badge-info">16</span></td>';
 			
 			// Actions and buttons
-			output += '<td><div class="btn-group"><a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#">Status <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="#">Draft</a></li><li><a href="#">Private</a></li></ul></div></td><td><button class="btn btn-small btn-info">View detail</button></td><td><button class="btn btn-small btn-danger" data-role="delete-item">Delete</button></td></tr>';
+			output += '<td><button class="btn btn-sm btn-info">View detail</button> <button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button></td></tr>';
 			
 		}
 		
 		output += '</table>';
 		
-		$('#admin-placements-list').html(output);
+		$('#admin-jobs-list').html(output);
 		
 		
 	}

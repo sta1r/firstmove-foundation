@@ -178,7 +178,8 @@
 		<ul class="nav nav-tabs">
 			<li><a href="#home" data-toggle="tab">Home</a></li>
 			<li class="active"><a href="#personal-details" data-toggle="tab">Personal details</a></li>
-			<li><a href="#password" data-toggle="tab">Password</a></li>
+			<li><a href="#student-information" data-toggle="tab">Student information</a></li>
+			<li><a href="#biographical-details" data-toggle="tab">Biography</a></li>
 			<li><a href="#settings" data-toggle="tab">Settings</a></li>
 		</ul>
 	</div>
@@ -251,6 +252,16 @@
 			</fieldset>
 
 
+							<button type="submit" class="btn btn-primary updated">Update</button>
+						</form>
+					</div>
+				</div>
+		  	</div>
+
+		  	<div class="tab-pane" id="biographical-details">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated" class="populate" data-populate="job_seeker">
 														<fieldset class="form-horizontal">
 								<legend>About you</legend>
 								<div class="form-group clearfix">
@@ -274,28 +285,33 @@
 								<div class="form-group">
 									<div class="col-sm-12">
 										<label>Personal statement</label>
-										<textarea class="form-control" rows="6" id="personalStatement"></textarea>
+										<textarea class="form-control" rows="8" id="personalStatement"></textarea>
 									</div>
 								</div>
 							</fieldset>
 
 
-							<fieldset>
+							<button type="submit" class="btn btn-primary updated">Update</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		  	<div class="tab-pane" id="student-information">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated" class="populate" data-populate="job_seeker">	
+														<fieldset>
 								<legend>Student information</legend>
 								<div class="form-group">
 									<label for="LCFStudentNumber">LCF student number</label>
 									<input id="LCFStudentNumber" type="text" class="form-control" placeholder="e.g. ABC12345678" />
 								</div>
 								<div class="form-group">
-									<label>Qualification</label>
-									<select class="form-control">
-										<option value="husker">List of courses</option>
-										<option value="starbuck">?</option>
-										<option value="hotdog">?</option>
-										<option value="apollo">?</option>
-									</select>
+									<label>Course</label>
+									<input id="LCFCourse" type="text" class="form-control" placeholder="" />
 								</div>
-								<div class="form-group">
+<!-- 								<div class="form-group">
 									<label>Grade</label>
 									<select class="form-control">
 										<option value="husker">N/A</option>
@@ -303,42 +319,50 @@
 										<option value="hotdog">?</option>
 										<option value="apollo">?</option>
 									</select>
-								</div>
+								</div> -->
 								<div class="form-group">
 									<label for="graduationYear">Graduation year</label>
 									<input id="graduationYear" type="text" class="form-control" placeholder="" />
 								</div>
 							</fieldset>
 
+
 							<button type="submit" class="btn btn-primary updated">Update</button>
 						</form>
 					</div>
 				</div>
-		  	</div>
+			</div>
 
-		  	<div class="tab-pane" id="password">
+		  	<div class="tab-pane" id="settings">
 		  		<div class="row">
 			  		<div class="col-md-6">
-						<form>
-					  		<div class="form-group">
-								<div class="col-sm-12">
+						<form action="#updated">
+							<fieldset>
+								<legend>Reset your password</legend>
+						  		<div class="form-group">
 									<label for="addressLine2">Password</label>
 									<input type="text" class="form-control" id="password" placeholder="" />
 								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
+								<div class="form-group">
 									<label for="townOrCity">Confirm</label>
 									<input type="text" class="form-control" id="passwordConfirm" placeholder="" />
 								</div>
-							</div>
+							</fieldset>
+							<fieldset>
+								<legend>Notifications</legend>
+								<div class="checkbox">
+								  <label>
+								    <input type="checkbox" value="">
+								    Send me email about jobs, events
+								  </label>
+								</div>
+							</fieldset>
 						</form>
 					</div>
 				</div>
 
 			</div>
 
-		  	<div class="tab-pane" id="settings">...</div>
 		</div>
 
 	</div>

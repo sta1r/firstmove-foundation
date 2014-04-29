@@ -48,8 +48,15 @@ ul.no-bullet {
 }
 
 // Hidden elements for alerts 
-.logged-in, .hidden-message {
+.hidden-message, .hidden-control, .admin-control {
 	display: none;
+}
+
+.logged-in {
+	display: block;
+	&.btn {
+		display: inline-block;
+	}
 }
 
 // Typography
