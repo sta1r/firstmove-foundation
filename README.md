@@ -1,8 +1,12 @@
 ## A new suite of front-end templates for LCF FirstMove
 
-Built using [Zurb Foundation with Grunt + Libsass](http://foundation.zurb.com/docs/sass.html).
+* [View demo site](http://strangerpixel.com/firstmove-foundation/)
 
 ## Requirements
+
+
+
+## Run it yourself
 
 You'll need to have the following items installed first of all:
 
@@ -11,7 +15,7 @@ You'll need to have the following items installed first of all:
   * [Bower](http://bower.io): Run `[sudo] npm install -g bower`
   * [Jekyll](http://jekyllrb.com/): Run `[sudo] gem install jekyll`
 
-## Quickstart
+Then:
 
 1. `git clone https://github.com/strangerpixel/firstmove-foundation.git`
 
@@ -21,8 +25,9 @@ You'll need to have the following items installed first of all:
 
 4. `npm install && bower install`
 
+
 While you're working on your project, run:
 
 `grunt`
 
-The `watch` task watches for changes to scss files and html inside the `/templates`, `/_layouts` and `/_includes` directories.
+The `watch` task watches for changes to scss files, as well as html inside the `/templates`, `/_layouts` and `/_includes` directories.
