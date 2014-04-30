@@ -11,7 +11,7 @@ title: Home
 
 <h2>Global layouts</h2>
 <ul>
-  {% for p in site.pages %}
+  {% for p in site.pages order:ascending %}
     {% if p.persona == 'all' %}
 	  <li>
 	    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">
