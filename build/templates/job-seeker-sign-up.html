@@ -39,7 +39,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="#">FirstMove</a>
+		  <a class="navbar-brand" href="http://strangerpixel.com/firstmove-foundation">FirstMove</a>
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
@@ -48,6 +48,7 @@
 			  	<ul class="dropdown-menu">
 					<li><a href="?logged-in=true">Logged in</a></li>
 					<li><a href="?">Logged out</a></li>
+					<li><a href="?logged-in=admin">Admin</a></li>
 			  	</ul>
 			</li>
 			<li class="dropdown">
@@ -176,20 +177,59 @@
 
 	<div class="col-md-6">
 
-		<form action="#updated">
-						<fieldset class="form-horizontal">
-				<legend>Your details</legend>
+		<form action="#updated" class="job-seeker-sign-up">
+			<fieldset class="form-horizontal add-bottom">
+				<!-- <legend>About you</legend> -->
 				<div class="form-group">
-					<div class="col-sm-6">
+	                <label class="col-md-12">I have an arts.ac.uk email address:</label>
+	                <div class="col-md-12 LDAP-account-select">
+	                    <label class="radio-inline">
+	                        <input type="radio" name="optionsRadios" id="LDAPAccountYes" value="yes" checked> Yes
+	                    </label>
+	                    <label class="radio-inline">
+	                        <input type="radio" name="optionsRadios" id="LDAPAccountNo" value="no"> No
+	                    </label>
+						<span class="help-block">If you have an arts.ac.uk email address, please use this to sign up - it will speed up your registration process. You will have the option to change your preferred email address and password after registration.</span>
+	                </div>
+	            </div>
+	            <div class="form-group">
+					<div class="col-sm-12">
+						<label for="LDAPEmailAddress">Email address</label>
+						<input type="text" class="form-control" id="LDAPEmailAddress" placeholder="" />
+						<span class="help-block">This should end in arts.ac.uk</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label for="LDAPPassword">Password</label>
+						<input type="text" class="form-control" id="LDAPPassword" placeholder="" />
+					</div>
+					<span class="help-block"></span>
+				</div>
+        	</fieldset>
+
+						<fieldset class="form-horizontal add-bottom">
+				<legend>Your details</legend>
+
+				<div class="form-group">
+					<div class="col-sm-2">				
+						<label for="country">Title</label>
+						<select class="form-control">
+						  <option>Mr</option>
+						  <option>Mrs</option>
+						  <option>Ms</option>
+						</select>
+					</div>
+					<div class="col-sm-5">
 						<label for="firstName">First name</label>
 						<input type="text" class="form-control" id="firstName" placeholder="" />	
 					</div>
-					<div class="col-sm-6">
+					<div class="col-sm-5">
 						<label for="lastName">Last name</label>
 						<input type="text" class="form-control" id="lastName" placeholder="" />
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group LDAP-optional">
 					<div class="col-sm-12">
 						<label for="emailAddress">Email address</label>
 						<input type="text" class="form-control" id="emailAddress" placeholder="" />
@@ -236,7 +276,7 @@
 
 										<fieldset>
 								<legend>Student information</legend>
-								<div class="form-group">
+								<div class="form-group LDAP-optional">
 									<label for="LCFStudentNumber">LCF student number</label>
 									<input id="LCFStudentNumber" type="text" class="form-control" placeholder="e.g. ABC12345678" />
 								</div>

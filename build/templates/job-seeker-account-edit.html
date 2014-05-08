@@ -39,7 +39,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="#">FirstMove</a>
+		  <a class="navbar-brand" href="http://strangerpixel.com/firstmove-foundation">FirstMove</a>
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
@@ -48,6 +48,7 @@
 			  	<ul class="dropdown-menu">
 					<li><a href="?logged-in=true">Logged in</a></li>
 					<li><a href="?">Logged out</a></li>
+					<li><a href="?logged-in=admin">Admin</a></li>
 			  	</ul>
 			</li>
 			<li class="dropdown">
@@ -176,11 +177,12 @@
 	<div class="col-md-12 add-bottom">
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs">
-			<li><a href="#home" data-toggle="tab">Home</a></li>
+			<!-- <li><a href="#home" data-toggle="tab">Home</a></li> -->
 			<li class="active"><a href="#personal-details" data-toggle="tab">Personal details</a></li>
 			<li><a href="#student-information" data-toggle="tab">Student information</a></li>
 			<li><a href="#biographical-details" data-toggle="tab">Biography</a></li>
 			<li><a href="#settings" data-toggle="tab">Settings</a></li>
+			<li class="admin-control"><a href="#admin-notes" data-toggle="tab">Admin</a></li>
 		</ul>
 	</div>
 
@@ -189,25 +191,34 @@
 		<!-- Tab panes -->
 		<div class="tab-content">
 		  	
-		  	<div class="tab-pane" id="home">...</div>
+		  	<!-- <div class="tab-pane" id="home">...</div> -->
 
 		  	<div class="tab-pane active" id="personal-details">
 		  		<div class="row">
 			  		<div class="col-md-6">
 						<form action="#updated" class="populate" data-populate="job_seeker">
-										<fieldset class="form-horizontal">
+										<fieldset class="form-horizontal add-bottom">
 				<legend>Your details</legend>
+
 				<div class="form-group">
-					<div class="col-sm-6">
+					<div class="col-sm-2">				
+						<label for="country">Title</label>
+						<select class="form-control">
+						  <option>Mr</option>
+						  <option>Mrs</option>
+						  <option>Ms</option>
+						</select>
+					</div>
+					<div class="col-sm-5">
 						<label for="firstName">First name</label>
 						<input type="text" class="form-control" id="firstName" placeholder="" />	
 					</div>
-					<div class="col-sm-6">
+					<div class="col-sm-5">
 						<label for="lastName">Last name</label>
 						<input type="text" class="form-control" id="lastName" placeholder="" />
 					</div>
 				</div>
-				<div class="form-group">
+				<div class="form-group LDAP-optional">
 					<div class="col-sm-12">
 						<label for="emailAddress">Email address</label>
 						<input type="text" class="form-control" id="emailAddress" placeholder="" />
@@ -264,22 +275,25 @@
 						<form action="#updated" class="populate" data-populate="job_seeker">
 														<fieldset class="form-horizontal">
 								<legend>About you</legend>
-								<div class="form-group clearfix">
-									<label class="col-sm-12">Date of birth</label>
-									<div class="col-sm-2">
-									    <input id="dobDay" type="tel" maxlength="2" class="form-control" placeholder="DD"/>
-									</div>
-									<div class="col-sm-2">
-									    <input id="dobMonth" type="tel" maxlength="2" class="form-control" placeholder="MM"/>
-									</div>
-									<div class="col-sm-2">
-									    <input id="dobYear" type="tel" maxlength="4" class="form-control" placeholder="YYYY" />
-									</div>
-								</div>
 								<div class="form-group">
 									<div class="col-sm-12">
 										<label for="nationality">Nationality</label>
 										<input id="nationality" type="text" class="form-control" placeholder="" />
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<label for="homeCountry">Home country</label>
+										<select class="form-control">
+						  					<option>United Kingdom</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<label for="jobLocation">Desired job locations</label>
+										<input id="jobLocation" type="text" class="form-control" placeholder="" />
+										<span class="help-block">Enter places separated by a comma e.g. New York, London, India</span>
 									</div>
 								</div>
 								<div class="form-group">
@@ -289,7 +303,6 @@
 									</div>
 								</div>
 							</fieldset>
-
 
 							<button type="submit" class="btn btn-primary updated">Update</button>
 						</form>
@@ -303,7 +316,7 @@
 						<form action="#updated" class="populate" data-populate="job_seeker">	
 														<fieldset>
 								<legend>Student information</legend>
-								<div class="form-group">
+								<div class="form-group LDAP-optional">
 									<label for="LCFStudentNumber">LCF student number</label>
 									<input id="LCFStudentNumber" type="text" class="form-control" placeholder="e.g. ABC12345678" />
 								</div>
@@ -352,15 +365,51 @@
 								<legend>Notifications</legend>
 								<div class="checkbox">
 								  <label>
-								    <input type="checkbox" value="">
-								    Send me email about jobs, events
+								    <input type="checkbox" value="" checked>
+								    Send me email about careers events and special promotions
 								  </label>
+								</div>
+							</fieldset>
+							<fieldset>
+								<legend>Jobs bulletin</legend>
+								<div class="form-group populate form-categories" data-populate="job_categories">
+									<label>Job preferences</label>
+								</div>
+								<div class="form-group">
+									<label>Frequency</label>
+									<div class="checkbox">
+										<label>
+									    	<input type="checkbox" value="">
+									    	Email me when any matching job is posted
+										</label>
+									</div>
+									<div class="checkbox">
+									    <label>
+									    	<input type="checkbox" value="" checked>
+									    	Email me a weekly digest of matching jobs 
+									  </label>
+									</div>
 								</div>
 							</fieldset>
 						</form>
 					</div>
 				</div>
+			</div>
 
+			<div class="tab-pane" id="admin-notes">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated" class="populate" data-populate="job_seeker">	
+							<fieldset>
+								<legend>Notes</legend>
+								<div class="form-group">
+									<textarea class="form-control" rows="8" id="adminNotes"></textarea>
+								</div>
+							</fieldset>
+							<button type="submit" class="btn btn-primary updated">Update</button>
+						</form>
+					</div>
+				</div>
 			</div>
 
 		</div>
