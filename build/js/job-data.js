@@ -57,28 +57,64 @@ var job_data = {
             "total": 14
         },
         {
+            "name": "Allocator",
+            "total": 3
+        },
+        {
+            "name": "Beauty Spa Management",
+            "total": 14
+        },
+        {
             "name": "Buying",
             "total": 4
         },
         {
+            "name": "Creative Direction",
+            "total": 14
+        },        
+        {
             "name": "Design",
             "total": 5
+        },
+        {
+            "name": "Digital",
+            "total": 19
+        },
+        {
+            "name": "Journalism",
+            "total": 14
+        },
+        {
+            "name": "Make Up Artistry",
+            "total": 14
         },
         {
             "name": "Marketing",
             "total": 5
         },
         {
+            "name": "Merchandising",
+            "total": 14
+        },
+        {
+            "name": "Performance Design",
+            "total": 14
+        },        
+        {
             "name": "Photography",
             "total": 5
         },
         {
-            "name": "Product development",
+            "name": "Product Development",
             "total": 5
         },
         {
-            "name": "Public relations",
+            "name": "Public Relations",
             "total": 5
+        },
+        {
+            "name": "Research & Development",
+            "total": 14
         },
         {
             "name": "Retail",
@@ -89,7 +125,11 @@ var job_data = {
             "total": 5
         },
         {
-            "name": "Visual merchandising",
+            "name": "Styling",
+            "total": 14
+        },
+        {
+            "name": "Visual Merchandising",
             "total": 5
         }   
     ]

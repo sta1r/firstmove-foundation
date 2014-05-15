@@ -1,74 +1,105 @@
-			<fieldset>
+			<fieldset class="form-horizontal">
 				<legend>Job details</legend>
 				<div class="form-group">
-					<label>Job title</label>
-					<input type="text" class="form-control" id="jobTitle" placeholder="" />
-					
+					<div class="col-sm-12">
+						<label>Job title</label>
+						<input type="text" class="form-control" id="jobTitle" placeholder="" />
+					</div>
 				</div>
 				<div class="form-group">
-					<label>Job location</label>
-					<input type="text" class="form-control" id="jobLocation" placeholder="" />
+					<div class="col-sm-12">
+						<label>Job location</label>
+						<input type="text" class="form-control" id="jobLocation" placeholder="" />
+					</div>				
 				</div>
 				<div class="form-group">
-					<label>Description</label>
-					<textarea class="form-control" rows="3" id="jobDescription"></textarea>
+					<div class="col-sm-12">
+						<label>Description</label>
+						<textarea class="form-control" rows="3" id="jobDescription"></textarea>
+					</div>				
 				</div>
 				<div class="form-group">
-					<label>Job type</label>
-					<select class="form-control">
-						<option value="husker">Short term work experience</option>
-						<option value="starbuck">Long term work placement</option>
-						<option value="hotdog">Graduate job</option>
-						<option value="apollo">Graduate freelance</option>
-					</select>
+					<div class="col-sm-12">
+						<label>Job type</label>
+						<select class="form-control">
+							<option value="husker">Short term work experience</option>
+							<option value="starbuck">Long term work placement</option>
+							<option value="hotdog">Freelance / Contract</option>
+							<option value="apollo">Full time</option>
+						</select>
+					</div>
 				</div>
 				<div class="form-group">
-					<label>Length of contract</label>
-					<select class="form-control">
-						<option value="apollo">Negotiable</option>
-						<option value="apollo">Permanent</option>
-						<option value="husker">4 weeks</option>
-						<option value="hotdog">3 months</option>
-						<option value="apollo">6 months</option>
-						<option value="apollo">12 months</option>
-					</select>
+					<label class="col-md-12">Length of contract</label>
+					<div class="col-sm-2">
+						<select class="form-control">
+							<option value="apollo">1</option>
+							<option value="apollo">2</option>
+							<option value="husker">3</option>
+							<option value="hotdog">4</option>
+							<option value="apollo">5</option>
+							<option value="apollo">6</option>
+							<option value="apollo">7</option>
+							<option value="apollo">8</option>
+							<option value="apollo">9</option>
+							<option value="apollo">10</option>
+							<option value="apollo">11</option>
+							<option value="apollo">12</option>				
+						</select>
+					</div>
+					<div class="col-sm-4">
+						<select class="form-control">
+							<option value="apollo">weeks</option>
+							<option value="apollo">months</option>
+							<option value="husker">years</option>
+						</select>
+					</div>
 				</div>
-				
 				<div class="form-group">
-					<label>Salary range</label>
-					<select class="form-control">
-						<option value="11">Negotiable</option>
-						<option value="12">£13k (NMW)</option>
-						<option value="13">£14k - £16k</option>
-						<option value="14">£16k - £18k</option>
-						<option value="5">£18K - £20K</option>
-						<option value="15">£20k - £22k</option>
-						<option value="16">£22k - £24k</option>
-						<option value="17">£25k+ (Please specify)</option>
-					</select>
+					<div class="col-sm-12">
+						<label>Salary range</label>
+						<select class="form-control">
+							<option value="11">Negotiable</option>
+							<option value="12">£13k (NMW)</option>
+							<option value="13">£14k - £16k</option>
+							<option value="14">£16k - £18k</option>
+							<option value="5">£18K - £20K</option>
+							<option value="15">£20k - £22k</option>
+							<option value="16">£22k - £24k</option>
+							<option value="17">£25k+ (Please specify)</option>
+						</select>
+					</div>
 				</div>
 
 				<div class="form-group">
-					<label>Salary (specific)</label>
-					<input type="text" class="form-control" placeholder="" />
+					<div class="col-sm-12">
+						<label>Salary (specific)</label>
+						<input type="text" class="form-control" placeholder="" />
+					</div>
 				</div>
 
 				<div class="form-group populate form-categories" data-populate="job_categories">
-					<label>Categories</label>
+					<label class="col-sm-12">Categories</label>
 				</div>
 				
 				<div class="form-group">
-					<label>Application deadline</label>
-					<input type="datetime" class="form-control" placeholder="" />
+					<div class="col-sm-12">
+						<label>Application deadline</label>
+						<input type="datetime" class="form-control" placeholder="" />
+					</div>
 				</div>
 
 				<div class="form-group">
-					<label>Company name</label>
-					<input type="text" class="form-control" placeholder="" />
+					<div class="col-sm-12">
+						<label>Company name</label>
+						<input type="text" class="form-control" placeholder="" />
+					</div>
 				</div>
 
 				<div class="form-group">
-					<label>Company URL</label>
-					<input type="text" class="form-control" placeholder="http://" />
+					<div class="col-sm-12">
+						<label>Company URL</label>
+						<input type="text" class="form-control" placeholder="http://" />
+					</div>
 				</div>
 			</fieldset>

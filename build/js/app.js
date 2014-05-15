@@ -14,7 +14,7 @@ jQuery(document).ready( function($) {
 
         	object.forEach(function(item) {
 
-        		checkboxes += '<div class="checkbox"><label><input type="checkbox">' + item.name + '</label></div>';
+        		checkboxes += '<div class="checkbox col-md-12"><label><input type="checkbox">' + item.name + '</label></div>';
 
         	});
 
