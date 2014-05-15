@@ -1,0 +1,151 @@
+---
+layout: admin-bootstrap
+title: Recruiter - Account Edit
+persona: recruiter
+---
+
+<div class="pull-right account-status">
+	<p><small>You are signed in as <a href="#">Francesca Smith</a></small></p>
+</div>
+
+<div class="page-header">
+	<h1>Your account</h1>
+</div>
+
+<div class="row">
+	{% include _message-account-update.html %}
+	
+    <div class="col-md-4 pull-right add-bottom">
+		<a href="recruiter-post-job.html" class="pull-right btn btn-success">Post a new job</a>
+	</div><!-- /.col-lg-6 -->
+
+	<div class="col-md-12 add-bottom">
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs">
+			<!-- <li><a href="#home" data-toggle="tab">Home</a></li> -->
+			<li class="active"><a href="#my-jobs" data-toggle="tab">Your jobs</a></li>
+			<li><a href="#personal-details" data-toggle="tab">Personal details</a></li>
+			<li><a href="#settings" data-toggle="tab">Settings</a></li>
+			<li class="admin-control"><a href="#admin-notes" data-toggle="tab">Admin</a></li>
+		</ul>
+	</div>
+
+
+	<div class="col-md-12">
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+		  	
+		  	<!-- <div class="tab-pane" id="home">...</div> -->
+			<div class="tab-pane active" id="my-jobs">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Date posted</th>
+							<th>Role</th>
+							<th>Views</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="label label-info">Draft</span>
+							</td>
+							<td>15 May 2014</td>
+							<td>Studio Photographer (6 month Fixed Term Contract)</td>
+							<td>
+								<span class="badge badge-info">0</span>
+							</td>
+							<td>
+								<a href="job-single.html?logged-in=recruiter" class="btn btn-sm btn-primary">View draft</a>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-success">Live</span>
+							</td>
+							<td>10 May 2014</td>
+							<td>Allocator</td>
+							<td>
+								<span class="badge badge-info">4</span>
+							</td>
+							<td>
+								<a href="job-single.html?logged-in=recruiter" class="btn btn-sm btn-primary">View</a>
+								<button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-default">Expired</span>
+							</td>
+							<td>5 February 2014</td>
+							<td>Retail assistant</td>
+							<td>
+								<span class="badge badge-info">120</span>
+							</td>
+							<td>
+								<a href="job-single.html?logged-in=recruiter" class="btn btn-sm btn-primary">View</a>
+								<a href="#" class="btn btn-sm btn-success">Re-open</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-default">Expired</span>
+							</td>
+							<td>10 October 2012</td>
+							<td>Experienced Freelance Journalist  (FR/EN)</td>
+							<td>
+								<span class="badge badge-info">16</span>
+							</td>
+							<td>
+								<a href="job-single.html?logged-in=recruiter" class="btn btn-sm btn-primary">View</a>
+								<a href="#" class="btn btn-sm btn-success">Post as new</a>
+							</td>
+						</tr>
+					</tbody>
+				</table></div>
+
+		  	<div class="tab-pane" id="personal-details">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated" class="populate" data-populate="recruiter">
+							{% include _personal-details.html %}
+
+							<button type="submit" class="btn btn-primary updated">Update</button>
+						</form>
+					</div>
+				</div>
+		  	</div>
+
+		  	<div class="tab-pane" id="settings">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated">
+							{% include _field-password-edit.html %}
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane" id="admin-notes">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated" class="populate" data-populate="recruiter">	
+							<fieldset>
+								<legend>Notes</legend>
+								<div class="form-group">
+									<textarea class="form-control" rows="8" id="adminNotes"></textarea>
+								</div>
+							</fieldset>
+							<button type="submit" class="btn btn-primary updated">Update</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

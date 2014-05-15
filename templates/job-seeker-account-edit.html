@@ -9,11 +9,7 @@ persona: job-seeker
 </div>
 
 <div class="row">
-	<div class="col-md-12">
-		<div id="message-updated" class="hidden-message alert alert-success">
-			<p><strong>Success!</strong> Your account has been updated.</p>
-		</div>
-	</div>
+	{% include _message-account-update.html %}
 
 	<div class="col-md-12 add-bottom">
 		<!-- Nav tabs -->
@@ -74,18 +70,8 @@ persona: job-seeker
 		  		<div class="row">
 			  		<div class="col-md-6">
 						<form action="#updated">
-							<fieldset>
-								<legend>Reset your password</legend>
-						  		<div class="form-group">
-									<label for="addressLine2">Password</label>
-									<input type="text" class="form-control" id="password" placeholder="" />
-								</div>
-								<div class="form-group">
-									<label for="townOrCity">Confirm</label>
-									<input type="text" class="form-control" id="passwordConfirm" placeholder="" />
-								</div>
-							</fieldset>
-							<fieldset>
+							{% include _field-password-edit.html %}
+							<fieldset class="add-bottom">
 								<legend>Notifications</legend>
 								<div class="checkbox">
 								  <label>

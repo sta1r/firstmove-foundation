@@ -111,7 +111,7 @@ jQuery(document).ready( function($) {
 	    }
 	}
 
-	$('.admin-control').hide();
+	$('.admin-control, .recruiter-control').hide();
 
 
 	if (GetURLParameter('logged-in')) {
@@ -120,6 +120,11 @@ jQuery(document).ready( function($) {
 
 	if (GetURLParameter('logged-in') == 'admin') {
 		$('.admin-control').show();
+	}
+
+	if (GetURLParameter('logged-in') == 'recruiter') {
+		$('.recruiter-control').show();
+		$('.apply-button').addClass('disabled');
 	}
 
 
@@ -170,11 +175,14 @@ jQuery(document).ready( function($) {
 	}
 
 	// PUSH DUMMY PLACEMENTS INTO TABLE ROWS
-	if ($('#admin-jobs-list').length) {
+	var tabular_jobs = $('#tabular-jobs-list');
+	var tabular_jobs_count = tabular_jobs.data('count');
+
+	if (tabular_jobs.length) {
 		
 		var output = '<table class="table table-striped"><thead><tr><th>Status</th><th>Date posted</th><th>Company</th><th>Role</th><th>Views</th><th>Actions</th></tr></thead><tbody>';
 		
-		for (i = 0; i < 10; i++) {
+		for (i = 0; i < tabular_jobs_count; i++) {
 			
 			output += '<tr><td><span class="label label-success">Live</span></td><td>10 October 2012</td><td>Debenhams</td><td>Retail assistant</td><td><span class="badge badge-info">16</span></td>';
 			
@@ -185,7 +193,7 @@ jQuery(document).ready( function($) {
 		
 		output += '</table>';
 		
-		$('#admin-jobs-list').html(output);
+		tabular_jobs.html(output);
 		
 		
 	}

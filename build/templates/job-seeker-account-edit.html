@@ -46,9 +46,11 @@
 		  	<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
-					<li><a href="?logged-in=true">Logged in</a></li>
-					<li><a href="?">Logged out</a></li>
-					<li><a href="?logged-in=admin">Admin</a></li>
+					<li><a href="?logged-in=true">Logged in (generic)</a></li>
+					<li><a href="?logged-in=job_seeker">Logged in as Job Seeker</a></li>
+					<li><a href="?logged-in=recruiter">Logged in as Recruiter</a></li>
+					<li><a href="?logged-in=admin">Logged in as Admin</a></li>
+					<li><a href="?">Log out</a></li>
 			  	</ul>
 			</li>
 			<li class="dropdown">
@@ -59,25 +61,25 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-activity-report.html">Activity Report</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-activity-report.html">Admin - Activity Report</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-field-spec.html">Editable fields</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-field-spec.html">Admin - Editable fields</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-jobs-report.html">Jobs Report</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-jobs-report.html">Admin - Jobs Report</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Job Seeker Account View</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Job Seeker Detail View</a>
 						</li>
 						
 					
@@ -131,6 +133,12 @@
 					
 						
 						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-account-edit.html">Recruiter - Account Edit</a>
+						</li>
+						
+					
+						
+						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-edit-job.html">Recruiter - edit job</a>
 						</li>
 						
@@ -138,12 +146,6 @@
 						
 						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job.html">Recruiter - post new job</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-view-jobs.html">Recruiter - view my jobs</a>
 						</li>
 						
 					
@@ -174,7 +176,7 @@
 </div>
 
 <div class="row">
-	<div class="col-md-12">
+		<div class="col-md-12">
 		<div id="message-updated" class="hidden-message alert alert-success">
 			<p><strong>Success!</strong> Your account has been updated.</p>
 		</div>
@@ -356,18 +358,18 @@
 		  		<div class="row">
 			  		<div class="col-md-6">
 						<form action="#updated">
-							<fieldset>
-								<legend>Reset your password</legend>
-						  		<div class="form-group">
-									<label for="addressLine2">Password</label>
-									<input type="text" class="form-control" id="password" placeholder="" />
-								</div>
-								<div class="form-group">
-									<label for="townOrCity">Confirm</label>
-									<input type="text" class="form-control" id="passwordConfirm" placeholder="" />
-								</div>
-							</fieldset>
-							<fieldset>
+							<fieldset class="add-bottom">
+	<legend>Reset your password</legend>
+		<div class="form-group">
+		<label for="addressLine2">Password</label>
+		<input type="text" class="form-control" id="password" placeholder="" />
+	</div>
+	<div class="form-group">
+		<label for="townOrCity">Confirm</label>
+		<input type="text" class="form-control" id="passwordConfirm" placeholder="" />
+	</div>
+</fieldset>
+							<fieldset class="add-bottom">
 								<legend>Notifications</legend>
 								<div class="checkbox">
 								  <label>

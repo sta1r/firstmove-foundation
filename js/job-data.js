@@ -12,18 +12,27 @@ var job_data = {
         "postcode": "E8 5DE",
         "country": "United Kingdom",
         "graduationYear": 2010,
-        "currentJobStatus": "F/T",
-        "currentJobLevel": "Intermediate",
         "nationality": "Greek",
         "homeCountry": "United Kingdom",
         "jobLocation": "London",
-        "dobDay": 7,
-        "dobMonth": 11,
-        "dobYear": 1989,
         "LCFStudentNumber": "STA08237348",
         "LCFCourse": "BA (Hons) FDT Menswear",
         "personalStatement": "Dimitri Stavrou made a real splash at this year's London Fashion Week. The young designer came out firing with a collection full of shimmering fabrics, fringes and trendy designs. The collection is absolutely brilliant. One look included a metallic gold trench coat that I would love to call my own. Dimitri Stavrou is definitely a designer to keep a close eye on in the years to come - Fashion Indie, 2009",
         "adminNotes": "This kid is incredible."
+    },
+
+    // Recruiter Object
+    recruiter: {
+        "firstName": "Adam",
+        "lastName": "Watling",
+        "emailAddress": "adam@watling.com",
+        "addressLine1": "The Willows",
+        "addressLine2": "29 Acacia Road",
+        "townOrCity": "Southampton",
+        "countyOrRegion": "Hampshire",
+        "postcode": "E8 5DE",
+        "country": "United Kingdom",
+        "adminNotes": "Need to have a word with Adam."
     },
 
     // Job Object

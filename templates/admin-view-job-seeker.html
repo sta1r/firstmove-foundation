@@ -1,6 +1,6 @@
 ---
 layout: admin-bootstrap
-title: Job Seeker Account View
+title: Job Seeker Detail View
 persona: admin
 ---
 
@@ -31,17 +31,26 @@ persona: admin
 		</div>
 
 		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">Student information</h3>
-		  </div>
-		  <div class="panel-body">
-		  	<p><strong>LCF student number:</strong> <span data-id="LCFStudentNumber"></span></p>
-			<p>currentJobLocation: <span data-id="currentJobLocation"></span></p>
-		    <p>currentJobStartdate: <span data-id="currentJobStartdate"></span></p>
-		    <p>currentJobStatus: <span data-id="currentJobStatus"></span></p>
-		    <p>currentJobLevel: <span data-id="currentJobLevel"></span></p>
-		    <p>personalStatement: <span data-id="personalStatement"></span></p>
-		  </div>
+			<div class="panel-heading">
+		    	<h3 class="panel-title">Student information</h3>
+		  	</div>
+		  	<div class="panel-body">
+				<p><strong>LCF student number:</strong> <span data-id="LCFStudentNumber"></span></p>
+				<p><strong>Course</strong>: <span data-id="LCFCourse"></span></p>
+				<p><strong>Graduation year</strong>: <span data-id="graduationYear"></span></p>
+				<p><strong>Personal statement</strong>: <span data-id="personalStatement"></span></p>
+		  	</div>
+		</div>
+
+		<div class="panel panel-default admin-control">
+			<div class="panel-heading">
+				<h3 class="panel-title">Notes</h3>
+			</div>
+			<div class="panel-body" data-id="adminNotes"></div>
+			<div class="panel-footer">
+				<a href="job-seeker-account-edit.html?logged-in=admin">Edit</a>
+			</div>
+
 		</div>
 	</div>
 </div>
