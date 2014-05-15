@@ -111,21 +111,25 @@ jQuery(document).ready( function($) {
 	    }
 	}
 
-	$('.admin-control, .recruiter-control').hide();
+	$('.hidden-control').hide();
 
 
 	if (GetURLParameter('logged-in')) {
-		$('.hidden-control').addClass('logged-in');
+		var loginID = GetURLParameter('logged-in');
+		//console.log(loginID);
+
+		//$('.hidden-control').addClass('logged-in');
+		$('.' + loginID + '-control').show();
 	}
 
-	if (GetURLParameter('logged-in') == 'admin') {
-		$('.admin-control').show();
-	}
+	// if (GetURLParameter('logged-in') == 'admin') {
+	// 	$('.admin-control').show();
+	// }
 
-	if (GetURLParameter('logged-in') == 'recruiter') {
-		$('.recruiter-control').show();
-		$('.apply-button').addClass('disabled');
-	}
+	// if (GetURLParameter('logged-in') == 'recruiter') {
+	// 	$('.recruiter-control').show();
+	// 	$('.apply-button').addClass('disabled');
+	// }
 
 
 	$('.populate').each( function(i) {
@@ -200,9 +204,10 @@ jQuery(document).ready( function($) {
 
 
 	// DATEPICKER
-	$('#dateFrom').datepicker();
-	$('#dateTo').datepicker();
-	$('#deadline').datepicker();
+	// $('#dateFrom').datepicker();
+	// $('#dateTo').datepicker();
+	// $('#deadline').datepicker();
+	$('.datepicker').datepicker();
 
 
 
