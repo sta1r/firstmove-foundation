@@ -138,4 +138,5 @@ var job_data = {
 
 // Custom Properties
 job_data["job_seeker"].fullName = job_data["job_seeker"].firstName + ' ' + job_data["job_seeker"].lastName;
+job_data["recruiter"].fullName = job_data["recruiter"].firstName + ' ' + job_data["recruiter"].lastName;
 

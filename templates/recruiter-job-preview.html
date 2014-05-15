@@ -1,0 +1,44 @@
+---
+layout: admin-bootstrap
+title: Recruiter - Job Preview
+persona: recruiter
+---
+
+<div class="page-header">
+	<h1>Your job</h1>
+</div>
+
+<div class="row populate" data-populate="job">
+	
+	<div class="col-md-7">
+		<div class="row">
+			<div class="col-md-12 add-bottom">
+				<h2 data-id="jobTitle"></h2>
+				<p class="lead" data-id="jobSummary"></p>
+				<p data-id="jobDescription"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<form role="form" action="recruiter-post-success.html">
+					<a href="recruiter-edit-job.html" class="btn btn-default">Edit</a>
+					<button type="submit" class="btn btn-primary">Post job</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4 col-md-offset-1">
+		<div class="well">
+			<table class="table">
+				<tr><td>Company</td><td data-id="companyName"><a href=""></a></td></tr>
+				<tr><td>Job type</td><td data-id="jobType"></td></tr>
+				<tr><td>Length of contract</td><td data-id="jobContractLength"></td></tr>
+				<tr><td>Salary</td><td data-id="jobSalary"></td></tr>
+				<tr><td>Deadline</td><td data-id="jobApplicationDeadline"></td></tr>
+			</table>
+		</div>
+	</div>
+		
+
+</div>

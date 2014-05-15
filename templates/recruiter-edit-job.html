@@ -1,8 +1,10 @@
 ---
 layout: admin-bootstrap
-title: Recruiter - edit job
+title: Recruiter - Edit Job
 persona: recruiter
 ---
+
+{% include _account-status-recruiter.html %}
 
 <div class="page-header">
 	<h1>Edit job</h1>
@@ -11,144 +13,12 @@ persona: recruiter
 <div class="row">
 	<div class="col-md-6">
 
-		<form role="form" class="populate" data-populate="job">
-			<fieldset>
-				<legend>Job details</legend>
-				<div class="form-group">
-					<label>Job title</label>
-					<input type="text" class="form-control" id="jobTitle" placeholder="" />
-					
-				</div>
-				<div class="form-group">
-					<label>Job location</label>
-					<input type="text" class="form-control" id="jobLocation" placeholder="" />
-				</div>
-				<div class="form-group">
-					<label>Description</label>
-					<textarea class="form-control" rows="3" id="jobDescription"></textarea>
-				</div>
-				<div class="form-group">
-					<label>Job type</label>
-					<select class="form-control">
-						<option value="husker">Short term work experience</option>
-						<option value="starbuck">Long term work placement</option>
-						<option value="hotdog">Graduate job</option>
-						<option value="apollo">Graduate freelance</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label>Length of contract</label>
-					<select class="form-control">
-						<option value="apollo">Negotiable</option>
-						<option value="apollo">Permanent</option>
-						<option value="husker">4 weeks</option>
-						<option value="hotdog">3 months</option>
-						<option value="apollo">6 months</option>
-						<option value="apollo">12 months</option>
-					</select>
-				</div>
-				
-				<div class="form-group">
-					<label>Salary range</label>
-					<select class="form-control">
-						<option value="11">Negotiable</option>
-						<option value="12">£13k (NMW)</option>
-						<option value="13">£14k - £16k</option>
-						<option value="14">£16k - £18k</option>
-						<option value="5">£18K - £20K</option>
-						<option value="15">£20k - £22k</option>
-						<option value="16">£22k - £24k</option>
-						<option value="17">£25k+ (Please specify)</option>
-					</select>
-				</div>
-
-				<div class="form-group">
-					<label>Salary (specific)</label>
-					<input type="text" class="form-control" placeholder="" />
-				</div>
-
-				<div class="form-group">
-					<label>Categories</label>
-					<div class="checkbox">
-						<label>
-							<input id="checkbox1" type="checkbox">Administration
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input id="checkbox1" type="checkbox">Buying
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input id="checkbox1" type="checkbox">Design
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input id="checkbox1" type="checkbox">Marketing
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input id="checkbox1" type="checkbox">Photography
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input id="checkbox1" type="checkbox">Product development
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input id="checkbox1" type="checkbox">Public relations
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input id="checkbox1" type="checkbox">Retail
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input id="checkbox1" type="checkbox">Sales
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input id="checkbox1" type="checkbox">Visual merchandising
-						</label>
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<label>Application deadline</label>
-					<input type="datetime" class="form-control" placeholder="" />
-				</div>
-
-				<div class="form-group">
-					<label>Company name</label>
-					<input type="text" class="form-control" placeholder="" />
-				</div>
-
-				<div class="form-group">
-					<label>Company URL</label>
-					<input type="text" class="form-control" placeholder="http://" />
-				</div>
-			</fieldset>
-
-
-			<div class="alert alert-info">
-				<p>Already signed up? <a href="sign-in.html">Log in</a> now to speed things up.</p>
-			</div>
-
-			{% include _personal-details.html %}
-
-			{% include _accept-terms.html %}
+		<form role="form" action="recruiter-job-preview.html" class="populate" data-populate="job">
+			
+			{% include _job-details.html %}
 
 			<button type="submit" class="btn btn-default">Save draft</button>
-			<button type="submit" class="btn btn-default">Preview job</button>
-			<button type="submit" class="btn btn-primary">Post job</button>
+			<button type="submit" class="btn btn-primary">Preview job</button>
 
 		</form>
 	</div>

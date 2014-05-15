@@ -9,23 +9,43 @@ persona: recruiter
 </div>
 
 <div class="row">
+	{% include _message-job-update.html %}
+
 	<div class="col-md-6">
 		
 		<div class="alert alert-info">
 			<p>Already signed up? <a href="sign-in.html">Log in</a> now to speed things up.</p>
 		</div>
 		
-		<form role="form">
+		<form role="form" action="recruiter-job-preview.html">
 
 			{% include _job-details.html %}
+
+			<fieldset class="add-bottom">
+				<legend>Attachments</legend>
+				<div class="well">
+					<div class="form-group">
+					    <label for="JobUpload1">File 1</label>
+					    <input type="file" id="JobUpload1">
+					</div>
+					<div class="form-group">
+					    <label for="JobUpload2">File 2</label>
+					    <input type="file" id="JobUpload2">
+					</div>
+					<div class="form-group">
+					    <label for="JobUpload3">File 3</label>
+					    <input type="file" id="JobUpload3">
+					</div>
+					<p class="help-block">2MB limit per file. Accepted file formats: .pdf, .doc, .docx, .txt, .rtf</p>
+				</div>
+			</fieldset>
 
 			{% include _personal-details.html %}
 
 			{% include _accept-terms.html %}
 
-			<button type="submit" class="btn btn-default">Save draft</button>
-			<button type="submit" class="btn btn-default">Preview job</button>
-			<button type="submit" class="btn btn-primary">Post job</button>
+			<a href="#updated" class="btn btn-default">Save draft</a>
+			<button type="submit" class="btn btn-primary">Preview job</button>
 
 		</form>
 	</div>

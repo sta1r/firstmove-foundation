@@ -202,6 +202,7 @@ jQuery(document).ready( function($) {
 	// DATEPICKER
 	$('#dateFrom').datepicker();
 	$('#dateTo').datepicker();
+	$('#deadline').datepicker();
 
 
 
