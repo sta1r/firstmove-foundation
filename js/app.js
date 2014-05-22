@@ -213,7 +213,7 @@ jQuery(document).ready( function($) {
 
 	//$('.hidden-form-field').css('visibility', 'visible'); // override for style on .hidden in style.css
 
-	var LDAP_opt_fields = $('.job-seeker-sign-up').find('.LDAP-optional');
+	var LDAP_opt_fields = $('form').find('.LDAP-optional');
 	LDAP_opt_fields.hide();
 
 	$('.LDAP-account-select').find('input').change( function() {
@@ -226,7 +226,7 @@ jQuery(document).ready( function($) {
 		// $(this).attr("checked", "checked");
 		console.log($(this).attr('id') + ' is ' + $(this).attr('checked'));
 
-		if ($('#LDAPAccountNo').is(':checked')) {
+		if ($('#LDAPAccountYes').is(':checked')) {
 			LDAP_opt_fields.show();
 		} else {
 			LDAP_opt_fields.hide();

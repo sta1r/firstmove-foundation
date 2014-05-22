@@ -1,0 +1,93 @@
+---
+layout: admin-bootstrap
+title: Sign Up
+persona: all
+---
+
+<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+			<div class="panel panel-info" >
+					<div class="panel-heading">
+						<div class="panel-title">Sign Up</div>
+					</div>     
+
+					<div class="panel-body" >
+
+						<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+	
+							<form id="signupform" class="form-horizontal" action="job-seeker-sign-up.html" role="form">
+								
+								<div id="signupalert" style="display:none" class="alert alert-danger">
+									<p>Error:</p>
+									<span></span>
+								</div>
+								
+								<div class="form-group">
+									<label class="col-md-3 control-label">I am a:</label>
+									<div class="col-md-9">
+										<label class="radio-inline">
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Job seeker
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Recruiter
+										</label>
+									</div>
+								</div>
+
+								<div class="form-group">
+					                <label class="col-md-3 control-label">I have an arts.ac.uk email address:</label>
+					                <div class="col-md-9 LDAP-account-select">
+					                    <label class="radio-inline">
+					                        <input type="radio" name="optionsRadios" id="LDAPAccountYes" value="yes"> Yes
+					                    </label>
+					                    <label class="radio-inline">
+					                        <input type="radio" name="optionsRadios" id="LDAPAccountNo" value="no"> No
+					                    </label>
+					                    <span class="help-block">If you have an arts.ac.uk email address, please use this to sign up.</span>
+					                </div>
+					            </div>
+							
+								<div class="form-group">
+									<label for="email" class="col-md-3 control-label">Email</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control" name="email" placeholder="Email Address">
+									</div>
+								</div>
+
+								<div class="form-group LDAP-optional">
+									<label for="email" class="col-md-3 control-label">Password</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control" name="LDAPPassword" placeholder="Password">
+										<span class="help-block">Your University network password</span>
+									</div>
+								</div>
+									
+<!--                                 <div class="form-group">
+									<label for="firstname" class="col-md-3 control-label">First Name</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control" name="firstname" placeholder="First Name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="lastname" class="col-md-3 control-label">Last Name</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control" name="lastname" placeholder="Last Name">
+									</div>
+								</div> -->
+								
+
+								<div class="form-group">
+									<!-- Button -->                                        
+									<div class="col-md-offset-3 col-md-9">
+										<button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>  
+									</div>
+								</div>
+
+							</form>
+
+
+						</div>                     
+					</div>  
+		</div>
+	   
+	</div>
+	
