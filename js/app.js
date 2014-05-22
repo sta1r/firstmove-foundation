@@ -164,11 +164,11 @@ jQuery(document).ready( function($) {
 	// PUSH DUMMY STUDENTS INTO TABLE ROWS
 	if ($('#students-list').length) {
 		
-		var output = '<table class="table table-striped"><thead><tr><th>Flag</th><th>Name</th><th>Course</th><th>Email address</th><th>Actions</th></tr></thead><tbody>';
+		var output = '<table class="table table-striped"><thead><tr><th>Flag</th><th><a href="#" title="Click to sort">Name</a></th><th>Course</th><th>Email address</th><th><a href="#" title="Click to sort">Last logged in</a></th><th>Actions</th></tr></thead><tbody>';
 		
 		for (i = 0; i < 20; i++) {
 			
-			output += '<tr><td><span class="glyphicon glyphicon-flag"></i></td><td>Dave Jones</td><td>BA Fashion Management</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td><a class="btn btn-primary btn-xs" href="admin-view-job-seeker.html">View detail</a></td></tr>';
+			output += '<tr><td><span class="glyphicon glyphicon-flag"></i></td><td>Dave Jones</td><td>BA Fashion Management</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-primary btn-xs" href="admin-view-job-seeker.html">View detail</a></td></tr>';
 			
 		}
 		
@@ -184,11 +184,11 @@ jQuery(document).ready( function($) {
 
 	if (tabular_jobs.length) {
 		
-		var output = '<table class="table table-striped"><thead><tr><th>Status</th><th>Date posted</th><th>Company</th><th>Role</th><th>Views</th><th>Actions</th></tr></thead><tbody>';
+		var output = '<table class="table table-striped"><thead><tr><th>Status</th><th>Date posted</th><th>Company</th><th>Role</th><th>Views</th><th>Applications</th><th>Vacancy filled by us?</th><th>Actions</th></tr></thead><tbody>';
 		
 		for (i = 0; i < tabular_jobs_count; i++) {
 			
-			output += '<tr><td><span class="label label-success">Live</span></td><td>10 October 2012</td><td>Debenhams</td><td>Retail assistant</td><td><span class="badge badge-info">16</span></td>';
+			output += '<tr><td><span class="label label-success">Live</span></td><td>10/10/2012</td><td>Debenhams</td><td>Retail assistant</td><td><span class="badge badge-info">16</span></td><td><span class="badge badge-info">5</span></td><td><span class="glyphicon glyphicon-ok"></span></td>';
 			
 			// Actions and buttons
 			output += '<td><button class="btn btn-sm btn-info">View detail</button> <button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button></td></tr>';
@@ -208,6 +208,11 @@ jQuery(document).ready( function($) {
 	// $('#dateTo').datepicker();
 	// $('#deadline').datepicker();
 	$('.datepicker').datepicker();
+	$('.input-daterange').datepicker({
+		format: "yyyy",
+    	startView: 2,
+    	minViewMode: 2
+	});
 
 
 

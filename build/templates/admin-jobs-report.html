@@ -11,6 +11,9 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="http://strangerpixel.com/firstmove-foundation/css/style.css" rel="stylesheet">
+	<!-- UAL screen css 
+	<link href="http://d27lwoqz7s24cy.cloudfront.net/assets/css/screen.min.css" rel="stylesheet"> -->
+
 	<!-- Bootstrap theme 
 	<link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
 
@@ -85,7 +88,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seekers.html">Job Seekers List</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seekers.html">Admin - Job Seekers Report</a>
 						</li>
 						
 					
@@ -210,14 +213,15 @@
 		<div class="well clearfix">
 			<div class="row">
 				<div class="col-md-12 add-bottom">
-
 					<div class="control pull-left">
-						<p>View</p>
-						<div class="btn-group">
-							<button class="btn btn-default btn-sm">Jobs</button>
-							<button class="btn btn-default btn-sm">Placements</button>
-							<button class="btn btn-default btn-sm active">All</button>
-						</div>
+						<p>Filter by type:</p>
+						<select class="form-control input-sm">
+							<option>Select</option>
+							<option value="short-term-work-experience">Short term work experience</option>
+							<option value="long-term-work-placement">Long term work placement</option>
+							<option value="freelance-contract">Freelance / Contract</option>
+							<option value="full-time">Full time</option>
+						</select>
 					</div>
 					<div class="control pull-left">
 						<p>Status</p>
@@ -227,19 +231,18 @@
 							<button class="btn btn-default btn-sm">All</button>
 						</div>
 					</div>	
-<!-- 					<div class="control pull-left">
-						<p>Filter by category:</p>
-						<div class="btn-group">
-						  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">All catgories <span class="caret"></span>
-						  </button>
-						  <ul class="dropdown-menu populate dropdown-categories" role="menu" data-populate="job_categories">	
-						  </ul>
+					<div class="control pull-left">
+						<p>Posted date range:</p>
+						<div class="input-daterange input-group" id="datepicker">
+						    <input type="text" class="input-sm form-control" name="start" />
+						    <span class="input-group-addon">to</span>
+						    <input type="text" class="input-sm form-control" name="end" />
 						</div>
-					</div> -->
+					</div>
 					<div class="control control-search pull-left">
 						<p>Job search</p>
 					    <div class="input-group input-group-sm">
-					      <input type="text" class="form-control">
+					      <input type="text" class="form-control" placeholder="Debenhams">
 					      <span class="input-group-btn">
 					        <button class="btn btn-default" type="button">Search</button>
 					      </span>
@@ -261,7 +264,147 @@
 <div class="row-fluid">
 	<div class="span10">
 	
-		<div id="tabular-jobs-list"></div>
+		<div>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Status</th>
+						<th>Date posted</th>
+						<th>Company</th>
+						<th>Role</th>
+						<th>Views</th>
+						<th>Applications</th>
+						<th>Vacancy filled by us?</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="label label-success">Live</span>
+						</td>
+						<td>20/5/2014</td>
+						<td>Debenhams</td>
+						<td>Retail assistant</td>
+						<td>
+							<span class="badge badge-info">10</span>
+						</td>
+						<td>
+							<span class="badge badge-info">2</span>
+						</td>
+						<td>
+						</td>
+						<td>
+							<button class="btn btn-sm btn-primary">View detail</button>
+							<button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="label label-success">Live</span>
+						</td>
+						<td>10/10/2012</td>
+						<td>Debenhams</td>
+						<td>Work experience</td>
+						<td>
+							<span class="badge badge-info">16</span>
+						</td>
+						<td>
+							<span class="badge badge-info">5</span>
+						</td>
+						<td>
+						</td>
+						<td>
+							<button class="btn btn-sm btn-primary">View detail</button>
+							<button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="label label-success">Live</span>
+						</td>
+						<td>10/10/2012</td>
+						<td>Debenhams</td>
+						<td>Promotions Executive</td>
+						<td>
+							<span class="badge badge-info">120</span>
+						</td>
+						<td>
+							<span class="badge badge-info">20</span>
+						</td>
+						<td>
+						</td>
+						<td>
+							<button class="btn btn-sm btn-primary">View detail</button>
+							<button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="label label-default">Expired</span>
+						</td>
+						<td>10/10/2012</td>
+						<td>Debenhams</td>
+						<td>Allocator</td>
+						<td>
+							<span class="badge badge-info">16</span>
+						</td>
+						<td>
+							<span class="badge badge-info">5</span>
+						</td>
+						<td>
+							<span class="glyphicon glyphicon-ok"></span>
+						</td>
+						<td>
+							<button class="btn btn-sm btn-primary">View detail</button>
+							<button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="label label-default">Expired</span>
+						</td>
+						<td>10/10/2012</td>
+						<td>Debenhams</td>
+						<td>Admin/buying assistant</td>
+						<td>
+							<span class="badge badge-info">16</span>
+						</td>
+						<td>
+							<span class="badge badge-info">5</span>
+						</td>
+						<td>
+							<span class="glyphicon glyphicon-ok"></span>
+						</td>
+						<td>
+							<button class="btn btn-sm btn-primary">View detail</button>
+							<button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="label label-default">Expired</span>
+						</td>
+						<td>10/10/2012</td>
+						<td>Debenhams</td>
+						<td>Retail assistant</td>
+						<td>
+							<span class="badge badge-info">20</span>
+						</td>
+						<td>
+							<span class="badge badge-info">2</span>
+						</td>
+						<td>
+							<span class="glyphicon glyphicon-remove"></span>
+						</td>
+						<td>
+							<button class="btn btn-sm btn-primary">View detail</button>
+							<button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button>
+						</td>
+					</tr>
+
+				</tbody>
+			</table></div>
 	
 		<div class="row">
 	<div class="col-md-12">

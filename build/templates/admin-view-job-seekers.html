@@ -11,6 +11,9 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="http://strangerpixel.com/firstmove-foundation/css/style.css" rel="stylesheet">
+	<!-- UAL screen css 
+	<link href="http://d27lwoqz7s24cy.cloudfront.net/assets/css/screen.min.css" rel="stylesheet"> -->
+
 	<!-- Bootstrap theme 
 	<link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
 
@@ -85,7 +88,7 @@
 					
 						
 						<li>
-				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seekers.html">Job Seekers List</a>
+				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seekers.html">Admin - Job Seekers Report</a>
 						</li>
 						
 					
@@ -185,7 +188,7 @@
 		
 		<ol class="breadcrumb">
 			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-		  	<li class="active">Job Seekers List</li>
+		  	<li class="active">Admin - Job Seekers Report</li>
 		</ol>
 		
 
@@ -209,30 +212,39 @@
 	<div class="col-md-12">
 		<div class="well clearfix">
 			<div class="control pull-left">
-				<p>Sort by:</p>
+				<p>View only:</p>
 				<div class="btn-group">
-					<button class="btn btn-default btn-sm">Name</button>
-					<button class="btn btn-default btn-sm">Course</button>
-					<button class="btn btn-default btn-sm">Last logged in</button>
+					<button class="btn btn-default btn-sm">Flagged</button>
+					<button class="btn btn-default btn-sm">LDAP</button>
 				</div>
 			</div>	
 			<div class="control pull-left">
-				<p>Filter by:</p>
-				<div class="btn-group">
-				  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">Filter <span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu" role="menu">
-				  	<li><a href="#">Year 1</a></li>
-					<li><a href="#">Year 2</a></li>
-					<li><a href="#">Year 3</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Alumni</a></li>	
-				  </ul>
+				<p>Filter by school:</p>
+				<select class="form-control input-sm">
+					<option>Select</option>
+					<option value="sdt">School of Design &amp; Technology</option>
+					<option value="sms">School of Management &amp; Science</option>
+					<option value="smc">School of Media &amp; Communications</option>
+				</select>
+			</div>
+			<div class="control pull-left">
+				<p>Filter by level:</p>
+				<select class="form-control input-sm">
+					<option>Select</option>
+					<option value="short-term-work-experience">Undergraduate</option>
+					<option value="long-term-work-placement">Postgraduate</option>
+				</select>
+			</div>
+			<div class="control pull-left">
+				<p>Graduation year range (inclusive):</p>
+				<div class="input-daterange input-group" id="datepicker">
+				    <input type="text" class="input-sm form-control" name="start" />
+				    <span class="input-group-addon">to</span>
+				    <input type="text" class="input-sm form-control" name="end" />
 				</div>
 			</div>
 			<div class="control control-search pull-left">
 				<p>Profile search:</p>
-
 			    <div class="input-group input-group-sm">
 			      <input type="text" class="form-control">
 			      <span class="input-group-btn">
@@ -240,7 +252,8 @@
 			      </span>
 			    </div><!-- /input-group -->
 			</div>
-			<div class="control pull-right">
+
+			<div class="control pull-left">
 				<p>With selection:</p>
 				<a href="#" class="btn btn-default btn-sm">Export</a>
 				<a href="#" class="btn btn-default btn-sm">Bulk email</a>
