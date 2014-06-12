@@ -2,6 +2,7 @@
 layout: admin-bootstrap
 title: Admin - Job Seekers Report
 persona: admin
+notes: Profile search indexes (at least) firstname, lastname, email and course.
 ---
 
 {% include _account-status.html %}
@@ -41,7 +42,7 @@ persona: admin
 			</div>
 			<div class="control pull-left">
 				<p>Graduation year range (inclusive):</p>
-				<div class="input-daterange input-group" id="datepicker">
+				<div class="input-daterange input-daterange-year input-group">
 				    <input type="text" class="input-sm form-control" name="start" />
 				    <span class="input-group-addon">to</span>
 				    <input type="text" class="input-sm form-control" name="end" />
@@ -65,7 +66,6 @@ persona: admin
 <div class="row">
 	<div class="col-md-12">
 		<div id="students-list"></div>
-				
 	</div>
 </div>
 

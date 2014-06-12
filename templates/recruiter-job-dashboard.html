@@ -1,0 +1,129 @@
+---
+layout: admin-bootstrap
+title: Recruiter - Job Dashboard
+persona: recruiter
+---
+
+{% include _account-status.html %}
+
+<div class="page-header populate" data-populate="job">
+	<h1>Job Dashboard</h1>
+</div>
+
+<div id="message-updated" class="hidden-message alert alert-success">
+	<p><strong>Thank you</strong> for your feedback.</p>
+</div>
+
+<div class="row">
+	<div class="col-md-12 job-details-widget populate" data-populate="job">
+		<h2 data-id="jobTitle"></h2>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Job summary</h3>
+			</div>
+			<div class="panel-body" data-id="jobSummary"></div>
+			<div class="panel-footer"><a href="job-single.html">&larr; View full listing</a></div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h2>Applications</h2>
+		<table class="table table-striped applications-inbox">
+			<thead>
+				<tr>
+					<th>Flag</th>
+					<th>Date</th>
+					<th>Name</th>
+					<th>Actions</th>
+					<th>Appointed?</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+					</td>
+					<td>15 May 2014</td>
+					<td>Paolo Maldini</td>
+					<td>
+						<a href="#" class="btn btn-sm btn-primary">View application</a>
+					</td>
+					<td>
+						<a href="#" class="flag"><span class="glyphicon glyphicon-ok"></span></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+					</td>
+					<td>10 May 2014</td>
+					<td>Diego Maradona</td>
+					<td>
+						<a href="#" class="btn btn-sm btn-primary">View application</a>
+					</td>
+					<td>
+						<a href="#" class="flag"><span class="glyphicon glyphicon-ok"></span></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+					</td>
+					<td>5 May 2014</td>
+					<td>Miroslav Klose</td>
+					<td>
+						<a href="#" class="btn btn-sm btn-primary">View application</a>
+					</td>
+					<td>
+						<a href="#" class="flag"><span class="glyphicon glyphicon-ok"></span></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a>
+					</td>
+					<td>5 May 2014</td>
+					<td>Ronaldo</td>
+					<td>
+						<a href="#" class="btn btn-sm btn-primary">View application</a>
+					</td>
+					<td>
+						<a href="#" class="flag"><span class="glyphicon glyphicon-ok"></span></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<h2>Job Feedback</h2>
+		<form role="form" action="#updated">
+			<fieldset class="form-horizontal add-bottom">
+				<legend>Feedback</legend>
+				<div class="form-group required">
+					<div class="col-sm-12">
+						<label>Outcome</label>
+						<select class="form-control">
+							<option>Please select</option>
+							<option value="1">This vacancy was filled by an applicant on FirstMove</option>
+							<option value="2">This vacancy was filled externally</option>
+							<option value="3">We did not fill this vacancy</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label>Comments</label>
+						<textarea class="form-control" rows="6" id="jobDescription"></textarea>
+						<span class="help-block">Please leave any comments about the applications you received, or any further feedback about your experience of recruiting via this site.</span>
+					</div>				
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</fieldset>
+		</form>
+	</div>
+</div>

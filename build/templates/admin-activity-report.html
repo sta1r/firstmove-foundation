@@ -48,6 +48,10 @@
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
 		  	
+		  	<li>
+		  		<a id="toggle-dev-notes" href="#dev-notes"><span class="glyphicon glyphicon-question-sign"></span></a>
+		  	</li>
+		  	
 		  	<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
@@ -114,13 +118,13 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html">Job Seeker - Account Edit</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-create.html">Job Seeker - Create Account</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-create-account.html">Job Seeker - Create Account</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html">Job Seeker - Account Edit</a>
 						</li>
 						
 					
@@ -145,6 +149,12 @@
 						
 						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-edit-job.html">Recruiter - Edit Job</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-job-dashboard.html">Recruiter - Job Dashboard</a>
 						</li>
 						
 					
@@ -181,12 +191,6 @@
 						
 						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-up.html">Sign Up</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/~sign-up-success.html">Sign Up Success</a>
 						</li>
 						
 					
@@ -230,26 +234,17 @@
 				<div class="btn-group">
 					<button class="btn btn-default btn-sm">Day</button>
 					<button class="btn btn-default btn-sm active">Month</button>
+					<button class="btn btn-default btn-sm">Year</button>
 				</div>
 
 			</div>	
-			<div class="control col-md-2">
-				<p>From:</p>
-				<div class="input-append date">
-					<div class="input-group" id="dateFrom" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-						<input class="form-control" type="text" value="12-02-2012" readonly="">
-						<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-				  	</div>
-			  	</div>
-			</div>
-			<div class="control col-md-2">
-				<p>To:</p>
-				<div class="input-append date">
-					<div class="input-group" id="dateTo" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-						<input class="form-control" type="text" value="12-03-2012" readonly="">
-						<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-				  	</div>
-			  	</div>
+			<div class="control pull-left">
+				<p>Date range:</p>
+				<div class="input-daterange input-group datepicker">
+				    <input type="text" class="input-sm form-control" name="start" />
+				    <span class="input-group-addon">to</span>
+				    <input type="text" class="input-sm form-control" name="end" />
+				</div>
 			</div>
 			<div class="control pull-right">
 				<p>With selection:</p>
@@ -328,11 +323,11 @@
 
 	</div> <!-- /container -->
 	
-	<footer class="dev-footer">
+	<footer id="dev-notes" class="dev-footer">
 		<div class="container">
 			<div class="row">
 		  		<div class="col-md-12">
-					<p></p>
+					<p>The view defaults to by month. If 'day' is selected, the most recent 10 days are listed per page, if 'year', the recent years in reverse order.</p>
 				</div>
 			</div>
 		</div>

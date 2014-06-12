@@ -114,13 +114,13 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html">Job Seeker - Account Edit</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-create.html">Job Seeker - Create Account</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-create-account.html">Job Seeker - Create Account</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html">Job Seeker - Account Edit</a>
 						</li>
 						
 					
@@ -145,6 +145,12 @@
 						
 						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-edit-job.html">Recruiter - Edit Job</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-job-dashboard.html">Recruiter - Job Dashboard</a>
 						</li>
 						
 					
@@ -181,12 +187,6 @@
 						
 						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-up.html">Sign Up</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/~sign-up-success.html">Sign Up Success</a>
 						</li>
 						
 					
@@ -247,6 +247,7 @@
 							<th>Date posted</th>
 							<th>Role</th>
 							<th>Views</th>
+							<th>Applications</th>
 							<th>Actions</th>
 						</tr>
 					</thead>
@@ -257,6 +258,9 @@
 							</td>
 							<td>15 May 2014</td>
 							<td>Studio Photographer (6 month Fixed Term Contract)</td>
+							<td>
+								<span class="badge badge-info">0</span>
+							</td>
 							<td>
 								<span class="badge badge-info">0</span>
 							</td>
@@ -275,6 +279,9 @@
 								<span class="badge badge-info">4</span>
 							</td>
 							<td>
+								<span class="badge badge-info">0</span>
+							</td>
+							<td>
 								<a href="recruiter-edit-job.html?logged-in=recruiter" class="btn btn-sm btn-default">Edit</a>
 								<button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button>
 							</td>
@@ -289,7 +296,10 @@
 								<span class="badge badge-info">120</span>
 							</td>
 							<td>
-								<a href="#" class="btn btn-sm btn-primary">Leave feedback</a>
+								<span class="badge badge-info">12</span>
+							</td>
+							<td>
+								<a href="recruiter-job-feedback.html?logged-in=recruiter" class="btn btn-sm btn-primary">Leave feedback</a>
 								<a href="#" class="btn btn-sm btn-success">Post as new</a>
 							</td>
 						</tr>
@@ -303,12 +313,16 @@
 								<span class="badge badge-info">16</span>
 							</td>
 							<td>
-								<a href="#" class="btn btn-sm btn-primary">Leave feedback</a>
+								<a href="#"><span class="badge badge-info">5</span></a>
+							</td>
+							<td>
+								<a href="recruiter-job-feedback.html?logged-in=recruiter" class="btn btn-sm btn-primary">Leave feedback</a>
 								<a href="#" class="btn btn-sm btn-success">Post as new</a>
 							</td>
 						</tr>
 					</tbody>
-				</table></div>
+				</table>
+			</div>
 
 		  	<div class="tab-pane" id="personal-details">
 		  		<div class="row">
@@ -457,7 +471,7 @@
 
 	</div> <!-- /container -->
 	
-	<footer class="dev-footer">
+	<footer id="dev-notes" class="dev-footer">
 		<div class="container">
 			<div class="row">
 		  		<div class="col-md-12">

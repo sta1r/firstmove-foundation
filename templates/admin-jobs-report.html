@@ -2,6 +2,7 @@
 layout: admin-bootstrap
 title: Admin - Jobs Report
 persona: admin
+notes: When an admin user exports a given dataset, the resulting CSV dump needs to contain the complete fieldset of the job object on a single row, i.e. including job location - which is not presented below for reasons of space.
 ---
 
 {% include _account-status.html %}
@@ -15,7 +16,7 @@ persona: admin
 		<div class="well clearfix">
 			<div class="row">
 				<div class="col-md-12 add-bottom">
-					<div class="control pull-left populate dropdown-job-types" data-populate="job_types">
+					<div class="control pull-left populate dropdown-list" data-populate="job_types">
 						<p>Filter by type:</p>
 						<select class="form-control input-sm">
 						</select>

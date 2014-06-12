@@ -1,4 +1,5 @@
 $light-blue: #12a4e0;
+$gold: #E5C100;
 $navbar-inverse-bg: $light-blue;
 $navbar-inverse-link-color: #FFF;
 $icon-font-path: "../fonts/bootstrap/";
@@ -125,4 +126,17 @@ footer {
 	p {
 		color: $state-info-text;
 	}
+}
+
+// icons
+.glyphicon-ok, .glyphicon-flag {
+	color: #ccc;
+}
+
+.glyphicon-ok.active {
+	color: $brand-success;
+}
+
+.glyphicon-flag.active {
+	color: $gold;
 }

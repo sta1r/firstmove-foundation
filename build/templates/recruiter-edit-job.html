@@ -48,6 +48,10 @@
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
 		  	
+		  	<li>
+		  		<a id="toggle-dev-notes" href="#dev-notes"><span class="glyphicon glyphicon-question-sign"></span></a>
+		  	</li>
+		  	
 		  	<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
@@ -114,13 +118,13 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html">Job Seeker - Account Edit</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-create.html">Job Seeker - Create Account</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-create-account.html">Job Seeker - Create Account</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html">Job Seeker - Account Edit</a>
 						</li>
 						
 					
@@ -145,6 +149,12 @@
 						
 						<li>
 				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-edit-job.html">Recruiter - Edit Job</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-job-dashboard.html">Recruiter - Job Dashboard</a>
 						</li>
 						
 					
@@ -181,12 +191,6 @@
 						
 						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-up.html">Sign Up</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/~sign-up-success.html">Sign Up Success</a>
 						</li>
 						
 					
@@ -278,7 +282,7 @@
 	<div class="form-group required">
 		<label class="col-md-12">Salary range (GBP)</label>
 		<div class="col-sm-8">
-			<div class="input-daterange input-group" id="datepicker">
+			<div class="input-group">
 			    <input type="text" class="input-sm form-control" name="start" placeholder="e.g. 18,000" />
 			    <span class="input-group-addon">to</span>
 			    <input type="text" class="input-sm form-control" name="end" placeholder="e.g. 20,000" />
@@ -352,7 +356,9 @@
 	</div>
 
 	<div class="col-md-5 col-md-offset-1">
-		
+		<div class="alert alert-warning">
+			<p>You are welcome to modify live jobs. However, please keep in mind that further email alerts for this listing will not be sent to subscribed job seekers. If you wish to substantially change a job listing, our advice would be to expire this job and create a new one.</p>
+		</div>
 
 	</div>
 </div>
@@ -360,11 +366,11 @@
 
 	</div> <!-- /container -->
 	
-	<footer class="dev-footer">
+	<footer id="dev-notes" class="dev-footer">
 		<div class="container">
 			<div class="row">
 		  		<div class="col-md-12">
-					<p></p>
+					<p>Basic TinyMCE editor (simply to process line breaks as p tags) required for textarea.</p>
 				</div>
 			</div>
 		</div>

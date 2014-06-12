@@ -132,7 +132,10 @@ jQuery(document).ready( function($) {
 	    
 	}
 
-	$('.hidden-control').hide();
+	$('.populate').each( function(i) {
+		scanDomAndPopulate($(this), $(this).data('populate'));
+	});
+
 
 
 	if (GetURLParameter('logged-in')) {
@@ -160,21 +163,18 @@ jQuery(document).ready( function($) {
 		//$('.apply-button').addClass('disabled');
 	}
 
+	// Toggle Developer Notes
 	$('#toggle-dev-notes').click(function(e) {
-		e.preventDefault();
 		$('.dev-footer').toggle();
 	});
 
-
-	$('.populate').each( function(i) {
-		scanDomAndPopulate($(this), $(this).data('populate'));
+	// Add a flag 
+	$('.flag').click(function(e) {
+		e.preventDefault();
+		$(this).find('.glyphicon').toggleClass('active');
 	});
 
-	
-
 	// ALERTS
-	$('.hidden-message').hide();
-
 	setTimeout(function() {
 	  if (location.hash) {
 	  	$('#message-updated').show();
@@ -202,7 +202,7 @@ jQuery(document).ready( function($) {
 		
 		for (i = 0; i < 20; i++) {
 			
-			output += '<tr><td><span class="glyphicon glyphicon-flag"></i></td><td>Dave Jones</td><td>BA Fashion Management</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-primary btn-xs" href="admin-view-job-seeker.html">View detail</a></td></tr>';
+			output += '<tr><td><span class="glyphicon glyphicon-flag"></span></td><td>Dave Jones</td><td>BA Fashion Management</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-primary btn-xs" href="admin-view-job-seeker.html">View detail</a></td></tr>';
 			
 		}
 		
@@ -242,7 +242,7 @@ jQuery(document).ready( function($) {
 	// $('#dateTo').datepicker();
 	// $('#deadline').datepicker();
 	$('.datepicker').datepicker();
-	$('.input-daterange').datepicker({
+	$('.input-daterange-year').datepicker({
 		format: "yyyy",
     	startView: 2,
     	minViewMode: 2

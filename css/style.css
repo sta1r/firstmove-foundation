@@ -4745,3 +4745,12 @@ footer {
   background-color: #d9edf7; }
   .dev-footer p {
     color: #31708f; }
+
+.glyphicon-ok, .glyphicon-flag {
+  color: #ccc; }
+
+.glyphicon-ok.active {
+  color: #5cb85c; }
+
+.glyphicon-flag.active {
+  color: #E5C100; }
