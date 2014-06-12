@@ -47,6 +47,11 @@
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
+		  	
+		  	<li>
+		  		<a id="toggle-dev-notes" href="#"><span class="glyphicon glyphicon-question-sign"></span></a>
+		  	</li>
+		  	
 		  	<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
@@ -119,7 +124,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-sign-up.html">Job Seeker - Sign Up</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-create-account.html">Job Seeker - Create Account</a>
 						</li>
 						
 					
@@ -155,7 +160,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job Error</a>
 						</li>
 						
 					
@@ -183,6 +188,12 @@
 						</li>
 						
 					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/~sign-up-success.html">Sign Up Success</a>
+						</li>
+						
+					
 			  </ul>
 			</li>
 		  </ul>
@@ -198,7 +209,7 @@
 		  	<li class="active">Job Page</li>
 		</ol>
 		
-
+		
 		<div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
 	<p><small>You are signed in as <span data-id="fullName"></span> | <a href="recruiter-account-edit.html?logged-in=recruiter">View account</a></small></p>
 </div>
@@ -210,8 +221,8 @@
 <div class="pull-right account-status hidden-control job_seeker-control populate" data-populate="job_seeker">
 	<p><small>You are signed in as <span data-id="fullName"></span> | <a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></small></p>
 </div>
-		
-		<div class="row hidden-control recruiter-control">
+
+<div class="row hidden-control recruiter-control">
 	<div class="col-md-4">
 		<a href="recruiter-edit-job.html" class="btn btn-primary">Edit this job</a>
 	</div>
@@ -245,12 +256,19 @@
 		
 		<a href="job-apply.html" class="btn btn-primary btn-sm btn-block apply-button">Apply for this job</a>
 	</div>
-		
-
 </div>
 
 	</div> <!-- /container -->
-
+	
+	<footer class="dev-footer">
+		<div class="container">
+			<div class="row">
+		  		<div class="col-md-12">
+					<p>Job seekers not logged in will be directed to <a href="sign-in.html">sign in</a>. Once a job has expired, recruiters should see a <a href="#" class="btn btn-sm btn-success">Post as new</a> button rather than an <a href="#" class="btn btn-sm btn-primary">Edit this job</a> button.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<footer class="admin-footer dark-bg">
 		<div class="container">
 			<div class="row">

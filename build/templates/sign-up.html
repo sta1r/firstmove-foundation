@@ -47,6 +47,7 @@
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
+		  	
 		  	<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
@@ -119,7 +120,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-sign-up.html">Job Seeker - Sign Up</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-create-account.html">Job Seeker - Create Account</a>
 						</li>
 						
 					
@@ -155,7 +156,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job Error</a>
 						</li>
 						
 					
@@ -183,6 +184,12 @@
 						</li>
 						
 					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/~sign-up-success.html">Sign Up Success</a>
+						</li>
+						
+					
 			  </ul>
 			</li>
 		  </ul>
@@ -198,94 +205,95 @@
 		  	<li class="active">Sign Up</li>
 		</ol>
 		
-
-		<div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
-	<p><small>You are signed in as <span data-id="fullName"></span> | <a href="recruiter-account-edit.html?logged-in=recruiter">View account</a></small></p>
-</div>
-
-<div class="pull-right account-status hidden-control admin-control">
-	<p><small>You are signed in as admin</small></p>
-</div>
-
-<div class="pull-right account-status hidden-control job_seeker-control populate" data-populate="job_seeker">
-	<p><small>You are signed in as <span data-id="fullName"></span> | <a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></small></p>
-</div>
 		
-		<div id="loginbox" class="login-box col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
-			<div class="panel panel-info" >
-					<div class="panel-heading">
-						<div class="panel-title">Create an account</div>
-					</div>     
-
-					<div class="panel-body" >
-
-						<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-	
-							<form id="signupform" class="form-horizontal" action="job-seeker-sign-up.html" role="form">
-								
-								<div id="signupalert" style="display:none" class="alert alert-danger">
-									<p>Error:</p>
-									<span></span>
-								</div>
-								
-								<div class="form-group">
-									<label class="col-md-3 control-label">I am a:</label>
-									<div class="col-md-9 account-select">
-										<label class="radio-inline">
-											<input type="radio" name="accountType" id="accountJobSeeker" value="yes"> Job seeker
-										</label>
-										<label class="radio-inline">
-											<input type="radio" name="accountType" id="accountRecruiter" value="yes"> Recruiter
-										</label>
-									</div>
-								</div>
-
-								<div class="form-group sign-up-optional sign-up-ldap">
-					                <label class="col-md-3 control-label">I have an arts.ac.uk email address:</label>
-					                <div class="col-md-9">
-					                    <label class="radio-inline">
-					                        <input type="radio" name="LDAPCheck" id="LDAPAccountYes" value="yes"> Yes
-					                    </label>
-					                    <label class="radio-inline">
-					                        <input type="radio" name="LDAPCheck" id="LDAPAccountNo" value="no"> No
-					                    </label>
-					                    <span class="help-block">If you have an arts.ac.uk email address, please use this to sign up.</span>
-					                </div>
-					            </div>
-							
-								<div class="form-group sign-up-optional sign-up-email">
-									<label for="email" class="col-md-3 control-label">Email</label>
-									<div class="col-md-9">
-										<input type="text" class="form-control" name="email" placeholder="Email Address">
-									</div>
-								</div>
-
-								<div class="form-group sign-up-optional sign-up-password">
-									<label for="email" class="col-md-3 control-label">Password</label>
-									<div class="col-md-9">
-										<input type="text" class="form-control" name="LDAPPassword" placeholder="Password">
-										<span class="help-block">Your University network password</span>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<div class="col-md-offset-3 col-md-9">
-										<button id="btn-signup" type="submit" class="btn btn-info">Sign Up</button>  
-									</div>
-								</div>
-
-							</form>
-
-
-						</div>                     
-					</div>  
+		<div class="login-box col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+	<div class="panel panel-info" >
+		<div class="panel-heading">
+			<div class="panel-title">Create an account</div>
 		</div>
-	   
-	</div>
+
+		<div class="panel-body" >
 	
+			<form id="signupform" class="form-horizontal" role="form">
+								
+				<div class="form-group">
+					<label class="col-md-3 control-label">I am a:</label>
+					<div class="col-md-9 account-select">
+						<label class="radio-inline">
+							<input type="radio" name="logged-in" id="accountJobSeeker" value="job_seeker"> Job seeker
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="logged-in" id="accountRecruiter" value="recruiter"> Recruiter
+						</label>
+					</div>
+				</div>
+
+				<div class="form-group sign-up-optional sign-up-ldap">
+					<label class="col-md-3 control-label">I have an arts.ac.uk email address:</label>
+					<div class="col-md-9">
+						<label class="radio-inline">
+							<input type="radio" name="LDAPCheck" id="LDAPAccountYes" value="yes"> Yes
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="LDAPCheck" id="LDAPAccountNo" value="no"> No
+						</label>
+						<span class="help-block">If you have an arts.ac.uk email address, please use this to sign up.</span>
+					</div>
+				</div>
+			
+				<div class="form-group sign-up-optional sign-up-email">
+					<label for="email" class="col-md-3 control-label">Email</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" name="email">
+					</div>
+				</div>
+
+				<div class="form-group sign-up-optional sign-up-ldap-password">
+					<label for="LDAPPassword" class="col-md-3 control-label">Password</label>
+					<div class="col-md-9">
+						<input type="password" class="form-control" name="LDAPPassword">
+						<span class="help-block">Your University network password</span>
+					</div>
+				</div>
+
+				<div class="form-group sign-up-optional sign-up-normal-password">
+					<label for="normalPassword" class="col-md-3 control-label">Password</label>
+					<div class="col-md-9">
+						<input type="password" class="form-control" name="normalPassword">
+					</div>
+				</div>
+				<div class="form-group sign-up-optional sign-up-normal-password">
+					<label for="normalPasswordConfirm" class="col-md-3 control-label">Re-enter password</label>
+					<div class="col-md-9">
+						<input type="password" class="form-control" name="normalPasswordConfirm" >
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-3 col-md-9">
+						<a id="job-seeker-sign-up-button" class="btn btn-info sign-up-optional" href="job-seeker-sign-up.html?logged-in=job_seeker">Sign Up</a>  
+						<a id="recruiter-sign-up-button" class="btn btn-info sign-up-optional" href="recruiter-post-job.html">Sign Up</a> 
+					</div>
+				</div>
+
+			</form>
+
+		</div><!-- .panel-body -->
+	</div><!-- .panel -->
+</div><!-- .login-box -->
+
 
 	</div> <!-- /container -->
-
+	
+	<footer class="dev-footer">
+		<div class="container">
+			<div class="row">
+		  		<div class="col-md-12">
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<footer class="admin-footer dark-bg">
 		<div class="container">
 			<div class="row">

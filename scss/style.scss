@@ -11,11 +11,25 @@ body {
 	padding-top: 70px;
 }
 
+.container[role="main"] {
+	margin-bottom: 60px;
+}
+
 // Utils
 ul.no-bullet {
 	margin-left: 0;
 	padding-left: 0;
 	list-style: none;
+}
+
+.required {
+	label:first-child:after { 
+		content:" *";
+		color: red; 
+	}
+	.checkbox label:first-child:after {
+		content:"";
+	}
 }
 
 .add-top {
@@ -37,9 +51,8 @@ ul.no-bullet {
 	margin-bottom: 40px;
 }
 
-.admin-footer {
+footer {
 	padding: 40px 0;
-	margin-top: 60px;
 }
 
 .full-width {
@@ -48,7 +61,7 @@ ul.no-bullet {
 }
 
 // Hidden elements for alerts 
-.hidden-message, .hidden-control, .admin-control {
+.hidden-message, .hidden-control, .admin-control, .sign-up-optional, .dev-footer {
 	display: none;
 }
 
@@ -104,4 +117,12 @@ ul.no-bullet {
 	font-size: 80%; 
 	position: relative; 
 	top:-10px;
+}
+
+// DEV dev-notes
+.dev-footer {
+	background-color: $state-info-bg;
+	p {
+		color: $state-info-text;
+	}
 }

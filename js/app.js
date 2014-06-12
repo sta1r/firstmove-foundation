@@ -14,7 +14,7 @@ jQuery(document).ready( function($) {
 
         	object.forEach(function(item) {
 
-        		checkboxes += '<div class="checkbox col-md-12"><label><input type="checkbox">' + item.name + '</label></div>';
+        		checkboxes += '<div class="col-sm-12"><div class="checkbox"><label><input type="checkbox">' + item.name + '</label></div></div>';
 
         	});
 
@@ -152,14 +152,18 @@ jQuery(document).ready( function($) {
 	// 	$('.admin-control').show();
 	// }
 
-	// if (GetURLParameter('logged-in') == 'recruiter') {
-	// 	$('.recruiter-control').show();
-	// 	$('.apply-button').addClass('disabled');
-	// }
+	if (GetURLParameter('logged-in') == 'recruiter') {
+		$('.apply-button').addClass('disabled');
+	}
 
 	if (GetURLParameter() === false) {
 		//$('.apply-button').addClass('disabled');
 	}
+
+	$('#toggle-dev-notes').click(function(e) {
+		e.preventDefault();
+		$('.dev-footer').toggle();
+	});
 
 
 	$('.populate').each( function(i) {
@@ -266,19 +270,25 @@ jQuery(document).ready( function($) {
 			$('.sign-up-email').hide();
 			if ($('#LDAPAccountYes').is(':checked')) {
 				$('.sign-up-email').show();
-				$('.sign-up-password').show();
+				$('.sign-up-ldap-password').show();
+				$('.sign-up-normal-password').hide();
 			}
 			if ($('#LDAPAccountNo').is(':checked')) {
 				$('.sign-up-email').show();
+				$('.sign-up-ldap-password').hide();
+				$('.sign-up-normal-password').show();
 			}
-
-			
+			$('#job-seeker-sign-up-button').show();
+			$('#recruiter-sign-up-button').hide();
 		}
 
 		if ($('#accountRecruiter').is(':checked')) {
 			$('.sign-up-ldap').hide();
 			$('.sign-up-email').show();
-			$('.sign-up-password').hide();
+			$('.sign-up-ldap-password').hide();
+			$('.sign-up-normal-password').show();
+			$('#job-seeker-sign-up-button').hide();
+			$('#recruiter-sign-up-button').show();
 		}
 
 	});

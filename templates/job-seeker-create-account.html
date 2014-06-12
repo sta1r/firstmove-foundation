@@ -1,0 +1,27 @@
+---
+layout: admin-bootstrap
+title: Job Seeker - Create Account
+persona: job-seeker
+---
+
+<div class="page-header">
+	<h1>Create your account</h1>
+</div>
+
+<div class="row">
+
+	<div class="col-md-6">
+
+		<form action="job-seeker-account-edit.html" class="job-seeker-sign-up">
+
+			{% include _personal-details.html %}
+
+			{% include _account-student-info.html %}
+
+			{% include _accept-terms.html %}
+
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+	</div>
+</div>

@@ -2,7 +2,10 @@
 layout: admin-bootstrap
 title: Job Page
 persona: all
+notes: Job seekers not logged in will be directed to <a href="sign-in.html">sign in</a>. Once a job has expired, recruiters should see a <a href="#" class="btn btn-sm btn-success">Post as new</a> button rather than an <a href="#" class="btn btn-sm btn-primary">Edit this job</a> button.
 ---
+
+{% include _account-status.html %}
 
 <div class="row hidden-control recruiter-control">
 	<div class="col-md-4">
@@ -28,6 +31,4 @@ persona: all
 		
 		<a href="job-apply.html" class="btn btn-primary btn-sm btn-block apply-button">Apply for this job</a>
 	</div>
-		
-
 </div>

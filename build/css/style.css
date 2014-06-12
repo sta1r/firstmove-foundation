@@ -4671,10 +4671,19 @@ button.close {
 body {
   padding-top: 70px; }
 
+.container[role="main"] {
+  margin-bottom: 60px; }
+
 ul.no-bullet {
   margin-left: 0;
   padding-left: 0;
   list-style: none; }
+
+.required label:first-child:after {
+  content: " *";
+  color: red; }
+.required .checkbox label:first-child:after {
+  content: ""; }
 
 .add-top {
   margin-top: 20px; }
@@ -4691,15 +4700,14 @@ ul.no-bullet {
   padding: 20px 0;
   margin-bottom: 40px; }
 
-.admin-footer {
-  padding: 40px 0;
-  margin-top: 60px; }
+footer {
+  padding: 40px 0; }
 
 .full-width {
   float: left;
   width: 100%; }
 
-.hidden-message, .hidden-control, .admin-control {
+.hidden-message, .hidden-control, .admin-control, .sign-up-optional, .dev-footer {
   display: none; }
 
 .logged-in {
@@ -4732,3 +4740,8 @@ ul.no-bullet {
   font-size: 80%;
   position: relative;
   top: -10px; }
+
+.dev-footer {
+  background-color: #d9edf7; }
+  .dev-footer p {
+    color: #31708f; }

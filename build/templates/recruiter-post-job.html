@@ -47,6 +47,7 @@
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
+		  	
 		  	<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
@@ -119,7 +120,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-sign-up.html">Job Seeker - Sign Up</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-create-account.html">Job Seeker - Create Account</a>
 						</li>
 						
 					
@@ -155,7 +156,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job Error</a>
 						</li>
 						
 					
@@ -183,6 +184,12 @@
 						</li>
 						
 					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/~sign-up-success.html">Sign Up Success</a>
+						</li>
+						
+					
 			  </ul>
 			</li>
 		  </ul>
@@ -198,18 +205,6 @@
 		  	<li class="active">Recruiter - Post New Job</li>
 		</ol>
 		
-
-		<div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
-	<p><small>You are signed in as <span data-id="fullName"></span> | <a href="recruiter-account-edit.html?logged-in=recruiter">View account</a></small></p>
-</div>
-
-<div class="pull-right account-status hidden-control admin-control">
-	<p><small>You are signed in as admin</small></p>
-</div>
-
-<div class="pull-right account-status hidden-control job_seeker-control populate" data-populate="job_seeker">
-	<p><small>You are signed in as <span data-id="fullName"></span> | <a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></small></p>
-</div>
 		
 		<div class="page-header">
 	<h1>Create your job listing</h1>
@@ -232,33 +227,33 @@
 		<form role="form" action="recruiter-job-preview.html" data-populate="recruiter">
 			<fieldset class="form-horizontal add-bottom">
 					<legend>Job details</legend>
-	<div class="form-group">
+	<div class="form-group required">
 		<div class="col-sm-12">
 			<label>Job title</label>
 			<input type="text" class="form-control" id="jobTitle" placeholder="" />
 		</div>
 	</div>
-	<div class="form-group">
+	<div class="form-group required">
 		<div class="col-sm-12">
 			<label>Job location</label>
 			<input type="text" class="form-control" id="jobLocation" placeholder="" />
 			<span class="help-block">e.g. High Street Kensington, London, UK</span>
 		</div>				
 	</div>
-	<div class="form-group">
+	<div class="form-group required">
 		<div class="col-sm-12">
 			<label>Description</label>
-			<textarea class="form-control" rows="3" id="jobDescription"></textarea>
+			<textarea class="form-control" rows="6" id="jobDescription"></textarea>
 		</div>				
 	</div>
-	<div class="form-group populate dropdown-list" data-populate="job_types">
+	<div class="form-group required populate dropdown-list" data-populate="job_types">
 		<div class="col-sm-12">
 			<label>Job type</label>
 			<select class="form-control">
 			</select>
 		</div>
 	</div>
-	<div class="form-group">
+	<div class="form-group required">
 		<label class="col-md-12">Duration</label>
 		<div class="col-sm-2">
 			<select class="form-control">
@@ -284,7 +279,7 @@
 			</select>
 		</div>
 	</div>
-	<div class="form-group">
+	<div class="form-group required">
 		<label class="col-md-12">Salary range (GBP)</label>
 		<div class="col-sm-8">
 			<div class="input-daterange input-group" id="datepicker">
@@ -305,11 +300,11 @@
 		</div>
 	</div>
 
-	<div class="form-group populate form-categories" data-populate="job_categories">
+	<div class="form-group required populate form-categories" data-populate="job_categories">
 		<label class="col-sm-12">Categories</label>
 	</div>
 	
-	<div class="form-group">
+	<div class="form-group required">
 		<div class="col-sm-12">
 			<label>Application deadline</label>
 			<div class="input-group date application-deadline-datepicker datepicker">
@@ -320,7 +315,7 @@
 			</fieldset>
 			<fieldset class="form-horizontal add-bottom">
 					<legend>Company details</legend>
-	<div class="form-group">
+	<div class="form-group required">
 		<div class="col-sm-12">
 			<label>Company name</label>
 			<input type="text" class="form-control" placeholder="" id="companyName" />
@@ -365,16 +360,16 @@
 						  <option>Ms</option>
 						</select>
 					</div>
-					<div class="col-sm-5">
+					<div class="col-sm-5 required">
 						<label for="firstName">First name</label>
 						<input type="text" class="form-control" id="firstName" placeholder="" />	
 					</div>
-					<div class="col-sm-5">
+					<div class="col-sm-5 required">
 						<label for="lastName">Last name</label>
 						<input type="text" class="form-control" id="lastName" placeholder="" />
 					</div>
 				</div>
-				<div class="form-group LDAP-optional">
+				<div class="form-group required" data-populate="job_seeker">
 					<div class="col-sm-12">
 						<label for="emailAddress">Email address</label>
 						<input type="text" class="form-control" id="emailAddress" placeholder="" />
@@ -425,22 +420,6 @@
 			</fieldset>
 
 
-						<fieldset class="form-horizontal add-bottom state--logged-out">
-				<legend>Password</legend>
-	        	<div class="form-group">
-					<div class="col-sm-12">
-						<label for="password">Password</label>
-						<input type="text" class="form-control" id="password" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label for="password">Confirm</label>
-						<input type="text" class="form-control" id="password" placeholder="" />
-					</div>
-				</div>
-			</fieldset>
-
 							<div class="panel panel-default">
   					<div class="panel-body">
   						<div class="checkbox">
@@ -471,7 +450,16 @@
 
 
 	</div> <!-- /container -->
-
+	
+	<footer class="dev-footer">
+		<div class="container">
+			<div class="row">
+		  		<div class="col-md-12">
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<footer class="admin-footer dark-bg">
 		<div class="container">
 			<div class="row">

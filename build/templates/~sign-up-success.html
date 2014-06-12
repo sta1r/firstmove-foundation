@@ -47,6 +47,7 @@
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
+		  	
 		  	<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
@@ -119,7 +120,7 @@
 					
 						
 						<li>
-				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-sign-up.html">Job Seeker - Sign Up</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-create-account.html">Job Seeker - Create Account</a>
 						</li>
 						
 					
@@ -155,7 +156,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job Error</a>
 						</li>
 						
 					
@@ -183,6 +184,12 @@
 						</li>
 						
 					
+						
+						<li>
+				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/~sign-up-success.html">Sign Up Success</a>
+						</li>
+						
+					
 			  </ul>
 			</li>
 		  </ul>
@@ -195,183 +202,46 @@
 		
 		<ol class="breadcrumb">
 			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-		  	<li class="active">Job Seeker - Sign Up</li>
+		  	<li class="active">Sign Up Success</li>
 		</ol>
 		
-
-		<div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
-	<p><small>You are signed in as <span data-id="fullName"></span> | <a href="recruiter-account-edit.html?logged-in=recruiter">View account</a></small></p>
-</div>
-
-<div class="pull-right account-status hidden-control admin-control">
-	<p><small>You are signed in as admin</small></p>
-</div>
-
-<div class="pull-right account-status hidden-control job_seeker-control populate" data-populate="job_seeker">
-	<p><small>You are signed in as <span data-id="fullName"></span> | <a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></small></p>
-</div>
 		
 		<div class="page-header">
-	<h1>Create your account</h1>
+	<h1>Welcome</h1>
 </div>
 
 <div class="row">
+	<div class="col-md-8">
+		<div class="alert alert-success">
+			<p><strong>Success!</strong> You have created an account.</p>
+		</div>
+		
+		<h3>What happens next?</h3>
 
-	<div class="col-md-12">
-		<div id="message-updated" class="hidden-message alert alert-success">
-			<p><strong>Success!</strong> Your account has been updated.</p>
+		<div class="hidden-control recruiter-control">
+			<p>Next steps for recruiters</p>
+		</div>
+		<div class="hidden-control job_seeker-control">
+			<p>Next steps for job seekers:</p>
+			<a class="btn" href="job-seeker-account-edit.html"
 		</div>
 	</div>
 
-	<div class="col-md-6">
 
-		<form action="#updated" class="job-seeker-sign-up">
-			<fieldset class="form-horizontal add-bottom">
-				<!-- <legend>About you</legend> -->
-	            <div class="form-group populate" data-populate="job_seeker">
-					<div class="col-sm-12">
-						<label for="emailAddress">Email address</label>
-						<input type="text" class="form-control" id="emailAddress" placeholder="" />
-					</div>
-				</div>
-        	</fieldset>
-
-						<fieldset class="form-horizontal add-bottom state--logged-out">
-				<legend>Password</legend>
-	        	<div class="form-group">
-					<div class="col-sm-12">
-						<label for="password">Password</label>
-						<input type="text" class="form-control" id="password" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label for="password">Confirm</label>
-						<input type="text" class="form-control" id="password" placeholder="" />
-					</div>
-				</div>
-			</fieldset>
-
-						<fieldset class="form-horizontal add-bottom">
-				<legend>Your details</legend>
-
-				<div class="form-group">
-					<div class="col-sm-2">				
-						<label for="country">Title</label>
-						<select class="form-control">
-						  <option>Mr</option>
-						  <option>Mrs</option>
-						  <option>Ms</option>
-						</select>
-					</div>
-					<div class="col-sm-5">
-						<label for="firstName">First name</label>
-						<input type="text" class="form-control" id="firstName" placeholder="" />	
-					</div>
-					<div class="col-sm-5">
-						<label for="lastName">Last name</label>
-						<input type="text" class="form-control" id="lastName" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group LDAP-optional">
-					<div class="col-sm-12">
-						<label for="emailAddress">Email address</label>
-						<input type="text" class="form-control" id="emailAddress" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label for="addressLine1">Address line 1</label>
-						<input type="text" class="form-control" id="addressLine1" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label for="addressLine2">Address line 2</label>
-						<input type="text" class="form-control" id="addressLine2" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label for="townOrCity">Town or city</label>
-						<input type="text" class="form-control" id="townOrCity" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">				
-						<label for="countyOrRegion">County or region</label>
-						<input type="text" class="form-control" id="countyOrRegion" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-5">				
-						<label for="postcode">Postcode</label>
-						<input type="text" class="form-control" id="postcode" placeholder="" />
-					</div>
-					<div class="col-sm-7">				
-						<label for="country">Country</label>
-						<select class="form-control">
-						  <option>United Kingdom</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">				
-						<label for="contactNumber">Phone</label>
-						<input type="text" class="form-control" id="contactNumber" placeholder="" />
-					</div>
-				</div>
-			</fieldset>
-
-
-										<fieldset class="add-bottom">
-								<legend>Student information</legend>
-								<div class="form-group LDAP-optional">
-									<label for="LCFStudentNumber">LCF student number</label>
-									<input id="LCFStudentNumber" type="text" class="form-control" placeholder="e.g. ABC12345678" />
-								</div>
-								<div class="form-group">
-									<label for="graduationYear">Graduation year</label>
-									<input id="graduationYear" type="text" class="form-control" placeholder="" />
-								</div>
-								<div class="form-group">
-									<label>Course</label>
-									<input id="LCFCourse" type="text" class="form-control" placeholder="" />
-								</div>
-								<div class="form-group populate dropdown-list" data-populate="lcf_schools">
-									<label>School</label>
-									<select class="form-control">
-									</select>
-								</div>
-								<div class="form-group populate dropdown-list" data-populate="lcf_study_levels">
-									<label>Level</label>
-									<select class="form-control">
-									</select>
-									<span class="help-block">Enter the highest level attained if you have left the College.</span>
-								</div>
-								
-							</fieldset>
-
-
-							<div class="panel panel-default">
-  					<div class="panel-body">
-  						<div class="checkbox">
-				  			<label>
-				    			<input type="checkbox" value="">
-				    			I have read and accepted the <a href="http://www.lcffirstmove.co.uk/terms/" target="_blank" title="View T&amp;C in a new window or tab">terms and conditions</a> and <a href="http://www.lcffirstmove.co.uk/terms#privacy"  target="_blank">privacy policy</a>.
-				  			</label>
-						</div>
-  					</div>
-				</div>
-
-			<button type="submit" class="btn btn-primary">Submit</button>
-		</form>
-
-	</div>
 </div>
 
-	</div> <!-- /container -->
 
+	</div> <!-- /container -->
+	
+	<footer class="dev-footer">
+		<div class="container">
+			<div class="row">
+		  		<div class="col-md-12">
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<footer class="admin-footer dark-bg">
 		<div class="container">
 			<div class="row">

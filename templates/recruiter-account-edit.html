@@ -12,8 +12,8 @@ persona: recruiter
 	{% include _message-account-update.html %}
 	
     <div class="col-md-4 pull-right add-bottom">
-		<a href="recruiter-post-job.html" class="pull-right btn btn-success">Post a new job</a>
-	</div><!-- /.col-md-4 -->
+		<a href="recruiter-post-job.html" class="control pull-right btn btn-success">Post a new job</a>
+	</div>
 
 	<div class="col-md-12 add-bottom">
 		<!-- Nav tabs -->
@@ -55,7 +55,7 @@ persona: recruiter
 								<span class="badge badge-info">0</span>
 							</td>
 							<td>
-								<a href="recruiter-edit-job.html?logged-in=recruiter" class="btn btn-sm btn-primary">View draft</a>
+								<a href="recruiter-edit-job.html?logged-in=recruiter" class="btn btn-sm btn-default">Edit</a>
 								
 							</td>
 						</tr>
@@ -64,12 +64,12 @@ persona: recruiter
 								<span class="label label-success">Live</span>
 							</td>
 							<td>10 May 2014</td>
-							<td>Allocator</td>
+							<td><a href="job-single.html?logged-in=recruiter">Allocator</a></td>
 							<td>
 								<span class="badge badge-info">4</span>
 							</td>
 							<td>
-								<a href="job-single.html?logged-in=recruiter" class="btn btn-sm btn-primary">View</a>
+								<a href="recruiter-edit-job.html?logged-in=recruiter" class="btn btn-sm btn-default">Edit</a>
 								<button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button>
 							</td>
 						</tr>
@@ -78,12 +78,12 @@ persona: recruiter
 								<span class="label label-default">Expired</span>
 							</td>
 							<td>5 February 2014</td>
-							<td>Retail assistant</td>
+							<td><a href="job-single.html?logged-in=recruiter">Retail assistant</a></td>
 							<td>
 								<span class="badge badge-info">120</span>
 							</td>
 							<td>
-								<a href="job-single.html?logged-in=recruiter" class="btn btn-sm btn-primary">View</a>
+								<a href="#" class="btn btn-sm btn-primary">Leave feedback</a>
 								<a href="#" class="btn btn-sm btn-success">Post as new</a>
 							</td>
 						</tr>
@@ -92,12 +92,12 @@ persona: recruiter
 								<span class="label label-default">Expired</span>
 							</td>
 							<td>10 October 2012</td>
-							<td>Experienced Freelance Journalist  (FR/EN)</td>
+							<td><a href="job-single.html?logged-in=recruiter">Experienced Freelance Journalist (FR/EN)</a></td>
 							<td>
 								<span class="badge badge-info">16</span>
 							</td>
 							<td>
-								<a href="job-single.html?logged-in=recruiter" class="btn btn-sm btn-primary">View</a>
+								<a href="#" class="btn btn-sm btn-primary">Leave feedback</a>
 								<a href="#" class="btn btn-sm btn-success">Post as new</a>
 							</td>
 						</tr>
@@ -109,7 +109,6 @@ persona: recruiter
 			  		<div class="col-md-6">
 						<form action="#updated" class="populate" data-populate="recruiter">
 							{% include _personal-details.html %}
-
 							<button type="submit" class="btn btn-primary updated">Update</button>
 						</form>
 					</div>
@@ -130,6 +129,7 @@ persona: recruiter
 								  </label>
 								</div>
 							</fieldset>
+							<button type="submit" class="btn btn-primary updated">Update</button>
 						</form>
 					</div>
 				</div>
