@@ -29,20 +29,7 @@ persona: job-seeker
 				</div>
         	</fieldset>
 
-			<fieldset class="form-horizontal add-bottom">
-				<legend>Password</legend>
-
-	        	<div class="form-group">
-					<div class="col-sm-12">
-						<label for="LDAPPassword">Password</label>
-						<input type="text" class="form-control" id="LDAPPassword" placeholder="" />
-					</div>
-					<div class="col-sm-12">
-						<label for="LDAPPassword">Confirm</label>
-						<input type="text" class="form-control" id="LDAPPassword" placeholder="" />
-					</div>
-				</div>
-			</fieldset>
+			{% include _account-password.html %}
 
 			{% include _personal-details.html %}
 

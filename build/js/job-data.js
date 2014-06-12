@@ -18,6 +18,8 @@ var job_data = {
         "jobLocation": "London",
         "LCFStudentNumber": "STA08237348",
         "LCFCourse": "BA (Hons) FDT Menswear",
+        "LCFSchool": "Graduate School",
+        "LCFLevel": "Postgraduate",
         "personalStatement": "Dmitri Stavrou made a real splash at this year's London Fashion Week. The young designer came out firing with a collection full of shimmering fabrics, fringes and trendy designs. The collection is absolutely brilliant. One look included a metallic gold trench coat that I would love to call my own. Dimitri Stavrou is definitely a designer to keep a close eye on in the years to come - Fashion Indie, 2009",
         "adminNotes": "This kid is incredible.",
         "lastLoggedIn": "10/5/2014"
@@ -34,6 +36,7 @@ var job_data = {
         "countyOrRegion": "Hampshire",
         "postcode": "E8 5DE",
         "country": "United Kingdom",
+        "contactNumber": "08816763150",
         "companyName": "Wingman Industries",
         "companyURL": "http://www.ingman.io",
         "adminNotes": "Need to have a word with Adam.",
@@ -186,6 +189,18 @@ var job_data = {
         {
             "name": "Graduate School",
             "shortcode": "gs"
+        }
+    ],
+
+    // LCF Study Levels Object
+    lcf_study_levels: [
+        {
+            "name": "Undergraduate",
+            "shortcode": "ug"
+        },
+        {
+            "name": "Postgraduate",
+            "shortcode": "pg"
         }
     ]
            

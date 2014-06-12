@@ -143,7 +143,7 @@
 					
 						
 						<li>
-				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-edit-job.html">Recruiter - Edit Job</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-edit-job.html">Recruiter - Edit Job</a>
 						</li>
 						
 					
@@ -155,7 +155,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job</a>
+				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job</a>
 						</li>
 						
 					
@@ -195,7 +195,7 @@
 		
 		<ol class="breadcrumb">
 			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-		  	<li class="active">Recruiter - Edit Job</li>
+		  	<li class="active">Recruiter - Post New Job</li>
 		</ol>
 		
 
@@ -212,156 +212,15 @@
 </div>
 		
 		<div class="page-header">
-	<h1>Edit job</h1>
+	<h1>Error</h1>
 </div>
 
 <div class="row">
-
-		<div class="col-md-12">
-		<div id="message-updated" class="hidden-message alert alert-success">
-			<p><strong>Success!</strong> Your job has been updated.</p>
-		</div>
-	</div>
-	
-	<div class="col-md-6">
-
-		<form role="form" action="recruiter-job-preview.html">
-			<fieldset class="form-horizontal add-bottom populate" data-populate="job">
-					<legend>Job details</legend>
-	<div class="form-group">
-		<div class="col-sm-12">
-			<label>Job title</label>
-			<input type="text" class="form-control" id="jobTitle" placeholder="" />
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="col-sm-12">
-			<label>Job location</label>
-			<input type="text" class="form-control" id="jobLocation" placeholder="" />
-			<span class="help-block">e.g. High Street Kensington, London, UK</span>
-		</div>				
-	</div>
-	<div class="form-group">
-		<div class="col-sm-12">
-			<label>Description</label>
-			<textarea class="form-control" rows="3" id="jobDescription"></textarea>
-		</div>				
-	</div>
-	<div class="form-group populate dropdown-list" data-populate="job_types">
-		<div class="col-sm-12">
-			<label>Job type</label>
-			<select class="form-control">
-			</select>
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-md-12">Duration</label>
-		<div class="col-sm-2">
-			<select class="form-control">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
-				<option value="11">11</option>
-				<option value="12">12</option>
-			</select>
-		</div>
-		<div class="col-sm-4">
-			<select class="form-control">
-				<option value="weeks">weeks</option>
-				<option value="months">months</option>
-				<option value="years">years</option>
-			</select>
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-md-12">Salary range (GBP)</label>
-		<div class="col-sm-8">
-			<div class="input-daterange input-group" id="datepicker">
-			    <input type="text" class="input-sm form-control" name="start" placeholder="e.g. 18,000" />
-			    <span class="input-group-addon">to</span>
-			    <input type="text" class="input-sm form-control" name="end" placeholder="e.g. 20,000" />
-			</div>
-			<span class="help-block">For exact salaries, you may simply enter a value in the left hand box</span>
-		</div>
-		<div class="col-sm-4">
-			<select class="form-control">
-				<option value="per-year">per year</option>
-				<option value="per-hour">per hour</option>
-				<option value="per-day">per day</option>
-				<option value="per-week">per week</option>
-				<option value="per-month">per month</option>
-			</select>
-		</div>
-	</div>
-
-	<div class="form-group populate form-categories" data-populate="job_categories">
-		<label class="col-sm-12">Categories</label>
-	</div>
-	
-	<div class="form-group">
-		<div class="col-sm-12">
-			<label>Application deadline</label>
-			<div class="input-group date application-deadline-datepicker datepicker">
-					<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-			</div>
-		</div>
-	</div>
-			</fieldset>
-			<fieldset class="form-horizontal add-bottom populate" data-populate="recruiter">
-					<legend>Company details</legend>
-	<div class="form-group">
-		<div class="col-sm-12">
-			<label>Company name</label>
-			<input type="text" class="form-control" placeholder="" id="companyName" />
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-sm-12">
-			<label>Company URL</label>
-			<input type="text" class="form-control" placeholder="http://" id="companyURL" />
-		</div>
-	</div>
-			</fieldset>	
-
-			<fieldset class="add-bottom">
-	<legend>Attachments</legend>
-	<div class="well">
-		<div class="form-group">
-		    <label for="JobUpload1">File 1</label>
-		    <input type="file" id="JobUpload1">
-		</div>
-		<div class="form-group">
-		    <label for="JobUpload2">File 2</label>
-		    <input type="file" id="JobUpload2">
-		</div>
-		<div class="form-group">
-		    <label for="JobUpload3">File 3</label>
-		    <input type="file" id="JobUpload3">
-		</div>
-		<p class="help-block">2MB limit per file. Accepted file formats: .pdf, .doc, .docx, .txt, .rtf</p>
-	</div>
-</fieldset>
-
-			<a href="#updated" class="btn btn-default">Save draft</a>
-			<button type="submit" class="btn btn-primary">Preview job</button>
-
-		</form>
-	</div>
-
-	<div class="col-md-5 col-md-offset-1">
-		
-
+	<div class="col-sm-6">
+		<div class="alert alert-danger populate" data-populate="recruiter">Error! The email address <span data-id="emailAddress"></span> already has an account in this system.</div>
+		<p>Your job has been saved - however please <a href="sign-in.html">sign in</a> to continue.</p>
 	</div>
 </div>
-
 
 	</div> <!-- /container -->
 

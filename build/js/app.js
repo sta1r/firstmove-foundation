@@ -50,7 +50,7 @@ jQuery(document).ready( function($) {
 
         }
 
-        else if (node.hasClass('dropdown-job-types')) {
+        else if (node.hasClass('dropdown-list')) {
 
         	var ddItems = '<option>Please select</option>';
 
@@ -140,7 +140,12 @@ jQuery(document).ready( function($) {
 		//console.log(loginID);
 
 		//$('.hidden-control').addClass('logged-in');
+		$('.state--logged-out').hide();
 		$('.' + loginID + '-control').show();
+
+		// if logged in, populate any relevant elements accordingly
+		$('*[data-populate="' + loginID + '"]').addClass('populate');
+
 	}
 
 	// if (GetURLParameter('logged-in') == 'admin') {
@@ -243,24 +248,39 @@ jQuery(document).ready( function($) {
 
 	//$('.hidden-form-field').css('visibility', 'visible'); // override for style on .hidden in style.css
 
-	var LDAP_opt_fields = $('form').find('.LDAP-optional');
-	LDAP_opt_fields.hide();
+	var opt_fields = $('form').find('.sign-up-optional');
+	opt_fields.hide();
 
-	$('.LDAP-account-select').find('input').change( function() {
+	$('#signupform').find('input').change( function() {
 
 		if (!$(this).is(':checked')) {
 			$(this).attr("checked", "checked");
 		} else {
 			$(this).attr("checked", "");
 		}
-		// $(this).attr("checked", "checked");
-		console.log($(this).attr('id') + ' is ' + $(this).attr('checked'));
 
-		if ($('#LDAPAccountYes').is(':checked')) {
-			LDAP_opt_fields.show();
-		} else {
-			LDAP_opt_fields.hide();
+		//console.log($(this).attr('id') + ' is ' + $(this).attr('checked'));
+
+		if ($('#accountJobSeeker').is(':checked')) {
+			$('.sign-up-ldap').show();
+			$('.sign-up-email').hide();
+			if ($('#LDAPAccountYes').is(':checked')) {
+				$('.sign-up-email').show();
+				$('.sign-up-password').show();
+			}
+			if ($('#LDAPAccountNo').is(':checked')) {
+				$('.sign-up-email').show();
+			}
+
+			
 		}
+
+		if ($('#accountRecruiter').is(':checked')) {
+			$('.sign-up-ldap').hide();
+			$('.sign-up-email').show();
+			$('.sign-up-password').hide();
+		}
+
 	});
 
 

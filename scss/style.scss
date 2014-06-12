@@ -87,3 +87,21 @@ ul.no-bullet {
 .saved {
 	opacity: 0.5;
 }
+
+// Log in box
+.login-box {
+	margin-top: 50px;
+	.panel-body {
+		padding-top: 30px;
+	}
+	.input-group {
+		//margin-bottom: 25px;
+	}
+}
+
+.panel-title-link {
+	float:right; 
+	font-size: 80%; 
+	position: relative; 
+	top:-10px;
+}
