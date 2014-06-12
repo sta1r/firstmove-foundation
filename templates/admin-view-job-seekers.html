@@ -11,12 +11,14 @@ persona: admin
 <div class="control-bar row">
 	<div class="col-md-12">
 		<div class="well clearfix">
-			<div class="control pull-left">
-				<p>View only:</p>
-				<div class="btn-group">
-					<button class="btn btn-default btn-sm">Flagged</button>
-					<button class="btn btn-default btn-sm">LDAP</button>
-				</div>
+			<div class="control control-search pull-left">
+				<p>Profile search:</p>
+			    <div class="input-group input-group-sm">
+			      <input type="text" class="form-control">
+			      <span class="input-group-btn">
+			        <button class="btn btn-default" type="button">Search</button>
+			      </span>
+			    </div>
 			</div>	
 			<div class="control pull-left">
 				<p>Filter by school:</p>
@@ -43,16 +45,13 @@ persona: admin
 				    <input type="text" class="input-sm form-control" name="end" />
 				</div>
 			</div>
-			<div class="control control-search pull-left">
-				<p>Profile search:</p>
-			    <div class="input-group input-group-sm">
-			      <input type="text" class="form-control">
-			      <span class="input-group-btn">
-			        <button class="btn btn-default" type="button">Search</button>
-			      </span>
-			    </div><!-- /input-group -->
-			</div>
 
+			<div class="control pull-left">
+				<p>View only:</p>
+				<div class="btn-group">
+					<button class="btn btn-default btn-sm">Flagged</button>
+				</div>
+			</div>
 			<div class="control pull-left">
 				<p>With selection:</p>
 				<a href="#" class="btn btn-default btn-sm">Export</a>

@@ -1,107 +1,86 @@
-			<fieldset class="form-horizontal add-bottom">
-				<legend>Job details</legend>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label>Job title</label>
-						<input type="text" class="form-control" id="jobTitle" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label>Job location</label>
-						<input type="text" class="form-control" id="jobLocation" placeholder="" />
-					</div>				
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label>Description</label>
-						<textarea class="form-control" rows="3" id="jobDescription"></textarea>
-					</div>				
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label>Job type</label>
-						<select class="form-control">
-							<option value="short-term-work-experience">Short term work experience</option>
-							<option value="long-term-work-placement">Long term work placement</option>
-							<option value="freelance-contract">Freelance / Contract</option>
-							<option value="full-time">Full time</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-12">Length of contract</label>
-					<div class="col-sm-2">
-						<select class="form-control">
-							<option value="apollo">1</option>
-							<option value="apollo">2</option>
-							<option value="husker">3</option>
-							<option value="hotdog">4</option>
-							<option value="apollo">5</option>
-							<option value="apollo">6</option>
-							<option value="apollo">7</option>
-							<option value="apollo">8</option>
-							<option value="apollo">9</option>
-							<option value="apollo">10</option>
-							<option value="apollo">11</option>
-							<option value="apollo">12</option>				
-						</select>
-					</div>
-					<div class="col-sm-4">
-						<select class="form-control">
-							<option value="apollo">weeks</option>
-							<option value="apollo">months</option>
-							<option value="husker">years</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label>Salary range</label>
-						<select class="form-control">
-							<option value="11">Negotiable</option>
-							<option value="12">£13k (NMW)</option>
-							<option value="13">£14k - £16k</option>
-							<option value="14">£16k - £18k</option>
-							<option value="5">£18K - £20K</option>
-							<option value="15">£20k - £22k</option>
-							<option value="16">£22k - £24k</option>
-							<option value="17">£25k+ (Please specify)</option>
-						</select>
-					</div>
-				</div>
+	<legend>Job details</legend>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<label>Job title</label>
+			<input type="text" class="form-control" id="jobTitle" placeholder="" />
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<label>Job location</label>
+			<input type="text" class="form-control" id="jobLocation" placeholder="" />
+			<span class="help-block">e.g. High Street Kensington, London, UK</span>
+		</div>				
+	</div>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<label>Description</label>
+			<textarea class="form-control" rows="3" id="jobDescription"></textarea>
+		</div>				
+	</div>
+	<div class="form-group populate dropdown-job-types" data-populate="job_types">
+		<div class="col-sm-12">
+			<label>Job type</label>
+			<select class="form-control">
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-12">Duration</label>
+		<div class="col-sm-2">
+			<select class="form-control">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+			</select>
+		</div>
+		<div class="col-sm-4">
+			<select class="form-control">
+				<option value="weeks">weeks</option>
+				<option value="months">months</option>
+				<option value="years">years</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-md-12">Salary range (GBP)</label>
+		<div class="col-sm-8">
+			<div class="input-daterange input-group" id="datepicker">
+			    <input type="text" class="input-sm form-control" name="start" placeholder="e.g. 18,000" />
+			    <span class="input-group-addon">to</span>
+			    <input type="text" class="input-sm form-control" name="end" placeholder="e.g. 20,000" />
+			</div>
+			<span class="help-block">For exact salaries, you may simply enter a value in the left hand box</span>
+		</div>
+		<div class="col-sm-4">
+			<select class="form-control">
+				<option value="per-year">per year</option>
+				<option value="per-hour">per hour</option>
+				<option value="per-day">per day</option>
+				<option value="per-week">per week</option>
+				<option value="per-month">per month</option>
+			</select>
+		</div>
+	</div>
 
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label>Salary (specific)</label>
-						<input type="text" class="form-control" placeholder="" />
-					</div>
-				</div>
-
-				<div class="form-group populate form-categories" data-populate="job_categories">
-					<label class="col-sm-12">Categories</label>
-				</div>
-				
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label>Application deadline</label>
-						<div class="input-group date application-deadline-datepicker datepicker">
-  							<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label>Company name</label>
-						<input type="text" class="form-control" placeholder="" />
-					</div>
-				</div>
-
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label>Company URL</label>
-						<input type="text" class="form-control" placeholder="http://" />
-					</div>
-				</div>
-			</fieldset>
+	<div class="form-group populate form-categories" data-populate="job_categories">
+		<label class="col-sm-12">Categories</label>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-sm-12">
+			<label>Application deadline</label>
+			<div class="input-group date application-deadline-datepicker datepicker">
+					<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+			</div>
+		</div>
+	</div>

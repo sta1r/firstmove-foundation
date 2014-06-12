@@ -50,6 +50,20 @@ jQuery(document).ready( function($) {
 
         }
 
+        else if (node.hasClass('dropdown-job-types')) {
+
+        	var ddItems = '<option>Please select</option>';
+
+        	object.forEach(function(item) {
+
+        		ddItems += '<option value="' + item.shortcode + '">' + item.name + '</option>';
+
+        	});
+
+        	node.find('select').html(ddItems);
+
+        }
+
         else if (node.hasClass('list-categories')) {
 
         	var listItems = '';
@@ -100,15 +114,22 @@ jQuery(document).ready( function($) {
 	function GetURLParameter(sParam)
 	{
 	    var sPageURL = window.location.search.substring(1);
-	    var sURLVariables = sPageURL.split('&');
-	    for (var i = 0; i < sURLVariables.length; i++) 
-	    {
-	        var sParameterName = sURLVariables[i].split('=');
-	        if (sParameterName[0] == sParam) 
-	        {
-	            return sParameterName[1];
-	        }
+	    if (sPageURL.length) {
+	    	var sURLVariables = sPageURL.split('&');
+		    for (var i = 0; i < sURLVariables.length; i++) 
+		    {
+		        var sParameterName = sURLVariables[i].split('=');
+		        if (sParameterName[0] == sParam) 
+		        {
+		            return sParameterName[1];
+		        }
+		    }
 	    }
+	    else
+	    {
+	    	return false;
+	    }
+	    
 	}
 
 	$('.hidden-control').hide();
@@ -130,6 +151,10 @@ jQuery(document).ready( function($) {
 	// 	$('.recruiter-control').show();
 	// 	$('.apply-button').addClass('disabled');
 	// }
+
+	if (GetURLParameter() === false) {
+		//$('.apply-button').addClass('disabled');
+	}
 
 
 	$('.populate').each( function(i) {

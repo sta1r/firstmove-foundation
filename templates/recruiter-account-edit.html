@@ -55,7 +55,7 @@ persona: recruiter
 								<span class="badge badge-info">0</span>
 							</td>
 							<td>
-								<a href="job-single.html?logged-in=recruiter" class="btn btn-sm btn-primary">View draft</a>
+								<a href="recruiter-edit-job.html?logged-in=recruiter" class="btn btn-sm btn-primary">View draft</a>
 								
 							</td>
 						</tr>
@@ -84,7 +84,7 @@ persona: recruiter
 							</td>
 							<td>
 								<a href="job-single.html?logged-in=recruiter" class="btn btn-sm btn-primary">View</a>
-								<a href="#" class="btn btn-sm btn-success">Re-open</a>
+								<a href="#" class="btn btn-sm btn-success">Post as new</a>
 							</td>
 						</tr>
 						<tr>
@@ -121,6 +121,15 @@ persona: recruiter
 			  		<div class="col-md-6">
 						<form action="#updated">
 							{% include _field-password-edit.html %}
+							<fieldset class="add-bottom">
+								<legend>Notifications</legend>
+								<div class="checkbox">
+								  <label>
+								    <input type="checkbox" value="" checked>
+								    Send me email about careers events and invitations to collaborate
+								  </label>
+								</div>
+							</fieldset>
 						</form>
 					</div>
 				</div>

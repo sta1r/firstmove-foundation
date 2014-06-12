@@ -29,15 +29,19 @@ persona: recruiter
 	</div>
 
 	<div class="col-md-4 col-md-offset-1">
-		<div class="well">
+		<div class="panel panel-default populate" data-populate="job">
+			{% include _job-details-mini.html %}
+		</div>
+		<div class="panel panel-default personal-details-widget">
+			<div class="panel-heading">
+				<h3 class="panel-title">Attachments</h3>
+			</div>
 			<table class="table">
-				<tr><td>Company</td><td data-id="companyName"><a href=""></a></td></tr>
-				<tr><td>Job type</td><td data-id="jobType"></td></tr>
-				<tr><td>Length of contract</td><td data-id="jobContractLength"></td></tr>
-				<tr><td>Salary</td><td data-id="jobSalary"></td></tr>
-				<tr><td>Deadline</td><td data-id="jobApplicationDeadline"></td></tr>
+				<tr><td>Zaeem-Jamal-company-profile.pdf</td></tr>
+				<tr><td>Extended-job-description.pdf</td></tr>
 			</table>
 		</div>
+
 	</div>
 		
 

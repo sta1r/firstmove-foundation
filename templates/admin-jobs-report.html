@@ -13,14 +13,9 @@ persona: admin
 		<div class="well clearfix">
 			<div class="row">
 				<div class="col-md-12 add-bottom">
-					<div class="control pull-left">
+					<div class="control pull-left populate dropdown-job-types" data-populate="job_types">
 						<p>Filter by type:</p>
 						<select class="form-control input-sm">
-							<option>Select</option>
-							<option value="short-term-work-experience">Short term work experience</option>
-							<option value="long-term-work-placement">Long term work placement</option>
-							<option value="freelance-contract">Freelance / Contract</option>
-							<option value="full-time">Full time</option>
 						</select>
 					</div>
 					<div class="control pull-left">
@@ -33,7 +28,7 @@ persona: admin
 					</div>	
 					<div class="control pull-left">
 						<p>Posted date range:</p>
-						<div class="input-daterange input-group" id="datepicker">
+						<div class="input-daterange input-group">
 						    <input type="text" class="input-sm form-control" name="start" />
 						    <span class="input-group-addon">to</span>
 						    <input type="text" class="input-sm form-control" name="end" />
@@ -70,8 +65,9 @@ persona: admin
 					<tr>
 						<th>Status</th>
 						<th>Date posted</th>
-						<th>Company</th>
 						<th>Role</th>
+						<th>Type</th>
+						<th>Company</th>
 						<th>Views</th>
 						<th>Applications</th>
 						<th>Vacancy filled by us?</th>
@@ -84,8 +80,9 @@ persona: admin
 							<span class="label label-success">Live</span>
 						</td>
 						<td>20/5/2014</td>
-						<td>Debenhams</td>
 						<td>Retail assistant</td>
+						<td>Full time permanent</td>
+						<td>Debenhams</td>
 						<td>
 							<span class="badge badge-info">10</span>
 						</td>
@@ -104,8 +101,9 @@ persona: admin
 							<span class="label label-success">Live</span>
 						</td>
 						<td>10/10/2012</td>
-						<td>Debenhams</td>
 						<td>Work experience</td>
+						<td>Short term work experience</td>
+						<td>Debenhams</td>
 						<td>
 							<span class="badge badge-info">16</span>
 						</td>
@@ -124,8 +122,9 @@ persona: admin
 							<span class="label label-success">Live</span>
 						</td>
 						<td>10/10/2012</td>
-						<td>Debenhams</td>
 						<td>Promotions Executive</td>
+						<td>Full time permanent
+						<td>Debenhams</td>
 						<td>
 							<span class="badge badge-info">120</span>
 						</td>
@@ -144,8 +143,9 @@ persona: admin
 							<span class="label label-default">Expired</span>
 						</td>
 						<td>10/10/2012</td>
-						<td>Debenhams</td>
 						<td>Allocator</td>
+						<td>Full time permanent
+						<td>Debenhams</td>
 						<td>
 							<span class="badge badge-info">16</span>
 						</td>
@@ -165,8 +165,9 @@ persona: admin
 							<span class="label label-default">Expired</span>
 						</td>
 						<td>10/10/2012</td>
-						<td>Debenhams</td>
 						<td>Admin/buying assistant</td>
+						<td>Part time permanent</td>
+						<td>Debenhams</td>
 						<td>
 							<span class="badge badge-info">16</span>
 						</td>
@@ -186,8 +187,9 @@ persona: admin
 							<span class="label label-default">Expired</span>
 						</td>
 						<td>10/10/2012</td>
-						<td>Debenhams</td>
 						<td>Retail assistant</td>
+						<td>Full time permanent</td>
+						<td>Debenhams</td>
 						<td>
 							<span class="badge badge-info">20</span>
 						</td>
