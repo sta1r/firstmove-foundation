@@ -5,8 +5,6 @@ persona: job-seeker
 notes: Basic TinyMCE editor (simply to process line breaks as p tags) required for textarea. 
 ---
 
-{% include _account-status.html %}
-
 <div class="page-header">
 	<h1>Apply</h1>
 </div>
@@ -34,13 +32,18 @@ notes: Basic TinyMCE editor (simply to process line breaks as p tags) required f
 					<textarea class="form-control" rows="12"></textarea>
 				</div>
 				<div class="form-group">
+					<label>Links</label>
+					<textarea class="form-control" rows="4"></textarea>
+					<span class="help-block">Please add any links to websites that support your application. One link per line.</span>
+				</div>
+				<div class="form-group">
 				    <label for="CVUpload">CV attachment</label>
 				    <input type="file" id="CVUpload">
 				    <p class="help-block">2MB limit. Accepted file formats: .pdf, .doc, .docx, .txt, .rtf</p>
 				</div>
 			</fieldset>
 
-			<button type="submit" class="btn btn-primary">Preview application</button>
+			<button type="submit" class="btn btn-primary">Preview and apply</button>
 
 		</form>
 	</div>
