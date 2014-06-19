@@ -62,7 +62,8 @@ var job_data = {
         "jobLocation": "Shoreditch, London, UK",
         "jobStatus": "Live",
         "jobPosted": "20/4/2014",
-        "jobLastModified": "20/5/2014"
+        "jobLastModified": "20/5/2014",
+        "jobViews": "4"
     },
 
     // Job Categories Object
