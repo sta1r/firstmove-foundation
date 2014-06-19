@@ -32,8 +32,8 @@
   </head>
 
   <body role="document">
-
-	<!-- Fixed navbar -->
+	
+	<!-- Main navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
@@ -43,7 +43,154 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="http://strangerpixel.com/firstmove-foundation">FirstMove</a>
+		  <a class="navbar-brand" href="http://strangerpixel.com/firstmove-foundation">LCF Careers</a>
+		</div>
+		<div class="navbar-collapse collapse">
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="state--logged-out"><a href="sign-in.html">Sign in</a></li>
+				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter">View account</a></li>
+				<li class="recruiter-control"><a href="recruiter-post-job.html">Post a job</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
+				<li class="state--logged-in"><a href="sign-in.html">Sign out</a></li>
+		  </ul>
+		  <div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
+	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
+</div>
+
+<div class="pull-right account-status hidden-control admin-control">
+	<p><small>You are signed in as admin</small></p>
+</div>
+
+<div class="pull-right account-status hidden-control job_seeker-control populate" data-populate="job_seeker">
+	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
+</div>
+		</div><!--/.nav-collapse -->
+	  </div>
+	</div>
+
+	<div class="container" role="main">
+
+		
+		<ol class="breadcrumb">
+			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
+		  	<li class="active">Sign Up</li>
+		</ol>
+		
+		
+		<div class="login-box col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+	<div class="panel panel-info" >
+		<div class="panel-heading">
+			<div class="panel-title">Create an account</div>
+		</div>
+
+		<div class="panel-body" >
+	
+			<form id="signupform" class="form-horizontal" role="form">
+								
+				<div class="form-group">
+					<label class="col-md-3 control-label">I am a:</label>
+					<div class="col-md-9 account-select">
+						<label class="radio-inline">
+							<input type="radio" name="logged-in" id="accountJobSeeker" value="job_seeker"> Job seeker
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="logged-in" id="accountRecruiter" value="recruiter"> Recruiter
+						</label>
+					</div>
+				</div>
+
+				<div class="form-group sign-up-optional sign-up-ldap">
+					<label class="col-md-3 control-label">I have an arts.ac.uk email address:</label>
+					<div class="col-md-9">
+						<label class="radio-inline">
+							<input type="radio" name="LDAPCheck" id="LDAPAccountYes" value="yes"> Yes
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="LDAPCheck" id="LDAPAccountNo" value="no"> No
+						</label>
+						<span class="help-block">If you have an arts.ac.uk email address, please use this to sign up.</span>
+					</div>
+				</div>
+			
+				<div class="form-group sign-up-optional sign-up-email">
+					<label for="email" class="col-md-3 control-label">Email</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" name="email">
+					</div>
+				</div>
+
+				<div class="form-group sign-up-optional sign-up-ldap-password">
+					<label for="LDAPPassword" class="col-md-3 control-label">Password</label>
+					<div class="col-md-9">
+						<input type="password" class="form-control" name="LDAPPassword">
+						<span class="help-block">Your University network password</span>
+					</div>
+				</div>
+
+				<div class="form-group sign-up-optional sign-up-normal-password">
+					<label for="normalPassword" class="col-md-3 control-label">Password</label>
+					<div class="col-md-9">
+						<input type="password" class="form-control" name="normalPassword">
+					</div>
+				</div>
+				<div class="form-group sign-up-optional sign-up-normal-password">
+					<label for="normalPasswordConfirm" class="col-md-3 control-label">Re-enter password</label>
+					<div class="col-md-9">
+						<input type="password" class="form-control" name="normalPasswordConfirm" >
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-offset-3 col-md-9">
+						<a id="job-seeker-sign-up-button" class="btn btn-info sign-up-optional" href="job-seeker-account-create.html?logged-in=job_seeker">Sign Up</a>  
+						<a id="recruiter-sign-up-button" class="btn btn-info sign-up-optional" href="recruiter-post-job.html">Sign Up</a> 
+					</div>
+				</div>
+
+			</form>
+
+		</div><!-- .panel-body -->
+	</div><!-- .panel -->
+</div><!-- .login-box -->
+
+
+	</div> <!-- /container -->
+	
+	<footer id="dev-notes" class="dev-footer">
+		<div class="container">
+			<div class="row">
+		  		<div class="col-md-12">
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer class="main-footer dark-bg">
+		<div class="container">
+			<div class="row">
+	  			<div class="col-md-12">
+					<p><small>&copy; London College of Fashion 2014</small></p>
+					<ul class="no-bullet">
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Terms & conditions</a></li>
+					</ul>
+	  			</div>
+			</div>
+		</div>  
+	</footer>
+
+	<!-- Fixed admin navbar (will be removed in production -->
+	<div class="navbar navbar-inverse navbar-fixed-bottom admin-navbar" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
@@ -72,7 +219,19 @@
 					
 						
 						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-bulk-email.html">Admin - Bulk Email</a>
+						</li>
+						
+					
+						
+						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-field-spec.html">Admin - Editable fields</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-job-seeker-report.html">Admin - Job Seekers Report</a>
 						</li>
 						
 					
@@ -84,13 +243,19 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Job Seeker Detail View</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-recruiter-report.html">Admin - Recruiters Report</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seekers.html">Admin - Job Seekers Report</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Admin - View Job Seeker</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-recruiter.html">Admin - View Recruiter</a>
 						</li>
 						
 					
@@ -196,113 +361,6 @@
 		</div><!--/.nav-collapse -->
 	  </div>
 	</div>
-
-	<div class="container" role="main">
-
-		
-		<ol class="breadcrumb">
-			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-		  	<li class="active">Sign Up</li>
-		</ol>
-		
-		
-		<div class="login-box col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-	<div class="panel panel-info" >
-		<div class="panel-heading">
-			<div class="panel-title">Create an account</div>
-		</div>
-
-		<div class="panel-body" >
-	
-			<form id="signupform" class="form-horizontal" role="form">
-								
-				<div class="form-group">
-					<label class="col-md-3 control-label">I am a:</label>
-					<div class="col-md-9 account-select">
-						<label class="radio-inline">
-							<input type="radio" name="logged-in" id="accountJobSeeker" value="job_seeker"> Job seeker
-						</label>
-						<label class="radio-inline">
-							<input type="radio" name="logged-in" id="accountRecruiter" value="recruiter"> Recruiter
-						</label>
-					</div>
-				</div>
-
-				<div class="form-group sign-up-optional sign-up-ldap">
-					<label class="col-md-3 control-label">I have an arts.ac.uk email address:</label>
-					<div class="col-md-9">
-						<label class="radio-inline">
-							<input type="radio" name="LDAPCheck" id="LDAPAccountYes" value="yes"> Yes
-						</label>
-						<label class="radio-inline">
-							<input type="radio" name="LDAPCheck" id="LDAPAccountNo" value="no"> No
-						</label>
-						<span class="help-block">If you have an arts.ac.uk email address, please use this to sign up.</span>
-					</div>
-				</div>
-			
-				<div class="form-group sign-up-optional sign-up-email">
-					<label for="email" class="col-md-3 control-label">Email</label>
-					<div class="col-md-9">
-						<input type="text" class="form-control" name="email">
-					</div>
-				</div>
-
-				<div class="form-group sign-up-optional sign-up-ldap-password">
-					<label for="LDAPPassword" class="col-md-3 control-label">Password</label>
-					<div class="col-md-9">
-						<input type="password" class="form-control" name="LDAPPassword">
-						<span class="help-block">Your University network password</span>
-					</div>
-				</div>
-
-				<div class="form-group sign-up-optional sign-up-normal-password">
-					<label for="normalPassword" class="col-md-3 control-label">Password</label>
-					<div class="col-md-9">
-						<input type="password" class="form-control" name="normalPassword">
-					</div>
-				</div>
-				<div class="form-group sign-up-optional sign-up-normal-password">
-					<label for="normalPasswordConfirm" class="col-md-3 control-label">Re-enter password</label>
-					<div class="col-md-9">
-						<input type="password" class="form-control" name="normalPasswordConfirm" >
-					</div>
-				</div>
-
-				<div class="form-group">
-					<div class="col-md-offset-3 col-md-9">
-						<a id="job-seeker-sign-up-button" class="btn btn-info sign-up-optional" href="job-seeker-account-create.html?logged-in=job_seeker">Sign Up</a>  
-						<a id="recruiter-sign-up-button" class="btn btn-info sign-up-optional" href="recruiter-post-job.html">Sign Up</a> 
-					</div>
-				</div>
-
-			</form>
-
-		</div><!-- .panel-body -->
-	</div><!-- .panel -->
-</div><!-- .login-box -->
-
-
-	</div> <!-- /container -->
-	
-	<footer id="dev-notes" class="dev-footer">
-		<div class="container">
-			<div class="row">
-		  		<div class="col-md-12">
-					<p></p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<footer class="admin-footer dark-bg">
-		<div class="container">
-			<div class="row">
-	  			<div class="col-md-12">
-					<p><small>&copy; London College of Fashion 2014</small></p>
-	  			</div>
-			</div>
-		</div>  
-	</footer>
 
 	<!-- Bootstrap core JavaScript
 	================================================== -->

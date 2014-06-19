@@ -1,7 +1,7 @@
 $light-blue: #12a4e0;
 $gold: #E5C100;
-$navbar-inverse-bg: $light-blue;
-$navbar-inverse-link-color: #FFF;
+// $navbar-inverse-bg: lighten(#000, 13.5%) !default;
+// $navbar-inverse-link-color: #FFF;
 $icon-font-path: "../fonts/bootstrap/";
 
 
@@ -10,10 +10,17 @@ $icon-font-path: "../fonts/bootstrap/";
 
 body {
 	padding-top: 70px;
+	padding-bottom: 50px;
 }
 
 .container[role="main"] {
 	margin-bottom: 60px;
+}
+
+// Navbars 
+.admin-navbar {
+	background-color: $gray;
+	margin-bottom: 0;
 }
 
 // Utils
@@ -42,8 +49,11 @@ ul.no-bullet {
 }
 
 .dark-bg {
-	background-color: #292929;
+	background-color: $gray-dark;
 	color: #FFF;
+	a {
+		color: #FFF;
+	}
 }
 
 .admin-header {
@@ -54,6 +64,9 @@ ul.no-bullet {
 
 footer {
 	padding: 40px 0;
+	&.main-footer {
+		padding: 40px 0 80px;
+	}
 }
 
 .full-width {
@@ -62,8 +75,18 @@ footer {
 }
 
 // Hidden elements for alerts 
-.hidden-message, .hidden-control, .admin-control, .sign-up-optional, .dev-footer {
+.hidden-message,
+.hidden-control, 
+.admin-control, 
+.recruiter-control, 
+.job_seeker-control,
+.sign-up-optional, 
+.dev-footer, 
+.state--logged-in {
 	display: none;
+	.nav & {
+		display: none;
+	}
 }
 
 .logged-in {
@@ -91,10 +114,15 @@ footer {
 	&.pull-right {
 		margin-left: 20px;
 	}
+	margin-bottom: 5px;
 }
 
 .control-search {
 	width: 230px;
+}
+
+.form-control {
+	height: 33px;
 }
 
 // LISTS

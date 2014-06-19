@@ -32,8 +32,8 @@
   </head>
 
   <body role="document">
-
-	<!-- Fixed navbar -->
+	
+	<!-- Main navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
@@ -43,7 +43,320 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="http://strangerpixel.com/firstmove-foundation">FirstMove</a>
+		  <a class="navbar-brand" href="http://strangerpixel.com/firstmove-foundation">LCF Careers</a>
+		</div>
+		<div class="navbar-collapse collapse">
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="state--logged-out"><a href="sign-in.html">Sign in</a></li>
+				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter">View account</a></li>
+				<li class="recruiter-control"><a href="recruiter-post-job.html">Post a job</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
+				<li class="state--logged-in"><a href="sign-in.html">Sign out</a></li>
+		  </ul>
+		  <div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
+	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
+</div>
+
+<div class="pull-right account-status hidden-control admin-control">
+	<p><small>You are signed in as admin</small></p>
+</div>
+
+<div class="pull-right account-status hidden-control job_seeker-control populate" data-populate="job_seeker">
+	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
+</div>
+		</div><!--/.nav-collapse -->
+	  </div>
+	</div>
+
+	<div class="container" role="main">
+
+		
+		<ol class="breadcrumb">
+			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
+		  	<li class="active">Recruiter - Post New Job</li>
+		</ol>
+		
+		
+		<div class="page-header">
+	<h1>Create your job listing</h1>
+</div>
+
+<div class="row">
+
+		<div class="col-md-12">
+		<div id="message-updated" class="hidden-message alert alert-success">
+			<p><strong>Success!</strong> Your job has been updated.</p>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		
+		<div class="alert alert-info state--logged-out">
+			<p>Already signed up? <a href="sign-in.html">Log in</a> now to speed things up. If you don't have an account - don't worry, we'll get to that shortly.</p>
+		</div>
+		
+		<form role="form" action="recruiter-job-preview.html" data-populate="recruiter">
+			<fieldset class="form-horizontal add-bottom">
+					<legend>Job details</legend>
+	<div class="form-group required">
+		<div class="col-sm-12">
+			<label>Job title</label>
+			<input type="text" class="form-control" id="jobTitle" placeholder="" />
+		</div>
+	</div>
+	<div class="form-group required">
+		<div class="col-sm-12">
+			<label>Job location</label>
+			<input type="text" class="form-control" id="jobLocation" placeholder="" />
+			<span class="help-block">e.g. High Street Kensington, London, UK</span>
+		</div>				
+	</div>
+	<div class="form-group required">
+		<div class="col-sm-12">
+			<label>Description</label>
+			<textarea class="form-control" rows="6" id="jobDescription"></textarea>
+		</div>				
+	</div>
+	<div class="form-group required populate dropdown-list" data-populate="job_types">
+		<div class="col-sm-12">
+			<label>Job type</label>
+			<select id="jobTypes" class="form-control">
+			</select>
+		</div>
+	</div>
+	<div id="durationSelect" class="form-group required hidden-control">
+		<label class="col-md-12">Duration</label>
+		<div class="col-sm-2">
+			<select class="form-control">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+			</select>
+		</div>
+		<div class="col-sm-4">
+			<select class="form-control">
+				<option value="weeks">weeks</option>
+				<option value="months">months</option>
+				<option value="years">years</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group required">
+		<label class="col-md-12">Salary range (GBP)</label>
+		<div class="col-sm-8">
+			<div class="input-group">
+			    <input type="text" class="input-sm form-control" name="start" placeholder="e.g. 18,000" />
+			    <span class="input-group-addon">to</span>
+			    <input type="text" class="input-sm form-control" name="end" placeholder="e.g. 20,000" />
+			</div>
+			<span class="help-block">For exact salaries, you may simply enter a value in the left hand box</span>
+		</div>
+		<div class="col-sm-4">
+			<select class="form-control">
+				<option value="per-year">per year</option>
+				<option value="per-hour">per hour</option>
+				<option value="per-day">per day</option>
+				<option value="per-week">per week</option>
+				<option value="per-month">per month</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="form-group required populate form-categories" data-populate="job_categories">
+		<label class="col-sm-12">Categories</label>
+	</div>
+	
+	<div class="form-group required">
+		<div class="col-sm-12">
+			<label>Application deadline</label>
+			<div class="input-group date application-deadline-datepicker datepicker">
+					<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+			</div>
+		</div>
+	</div>
+			</fieldset>
+			<fieldset class="form-horizontal add-bottom">
+					<legend>Company details</legend>
+	<div class="form-group required">
+		<div class="col-sm-12">
+			<label>Company name</label>
+			<input type="text" class="form-control" placeholder="" id="companyName" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-12">
+			<label>Company URL</label>
+			<input type="url" class="form-control" placeholder="http://" id="companyURL" />
+		</div>
+	</div>
+			</fieldset>
+			<fieldset class="add-bottom">
+	<legend>Attachments</legend>
+	<div class="well">
+		<div class="form-group">
+		    <label for="JobUpload1">File 1</label>
+		    <input type="file" id="JobUpload1">
+		</div>
+		<div class="form-group">
+		    <label for="JobUpload2">File 2</label>
+		    <input type="file" id="JobUpload2">
+		</div>
+		<div class="form-group">
+		    <label for="JobUpload3">File 3</label>
+		    <input type="file" id="JobUpload3">
+		</div>
+		<p class="help-block">2MB limit per file. Accepted file formats: .pdf, .doc, .docx, .txt, .rtf</p>
+	</div>
+</fieldset>
+
+						<fieldset class="form-horizontal add-bottom">
+				<legend>Your details</legend>
+
+				<div class="form-group">
+					<div class="col-sm-2">				
+						<label for="country">Title</label>
+						<select class="form-control">
+						  <option>Mr</option>
+						  <option>Mrs</option>
+						  <option>Ms</option>
+						  <option>Miss</option>
+						</select>
+					</div>
+					<div class="col-sm-5 required">
+						<label for="firstName">First name</label>
+						<input type="text" class="form-control" id="firstName" />	
+					</div>
+					<div class="col-sm-5 required">
+						<label for="lastName">Last name</label>
+						<input type="text" class="form-control" id="lastName" />
+					</div>
+				</div>
+				<div class="form-group required" data-populate="job_seeker">
+					<div class="col-sm-12">
+						<label for="emailAddress">Email address</label>
+						<input type="text" class="form-control" id="emailAddress" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label for="addressLine1">Address line 1</label>
+						<input type="text" class="form-control" id="addressLine1" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label for="addressLine2">Address line 2</label>
+						<input type="text" class="form-control" id="addressLine2" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label for="townOrCity">Town or city</label>
+						<input type="text" class="form-control" id="townOrCity" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">				
+						<label for="countyOrRegion">County or region</label>
+						<input type="text" class="form-control" id="countyOrRegion" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-5">				
+						<label for="postcode">Postcode</label>
+						<input type="text" class="form-control" id="postcode" />
+					</div>
+					<div class="col-sm-7">				
+						<label for="country">Country</label>
+						<select class="form-control">
+						  <option>United Kingdom</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">				
+						<label for="contactNumber">Phone</label>
+						<input type="tel" class="form-control" id="contactNumber" />
+					</div>
+				</div>
+			</fieldset>
+
+
+							<div class="panel panel-default">
+  					<div class="panel-body">
+  						<div class="checkbox">
+				  			<label>
+				    			<input type="checkbox" value="">
+				    			I have read and accepted the <a href="http://www.lcffirstmove.co.uk/terms/" target="_blank" title="View T&amp;C in a new window or tab">terms and conditions</a> and <a href="http://www.lcffirstmove.co.uk/terms#privacy"  target="_blank">privacy policy</a>.
+				  			</label>
+						</div>
+  					</div>
+				</div>
+
+			<a href="recruiter-edit-job.html#updated" class="btn btn-default">Save as draft</a>
+			<button type="submit" class="btn btn-primary">Preview and post</button>
+			<!-- <a href="recruiter-post-job-error.html" class="btn btn-danger">Test account error</a> -->
+
+		</form>
+	</div>
+
+	<div class="col-md-5 col-md-offset-1">
+		<div class="alert alert-warning">
+			<h4>PLEASE NOTE</h4>
+			<p>Any opportunities advertised on the LCF FirstMove website which are unpaid and not part of student accredited short term work experience and long term work placements will be removed immediately by the LCF Careers team.</p>
+			<p>All other opportunities must be paid at a rate of at least National Minimum Wage (NMW). For more information on the current NMW rate please go to - <a href="https://www.gov.uk/national-minimum-wage-rates" target="_blank">https://www.gov.uk/national-minimum-wage-rates</a>. By registering you are agreeing to cooperate with these guidelines.</p>
+		</div>
+	</div>
+</div>
+
+
+	</div> <!-- /container -->
+	
+	<footer id="dev-notes" class="dev-footer">
+		<div class="container">
+			<div class="row">
+		  		<div class="col-md-12">
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer class="main-footer dark-bg">
+		<div class="container">
+			<div class="row">
+	  			<div class="col-md-12">
+					<p><small>&copy; London College of Fashion 2014</small></p>
+					<ul class="no-bullet">
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Terms & conditions</a></li>
+					</ul>
+	  			</div>
+			</div>
+		</div>  
+	</footer>
+
+	<!-- Fixed admin navbar (will be removed in production -->
+	<div class="navbar navbar-inverse navbar-fixed-bottom admin-navbar" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
@@ -72,7 +385,19 @@
 					
 						
 						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-bulk-email.html">Admin - Bulk Email</a>
+						</li>
+						
+					
+						
+						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-field-spec.html">Admin - Editable fields</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-job-seeker-report.html">Admin - Job Seekers Report</a>
 						</li>
 						
 					
@@ -84,13 +409,19 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Job Seeker Detail View</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-recruiter-report.html">Admin - Recruiters Report</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seekers.html">Admin - Job Seekers Report</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Admin - View Job Seeker</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-recruiter.html">Admin - View Recruiter</a>
 						</li>
 						
 					
@@ -196,280 +527,6 @@
 		</div><!--/.nav-collapse -->
 	  </div>
 	</div>
-
-	<div class="container" role="main">
-
-		
-		<ol class="breadcrumb">
-			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-		  	<li class="active">Recruiter - Post New Job</li>
-		</ol>
-		
-		
-		<div class="page-header">
-	<h1>Create your job listing</h1>
-</div>
-
-<div class="row">
-
-		<div class="col-md-12">
-		<div id="message-updated" class="hidden-message alert alert-success">
-			<p><strong>Success!</strong> Your job has been updated.</p>
-		</div>
-	</div>
-
-	<div class="col-md-6">
-		
-		<div class="alert alert-info state--logged-out">
-			<p>Already signed up? <a href="sign-in.html">Log in</a> now to speed things up. If you don't have an account - don't worry, we'll get to that shortly.</p>
-		</div>
-		
-		<form role="form" action="recruiter-job-preview.html" data-populate="recruiter">
-			<fieldset class="form-horizontal add-bottom">
-					<legend>Job details</legend>
-	<div class="form-group required">
-		<div class="col-sm-12">
-			<label>Job title</label>
-			<input type="text" class="form-control" id="jobTitle" placeholder="" />
-		</div>
-	</div>
-	<div class="form-group required">
-		<div class="col-sm-12">
-			<label>Job location</label>
-			<input type="text" class="form-control" id="jobLocation" placeholder="" />
-			<span class="help-block">e.g. High Street Kensington, London, UK</span>
-		</div>				
-	</div>
-	<div class="form-group required">
-		<div class="col-sm-12">
-			<label>Description</label>
-			<textarea class="form-control" rows="6" id="jobDescription"></textarea>
-		</div>				
-	</div>
-	<div class="form-group required populate dropdown-list" data-populate="job_types">
-		<div class="col-sm-12">
-			<label>Job type</label>
-			<select class="form-control">
-			</select>
-		</div>
-	</div>
-	<div class="form-group required">
-		<label class="col-md-12">Duration</label>
-		<div class="col-sm-2">
-			<select class="form-control">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
-				<option value="11">11</option>
-				<option value="12">12</option>
-			</select>
-		</div>
-		<div class="col-sm-4">
-			<select class="form-control">
-				<option value="weeks">weeks</option>
-				<option value="months">months</option>
-				<option value="years">years</option>
-			</select>
-		</div>
-	</div>
-	<div class="form-group required">
-		<label class="col-md-12">Salary range (GBP)</label>
-		<div class="col-sm-8">
-			<div class="input-group">
-			    <input type="text" class="input-sm form-control" name="start" placeholder="e.g. 18,000" />
-			    <span class="input-group-addon">to</span>
-			    <input type="text" class="input-sm form-control" name="end" placeholder="e.g. 20,000" />
-			</div>
-			<span class="help-block">For exact salaries, you may simply enter a value in the left hand box</span>
-		</div>
-		<div class="col-sm-4">
-			<select class="form-control">
-				<option value="per-year">per year</option>
-				<option value="per-hour">per hour</option>
-				<option value="per-day">per day</option>
-				<option value="per-week">per week</option>
-				<option value="per-month">per month</option>
-			</select>
-		</div>
-	</div>
-
-	<div class="form-group required populate form-categories" data-populate="job_categories">
-		<label class="col-sm-12">Categories</label>
-	</div>
-	
-	<div class="form-group required">
-		<div class="col-sm-12">
-			<label>Application deadline</label>
-			<div class="input-group date application-deadline-datepicker datepicker">
-					<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-			</div>
-		</div>
-	</div>
-			</fieldset>
-			<fieldset class="form-horizontal add-bottom">
-					<legend>Company details</legend>
-	<div class="form-group required">
-		<div class="col-sm-12">
-			<label>Company name</label>
-			<input type="text" class="form-control" placeholder="" id="companyName" />
-		</div>
-	</div>
-
-	<div class="form-group">
-		<div class="col-sm-12">
-			<label>Company URL</label>
-			<input type="text" class="form-control" placeholder="http://" id="companyURL" />
-		</div>
-	</div>
-			</fieldset>
-			<fieldset class="add-bottom">
-	<legend>Attachments</legend>
-	<div class="well">
-		<div class="form-group">
-		    <label for="JobUpload1">File 1</label>
-		    <input type="file" id="JobUpload1">
-		</div>
-		<div class="form-group">
-		    <label for="JobUpload2">File 2</label>
-		    <input type="file" id="JobUpload2">
-		</div>
-		<div class="form-group">
-		    <label for="JobUpload3">File 3</label>
-		    <input type="file" id="JobUpload3">
-		</div>
-		<p class="help-block">2MB limit per file. Accepted file formats: .pdf, .doc, .docx, .txt, .rtf</p>
-	</div>
-</fieldset>
-
-						<fieldset class="form-horizontal add-bottom">
-				<legend>Your details</legend>
-
-				<div class="form-group">
-					<div class="col-sm-2">				
-						<label for="country">Title</label>
-						<select class="form-control">
-						  <option>Mr</option>
-						  <option>Mrs</option>
-						  <option>Ms</option>
-						  <option>Miss</option>
-						</select>
-					</div>
-					<div class="col-sm-5 required">
-						<label for="firstName">First name</label>
-						<input type="text" class="form-control" id="firstName" placeholder="" />	
-					</div>
-					<div class="col-sm-5 required">
-						<label for="lastName">Last name</label>
-						<input type="text" class="form-control" id="lastName" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group required" data-populate="job_seeker">
-					<div class="col-sm-12">
-						<label for="emailAddress">Email address</label>
-						<input type="text" class="form-control" id="emailAddress" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label for="addressLine1">Address line 1</label>
-						<input type="text" class="form-control" id="addressLine1" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label for="addressLine2">Address line 2</label>
-						<input type="text" class="form-control" id="addressLine2" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label for="townOrCity">Town or city</label>
-						<input type="text" class="form-control" id="townOrCity" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">				
-						<label for="countyOrRegion">County or region</label>
-						<input type="text" class="form-control" id="countyOrRegion" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-5">				
-						<label for="postcode">Postcode</label>
-						<input type="text" class="form-control" id="postcode" placeholder="" />
-					</div>
-					<div class="col-sm-7">				
-						<label for="country">Country</label>
-						<select class="form-control">
-						  <option>United Kingdom</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">				
-						<label for="contactNumber">Phone</label>
-						<input type="text" class="form-control" id="contactNumber" placeholder="" />
-					</div>
-				</div>
-			</fieldset>
-
-
-							<div class="panel panel-default">
-  					<div class="panel-body">
-  						<div class="checkbox">
-				  			<label>
-				    			<input type="checkbox" value="">
-				    			I have read and accepted the <a href="http://www.lcffirstmove.co.uk/terms/" target="_blank" title="View T&amp;C in a new window or tab">terms and conditions</a> and <a href="http://www.lcffirstmove.co.uk/terms#privacy"  target="_blank">privacy policy</a>.
-				  			</label>
-						</div>
-  					</div>
-				</div>
-
-			<a href="recruiter-edit-job.html#updated" class="btn btn-default">Save draft</a>
-			<button type="submit" class="btn btn-primary">Preview job</button>
-			<a href="recruiter-post-job-error.html" class="btn btn-danger">Test account error</a>
-
-		</form>
-	</div>
-
-	<div class="col-md-5 col-md-offset-1">
-		<div class="alert alert-warning">
-			<h4>PLEASE NOTE</h4>
-			<p>Any opportunities advertised on the LCF FirstMove website which are unpaid and not part of student accredited short term work experience and long term work placements will be removed immediately by the LCF Careers team.</p>
-			<p>All other opportunities must be paid at a rate of at least National Minimum Wage (NMW). For more information on the current NMW rate please go to - <a href="https://www.gov.uk/national-minimum-wage-rates" target="_blank">https://www.gov.uk/national-minimum-wage-rates</a>. By registering you are agreeing to cooperate with these guidelines.</p>
-		</div>
-
-	</div>
-</div>
-
-
-	</div> <!-- /container -->
-	
-	<footer id="dev-notes" class="dev-footer">
-		<div class="container">
-			<div class="row">
-		  		<div class="col-md-12">
-					<p></p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<footer class="admin-footer dark-bg">
-		<div class="container">
-			<div class="row">
-	  			<div class="col-md-12">
-					<p><small>&copy; London College of Fashion 2014</small></p>
-	  			</div>
-			</div>
-		</div>  
-	</footer>
 
 	<!-- Bootstrap core JavaScript
 	================================================== -->

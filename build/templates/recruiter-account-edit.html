@@ -32,8 +32,8 @@
   </head>
 
   <body role="document">
-
-	<!-- Fixed navbar -->
+	
+	<!-- Main navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
@@ -43,10 +43,387 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="http://strangerpixel.com/firstmove-foundation">FirstMove</a>
+		  <a class="navbar-brand" href="http://strangerpixel.com/firstmove-foundation">LCF Careers</a>
+		</div>
+		<div class="navbar-collapse collapse">
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="state--logged-out"><a href="sign-in.html">Sign in</a></li>
+				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter">View account</a></li>
+				<li class="recruiter-control"><a href="recruiter-post-job.html">Post a job</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
+				<li class="state--logged-in"><a href="sign-in.html">Sign out</a></li>
+		  </ul>
+		  <div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
+	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
+</div>
+
+<div class="pull-right account-status hidden-control admin-control">
+	<p><small>You are signed in as admin</small></p>
+</div>
+
+<div class="pull-right account-status hidden-control job_seeker-control populate" data-populate="job_seeker">
+	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
+</div>
+		</div><!--/.nav-collapse -->
+	  </div>
+	</div>
+
+	<div class="container" role="main">
+
+		
+		<ol class="breadcrumb">
+			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
+		  	<li class="active">Recruiter - Account Edit</li>
+		</ol>
+		
+		
+		<div class="page-header">
+	<h1>Your account</h1>
+</div>
+
+<div class="row">
+		<div class="col-md-12">
+		<div id="message-updated" class="hidden-message alert alert-success">
+			<p><strong>Success!</strong> Your account has been updated.</p>
+		</div>
+	</div>
+	
+    <div class="col-md-4 pull-right add-bottom">
+		<a href="recruiter-post-job.html" class="control pull-right btn btn-success">Post a new job</a>
+	</div>
+
+	<div class="col-md-12 add-bottom">
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs">
+			<!-- <li><a href="#home" data-toggle="tab">Home</a></li> -->
+			<li class="active"><a href="#my-jobs" data-toggle="tab">Your jobs</a></li>
+			<li><a href="#personal-details" data-toggle="tab">Personal details</a></li>
+			<li><a href="#company-details" data-toggle="tab">Company details</a></li>
+			<li><a href="#settings" data-toggle="tab">Settings</a></li>
+			<li class="admin-control"><a href="#admin-notes" data-toggle="tab">Admin</a></li>
+		</ul>
+	</div>
+
+
+	<div class="col-md-12">
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+		  	
+			<div class="tab-pane active" id="my-jobs">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Status</th>
+							<th>Date posted</th>
+							<th>Role</th>
+							<th>Views</th>
+							<th>Applications</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="label label-info">Draft</span>
+							</td>
+							<td>15 May 2014</td>
+							<td>Studio Photographer (6 month Fixed Term Contract)</td>
+							<td>
+								<span class="badge badge-info">0</span>
+							</td>
+							<td>
+								<span class="badge badge-info">0</span>
+							</td>
+							<td>
+								<a href="recruiter-edit-job.html?logged-in=recruiter" class="btn btn-sm btn-default">Edit</a>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-success">Live</span>
+							</td>
+							<td>10 May 2014</td>
+							<td><a href="job-single.html?logged-in=recruiter">Allocator</a></td>
+							<td>
+								<span class="badge badge-info">4</span>
+							</td>
+							<td>
+								<span class="badge badge-info">0</span>
+							</td>
+							<td>
+								<a href="recruiter-edit-job.html?logged-in=recruiter" class="btn btn-sm btn-default">Edit</a>
+								<button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-default">Expired</span>
+							</td>
+							<td>5 February 2014</td>
+							<td><a href="job-single.html?logged-in=recruiter">Retail assistant</a></td>
+							<td>
+								<span class="badge badge-info">120</span>
+							</td>
+							<td>
+								<span class="badge badge-info">12</span>
+							</td>
+							<td>
+								<a href="recruiter-job-dashboard.html?logged-in=recruiter" class="btn btn-sm btn-primary">Leave feedback</a>
+								<a href="#" class="btn btn-sm btn-success">Post as new</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="label label-default">Expired</span>
+							</td>
+							<td>10 October 2012</td>
+							<td><a href="job-single.html?logged-in=recruiter">Experienced Freelance Journalist (FR/EN)</a></td>
+							<td>
+								<span class="badge badge-info">16</span>
+							</td>
+							<td>
+								<a href="#"><span class="badge badge-info">5</span></a>
+							</td>
+							<td>
+								<a href="recruiter-job-dashboard.html?logged-in=recruiter" class="btn btn-sm btn-primary">Leave feedback</a>
+								<a href="#" class="btn btn-sm btn-success">Post as new</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		  	<div class="tab-pane" id="personal-details">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated" class="populate" data-populate="recruiter">
+										<fieldset class="form-horizontal add-bottom">
+				<legend>Your details</legend>
+
+				<div class="form-group">
+					<div class="col-sm-2">				
+						<label for="country">Title</label>
+						<select class="form-control">
+						  <option>Mr</option>
+						  <option>Mrs</option>
+						  <option>Ms</option>
+						  <option>Miss</option>
+						</select>
+					</div>
+					<div class="col-sm-5 required">
+						<label for="firstName">First name</label>
+						<input type="text" class="form-control" id="firstName" />	
+					</div>
+					<div class="col-sm-5 required">
+						<label for="lastName">Last name</label>
+						<input type="text" class="form-control" id="lastName" />
+					</div>
+				</div>
+				<div class="form-group required" data-populate="job_seeker">
+					<div class="col-sm-12">
+						<label for="emailAddress">Email address</label>
+						<input type="text" class="form-control" id="emailAddress" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label for="addressLine1">Address line 1</label>
+						<input type="text" class="form-control" id="addressLine1" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label for="addressLine2">Address line 2</label>
+						<input type="text" class="form-control" id="addressLine2" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">
+						<label for="townOrCity">Town or city</label>
+						<input type="text" class="form-control" id="townOrCity" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">				
+						<label for="countyOrRegion">County or region</label>
+						<input type="text" class="form-control" id="countyOrRegion" />
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-5">				
+						<label for="postcode">Postcode</label>
+						<input type="text" class="form-control" id="postcode" />
+					</div>
+					<div class="col-sm-7">				
+						<label for="country">Country</label>
+						<select class="form-control">
+						  <option>United Kingdom</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-12">				
+						<label for="contactNumber">Phone</label>
+						<input type="tel" class="form-control" id="contactNumber" />
+					</div>
+				</div>
+			</fieldset>
+
+							<button type="submit" class="btn btn-primary updated">Update</button>
+						</form>
+					</div>
+				</div>
+		  	</div>
+
+		  	<div class="tab-pane" id="company-details">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated" class="populate" data-populate="recruiter">
+							<fieldset class="form-horizontal add-bottom">
+									<legend>Company details</legend>
+	<div class="form-group required">
+		<div class="col-sm-12">
+			<label>Company name</label>
+			<input type="text" class="form-control" placeholder="" id="companyName" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-12">
+			<label>Company URL</label>
+			<input type="url" class="form-control" placeholder="http://" id="companyURL" />
+		</div>
+	</div>
+							</fieldset>
+							<button type="submit" class="btn btn-primary updated">Update</button>
+						</form>
+					</div>
+				</div>
+		  	</div>
+
+		  	<div class="tab-pane" id="settings">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated">
+							<fieldset class="add-bottom">
+	<legend>Reset your password</legend>
+		<div class="form-group">
+		<label for="currentPassword">Current password</label>
+		<input type="password" class="form-control" id="currentPassword" />
+	</div>
+	<div class="form-group">
+		<label for="newPassword">New password</label>
+		<input type="password" class="form-control" id="newPassword" />
+	</div>
+	<div class="form-group">
+		<label for="newPasswordConfirm">Re-enter password</label>
+		<input type="password" class="form-control" id="newPasswordConfirm" />
+	</div>
+</fieldset>
+							<fieldset class="add-bottom">
+								<legend>Notifications</legend>
+								<div class="checkbox">
+								  <label>
+								    <input type="checkbox" value="" checked>
+								    Send me email about careers events and invitations to collaborate
+								  </label>
+								</div>
+							</fieldset>
+							<button type="submit" class="btn btn-primary updated">Update</button>
+						</form>
+					</div>
+					<div class="col-md-5 col-md-offset-1">
+						<div class="alert alert-warning">
+							<h4>Data protection</h4>
+							<p>We will only use your details to contact you about your posted jobs and your account. If you agree to receive additional notifications, we will send you email periodically. We will not use your details for any other purpose or pass on your details to any third party unless you specifically ask us to. See our <a href="#">privacy policy</a> for more information.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane" id="admin-notes">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated" class="populate" data-populate="recruiter">	
+														<fieldset>
+								<legend>Admin</legend>
+								<div class="form-group">
+									<label for="adminKeywords">Keywords</label>
+									<input id="adminKeywords" type="text" class="form-control" />
+									<span class="help-block">Separate keywords with commas</span>
+								</div>
+								<div class="form-group">
+									<label>Notes</label>
+									<textarea class="form-control" rows="8" id="adminNotes"></textarea>
+								</div>
+							</fieldset>
+							<button type="submit" class="btn btn-primary updated">Update</button>
+							<a class="btn btn-success" href="admin-view-recruiter.html?logged-in=admin">View</a>
+						</form>
+					</div>
+					<div class="col-md-4 col-md-offset-2">
+						<div class="panel panel-default personal-details-widget">
+							<div class="panel-heading">
+								<h3 class="panel-title">Last updated</h3>
+							</div>
+							<table class="table">
+								<tr><td>Cath Bartlett</td><td>12/06/2014</td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+	</div> <!-- /container -->
+	
+	<footer id="dev-notes" class="dev-footer">
+		<div class="container">
+			<div class="row">
+		  		<div class="col-md-12">
+					<p>Only admins can view and edit the 'admin' tab</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer class="main-footer dark-bg">
+		<div class="container">
+			<div class="row">
+	  			<div class="col-md-12">
+					<p><small>&copy; London College of Fashion 2014</small></p>
+					<ul class="no-bullet">
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Terms & conditions</a></li>
+					</ul>
+	  			</div>
+			</div>
+		</div>  
+	</footer>
+
+	<!-- Fixed admin navbar (will be removed in production -->
+	<div class="navbar navbar-inverse navbar-fixed-bottom admin-navbar" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
+		  	
+		  	<li>
+		  		<a id="toggle-dev-notes" href="#dev-notes"><span class="glyphicon glyphicon-question-sign"></span></a>
+		  	</li>
 		  	
 		  	<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
@@ -72,7 +449,19 @@
 					
 						
 						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-bulk-email.html">Admin - Bulk Email</a>
+						</li>
+						
+					
+						
+						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-field-spec.html">Admin - Editable fields</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-job-seeker-report.html">Admin - Job Seekers Report</a>
 						</li>
 						
 					
@@ -84,13 +473,19 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Job Seeker Detail View</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-recruiter-report.html">Admin - Recruiters Report</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seekers.html">Admin - Job Seekers Report</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Admin - View Job Seeker</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-recruiter.html">Admin - View Recruiter</a>
 						</li>
 						
 					
@@ -196,300 +591,6 @@
 		</div><!--/.nav-collapse -->
 	  </div>
 	</div>
-
-	<div class="container" role="main">
-
-		
-		<ol class="breadcrumb">
-			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-		  	<li class="active">Recruiter - Account Edit</li>
-		</ol>
-		
-		
-		<div class="page-header">
-	<h1>Your account</h1>
-</div>
-
-<div class="row">
-		<div class="col-md-12">
-		<div id="message-updated" class="hidden-message alert alert-success">
-			<p><strong>Success!</strong> Your account has been updated.</p>
-		</div>
-	</div>
-	
-    <div class="col-md-4 pull-right add-bottom">
-		<a href="recruiter-post-job.html" class="control pull-right btn btn-success">Post a new job</a>
-	</div>
-
-	<div class="col-md-12 add-bottom">
-		<!-- Nav tabs -->
-		<ul class="nav nav-tabs">
-			<!-- <li><a href="#home" data-toggle="tab">Home</a></li> -->
-			<li class="active"><a href="#my-jobs" data-toggle="tab">Your jobs</a></li>
-			<li><a href="#personal-details" data-toggle="tab">Personal details</a></li>
-			<li><a href="#settings" data-toggle="tab">Settings</a></li>
-			<li class="hidden-control admin-control"><a href="#admin-notes" data-toggle="tab">Admin</a></li>
-		</ul>
-	</div>
-
-
-	<div class="col-md-12">
-
-		<!-- Tab panes -->
-		<div class="tab-content">
-		  	
-		  	<!-- <div class="tab-pane" id="home">...</div> -->
-			<div class="tab-pane active" id="my-jobs">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>Status</th>
-							<th>Date posted</th>
-							<th>Role</th>
-							<th>Views</th>
-							<th>Applications</th>
-							<th>Actions</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								<span class="label label-info">Draft</span>
-							</td>
-							<td>15 May 2014</td>
-							<td>Studio Photographer (6 month Fixed Term Contract)</td>
-							<td>
-								<span class="badge badge-info">0</span>
-							</td>
-							<td>
-								<span class="badge badge-info">0</span>
-							</td>
-							<td>
-								<a href="recruiter-edit-job.html?logged-in=recruiter" class="btn btn-sm btn-default">Edit</a>
-								
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<span class="label label-success">Live</span>
-							</td>
-							<td>10 May 2014</td>
-							<td><a href="job-single.html?logged-in=recruiter">Allocator</a></td>
-							<td>
-								<span class="badge badge-info">4</span>
-							</td>
-							<td>
-								<span class="badge badge-info">0</span>
-							</td>
-							<td>
-								<a href="recruiter-edit-job.html?logged-in=recruiter" class="btn btn-sm btn-default">Edit</a>
-								<button class="btn btn-sm btn-danger" data-role="delete-item">Expire</button>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<span class="label label-default">Expired</span>
-							</td>
-							<td>5 February 2014</td>
-							<td><a href="job-single.html?logged-in=recruiter">Retail assistant</a></td>
-							<td>
-								<span class="badge badge-info">120</span>
-							</td>
-							<td>
-								<span class="badge badge-info">12</span>
-							</td>
-							<td>
-								<a href="recruiter-job-feedback.html?logged-in=recruiter" class="btn btn-sm btn-primary">Leave feedback</a>
-								<a href="#" class="btn btn-sm btn-success">Post as new</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<span class="label label-default">Expired</span>
-							</td>
-							<td>10 October 2012</td>
-							<td><a href="job-single.html?logged-in=recruiter">Experienced Freelance Journalist (FR/EN)</a></td>
-							<td>
-								<span class="badge badge-info">16</span>
-							</td>
-							<td>
-								<a href="#"><span class="badge badge-info">5</span></a>
-							</td>
-							<td>
-								<a href="recruiter-job-feedback.html?logged-in=recruiter" class="btn btn-sm btn-primary">Leave feedback</a>
-								<a href="#" class="btn btn-sm btn-success">Post as new</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
-		  	<div class="tab-pane" id="personal-details">
-		  		<div class="row">
-			  		<div class="col-md-6">
-						<form action="#updated" class="populate" data-populate="recruiter">
-										<fieldset class="form-horizontal add-bottom">
-				<legend>Your details</legend>
-
-				<div class="form-group">
-					<div class="col-sm-2">				
-						<label for="country">Title</label>
-						<select class="form-control">
-						  <option>Mr</option>
-						  <option>Mrs</option>
-						  <option>Ms</option>
-						  <option>Miss</option>
-						</select>
-					</div>
-					<div class="col-sm-5 required">
-						<label for="firstName">First name</label>
-						<input type="text" class="form-control" id="firstName" placeholder="" />	
-					</div>
-					<div class="col-sm-5 required">
-						<label for="lastName">Last name</label>
-						<input type="text" class="form-control" id="lastName" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group required" data-populate="job_seeker">
-					<div class="col-sm-12">
-						<label for="emailAddress">Email address</label>
-						<input type="text" class="form-control" id="emailAddress" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label for="addressLine1">Address line 1</label>
-						<input type="text" class="form-control" id="addressLine1" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label for="addressLine2">Address line 2</label>
-						<input type="text" class="form-control" id="addressLine2" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">
-						<label for="townOrCity">Town or city</label>
-						<input type="text" class="form-control" id="townOrCity" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">				
-						<label for="countyOrRegion">County or region</label>
-						<input type="text" class="form-control" id="countyOrRegion" placeholder="" />
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-5">				
-						<label for="postcode">Postcode</label>
-						<input type="text" class="form-control" id="postcode" placeholder="" />
-					</div>
-					<div class="col-sm-7">				
-						<label for="country">Country</label>
-						<select class="form-control">
-						  <option>United Kingdom</option>
-						</select>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-12">				
-						<label for="contactNumber">Phone</label>
-						<input type="text" class="form-control" id="contactNumber" placeholder="" />
-					</div>
-				</div>
-			</fieldset>
-
-							<button type="submit" class="btn btn-primary updated">Update</button>
-						</form>
-					</div>
-				</div>
-		  	</div>
-
-		  	<div class="tab-pane" id="settings">
-		  		<div class="row">
-			  		<div class="col-md-6">
-						<form action="#updated">
-							<fieldset class="add-bottom">
-	<legend>Reset your password</legend>
-		<div class="form-group">
-		<label for="currentPassword">Current password</label>
-		<input type="password" class="form-control" id="currentPassword" />
-	</div>
-	<div class="form-group">
-		<label for="newPassword">New password</label>
-		<input type="password" class="form-control" id="newPassword" />
-	</div>
-	<div class="form-group">
-		<label for="newPasswordConfirm">Re-enter password</label>
-		<input type="password" class="form-control" id="newPasswordConfirm" />
-	</div>
-</fieldset>
-							<fieldset class="add-bottom">
-								<legend>Notifications</legend>
-								<div class="checkbox">
-								  <label>
-								    <input type="checkbox" value="" checked>
-								    Send me email about careers events and invitations to collaborate
-								  </label>
-								</div>
-							</fieldset>
-							<button type="submit" class="btn btn-primary updated">Update</button>
-						</form>
-					</div>
-				</div>
-			</div>
-
-			<div class="tab-pane" id="admin-notes">
-		  		<div class="row">
-			  		<div class="col-md-6">
-						<form action="#updated" class="populate" data-populate="recruiter">	
-							<fieldset>
-								<legend>Notes</legend>
-								<div class="form-group">
-									<textarea class="form-control" rows="8" id="adminNotes"></textarea>
-								</div>
-							</fieldset>
-							<button type="submit" class="btn btn-primary updated">Update</button>
-						</form>
-					</div>
-					<div class="col-md-4 col-md-offset-2">
-						<div class="panel panel-default personal-details-widget">
-							<div class="panel-heading">
-								<h3 class="panel-title">Last updated</h3>
-							</div>
-							<table class="table">
-								<tr><td>Cath Bartlett</td><td>12/06/2014</td></tr>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</div>
-
-	</div> <!-- /container -->
-	
-	<footer id="dev-notes" class="dev-footer">
-		<div class="container">
-			<div class="row">
-		  		<div class="col-md-12">
-					<p></p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<footer class="admin-footer dark-bg">
-		<div class="container">
-			<div class="row">
-	  			<div class="col-md-12">
-					<p><small>&copy; London College of Fashion 2014</small></p>
-	  			</div>
-			</div>
-		</div>  
-	</footer>
 
 	<!-- Bootstrap core JavaScript
 	================================================== -->

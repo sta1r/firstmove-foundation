@@ -136,6 +136,13 @@ jQuery(document).ready( function($) {
 		scanDomAndPopulate($(this), $(this).data('populate'));
 	});
 
+	// Populate bulk email list
+	var list = "";
+	var email = "davatron3000@gmail.com";
+	for (var i = 0; i < 20; i++) {
+		list += email + '\n';
+	}
+	$('#bulkEmailList').html(list);
 
 
 	if (GetURLParameter('logged-in')) {
@@ -144,6 +151,7 @@ jQuery(document).ready( function($) {
 
 		//$('.hidden-control').addClass('logged-in');
 		$('.state--logged-out').hide();
+		$('.state--logged-in').show();
 		$('.' + loginID + '-control').show();
 
 		// if logged in, populate any relevant elements accordingly
@@ -168,32 +176,33 @@ jQuery(document).ready( function($) {
 		$('.dev-footer').toggle();
 	});
 
-	// Add a flag 
-	$('.flag').click(function(e) {
-		e.preventDefault();
-		$(this).find('.glyphicon').toggleClass('active');
-	});
+	/* -----------------------------
+	** Hash-based alerts and actions
+	*/
+	var hash = window.location.hash;
 
-	// ALERTS
+	// Update alert
 	setTimeout(function() {
-	  if (location.hash) {
+	  if (hash == '#updated') {
 	  	$('#message-updated').show();
 	    window.scrollTo(0, 0);
+	  } else {
+	  	$('#message-updated').hide();
 	  }
 	}, 1);
 
-	// var hash = window.location.hash;
-	// console.log(hash);
-	// $(hash+':first').show();
+	// Go to tab based on location hash
+  	hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+  	$('.nav-tabs a').click(function (e) {
+    	$(this).tab('show');
+    	var scrollmem = $('body').scrollTop();
+    	window.location.hash = this.hash;
+    	$('html,body').scrollTop(scrollmem);
+  	});
 
 
-	//$('#firstName').val(job_seeker.firstName);
-
-	//console.log(_form);
-	// $('.personal-details-widget').find('.populate').append(
-	// 	'<p>Name: ' + job_seeker.firstName + ' ' + job_seeker.lastName + '</p>' +
-	// 	'<p>Email address: ' + job_seeker.emailAddress + '</p>'
-	// );
+	
 
 	// PUSH DUMMY STUDENTS INTO TABLE ROWS
 	if ($('#students-list').length) {
@@ -202,13 +211,30 @@ jQuery(document).ready( function($) {
 		
 		for (i = 0; i < 20; i++) {
 			
-			output += '<tr><td><span class="glyphicon glyphicon-flag"></span></td><td>Dave Jones</td><td>BA Fashion Management</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-primary btn-xs" href="admin-view-job-seeker.html">View detail</a></td></tr>';
+			output += '<tr><td><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td>Dave Jones</td><td>BA Fashion Management</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-primary btn-xs" href="admin-view-job-seeker.html">View detail</a></td></tr>';
 			
 		}
 		
 		output += '</table>';
 		
 		$('#students-list').html(output);
+		
+	}
+
+	// PUSH DUMMY RECRUITERS INTO TABLE ROWS
+	if ($('#recruiters-list').length) {
+		
+		var output = '<table class="table table-striped"><thead><tr><th>Flag</th><th><a href="#" title="Click to sort">Name</a></th><th>Company name</th><th>Email address</th><th><a href="#" title="Click to sort">Last logged in</a></th><th>Actions</th></tr></thead><tbody>';
+		
+		for (i = 0; i < 20; i++) {
+			
+			output += '<tr><td><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td>Adam Watling</td><td>Wingman Industries</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-primary btn-xs" href="admin-view-recruiter.html">View detail</a></td></tr>';
+			
+		}
+		
+		output += '</table>';
+		
+		$('#recruiters-list').html(output);
 		
 	}
 
@@ -250,8 +276,12 @@ jQuery(document).ready( function($) {
 
 
 
-	//$('.hidden-form-field').css('visibility', 'visible'); // override for style on .hidden in style.css
 
+
+
+	/* ----------
+	** Sign up UI
+	*/
 	var opt_fields = $('form').find('.sign-up-optional');
 	opt_fields.hide();
 
@@ -291,6 +321,26 @@ jQuery(document).ready( function($) {
 			$('#recruiter-sign-up-button').show();
 		}
 
+	});
+
+	/* -------------
+	** Miscellaneous
+	*/
+
+	// Add a flag 
+	$('.flag').click(function(e) {
+		e.preventDefault();
+		$(this).find('.glyphicon').toggleClass('active');
+	});
+
+	// Duration field
+	$('#jobTypes').change( function() {
+		console.log($(this).val());
+		if ($(this).val() === 'full-time' || $(this).val() === 'part-time') {
+			$('#durationSelect').show();
+		} else {
+			$('#durationSelect').hide();
+		}
 	});
 
 

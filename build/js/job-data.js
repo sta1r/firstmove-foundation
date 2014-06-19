@@ -21,8 +21,12 @@ var job_data = {
         "LCFSchool": "Graduate School",
         "LCFLevel": "Postgraduate",
         "personalStatement": "Dmitri Stavrou made a real splash at this year's London Fashion Week. The young designer came out firing with a collection full of shimmering fabrics, fringes and trendy designs. The collection is absolutely brilliant. One look included a metallic gold trench coat that I would love to call my own. Dimitri Stavrou is definitely a designer to keep a close eye on in the years to come - Fashion Indie, 2009",
+        "adminKeywords": "mentor, power user, video skills",
         "adminNotes": "This kid is incredible.",
-        "lastLoggedIn": "10/5/2014"
+        "activeSince": "20/9/2010",
+        "lastLoggedIn": "10/5/2014",
+        "applicationsSubmitted": "5",
+        "appointments": "1"
     },
 
     // Recruiter Object
@@ -39,8 +43,11 @@ var job_data = {
         "contactNumber": "08816763150",
         "companyName": "Wingman Industries",
         "companyURL": "http://www.ingman.io",
+        "adminKeywords": "speaker, available, youthful, tends to play up front",
         "adminNotes": "Need to have a word with Adam.",
-        "lastLoggedIn": "20/5/2014"
+        "activeSince": "20/9/2010",
+        "lastLoggedIn": "20/5/2014",
+        "jobsPosted": "4"
     },
 
     // Job Object
@@ -53,11 +60,12 @@ var job_data = {
         "jobSalary": "£18,000 - £20,000 per year",
         "jobSummary": "Zaeem Jamal are currently looking for a part time in house seamstress who would conduct dress fittings and carry out alterations on our gowns and dresses.",
         "jobDescription": "<p>They will pay a negotiable hourly rate on a part time basis. The job would be for probably 2-3 half days per week. So possibly in total approximately 12/15 hours a week, variable. This can be more when busier.</p><p>The candidate would really need to have some experience in fittings and alterations, as they will be working on their own, not under supervision. So a graduate perhaps who has some hands on experience and has worked on the technical aspect of tailoring.</p><p>Below is the website that would give you some idea of their House Collection. Their gowns are in silk and are often delicately beaded.</p>",
-        "jobApplicationDeadline": "11 April, 2014",
+        "jobApplicationDeadline": "11 August 2014",
         "jobLocation": "Shoreditch, London, UK",
         "jobStatus": "Live",
-        "jobPosted": "20/4/2014",
-        "jobLastModified": "20/5/2014"
+        "jobPosted": "20 April 2014",
+        "jobLastModified": "1 May 2014",
+        "jobViews": "4"
     },
 
     // Job Categories Object
@@ -156,7 +164,7 @@ var job_data = {
         },
         {
             "name": "Long term work placement",
-            "total": "long-term-work-placement"
+            "shortcode": "long-term-work-placement"
         },
         {
             "name": "Freelance / Contract",

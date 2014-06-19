@@ -75,7 +75,7 @@
 		
 		<ol class="breadcrumb">
 			<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-		  	<li class="active">Apply - Success</li>
+		  	<li class="active">Admin - Job Seekers Report</li>
 		</ol>
 		
 		
@@ -92,20 +92,87 @@
 </div>
 
 <div class="page-header">
-	<h1>Your application</h1>
+	<h1>Job seeker report</h1>
+</div>
+
+<div class="control-bar row">
+	<div class="col-md-12">
+		<div class="well clearfix">
+			<div class="row">
+				<div class="col-md-12 add-bottom">
+					<div class="control control-search pull-left">
+						<p>Profile search:</p>
+					    <div class="input-group input-group-sm">
+					      <input type="search" class="form-control">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default" type="button">Search</button>
+					      </span>
+					    </div>
+					</div>	
+					<div class="control pull-left populate dropdown-list" data-populate="lcf_schools">
+						<p>Filter by school:</p>
+						<select class="form-control input-sm">
+						</select>
+					</div>
+					<div class="control pull-left">
+						<p>Filter by level:</p>
+						<select class="form-control input-sm">
+							<option>Select</option>
+							<option value="short-term-work-experience">Undergraduate</option>
+							<option value="long-term-work-placement">Postgraduate</option>
+						</select>
+					</div>
+					<div class="control pull-left">
+						<p>Graduation year range (inclusive):</p>
+						<div class="input-daterange input-daterange-year input-group">
+						    <input type="text" class="input-sm form-control" name="start" />
+						    <span class="input-group-addon">to</span>
+						    <input type="text" class="input-sm form-control" name="end" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="control pull-left">
+						<label class="checkbox-inline">
+  							<input type="checkbox" id="flagged" value="flagged"> Flagged
+						</label>
+						<label class="checkbox-inline">
+  							<input type="checkbox" id="marketable" value="marketable"> Marketing permitted
+						</label>
+					</div>
+					<div class="control pull-left">
+						<p>With selection:
+							<a href="#" class="btn btn-default btn-sm">Export</a>
+							<a href="admin-bulk-email.html" class="btn btn-default btn-sm">Bulk email</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div id="students-list"></div>
+	</div>
 </div>
 
 <div class="row">
-	<div class="col-md-8">
-		<div class="alert alert-success">
-			<p><strong>Success!</strong> Your application has been submitted.</p>
-		</div>
-		<h3>What happens next?</h3>
-		<p>Copy required here</p>
+	<div class="col-md-12">
+		<ul class="pagination">
+		  <li class="disabled"><a href="#">&laquo;</a></li>
+		  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+		  <li><a href="#">2</a></li>
+		  <li><a href="#">3</a></li>
+		  <li><a href="#">4</a></li>
+		  <li><a href="#">5</a></li>
+		  <li><a href="#">&raquo;</a></li>
+		</ul>
 	</div>
-
-
 </div>
+
 
 
 	</div> <!-- /container -->
@@ -114,7 +181,7 @@
 		<div class="container">
 			<div class="row">
 		  		<div class="col-md-12">
-					<p></p>
+					<p>Profile search indexes (at least) firstname, lastname, email, course, admin notes and admin keywords.</p>
 				</div>
 			</div>
 		</div>
@@ -146,6 +213,10 @@
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
+		  	
+		  	<li>
+		  		<a id="toggle-dev-notes" href="#dev-notes"><span class="glyphicon glyphicon-question-sign"></span></a>
+		  	</li>
 		  	
 		  	<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
@@ -183,7 +254,7 @@
 					
 						
 						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-job-seeker-report.html">Admin - Job Seekers Report</a>
+				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/admin-job-seeker-report.html">Admin - Job Seekers Report</a>
 						</li>
 						
 					
@@ -219,7 +290,7 @@
 					
 						
 						<li>
-				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/job-apply-success.html">Apply - Success</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply-success.html">Apply - Success</a>
 						</li>
 						
 					
