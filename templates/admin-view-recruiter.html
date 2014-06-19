@@ -1,0 +1,64 @@
+---
+layout: admin-bootstrap
+title: Admin - View Recruiter
+persona: admin
+---
+
+{% include _account-status.html %}
+
+<div class="page-header">
+	<h1>Recruiter detail</h1>
+</div>
+
+<div class="row populate" data-populate="recruiter">
+	<div class="col-md-8">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Personal details</h3>
+		  </div>
+		  <div class="panel-body">
+			<p><strong data-id="fullName"></strong></p>
+			<p><a href="mailto:" data-id="emailAddress" title="Email this job seeker"></a></p>
+			<p><strong>Address:</strong></p>	
+			<p>
+				<span data-id="addressLine1"></span><br>
+				<span data-id="addressLine2"></span><br>
+				<span data-id="townOrCity"></span><br>
+				<span data-id="countyOrRegion"></span><br>
+				<span data-id="postcode"></span><br>
+				<span data-id="country"></span>
+			</p>
+			<p><strong>Phone:</strong> <span data-id="contactNumber"></span></p>
+		  </div>
+		</div>
+
+		<div class="panel panel-default admin-control">
+			<div class="panel-heading">
+				<h3 class="panel-title">Admin</h3>
+			</div>
+			<div class="panel-body">
+				<p><strong>Keywords:</strong></p>
+				<p data-id="adminKeywords"></p>
+				<p><strong>Notes:</strong></p>
+				<p data-id="adminNotes"></p>
+			</div>
+			<div class="panel-footer">
+				<small>Last updated by Adam Watling on 12/06/14 - <a href="recruiter-account-edit.html?logged-in=admin#admin-notes">Edit notes and keywords</a></small>
+			</div>
+
+		</div>
+	</div>
+	<div class="col-md-4 job-seeker-stats-widget populate" data-populate="recruiter">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Stats</h3>
+			</div>
+			<table class="table">
+				<tr><td>Last logged in</td><td data-id="lastLoggedIn"></td></tr>
+				<tr><td>Active since</td><td data-id="activeSince"></td></tr>
+				<tr><td>Jobs posted</td><td data-id="jobsPosted"></td></tr>
+			</table>
+		</div>
+
+	</div>
+</div>
