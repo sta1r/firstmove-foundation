@@ -23,7 +23,10 @@ var job_data = {
         "personalStatement": "Dmitri Stavrou made a real splash at this year's London Fashion Week. The young designer came out firing with a collection full of shimmering fabrics, fringes and trendy designs. The collection is absolutely brilliant. One look included a metallic gold trench coat that I would love to call my own. Dimitri Stavrou is definitely a designer to keep a close eye on in the years to come - Fashion Indie, 2009",
         "adminKeywords": "mentor, power user, video skills",
         "adminNotes": "This kid is incredible.",
-        "lastLoggedIn": "10/5/2014"
+        "activeSince": "20/9/2010",
+        "lastLoggedIn": "10/5/2014",
+        "applicationsSubmitted": "5",
+        "appointments": "1"
     },
 
     // Recruiter Object
