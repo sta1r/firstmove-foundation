@@ -21,6 +21,7 @@ var job_data = {
         "LCFSchool": "Graduate School",
         "LCFLevel": "Postgraduate",
         "personalStatement": "Dmitri Stavrou made a real splash at this year's London Fashion Week. The young designer came out firing with a collection full of shimmering fabrics, fringes and trendy designs. The collection is absolutely brilliant. One look included a metallic gold trench coat that I would love to call my own. Dimitri Stavrou is definitely a designer to keep a close eye on in the years to come - Fashion Indie, 2009",
+        "adminKeywords": "mentor, power user, video skills",
         "adminNotes": "This kid is incredible.",
         "lastLoggedIn": "10/5/2014"
     },
@@ -39,6 +40,7 @@ var job_data = {
         "contactNumber": "08816763150",
         "companyName": "Wingman Industries",
         "companyURL": "http://www.ingman.io",
+        "adminKeywords": "speaker, available, youthful, good in the air",
         "adminNotes": "Need to have a word with Adam.",
         "lastLoggedIn": "20/5/2014"
     },
