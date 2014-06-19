@@ -46,21 +46,22 @@
 		  <a class="navbar-brand" href="http://strangerpixel.com/firstmove-foundation">LCF Careers</a>
 		</div>
 		<div class="navbar-collapse collapse">
-
+			
 			<ul class="nav navbar-nav navbar-right">
 				<li class="state--logged-out"><a href="sign-in.html">Sign in</a></li>
 				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
-				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter">View account</a></li>
-				<li class="recruiter-control"><a href="recruiter-post-job.html">Post a job</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter#personal-details">View account</a></li>
 				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
+				<li class="recruiter-control"><a href="recruiter-post-job.html">Post a job</a></li>
 				<li class="state--logged-in"><a href="sign-in.html">Sign out</a></li>
-		  </ul>
+		  	</ul>
+		  	
 		  <div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
 	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
 </div>
 
 <div class="pull-right account-status hidden-control admin-control">
-	<p><small>You are signed in as admin</small></p>
+	<p class="navbar-text navbar-right"><small>You are signed in as admin</small></p>
 </div>
 
 <div class="pull-right account-status hidden-control job_seeker-control populate" data-populate="job_seeker">
@@ -93,8 +94,8 @@
 	<div class="col-md-12 add-bottom">
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs">
-			<!-- <li><a href="#home" data-toggle="tab">Home</a></li> -->
-			<li class="active"><a href="#personal-details" data-toggle="tab">Personal details</a></li>
+			<li class="active"><a href="#my-jobs" data-toggle="tab">My jobs</a></li>
+			<li><a href="#personal-details" data-toggle="tab">Personal details</a></li>
 			<li><a href="#student-information" data-toggle="tab">Student information</a></li>
 			<li><a href="#biographical-details" data-toggle="tab">Biography</a></li>
 			<li><a href="#settings" data-toggle="tab">Settings</a></li>
@@ -107,7 +108,54 @@
 		<!-- Tab panes -->
 		<div class="tab-content">
 		  	
-		  	<div class="tab-pane active" id="personal-details">
+		  	<div class="tab-pane active" id="my-jobs">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Date applied</th>
+							<th>Role</th>
+							<th>Deadline</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>15 May 2014</td>
+							<td><a href="job-single.html?logged-in=job_seeker">Studio Photographer (6 month Fixed Term Contract)</a></td>
+							<td>16 May 2014</td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>10 May 2014</td>
+							<td><a href="job-single.html?logged-in=job_seeker">Allocator</a></td>
+							<td>16 May 2014</td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>5 February 2014</td>
+							<td><a href="job-single.html?logged-in=job_seeker">Retail assistant</a></td>
+							<td>15 February 2014</td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr>
+							<td>10 October 2013</td>
+							<td><a href="job-single.html?logged-in=job_seeker">Experienced Freelance Journalist (FR/EN)</a></td>
+							<td>12 October 2013</td>
+							<td>
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		  	<div class="tab-pane" id="personal-details">
 		  		<div class="row">
 			  		<div class="col-md-6">
 						<form action="#updated" class="populate" data-populate="job_seeker">

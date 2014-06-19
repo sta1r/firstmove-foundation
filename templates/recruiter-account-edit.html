@@ -10,17 +10,13 @@ notes: Only admins can view and edit the 'admin' tab
 </div>
 
 <div class="row">
+
 	{% include _message-account-update.html %}
-	
-    <div class="col-md-4 pull-right add-bottom">
-		<a href="recruiter-post-job.html" class="control pull-right btn btn-success">Post a new job</a>
-	</div>
 
 	<div class="col-md-12 add-bottom">
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs">
-			<!-- <li><a href="#home" data-toggle="tab">Home</a></li> -->
-			<li class="active"><a href="#my-jobs" data-toggle="tab">Your jobs</a></li>
+			<li class="active"><a href="#my-jobs" data-toggle="tab">My jobs</a></li>
 			<li><a href="#personal-details" data-toggle="tab">Personal details</a></li>
 			<li><a href="#company-details" data-toggle="tab">Company details</a></li>
 			<li><a href="#settings" data-toggle="tab">Settings</a></li>
@@ -33,7 +29,6 @@ notes: Only admins can view and edit the 'admin' tab
 
 		<!-- Tab panes -->
 		<div class="tab-content">
-		  	
 			<div class="tab-pane active" id="my-jobs">
 				<table class="table table-striped">
 					<thead>

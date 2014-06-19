@@ -2,7 +2,7 @@
 layout: admin-bootstrap
 title: Recruiter - Edit Job
 persona: recruiter
-notes: Basic TinyMCE editor (simply to process line breaks as p tags) required for textarea. 
+notes: Basic TinyMCE editor (simply to process line breaks as p tags) required for textarea. If this job is in draft, the success message will use _message-save-draft.html. If it's already live, we use _message-job-update.html.
 ---
 
 <div class="page-header">
@@ -11,7 +11,7 @@ notes: Basic TinyMCE editor (simply to process line breaks as p tags) required f
 
 <div class="row">
 
-	{% include _message-job-update.html %}
+	{% include _message-save-draft.html %}
 	
 	<div class="col-md-6">
 
@@ -25,8 +25,8 @@ notes: Basic TinyMCE editor (simply to process line breaks as p tags) required f
 
 			{% include _job-attachments-upload.html %}
 
-			<a href="#updated" class="btn btn-default">Save draft</a>
-			<button type="submit" class="btn btn-primary">Preview job</button>
+			<a href="#updated" class="btn btn-default">Save as draft</a>
+			<button type="submit" class="btn btn-primary">Preview and post</button>
 
 		</form>
 	</div>

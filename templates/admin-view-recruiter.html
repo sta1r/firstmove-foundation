@@ -4,8 +4,6 @@ title: Admin - View Recruiter
 persona: admin
 ---
 
-{% include _account-status.html %}
-
 <div class="page-header">
 	<h1>Recruiter detail</h1>
 </div>
@@ -18,7 +16,7 @@ persona: admin
 		  </div>
 		  <div class="panel-body">
 			<p><strong data-id="fullName"></strong></p>
-			<p><a href="mailto:" data-id="emailAddress" title="Email this job seeker"></a></p>
+			<p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:" data-id="emailAddress" title="Email this job seeker"></a></p>
 			<p><strong>Address:</strong></p>	
 			<p>
 				<span data-id="addressLine1"></span><br>

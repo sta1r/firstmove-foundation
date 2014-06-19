@@ -46,21 +46,22 @@
 		  <a class="navbar-brand" href="http://strangerpixel.com/firstmove-foundation">LCF Careers</a>
 		</div>
 		<div class="navbar-collapse collapse">
-
+			
 			<ul class="nav navbar-nav navbar-right">
 				<li class="state--logged-out"><a href="sign-in.html">Sign in</a></li>
 				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
-				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter">View account</a></li>
-				<li class="recruiter-control"><a href="recruiter-post-job.html">Post a job</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter#personal-details">View account</a></li>
 				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
+				<li class="recruiter-control"><a href="recruiter-post-job.html">Post a job</a></li>
 				<li class="state--logged-in"><a href="sign-in.html">Sign out</a></li>
-		  </ul>
+		  	</ul>
+		  	
 		  <div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
 	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
 </div>
 
 <div class="pull-right account-status hidden-control admin-control">
-	<p><small>You are signed in as admin</small></p>
+	<p class="navbar-text navbar-right"><small>You are signed in as admin</small></p>
 </div>
 
 <div class="pull-right account-status hidden-control job_seeker-control populate" data-populate="job_seeker">
@@ -79,19 +80,7 @@
 		</ol>
 		
 		
-		<div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
-	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
-</div>
-
-<div class="pull-right account-status hidden-control admin-control">
-	<p><small>You are signed in as admin</small></p>
-</div>
-
-<div class="pull-right account-status hidden-control job_seeker-control populate" data-populate="job_seeker">
-	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
-</div>
-
-<div class="page-header">
+		<div class="page-header">
 	<h1>Recruiter report</h1>
 </div>
 
@@ -102,38 +91,13 @@
 				<div class="col-md-12 add-bottom">
 					<div class="control control-search pull-left">
 						<p>Recruiter search:</p>
-					    <div class="input-group input-group-sm">
-					      <input type="search" class="form-control">
-					      <span class="input-group-btn">
-					        <button class="btn btn-default" type="button">Search</button>
-					      </span>
-					    </div>
-					</div>	
-					<div class="control pull-left populate dropdown-list" data-populate="lcf_schools">
-						<p>Filter by school:</p>
-						<select class="form-control input-sm">
-						</select>
-					</div>
-					<div class="control pull-left">
-						<p>Filter by level:</p>
-						<select class="form-control input-sm">
-							<option>Select</option>
-							<option value="short-term-work-experience">Undergraduate</option>
-							<option value="long-term-work-placement">Postgraduate</option>
-						</select>
-					</div>
-					<div class="control pull-left">
-						<p>Graduation year range (inclusive):</p>
-						<div class="input-daterange input-daterange-year input-group">
-						    <input type="text" class="input-sm form-control" name="start" />
-						    <span class="input-group-addon">to</span>
-						    <input type="text" class="input-sm form-control" name="end" />
+						<div class="input-group input-group-sm">
+							<input type="search" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Search</button>
+							</span>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
 					<div class="control pull-left">
 						<label class="checkbox-inline">
   							<input type="checkbox" id="flagged" value="flagged"> Flagged

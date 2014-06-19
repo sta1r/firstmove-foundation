@@ -2,6 +2,7 @@
 layout: admin-bootstrap
 title: Recruiter - Post New Job
 persona: recruiter
+notes: If the recruiter does not yet have an account, the password fields will be displayed at the bottom of this form, and the act of either saving a draft, or previewing and posting, will create an account for them.
 ---
 
 <div class="page-header">
@@ -9,8 +10,6 @@ persona: recruiter
 </div>
 
 <div class="row">
-
-	{% include _message-job-update.html %}
 
 	<div class="col-md-6">
 		
@@ -29,6 +28,8 @@ persona: recruiter
 
 			{% include _personal-details.html %}
 
+			{% include _account-password.html %}
+
 			{% include _accept-terms.html %}
 
 			<a href="recruiter-edit-job.html#updated" class="btn btn-default">Save as draft</a>
@@ -40,7 +41,7 @@ persona: recruiter
 
 	<div class="col-md-5 col-md-offset-1">
 		<div class="alert alert-warning">
-			<h4>PLEASE NOTE</h4>
+			<h4>Please note</h4>
 			<p>Any opportunities advertised on the LCF FirstMove website which are unpaid and not part of student accredited short term work experience and long term work placements will be removed immediately by the LCF Careers team.</p>
 			<p>All other opportunities must be paid at a rate of at least National Minimum Wage (NMW). For more information on the current NMW rate please go to - <a href="https://www.gov.uk/national-minimum-wage-rates" target="_blank">https://www.gov.uk/national-minimum-wage-rates</a>. By registering you are agreeing to cooperate with these guidelines.</p>
 		</div>

@@ -228,7 +228,7 @@ jQuery(document).ready( function($) {
 		
 		for (i = 0; i < 20; i++) {
 			
-			output += '<tr><td><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td>Adam Watling</td><td>Wingman Industries</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-primary btn-xs" href="admin-view-recruiter.html">View detail</a></td></tr>';
+			output += '<tr><td><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td>Adam Watling</td><td>Wingman Industries</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-primary btn-xs" href="admin-view-recruiter.html?logged-in=admin">View detail</a></td></tr>';
 			
 		}
 		
@@ -337,9 +337,9 @@ jQuery(document).ready( function($) {
 	$('#jobTypes').change( function() {
 		console.log($(this).val());
 		if ($(this).val() === 'full-time' || $(this).val() === 'part-time') {
-			$('#durationSelect').show();
-		} else {
 			$('#durationSelect').hide();
+		} else {
+			$('#durationSelect').show();
 		}
 	});
 
