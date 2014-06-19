@@ -21,6 +21,7 @@ persona: recruiter
 			<!-- <li><a href="#home" data-toggle="tab">Home</a></li> -->
 			<li class="active"><a href="#my-jobs" data-toggle="tab">Your jobs</a></li>
 			<li><a href="#personal-details" data-toggle="tab">Personal details</a></li>
+			<li><a href="#company-details" data-toggle="tab">Company details</a></li>
 			<li><a href="#settings" data-toggle="tab">Settings</a></li>
 			<li class="hidden-control admin-control"><a href="#admin-notes" data-toggle="tab">Admin</a></li>
 		</ul>
@@ -32,7 +33,6 @@ persona: recruiter
 		<!-- Tab panes -->
 		<div class="tab-content">
 		  	
-		  	<!-- <div class="tab-pane" id="home">...</div> -->
 			<div class="tab-pane active" id="my-jobs">
 				<table class="table table-striped">
 					<thead>
@@ -129,6 +129,19 @@ persona: recruiter
 				</div>
 		  	</div>
 
+		  	<div class="tab-pane" id="company-details">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated" class="populate" data-populate="recruiter">
+							<fieldset class="form-horizontal add-bottom">
+								{% include _company-details.html %}
+							</fieldset>
+							<button type="submit" class="btn btn-primary updated">Update</button>
+						</form>
+					</div>
+				</div>
+		  	</div>
+
 		  	<div class="tab-pane" id="settings">
 		  		<div class="row">
 			  		<div class="col-md-6">
@@ -146,6 +159,12 @@ persona: recruiter
 							<button type="submit" class="btn btn-primary updated">Update</button>
 						</form>
 					</div>
+					<div class="col-md-5 col-md-offset-1">
+						<div class="alert alert-warning">
+							<h4>Data protection</h4>
+							<p>We will only use your details to contact you about your posted jobs and your account. If you agree to receive additional notifications, we will send you email periodically. We will not use your details for any other purpose or pass on your details to any third party unless you specifically ask us to. See our <a href="#">privacy policy</a> for more information.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -153,13 +172,9 @@ persona: recruiter
 		  		<div class="row">
 			  		<div class="col-md-6">
 						<form action="#updated" class="populate" data-populate="recruiter">	
-							<fieldset>
-								<legend>Notes</legend>
-								<div class="form-group">
-									<textarea class="form-control" rows="8" id="adminNotes"></textarea>
-								</div>
-							</fieldset>
+							{% include _admin-notes-keywords.html %}
 							<button type="submit" class="btn btn-primary updated">Update</button>
+							<a class="btn btn-success" href="admin-view-recruiter.html?logged-in=admin">View</a>
 						</form>
 					</div>
 					<div class="col-md-4 col-md-offset-2">
