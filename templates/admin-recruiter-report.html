@@ -1,0 +1,79 @@
+---
+layout: admin-bootstrap
+title: Admin - Recruiters Report
+persona: admin
+notes: Recruiter search indexes (at least) firstname, lastname, email, company name, admin notes and admin keywords.
+---
+
+{% include _account-status.html %}
+
+<div class="page-header">
+	<h1>Recruiter report</h1>
+</div>
+
+<div class="control-bar row">
+	<div class="col-md-12">
+		<div class="well clearfix">
+			<div class="row">
+				<div class="col-md-12 add-bottom">
+					<div class="control control-search pull-left">
+						<p>Recruiter search:</p>
+					    <div class="input-group input-group-sm">
+					      <input type="search" class="form-control">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default" type="button">Search</button>
+					      </span>
+					    </div>
+					</div>	
+					<div class="control pull-left populate dropdown-list" data-populate="lcf_schools">
+						<p>Filter by school:</p>
+						<select class="form-control input-sm">
+						</select>
+					</div>
+					<div class="control pull-left">
+						<p>Filter by level:</p>
+						<select class="form-control input-sm">
+							<option>Select</option>
+							<option value="short-term-work-experience">Undergraduate</option>
+							<option value="long-term-work-placement">Postgraduate</option>
+						</select>
+					</div>
+					<div class="control pull-left">
+						<p>Graduation year range (inclusive):</p>
+						<div class="input-daterange input-daterange-year input-group">
+						    <input type="text" class="input-sm form-control" name="start" />
+						    <span class="input-group-addon">to</span>
+						    <input type="text" class="input-sm form-control" name="end" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="control pull-left">
+						<label class="checkbox-inline">
+  							<input type="checkbox" id="flagged" value="flagged"> Flagged
+						</label>
+						<label class="checkbox-inline">
+  							<input type="checkbox" id="marketable" value="marketable"> Marketing permitted
+						</label>
+					</div>
+					<div class="control pull-left">
+						<p>With selection:
+							<a href="#" class="btn btn-default btn-sm">Export</a>
+							<a href="admin-bulk-email.html" class="btn btn-default btn-sm">Bulk email</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div id="recruiters-list"></div>
+	</div>
+</div>
+
+{% include _pagination.html %}
+
