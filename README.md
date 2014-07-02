@@ -1,12 +1,8 @@
 ## A new suite of front-end templates for LCF FirstMove
 
-* [View demo site](http://strangerpixel.com/firstmove-foundation/)
+Built using selected elements of [Twitter Bootstrap](http://getbootstrap.com/). Bootstrap is maintained as a dependency via Bower, so the core files can be updated in future. The UI is finished with themed 'UAL' skin. 
 
 ## Requirements
-
-
-
-## Run it yourself
 
 You'll need to have the following items installed first of all:
 
@@ -15,7 +11,7 @@ You'll need to have the following items installed first of all:
   * [Bower](http://bower.io): Run `[sudo] npm install -g bower`
   * [Jekyll](http://jekyllrb.com/): Run `[sudo] gem install jekyll`
 
-Then:
+## Quickstart
 
 1. `git clone https://github.com/strangerpixel/firstmove-foundation.git`
 
@@ -25,9 +21,8 @@ Then:
 
 4. `npm install && bower install`
 
-
 While you're working on your project, run:
 
 `grunt`
 
-The `watch` task watches for changes to scss files, as well as html inside the `/templates`, `/_layouts` and `/_includes` directories.
+The `watch` task watches for changes to scss files and html inside the `/templates`, `/_layouts` and `/_includes` directories.
