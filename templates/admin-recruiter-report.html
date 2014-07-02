@@ -13,9 +13,9 @@ notes: Recruiter search indexes (at least) firstname, lastname, email, company n
 	<div class="col-md-12">
 		<div class="well clearfix">
 			<div class="row">
-				<div class="col-md-12 add-bottom">
-					<div class="control control-search pull-left">
-						<p>Recruiter search:</p>
+				<div class="">
+					<div class="control control-search col-md-4 col-sm-12">
+						<p class="label">Recruiter search</p>
 						<div class="input-group input-group-sm">
 							<input type="search" class="form-control">
 							<span class="input-group-btn">
@@ -23,19 +23,23 @@ notes: Recruiter search indexes (at least) firstname, lastname, email, company n
 							</span>
 						</div>
 					</div>
-					<div class="control pull-left">
-						<label class="checkbox-inline">
-  							<input type="checkbox" id="flagged" value="flagged"> Flagged
-						</label>
-						<label class="checkbox-inline">
-  							<input type="checkbox" id="marketable" value="marketable"> Marketing permitted
-						</label>
+					<div class="control col-md-4 col-sm-12">
+						<p class="label">Select</p>
+						<div class="checkbox-inline">
+							<label>
+	  							<input type="checkbox" id="flagged" value="flagged"> Flagged
+							</label>
+						</div>
+ 						<div class="checkbox-inline">
+ 							<label>
+	  							<input type="checkbox" id="marketable" value="marketable"> Marketing permitted
+							</label>
+						</div>
 					</div>
-					<div class="control pull-left">
-						<p>With selection:
-							<a href="#" class="btn btn-default btn-sm">Export</a>
-							<a href="admin-bulk-email.html" class="btn btn-default btn-sm">Bulk email</a>
-						</p>
+					<div class="control col-md-4 col-sm-12">
+						<p class="label">With selection</p>
+						<a href="#" class="btn btn-primary btn-sm">Export</a>
+						<a href="admin-bulk-email.html" class="btn btn-default btn-sm">Bulk email</a>
 					</div>
 				</div>
 			</div>

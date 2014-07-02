@@ -12,7 +12,8 @@
 	<!-- <link href="http://d27lwoqz7s24cy.cloudfront.net/assets/css/screen.min.css" rel="stylesheet">  -->
 
 	<!-- Bootstrap core CSS -->
-	<link href="{{ site.url }}/css/bootstrap-select.css" rel="stylesheet">
+	<!-- <link href="{{ site.url }}/css/bootstrap-select.css" rel="stylesheet"> -->
+	<!-- <link href="http://localhost:9000/assets/css/vendor-forms.css" rel="stylesheet"> -->
 	<link href="{{ site.url }}/css/ual-theme.css" rel="stylesheet">
 	<!-- UAL screen css -->
 
@@ -35,7 +36,7 @@
   <body role="document">
 	
 	<!-- Main navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="navbar navbar-inverse navbar-top" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
 		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -44,7 +45,10 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="{{ site.url }}">LCF Careers</a>
+		  <div class="navbar-brand">
+		  	<img class="hidden-xs" src="{{ site.url }}/img/ual_lockup_lcf_white.png" alt="LCF Careers">
+		  	<img class="visible-xs" src="{{ site.url }}/img/ual_mobile_logo.png" alt="LCF Careers">
+		  </div>
 		</div>
 		<div class="navbar-collapse collapse">
 			{% if page.breadcrumb != false %}
@@ -62,15 +66,19 @@
 	  </div>
 	</div>
 
+	<div class="breadcrumb-bar">
+		<div class="container">
+			{% if page.breadcrumb != false %}
+			<ol class="breadcrumb">
+				<li><a href="{{ site.url }}">Home</a></li>
+			  	<li class="active">{{ page.title }}</li>
+			</ol>
+			{% endif %}
+		</div>
+	</div>
+
 	<div class="container" role="main">
 
-		{% if page.breadcrumb != false %}
-		<ol class="breadcrumb">
-			<li><a href="{{ site.url }}">Home</a></li>
-		  	<li class="active">{{ page.title }}</li>
-		</ol>
-		{% endif %}
-		
 		{{ content }}
 
 	</div> <!-- /container -->
@@ -84,22 +92,27 @@
 			</div>
 		</div>
 	</footer>
-	<footer class="main-footer dark-bg">
-		<div class="container">
-			<div class="row">
-	  			<div class="col-md-12">
-					<p><small>&copy; London College of Fashion 2014</small></p>
-					<ul class="no-bullet">
-						<li><a href="#">Privacy policy</a></li>
+	<footer class="main-footer black-bg">
+  		<div class="container">
+    		<div class="row">
+    			<div class="footer-links col-md-3">
+			        <ul class="no-bullet">
+			          	<li><a href="#">Privacy policy</a></li>
 						<li><a href="#">Terms & conditions</a></li>
-					</ul>
-	  			</div>
+			        </ul>
+			    </div>
+      		</div>
+      
+			<div class="row">
+				<div class="copyright col-sm-12">
+				  <p>&copy; 2014 University of the Arts London All Rights Reserved</p>
+				</div>
 			</div>
-		</div>  
+  		</div>
 	</footer>
 
 	<!-- Fixed admin navbar (will be removed in production -->
-	<div class="navbar navbar-inverse navbar-fixed-bottom admin-navbar" role="navigation">
+	<div class="navbar navbar-inverse admin-navbar" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
 		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -143,6 +156,7 @@
 	  </div>
 	</div>
 
+
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -152,6 +166,7 @@
 	<script src="{{ site.url }}/js/job-data.js"></script>
 	<script src="{{ site.url }}/js/app.js"></script>
 
+	<!-- Grunt live-reload, will be removed for production -->
 	<script src="http://localhost:9000/livereload.js"></script>
   </body>
 </html>

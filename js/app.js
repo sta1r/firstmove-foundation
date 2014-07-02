@@ -52,7 +52,7 @@ jQuery(document).ready( function($) {
 
         else if (node.hasClass('dropdown-list')) {
 
-        	var ddItems = '<option>Please select</option>';
+        	var ddItems = '<option>Select</option>';
 
         	object.forEach(function(item) {
 
@@ -211,7 +211,7 @@ jQuery(document).ready( function($) {
 		
 		for (i = 0; i < 20; i++) {
 			
-			output += '<tr><td><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td>Dave Jones</td><td>BA Fashion Management</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-primary btn-xs" href="admin-view-job-seeker.html">View detail</a></td></tr>';
+			output += '<tr><td><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td>Dave Jones</td><td>BA Fashion Management</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-info btn-sm" href="admin-view-job-seeker.html">View detail</a></td></tr>';
 			
 		}
 		
@@ -228,7 +228,7 @@ jQuery(document).ready( function($) {
 		
 		for (i = 0; i < 20; i++) {
 			
-			output += '<tr><td><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td>Adam Watling</td><td>Wingman Industries</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-primary btn-xs" href="admin-view-recruiter.html?logged-in=admin">View detail</a></td></tr>';
+			output += '<tr><td><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td>Adam Watling</td><td>Wingman Industries</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-info btn-sm" href="admin-view-recruiter.html?logged-in=admin">View detail</a></td></tr>';
 			
 		}
 		
@@ -267,7 +267,9 @@ jQuery(document).ready( function($) {
 	// $('#dateFrom').datepicker();
 	// $('#dateTo').datepicker();
 	// $('#deadline').datepicker();
-	$('.datepicker').datepicker();
+	$('.datepicker').datepicker({
+		format: "dd/mm/yyyy"
+	});
 	$('.input-daterange-year').datepicker({
 		format: "yyyy",
     	startView: 2,

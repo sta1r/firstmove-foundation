@@ -15,14 +15,13 @@ module.exports = function(grunt) {
     sass: {
       options: {
         //includePaths: ['bower_components/foundation/scss']
-        includePaths: ['bower_components/bootstrap-sass/vendor/assets/stylesheets']
+        includePaths: ['bower_components/bootstrap-sass/assets/stylesheets']
       },
       dist: {
         options: {
           outputStyle: 'expanded'
         },
         files: {
-          'css/bootstrap-select.css': 'scss/bootstrap-select.scss',
           'css/ual-theme.css': 'scss/ual-theme.scss'
         }        
       }

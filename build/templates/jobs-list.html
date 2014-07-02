@@ -12,8 +12,9 @@
 	<!-- <link href="http://d27lwoqz7s24cy.cloudfront.net/assets/css/screen.min.css" rel="stylesheet">  -->
 
 	<!-- Bootstrap core CSS -->
-	<link href="http://localhost:4000/css/bootstrap-select.css" rel="stylesheet">
-	<link href="http://localhost:4000/css/ual-theme.css" rel="stylesheet">
+	<!-- <link href="http://strangerpixel.com/firstmove-foundation/css/bootstrap-select.css" rel="stylesheet"> -->
+	<!-- <link href="http://localhost:9000/assets/css/vendor-forms.css" rel="stylesheet"> -->
+	<link href="http://strangerpixel.com/firstmove-foundation/css/ual-theme.css" rel="stylesheet">
 	<!-- UAL screen css -->
 
 	<!-- Bootstrap theme 
@@ -35,7 +36,7 @@
   <body role="document">
 	
 	<!-- Main navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="navbar navbar-inverse navbar-top" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
 		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -44,7 +45,10 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="http://localhost:4000">LCF Careers</a>
+		  <div class="navbar-brand">
+		  	<img class="hidden-xs" src="http://strangerpixel.com/firstmove-foundation/img/ual_lockup_lcf_white.png" alt="LCF Careers">
+		  	<img class="visible-xs" src="http://strangerpixel.com/firstmove-foundation/img/ual_mobile_logo.png" alt="LCF Careers">
+		  </div>
 		</div>
 		<div class="navbar-collapse collapse">
 			
@@ -72,15 +76,19 @@
 	  </div>
 	</div>
 
+	<div class="breadcrumb-bar">
+		<div class="container">
+			
+			<ol class="breadcrumb">
+				<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
+			  	<li class="active">Jobs List</li>
+			</ol>
+			
+		</div>
+	</div>
+
 	<div class="container" role="main">
 
-		
-		<ol class="breadcrumb">
-			<li><a href="http://localhost:4000">Home</a></li>
-		  	<li class="active">Jobs List</li>
-		</ol>
-		
-		
 		<div class="page-header">
 	<h1>All current opportunities</h1>
 </div>
@@ -226,22 +234,27 @@
 			</div>
 		</div>
 	</footer>
-	<footer class="main-footer dark-bg">
-		<div class="container">
-			<div class="row">
-	  			<div class="col-md-12">
-					<p><small>&copy; London College of Fashion 2014</small></p>
-					<ul class="no-bullet">
-						<li><a href="#">Privacy policy</a></li>
+	<footer class="main-footer black-bg">
+  		<div class="container">
+    		<div class="row">
+    			<div class="footer-links col-md-3">
+			        <ul class="no-bullet">
+			          	<li><a href="#">Privacy policy</a></li>
 						<li><a href="#">Terms & conditions</a></li>
-					</ul>
-	  			</div>
+			        </ul>
+			    </div>
+      		</div>
+      
+			<div class="row">
+				<div class="copyright col-sm-12">
+				  <p>&copy; 2014 University of the Arts London All Rights Reserved</p>
+				</div>
 			</div>
-		</div>  
+  		</div>
 	</footer>
 
 	<!-- Fixed admin navbar (will be removed in production -->
-	<div class="navbar navbar-inverse navbar-fixed-bottom admin-navbar" role="navigation">
+	<div class="navbar navbar-inverse admin-navbar" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
 		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -276,151 +289,151 @@
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/admin-activity-report.html">Admin - Activity Report</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-activity-report.html">Admin - Activity Report</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/admin-bulk-email.html">Admin - Bulk Email</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-bulk-email.html">Admin - Bulk Email</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/admin-field-spec.html">Admin - Editable fields</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-field-spec.html">Admin - Editable fields</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/admin-job-seeker-report.html">Admin - Job Seekers Report</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-job-seeker-report.html">Admin - Job Seekers Report</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/admin-jobs-report.html">Admin - Jobs Report</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-jobs-report.html">Admin - Jobs Report</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/admin-recruiter-report.html">Admin - Recruiters Report</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-recruiter-report.html">Admin - Recruiters Report</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/admin-view-job-seeker.html">Admin - View Job Seeker</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Admin - View Job Seeker</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/admin-view-recruiter.html">Admin - View Recruiter</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-recruiter.html">Admin - View Recruiter</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/job-apply-preview.html">Apply - Preview</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply-preview.html">Apply - Preview</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/job-apply-success.html">Apply - Success</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply-success.html">Apply - Success</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/job-apply.html">Apply for a job</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply.html">Apply for a job</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/job-seeker-account-create.html">Job Seeker - Create Account</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-create.html">Job Seeker - Create Account</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/job-seeker-account-edit.html">Job Seeker - Account Edit</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html">Job Seeker - Account Edit</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/job-single.html">Job Page</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-single.html">Job Page</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a class="active" href="http://localhost:4000/templates/jobs-list.html">Jobs List</a>
+				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/jobs-list.html">Jobs List</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/recruiter-account-edit.html">Recruiter - Account Edit</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-account-edit.html">Recruiter - Account Edit</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/recruiter-application-view.html">Application View</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-application-view.html">Application View</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/recruiter-edit-job.html">Recruiter - Edit Job</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-edit-job.html">Recruiter - Edit Job</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/recruiter-job-dashboard.html">Recruiter - Job Dashboard</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-job-dashboard.html">Recruiter - Job Dashboard</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/recruiter-job-preview.html">Recruiter - Job Preview</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-job-preview.html">Recruiter - Job Preview</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/recruiter-post-job-error.html">Recruiter - Post New Job Error</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job Error</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/recruiter-post-job.html">Recruiter - Post New Job</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job.html">Recruiter - Post New Job</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/recruiter-post-success.html">Recruiter - Post Job Success</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-success.html">Recruiter - Post Job Success</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/sign-in.html">Sign In</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign In</a>
 						</li>
 						
 					
 						
 						<li>
-				  			<a  href="http://localhost:4000/templates/sign-up.html">Sign Up</a>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-up.html">Sign Up</a>
 						</li>
 						
 					
@@ -431,15 +444,17 @@
 	  </div>
 	</div>
 
+
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="http://localhost:4000/js/bootstrap-sass/vendor/assets/javascripts/bootstrap.min.js"></script>
-	<script src="http://localhost:4000/js/bootstrap-datepicker.js"></script>
-	<script src="http://localhost:4000/js/job-data.js"></script>
-	<script src="http://localhost:4000/js/app.js"></script>
+	<script src="http://strangerpixel.com/firstmove-foundation/js/bootstrap-sass/vendor/assets/javascripts/bootstrap.min.js"></script>
+	<script src="http://strangerpixel.com/firstmove-foundation/js/bootstrap-datepicker.js"></script>
+	<script src="http://strangerpixel.com/firstmove-foundation/js/job-data.js"></script>
+	<script src="http://strangerpixel.com/firstmove-foundation/js/app.js"></script>
 
+	<!-- Grunt live-reload, will be removed for production -->
 	<script src="http://localhost:9000/livereload.js"></script>
   </body>
 </html>

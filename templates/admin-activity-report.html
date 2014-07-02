@@ -13,7 +13,7 @@ notes: The view defaults to by month. If 'day' is selected, the most recent 10 d
 	<div class="col-md-12">
 		<div class="well clearfix">
 			<div class="control pull-left">
-				<p>View by:</p>
+				<p class="label">View by</p>
 				<div class="btn-group">
 					<button class="btn btn-default btn-sm">Day</button>
 					<button class="btn btn-default btn-sm active">Month</button>
@@ -22,7 +22,7 @@ notes: The view defaults to by month. If 'day' is selected, the most recent 10 d
 
 			</div>	
 			<div class="control pull-left">
-				<p>Date range:</p>
+				<p class="label">Date range</p>
 				<div class="input-daterange input-group datepicker">
 				    <input type="text" class="input-sm form-control" name="start" />
 				    <span class="input-group-addon">to</span>
@@ -30,8 +30,8 @@ notes: The view defaults to by month. If 'day' is selected, the most recent 10 d
 				</div>
 			</div>
 			<div class="control pull-right">
-				<p>With selection:</p>
-				<a href="#" class="btn btn-default btn-sm">Export</a>
+				<p class="label">With selection</p>
+				<a href="#" class="btn btn-primary btn-sm">Export</a>
 			</div>
 		</div>
 	</div>
@@ -42,51 +42,47 @@ notes: The view defaults to by month. If 'day' is selected, the most recent 10 d
 			<thead>
 				<tr>
 					<th>Date</th>
-					<th>Job seeker sign ups</th>
-					<th>Job seeker logins</th>
-					<th>Jobs posted</th>
-					<th>Job applications</th>
-					<th>Vacancies filled</th>
+					<th class="align-center">Job seeker sign ups</th>
+					<th class="align-center">Job seeker logins</th>
+					<th class="align-center">Jobs posted</th>
+					<th class="align-center">Job applications</th>
+					<th class="align-center">Vacancies filled</th>
 				</tr>
 			</thead>
 			<tr>
 				<td>April 2014</td>
-				<td>64</td>
-				<td>88</td>
-				<td>34</td>
-				<td>104</td>
-				<td>32</td>
+				<td class="align-center">64</td>
+				<td class="align-center">88</td>
+				<td class="align-center">34</td>
+				<td class="align-center">104</td>
+				<td class="align-center">32</td>
 			</tr>
 			<tr>
 				<td>March 2014</td>
-				<td>44</td>
-				<td>78</td>
-				<td>20</td>
-				<td>88</td>
-				<td>19</td>
+				<td class="align-center">44</td>
+				<td class="align-center">78</td>
+				<td class="align-center">20</td>
+				<td class="align-center">88</td>
+				<td class="align-center">19</td>
 			</tr>
 			<tr>
 				<td>February 2014</td>
-				<td>38</td>
-				<td>68</td>
-				<td>24</td>
-				<td>67</td>
-				<td>18</td>
+				<td class="align-center">38</td>
+				<td class="align-center">68</td>
+				<td class="align-center">24</td>
+				<td class="align-center">67</td>
+				<td class="align-center">18</td>
 			</tr>
 			<tr>
 				<td>January 2014</td>
-				<td>30</td>
-				<td>57</td>
-				<td>12</td>
-				<td>45</td>
-				<td>7</td>
+				<td class="align-center">30</td>
+				<td class="align-center">57</td>
+				<td class="align-center">12</td>
+				<td class="align-center">45</td>
+				<td class="align-center">7</td>
 			</tr>
 		</table>
 	</div>
 </div>
-
-
-
-
 
 {% include _pagination.html %}

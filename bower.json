@@ -1,7 +1,6 @@
 {
   "name": "firstmove-foundation",
   "dependencies": {
-    "foundation": "zurb/bower-foundation",
     "bootstrap-sass": "twbs/bootstrap-sass"
   }
 }
