@@ -2,10 +2,10 @@ $light-blue: #12a4e0;
 $gold: #E5C100;
 // $navbar-inverse-bg: lighten(#000, 13.5%) !default;
 // $navbar-inverse-link-color: #FFF;
-$icon-font-path: "../fonts/bootstrap/";
 
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
 
-@import "stylesheets/bootstrap";
 @import "datepicker";
 
 body {

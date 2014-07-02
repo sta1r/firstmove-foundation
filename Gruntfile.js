@@ -1,3 +1,4 @@
+'use strict';
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -14,19 +15,20 @@ module.exports = function(grunt) {
     sass: {
       options: {
         //includePaths: ['bower_components/foundation/scss']
-        includePaths: ['bower_components/bootstrap-sass/vendor/assets']
+        includePaths: ['bower_components/bootstrap-sass/vendor/assets/stylesheets']
       },
       dist: {
         options: {
           outputStyle: 'expanded'
         },
         files: {
-          'css/style.css': 'scss/style.scss'
+          'css/bootstrap-select.css': 'scss/bootstrap-select.scss',
+          'css/ual-theme.css': 'scss/ual-theme.scss'
         }        
       }
     },
 
-    // copy selected Foundation JS files from bower_components into the theme's JS folder
+    // copy selected files from bower_components into the theme's JS folder
     // only run after modifying what is being copied or if bower is updated
     copy: {
       main: {
@@ -61,28 +63,40 @@ module.exports = function(grunt) {
           '_config.yml',
           'index.html'
         ],
-        tasks: ['shell:jekyllBuild', 'shell:jekyllServe'],
-        options: {
-          interrupt: true,
-          atBegin: true,
-          livereload: {
-            port: 9000
-          }
-        }
+        tasks: ['shell:jekyllBuild', 'shell:jekyllServe']
+      //   options: {
+      //     interrupt: true,
+      //     atBegin: true,
+      //     livereload: {
+      //       port: 9000
+      //     }
+      //   }
       },
 
       sass: {
         files: 'scss/*.scss',
         tasks: ['sass']
       }
+    },
+
+    concurrent: {
+      target: {
+        tasks: ['shell:jekyllBuild', 'shell:jekyllServe', 'watch'],
+        options: {
+          logConcurrentOutput: true
+        }
+      }  
     }
+
   });
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['concurrent:target']);
+
 
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-concurrent');
 
 }
