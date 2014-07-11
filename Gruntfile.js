@@ -19,7 +19,7 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          outputStyle: 'expanded'
+          outputStyle: 'compressed'
         },
         files: {
           'css/ual-theme.css': 'scss/ual-theme.scss'
@@ -60,7 +60,8 @@ module.exports = function(grunt) {
           'css/*.css',
           'templates/*.html',
           '_config.yml',
-          'index.html'
+          'index.html',
+          'contents.html'
         ],
         tasks: ['shell:jekyllBuild', 'shell:jekyllServe']
       //   options: {
