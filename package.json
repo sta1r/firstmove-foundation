@@ -4,7 +4,7 @@
   "description": "Front-end prototypes for the FirstMove rebuild",
   "author": "Alastair Mucklow",
   "devDependencies": {
-    "node-sass": "~0.8.4",
+    "node-sass": "~0.9.3",
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-contrib-copy": "~0.5.0",
