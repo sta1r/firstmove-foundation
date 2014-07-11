@@ -52,6 +52,15 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			
+			<ul class="nav navbar-nav navbar-right">
+				<li class="state--logged-out"><a href="sign-in.html">Sign in</a></li>
+				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter#personal-details">View account</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
+				<li class="recruiter-control"><a href="recruiter-post-job.html">Post a job</a></li>
+				<li class="state--logged-in"><a href="sign-in.html">Sign out</a></li>
+		  	</ul>
+		  	
 		  <div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
 	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
 </div>
@@ -70,399 +79,148 @@
 	<div class="breadcrumb-bar">
 		<div class="container">
 			
+			<ol class="breadcrumb">
+				<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
+			  	<li class="active">Jobs List</li>
+			</ol>
+			
 		</div>
 	</div>
 
 	<div class="container" role="main">
 
 		<div class="page-header">
-  <h1>Contents</h1>
+	<h1>All current opportunities</h1>
 </div>
 
-<h2>Global layouts</h2>
-<ul>
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/job-single.html">
-	    Job Page
-	    </a>
-	  </li>
-	
-  
-    
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/jobs-list.html">
-	    Jobs List
-	    </a>
-	  </li>
-	
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">
-	    Sign In
-	    </a>
-	  </li>
-	
-  
-    
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-up.html">
-	    Sign Up
-	    </a>
-	  </li>
-	
-  
-</ul>
+<div class="row add-bottom">
+	<div class="col-md-8">
+		<p>Browsing 56 current opportunities</p>
+	</div>
+	<div class="col-md-4">
+		<div class="control pull-right">
+			<div class="input-group">
+				<input type="search" class="form-control" placeholder="Search">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">Search</button>
+				</span>
+			</div><!-- /input-group -->
+		</div>
+	</div>
+</div>
 
+<div class="row">
+	<div class="col-md-3 sidebar">
+		<div class="list-group">
+			<a href="#" class="list-group-item active">All</a>
+			<a href="#" class="list-group-item"><span class="badge">56</span>Jobs</a>
+			<a href="#" class="list-group-item"><span class="badge">16</span>Placements</a>
+		</div>
+		<div class="list-group populate list-categories" data-populate="job_categories"></div>
+	</div>
+	<div class="col-md-9 add-bottom">
+		<ul class="job-list no-bullet">
+			
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">Part Time Sales Person</a></h3>
+		<h4>Sweaty Betty</h4>
 
+		<p class="meta"><span class="job-type">Graduate job</span> | <span class="job-contract-length">Contract: Permanent</span> | <span class="salary">Salary: &pound;7.00</span> | <span class="location">West London</span></p>
+		
+		<p class="admin-control"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
+	</li>
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">Photographic & Web Assistant</a></h3>
+		<h4>This Old Thing London (Charli Evans)</h4>
+		
+		<p class="meta"><span class="job-type">Long Term Work Placement</span> | <span class="job-contract-length">Contract: Negotiable</span> | <span class="salary">Salary: Negotiable</span> | West London</p>
+		
+		<p class="admin-control"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>	
+	</li>
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">WGSN Editorial Intern</a></h3>
+		<h4>WGSN</h4>
+		
+		<p class="meta"><span class="job-type">Short Term Work Experience</span> | <span class="job-contract-length">Negotiable</span> | <span class="salary">Salary: Travel and Expenses</span> | <span class="location">Greater London</span></p>
 
+		<p class="admin-control"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
+	</li>
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">Seamstress</a></h3>
+		<h4>Zaeem Jamal</h4>
+		
+		<p class="meta"><span class="job-type">Part time permanent</span> | <span class="job-contract-length">6 months</span> | <span class="salary">Salary: £18,000 - £20,000 per year</span> | <span class="location">Shoreditch, London, UK</span></p>
 
-<h2>Job Seekers</h2>
-<ul>
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply-preview.html">
-	    Apply - Preview
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply-success.html">
-	    Apply - Success
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply.html">
-	    Apply for a job
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-create.html">
-	    Job Seeker - Create Account
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html">
-	    Job Seeker - Account Edit
-	    </a>
-	  </li>
-	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-application-view.html">
-	    Application View
-	    </a>
-	  </li>
-	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-</ul>
+		<p class="admin-control"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
+	</li>
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">Showroom Administrator/Assistant to Director</a></h3>
+		<h4>L'Apartement (Francesca Carrillo)</h4>
+		
+		<p class="meta"><span class="job-type">Full time permanent</span> | <span class="salary">Salary: £22,000 - £24,000 per year</span> | <span class="location">Greater London</span></p>
 
+		<p class="admin-control"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
+	</li>
 
+			
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">Part Time Sales Person</a></h3>
+		<h4>Sweaty Betty</h4>
 
-<h2>Recruiters</h2>
-<ul>
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-account-edit.html">
-	    Recruiter - Account Edit
-	    </a>
-	  </li>
-	
-  
-  	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-edit-job.html">
-	    Recruiter - Edit Job
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-job-dashboard.html">
-	    Recruiter - Job Dashboard
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-job-preview.html">
-	    Recruiter - Job Preview
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">
-	    Recruiter - Post New Job Error
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job.html">
-	    Recruiter - Post New Job
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-success.html">
-	    Recruiter - Post Job Success
-	    </a>
-	  </li>
-	
-  
-  	
-  
-  	
-  
-</ul>
+		<p class="meta"><span class="job-type">Graduate job</span> | <span class="job-contract-length">Contract: Permanent</span> | <span class="salary">Salary: &pound;7.00</span> | <span class="location">West London</span></p>
+		
+		<p class="admin-control"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
+	</li>
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">Photographic & Web Assistant</a></h3>
+		<h4>This Old Thing London (Charli Evans)</h4>
+		
+		<p class="meta"><span class="job-type">Long Term Work Placement</span> | <span class="job-contract-length">Contract: Negotiable</span> | <span class="salary">Salary: Negotiable</span> | West London</p>
+		
+		<p class="admin-control"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>	
+	</li>
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">WGSN Editorial Intern</a></h3>
+		<h4>WGSN</h4>
+		
+		<p class="meta"><span class="job-type">Short Term Work Experience</span> | <span class="job-contract-length">Negotiable</span> | <span class="salary">Salary: Travel and Expenses</span> | <span class="location">Greater London</span></p>
 
+		<p class="admin-control"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
+	</li>
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">Seamstress</a></h3>
+		<h4>Zaeem Jamal</h4>
+		
+		<p class="meta"><span class="job-type">Part time permanent</span> | <span class="job-contract-length">6 months</span> | <span class="salary">Salary: £18,000 - £20,000 per year</span> | <span class="location">Shoreditch, London, UK</span></p>
 
+		<p class="admin-control"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
+	</li>
+	<li class="job-item full-width add-bottom">
+		<h3><a href="job-single.html">Showroom Administrator/Assistant to Director</a></h3>
+		<h4>L'Apartement (Francesca Carrillo)</h4>
+		
+		<p class="meta"><span class="job-type">Full time permanent</span> | <span class="salary">Salary: £22,000 - £24,000 per year</span> | <span class="location">Greater London</span></p>
 
-<h2>Admin</h2>
-<ul>
-  
-  	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-activity-report.html">
-	    Admin - Activity Report
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-bulk-email.html">
-	    Admin - Bulk Email
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-field-spec.html">
-	    Admin - Editable fields
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-job-seeker-report.html">
-	    Admin - Job Seekers Report
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-jobs-report.html">
-	    Admin - Jobs Report
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-recruiter-report.html">
-	    Admin - Recruiters Report
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">
-	    Admin - View Job Seeker
-	    </a>
-	  </li>
-	
-  
-  	
-	  <li>
-	    <a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-recruiter.html">
-	    Admin - View Recruiter
-	    </a>
-	  </li>
-	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-  	
-  
-</ul>
+		<p class="admin-control"><a href="recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
+	</li>
+
+		</ul>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<ul class="pagination">
+		  <li class="disabled"><a href="#">&laquo;</a></li>
+		  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+		  <li><a href="#">2</a></li>
+		  <li><a href="#">3</a></li>
+		  <li><a href="#">4</a></li>
+		  <li><a href="#">5</a></li>
+		  <li><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+</div>
 
 	</div> <!-- /container -->
 	
@@ -470,7 +228,7 @@
 		<div class="container">
 			<div class="row">
 		  		<div class="col-md-12">
-					<p></p>
+					<p>Search facets for categories only display if there are live jobs in those categories. Facets for jobs and placements are slightly different, and should always be visible even if e.g. there are 0 placements offered.</p>
 				</div>
 			</div>
 		</div>
@@ -508,6 +266,10 @@
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
 		  	
+		  	<li>
+		  		<a id="toggle-dev-notes" href="#dev-notes"><span class="glyphicon glyphicon-question-sign"></span></a>
+		  	</li>
+		  	
 		  	<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
@@ -518,10 +280,16 @@
 					<li><a href="?">Log out</a></li>
 			  	</ul>
 			</li>
-			<li class="dropdown">
+			<!-- <li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
 			  	<ul class="dropdown-menu">
 					
+						
+					
+						
+						<li>
+				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/index.html">Jobs List</a>
+						</li>
 						
 					
 						
@@ -675,7 +443,8 @@
 						
 					
 			  </ul>
-			</li>
+			</li> -->
+			<li><a href="http://strangerpixel.com/firstmove-foundation/contents.html">Contents</a></li>
 		  </ul>
 		</div><!--/.nav-collapse -->
 	  </div>
