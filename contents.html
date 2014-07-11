@@ -1,0 +1,68 @@
+---
+layout: admin-bootstrap
+menu: false
+breadcrumb: false
+title: Contents
+---
+
+<div class="page-header">
+  <h1>{{ page.title }}</h1>
+</div>
+
+<h2>Global layouts</h2>
+<ul>
+  {% for p in site.pages | sort: 'title' %}
+    {% if p.persona == 'all' %}
+	  <li>
+	    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">
+	    {{ p.title }}
+	    </a>
+	  </li>
+	{% endif %}
+  {% endfor %}
+</ul>
+
+
+
+<h2>Job Seekers</h2>
+<ul>
+  {% for p in site.pages %}
+  	{% if p.persona == 'job-seeker' %}
+	  <li>
+	    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">
+	    {{ p.title }}
+	    </a>
+	  </li>
+	{% endif %}
+  {% endfor %}
+</ul>
+
+
+
+<h2>Recruiters</h2>
+<ul>
+  {% for p in site.pages %}
+  	{% if p.persona == 'recruiter' %}
+	  <li>
+	    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">
+	    {{ p.title }}
+	    </a>
+	  </li>
+	{% endif %}
+  {% endfor %}
+</ul>
+
+
+
+<h2>Admin</h2>
+<ul>
+  {% for p in site.pages %}
+  	{% if p.persona == 'admin' %}
+	  <li>
+	    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">
+	    {{ p.title }}
+	    </a>
+	  </li>
+	{% endif %}
+  {% endfor %}
+</ul>

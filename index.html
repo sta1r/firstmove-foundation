@@ -1,69 +1,45 @@
 ---
 layout: admin-bootstrap
-menu: false
-breadcrumb: false
-title: Home
+title: Jobs List
+persona: all
+notes: Search facets for categories only display if there are live jobs in those categories. Facets for jobs and placements are slightly different, and should always be visible even if e.g. there are 0 placements offered.
 ---
 
 <div class="page-header">
-  <h1>Contents</h1>
+	<h1>All current opportunities</h1>
 </div>
 
-<h2>Global layouts</h2>
-<ul>
-  {% for p in site.pages | sort: 'title' %}
-    {% if p.persona == 'all' %}
-	  <li>
-	    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">
-	    {{ p.title }}
-	    </a>
-	  </li>
-	{% endif %}
-  {% endfor %}
-</ul>
+<div class="row add-bottom">
+	<div class="col-md-8">
+		<p>Browsing 56 current opportunities</p>
+	</div>
+	<div class="col-md-4">
+		<div class="control pull-right">
+			<div class="input-group">
+				<input type="search" class="form-control" placeholder="Search">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">Search</button>
+				</span>
+			</div><!-- /input-group -->
+		</div>
+	</div>
+</div>
 
+<div class="row">
+	<div class="col-md-3 sidebar">
+		<div class="list-group">
+			<a href="#" class="list-group-item active">All</a>
+			<a href="#" class="list-group-item"><span class="badge">56</span>Jobs</a>
+			<a href="#" class="list-group-item"><span class="badge">16</span>Placements</a>
+		</div>
+		<div class="list-group populate list-categories" data-populate="job_categories"></div>
+	</div>
+	<div class="col-md-9 add-bottom">
+		<ul class="job-list no-bullet">
+			{% include _list-jobs.html %}
+			{% include _list-jobs.html %}
+		</ul>
+	</div>
+</div>
 
-
-
-<h2>Job Seekers</h2>
-<ul>
-  {% for p in site.pages %}
-  	{% if p.persona == 'job-seeker' %}
-	  <li>
-	    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">
-	    {{ p.title }}
-	    </a>
-	  </li>
-	{% endif %}
-  {% endfor %}
-</ul>
-
-
-
-<h2>Recruiters</h2>
-<ul>
-  {% for p in site.pages %}
-  	{% if p.persona == 'recruiter' %}
-	  <li>
-	    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">
-	    {{ p.title }}
-	    </a>
-	  </li>
-	{% endif %}
-  {% endfor %}
-</ul>
-
-
-
-<h2>Admin</h2>
-<ul>
-  {% for p in site.pages %}
-  	{% if p.persona == 'admin' %}
-	  <li>
-	    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">
-	    {{ p.title }}
-	    </a>
-	  </li>
-	{% endif %}
-  {% endfor %}
-</ul>
+{% include _pagination.html %}
