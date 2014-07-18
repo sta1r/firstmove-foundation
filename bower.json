@@ -1,6 +1,7 @@
 {
-  "name": "firstmove-foundation",
+  "name": "lcf-careers-live",
   "dependencies": {
-    "bootstrap-sass": "twbs/bootstrap-sass"
+    "bootstrap-sass-official": "~3.2.0",
+    "jquery": "~2.1.1"
   }
 }
