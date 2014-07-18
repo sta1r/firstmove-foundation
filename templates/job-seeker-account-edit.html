@@ -2,7 +2,7 @@
 layout: admin-bootstrap
 title: Job Seeker - Account Edit
 persona: job-seeker
-notes: Only admins can view and edit the 'admin' tab
+notes: Your jobs tab - if no jobs have been applied for, display text "You have not yet applied for any jobs or placements". If redirecting from the account creation form, display the updated alert with the text "Success! Your account has been created". Only admins can view and edit the 'admin' tab. Perhaps the delete controls should be on the <a href="admin-view-job-seeker.html?logged-in=admin">detail page</a>?
 ---
 
 <div class="page-header">
@@ -15,7 +15,7 @@ notes: Only admins can view and edit the 'admin' tab
 	<div class="col-md-12 add-bottom">
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="#my-jobs" data-toggle="tab">My jobs</a></li>
+			<li class="active"><a href="#my-jobs" data-toggle="tab">Your jobs and placements</a></li>
 			<li><a href="#personal-details" data-toggle="tab">Personal details</a></li>
 			<li><a href="#student-information" data-toggle="tab">Student information</a></li>
 			<li><a href="#biographical-details" data-toggle="tab">Biography</a></li>
@@ -186,7 +186,9 @@ notes: Only admins can view and edit the 'admin' tab
 							<table class="table">
 								<tr><td>Adam Watling</td><td>12/06/2014</td></tr>
 							</table>
+
 						</div>
+						<button type="button" class="btn btn-block btn-danger" data-function="alert" data-alert="Are you sure?">Delete this account permanently</button>
 					</div>
 				</div>
 			</div>
