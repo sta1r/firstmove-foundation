@@ -1,6 +1,7 @@
+/* All the scripting for populating prototypes with data, dev-notes etc. not required for production */
+
 jQuery(document).ready( function($) {
 
-	
 	function scanDomAndPopulate(DOMnode, dataSegment) {
 
 		var object = job_data[dataSegment];
@@ -176,33 +177,6 @@ jQuery(document).ready( function($) {
 		$('.dev-footer').toggle();
 	});
 
-	/* -----------------------------
-	** Hash-based alerts and actions
-	*/
-	var hash = window.location.hash;
-
-	// Update alert
-	setTimeout(function() {
-	  if (hash == '#updated') {
-	  	$('#message-updated').show();
-	    window.scrollTo(0, 0);
-	  } else {
-	  	$('#message-updated').hide();
-	  }
-	}, 1);
-
-	// Go to tab based on location hash
-  	hash && $('ul.nav a[href="' + hash + '"]').tab('show');
-
-  	$('.nav-tabs a').click(function (e) {
-    	$(this).tab('show');
-    	var scrollmem = $('body').scrollTop();
-    	window.location.hash = this.hash;
-    	$('html,body').scrollTop(scrollmem);
-  	});
-
-
-	
 
 	// PUSH DUMMY STUDENTS INTO TABLE ROWS
 	if ($('#students-list').length) {
@@ -211,7 +185,7 @@ jQuery(document).ready( function($) {
 		
 		for (i = 0; i < 20; i++) {
 			
-			output += '<tr><td><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td>Dave Jones</td><td>BA Fashion Management</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-info btn-sm" href="admin-view-job-seeker.html">View detail</a></td></tr>';
+			output += '<tr><td data-label="flag"><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td data-label="name">Dave Jones</td><td data-label="course">BA Fashion Management</td><td data-label="email-address"><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td data-label="last-logged-in">10/5/2014</td><td data-label="actions"><a class="btn btn-info btn-sm" href="admin-view-job-seeker.html">View detail</a></td></tr>';
 			
 		}
 		
@@ -224,11 +198,11 @@ jQuery(document).ready( function($) {
 	// PUSH DUMMY RECRUITERS INTO TABLE ROWS
 	if ($('#recruiters-list').length) {
 		
-		var output = '<table class="table table-striped"><thead><tr><th>Flag</th><th><a href="#" title="Click to sort">Name</a></th><th>Company name</th><th>Email address</th><th><a href="#" title="Click to sort">Last logged in</a></th><th>Actions</th></tr></thead><tbody>';
+		var output = '<table class="table table-striped"><thead><tr><th>Flag</th><th><a href="#" title="Click to sort">Name</a></th><th>Company</th><th>Email address</th><th><a href="#" title="Click to sort">Last logged in</a></th><th>Actions</th></tr></thead><tbody>';
 		
 		for (i = 0; i < 20; i++) {
 			
-			output += '<tr><td><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td>Adam Watling</td><td>Wingman Industries</td><td><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td>10/5/2014</td><td><a class="btn btn-info btn-sm" href="admin-view-recruiter.html?logged-in=admin">View detail</a></td></tr>';
+			output += '<tr><td data-label="flag"><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td data-label="name">Adam Watling</td><td data-label="company">Wingman Industries</td><td data-label="email-address"><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td data-label="last-logged-in">10/5/2014</td><td data-label="actions"><a class="btn btn-info btn-sm" href="admin-view-recruiter.html?logged-in=admin">View detail</a></td></tr>';
 			
 		}
 		
@@ -261,89 +235,6 @@ jQuery(document).ready( function($) {
 		
 		
 	}
-
-
-	// DATEPICKER
-	// $('#dateFrom').datepicker();
-	// $('#dateTo').datepicker();
-	// $('#deadline').datepicker();
-	$('.datepicker').datepicker({
-		format: "dd/mm/yyyy"
-	});
-	$('.input-daterange-year').datepicker({
-		format: "yyyy",
-    	startView: 2,
-    	minViewMode: 2
-	});
-
-
-
-
-
-
-	/* ----------
-	** Sign up UI
-	*/
-	var opt_fields = $('form').find('.sign-up-optional');
-	opt_fields.hide();
-
-	$('#signupform').find('input').change( function() {
-
-		if (!$(this).is(':checked')) {
-			$(this).attr("checked", "checked");
-		} else {
-			$(this).attr("checked", "");
-		}
-
-		//console.log($(this).attr('id') + ' is ' + $(this).attr('checked'));
-
-		if ($('#accountJobSeeker').is(':checked')) {
-			$('.sign-up-ldap').show();
-			$('.sign-up-email').hide();
-			if ($('#LDAPAccountYes').is(':checked')) {
-				$('.sign-up-email').show();
-				$('.sign-up-ldap-password').show();
-				$('.sign-up-normal-password').hide();
-			}
-			if ($('#LDAPAccountNo').is(':checked')) {
-				$('.sign-up-email').show();
-				$('.sign-up-ldap-password').hide();
-				$('.sign-up-normal-password').show();
-			}
-			$('#job-seeker-sign-up-button').show();
-			$('#recruiter-sign-up-button').hide();
-		}
-
-		if ($('#accountRecruiter').is(':checked')) {
-			$('.sign-up-ldap').hide();
-			$('.sign-up-email').show();
-			$('.sign-up-ldap-password').hide();
-			$('.sign-up-normal-password').show();
-			$('#job-seeker-sign-up-button').hide();
-			$('#recruiter-sign-up-button').show();
-		}
-
-	});
-
-	/* -------------
-	** Miscellaneous
-	*/
-
-	// Add a flag 
-	$('.flag').click(function(e) {
-		e.preventDefault();
-		$(this).find('.glyphicon').toggleClass('active');
-	});
-
-	// Duration field
-	$('#jobTypes').change( function() {
-		console.log($(this).val());
-		if ($(this).val() === 'full-time' || $(this).val() === 'part-time') {
-			$('#durationSelect').hide();
-		} else {
-			$('#durationSelect').show();
-		}
-	});
 
 
 });
