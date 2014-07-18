@@ -1,4 +1,3 @@
-/*! I am a loud comment. I ain't goin' nowheres. */
 /*------------------------------------*\
 	VENDOR
 \*------------------------------------*/
@@ -193,7 +192,14 @@ em {
 	margin-bottom: 5px;
 }
 
-
+.page-header {
+	position: relative;
+	.pull-right {
+		position: absolute;
+		right: 0;
+		top: 10px;
+	}
+}
 
 // Elements
 .form-control {
@@ -375,5 +381,79 @@ footer {
 
 	.control-search {
 		width: 230px;
+	}
+
+	td.numeric, th.numeric {
+		text-align: center;
+	}
+}
+
+// Tablet and below
+@media only (max-width: $screen-md-min) {
+
+/* The following rules will not be seen by IE9 and below */
+.modern-browsers {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	.table>tbody>tr>td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data - the :before values should exactly match the <th> text when the table is in standard mode 
+	*/
+	td[data-label="actions"]:before { content: "Actions"; }
+
+	td[data-label="applications"]:before { content: "Applications"; }
+
+	td[data-label="company"]:before { content: "Company"; }
+	td[data-label="course"]:before { content: "Course"; }
+	td[data-label="date"]:before { content: "Date"; }
+	td[data-label="date-posted"]:before { content: "Date posted"; }
+	td[data-label="email-address"]:before { content: "Email address"; }
+	td[data-label="filled-check"]:before { content: "Vacancy filled by us?"; }
+	td[data-label="flag"]:before { content: "Flag"; }
+	td[data-label="job-applications"]:before { content: "Job applications"; }
+	td[data-label="job-seeker-sign-ups"]:before { content: "Job seeker sign ups"; }
+	td[data-label="job-seeker-logins"]:before { content: "Job seeker logins"; }
+	td[data-label="jobs-posted"]:before { content: "Jobs posted"; }
+	td[data-label="last-logged-in"]:before { content: "Last logged in"; }
+	td[data-label="name"]:before { content: "Name"; }
+	td[data-label="role"]:before { content: "Role"; }
+
+	td[data-label="status"]:before { content: "Status"; }
+	td[data-label="type"]:before { content: "Type"; }
+	td[data-label="vacancies-filled"]:before { content: "Vacancies filled"; }
+
+	td[data-label="views"]:before { content: "Views"; }
+
 	}
 }
