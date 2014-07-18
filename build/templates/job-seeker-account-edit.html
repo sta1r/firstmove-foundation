@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<!--[if lt IE 7]>  <html lang="en" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html lang="en" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html lang="en" class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html lang="en" class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html lang="en"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="modern-browsers"> <!--<![endif]-->
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +15,7 @@
 
 	<title>LCF FirstMove - Front End Templates</title>
 
-	<!-- <link href="http://d27lwoqz7s24cy.cloudfront.net/assets/css/screen.min.css" rel="stylesheet">  -->
-
-	<!-- Bootstrap core CSS -->
-	<!-- <link href="http://strangerpixel.com/firstmove-foundation/css/bootstrap-select.css" rel="stylesheet"> -->
-	<!-- <link href="http://localhost:9000/assets/css/vendor-forms.css" rel="stylesheet"> -->
+	<!-- UAL Bootstrap Theme -->
 	<link href="http://strangerpixel.com/firstmove-foundation/css/ual-theme.css" rel="stylesheet">
 	
 	<!--
@@ -42,26 +44,18 @@
 	 * 
 	 * © 2013 MyFonts Inc
 	*/
-	Uncomment below to reference MyFonts Kit the right way. Note - font paths need to be updated on arts.ac.uk.
+	Uncomment below to reference MyFonts Kit the right way. Note - font paths need to be updated on arts.ac.uk. IF it's OK to reference from within SASS, use the swiss-721 file and loud comments to preserve the license info.
 	<link rel="stylesheet" type="text/css" href="MyFontsWebfontsKit.css">
 	-->
-	<!-- Bootstrap theme 
-	<link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
-
-	<!-- Custom styles for this template 
-	<link href="theme.css" rel="stylesheet">-->
-
-	<!-- Just for debugging purposes. Don't actually copy this line! -->
-	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-  </head>
+</head>
 
-  <body role="document">
+<body role="document">
 	
 	<div class="navbar navbar-inverse navbar-top" role="navigation">
 	  <div class="container">
@@ -72,7 +66,7 @@
 		  </div>
 		</div>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="http://www.arts.ac.uk/fashion/about/lcf-careers/">&laquo; Back to LCF Careers</a></li>
+			<li><a href="http://www.arts.ac.uk/fashion/about/lcf-careers/">LCF Careers</a></li>
 	  	</ul>
 	  </div>
 	</div>
@@ -147,11 +141,12 @@
 	<div class="col-md-12 add-bottom">
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="#my-jobs" data-toggle="tab">My jobs</a></li>
+			<li class="active"><a href="#my-jobs" data-toggle="tab">Your jobs and placements</a></li>
 			<li><a href="#personal-details" data-toggle="tab">Personal details</a></li>
 			<li><a href="#student-information" data-toggle="tab">Student information</a></li>
 			<li><a href="#biographical-details" data-toggle="tab">Biography</a></li>
-			<li><a href="#settings" data-toggle="tab">Settings</a></li>
+			<li><a href="#notifications" data-toggle="tab">Notifications</a></li>
+			<li><a href="#password" data-toggle="tab">Password</a></li>
 			<li class="hidden-control admin-control"><a href="#admin-notes" data-toggle="tab">Admin</a></li>
 		</ul>
 	</div>
@@ -335,24 +330,24 @@
 						<form action="#updated" class="populate" data-populate="job_seeker">	
 														<fieldset class="add-bottom">
 								<legend>Student information</legend>
-								<div class="form-group">
+								<div class="form-group required">
 									<label for="LCFStudentNumber">LCF student number</label>
 									<input id="LCFStudentNumber" type="text" class="form-control" placeholder="e.g. ABC12345678" />
 								</div>
-								<div class="form-group">
+								<div class="form-group required">
 									<label for="graduationYear">Graduation year</label>
 									<input id="graduationYear" type="text" class="form-control" placeholder="e.g. 2015" />
 								</div>
-								<div class="form-group">
+								<div class="form-group required">
 									<label>Course</label>
 									<input id="LCFCourse" type="text" class="form-control" placeholder="" />
 								</div>
-								<div class="form-group populate dropdown-list" data-populate="lcf_schools">
+								<div class="form-group required populate dropdown-list" data-populate="lcf_schools">
 									<label>School</label>
 									<select class="form-control">
 									</select>
 								</div>
-								<div class="form-group populate dropdown-list" data-populate="lcf_study_levels">
+								<div class="form-group required populate dropdown-list" data-populate="lcf_study_levels">
 									<label>Level</label>
 									<select class="form-control">
 									</select>
@@ -366,25 +361,10 @@
 				</div>
 			</div>
 
-		  	<div class="tab-pane" id="settings">
+			<div class="tab-pane" id="notifications">
 		  		<div class="row">
 			  		<div class="col-md-6">
 						<form action="#updated">
-							<fieldset class="add-bottom">
-	<legend>Reset your password</legend>
-		<div class="form-group">
-		<label for="currentPassword">Current password</label>
-		<input type="password" class="form-control" id="currentPassword" />
-	</div>
-	<div class="form-group">
-		<label for="newPassword">New password</label>
-		<input type="password" class="form-control" id="newPassword" />
-	</div>
-	<div class="form-group">
-		<label for="newPasswordConfirm">Re-enter password</label>
-		<input type="password" class="form-control" id="newPasswordConfirm" />
-	</div>
-</fieldset>
 							<fieldset class="add-bottom">
 								<legend>Notifications</legend>
 								<div class="checkbox">
@@ -430,6 +410,31 @@
 				</div>
 			</div>
 
+		  	<div class="tab-pane" id="password">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated">
+							<fieldset class="add-bottom">
+	<legend>Reset your password</legend>
+		<div class="form-group">
+		<label for="currentPassword">Current password</label>
+		<input type="password" class="form-control" id="currentPassword" />
+	</div>
+	<div class="form-group">
+		<label for="newPassword">New password</label>
+		<input type="password" class="form-control" id="newPassword" />
+	</div>
+	<div class="form-group">
+		<label for="newPasswordConfirm">Re-enter password</label>
+		<input type="password" class="form-control" id="newPasswordConfirm" />
+	</div>
+</fieldset>
+							<button type="submit" class="btn btn-primary updated">Update</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
 			<div class="tab-pane" id="admin-notes">
 		  		<div class="row">
 			  		<div class="col-md-6">
@@ -458,7 +463,9 @@
 							<table class="table">
 								<tr><td>Adam Watling</td><td>12/06/2014</td></tr>
 							</table>
+
 						</div>
+						<button type="button" class="btn btn-block btn-danger" data-function="alert" data-alert="Are you sure?">Delete this account permanently</button>
 					</div>
 				</div>
 			</div>
@@ -474,7 +481,7 @@
 		<div class="container">
 			<div class="row">
 		  		<div class="col-md-12">
-					<p>Only admins can view and edit the 'admin' tab</p>
+					<p>Your jobs tab - if no jobs have been applied for, display text "You have not yet applied for any jobs or placements". If redirecting from the account creation form, display the updated alert with the text "Success! Your account has been created". Only admins can view and edit the 'admin' tab. Perhaps the delete controls should be on the <a href="admin-view-job-seeker.html?logged-in=admin">detail page</a>?</p>
 				</div>
 			</div>
 		</div>
@@ -694,13 +701,11 @@
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/bootstrap-sass/vendor/assets/javascripts/bootstrap.min.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/bootstrap-datepicker.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/job-data.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/app.js"></script>
-
-	<!-- Grunt live-reload, will be removed for production -->
+	<script src="http://strangerpixel.com/firstmove-foundation/js/lcf-careers-live.min.js"></script>
+	<!-- Remove the following scripts for production -->
+	<script src="http://strangerpixel.com/firstmove-foundation/source/js/job-data.js"></script>
+	<script src="http://strangerpixel.com/firstmove-foundation/source/js/dev.js"></script>
 	<script src="http://localhost:9000/livereload.js"></script>
-  </body>
+
+</body>
 </html>

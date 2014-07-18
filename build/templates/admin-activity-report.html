@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<!--[if lt IE 7]>  <html lang="en" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html lang="en" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html lang="en" class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html lang="en" class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html lang="en"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="modern-browsers"> <!--<![endif]-->
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +15,7 @@
 
 	<title>LCF FirstMove - Front End Templates</title>
 
-	<!-- <link href="http://d27lwoqz7s24cy.cloudfront.net/assets/css/screen.min.css" rel="stylesheet">  -->
-
-	<!-- Bootstrap core CSS -->
-	<!-- <link href="http://strangerpixel.com/firstmove-foundation/css/bootstrap-select.css" rel="stylesheet"> -->
-	<!-- <link href="http://localhost:9000/assets/css/vendor-forms.css" rel="stylesheet"> -->
+	<!-- UAL Bootstrap Theme -->
 	<link href="http://strangerpixel.com/firstmove-foundation/css/ual-theme.css" rel="stylesheet">
 	
 	<!--
@@ -42,26 +44,18 @@
 	 * 
 	 * © 2013 MyFonts Inc
 	*/
-	Uncomment below to reference MyFonts Kit the right way. Note - font paths need to be updated on arts.ac.uk.
+	Uncomment below to reference MyFonts Kit the right way. Note - font paths need to be updated on arts.ac.uk. IF it's OK to reference from within SASS, use the swiss-721 file and loud comments to preserve the license info.
 	<link rel="stylesheet" type="text/css" href="MyFontsWebfontsKit.css">
 	-->
-	<!-- Bootstrap theme 
-	<link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
-
-	<!-- Custom styles for this template 
-	<link href="theme.css" rel="stylesheet">-->
-
-	<!-- Just for debugging purposes. Don't actually copy this line! -->
-	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-  </head>
+</head>
 
-  <body role="document">
+<body role="document">
 	
 	<div class="navbar navbar-inverse navbar-top" role="navigation">
 	  <div class="container">
@@ -72,7 +66,7 @@
 		  </div>
 		</div>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="http://www.arts.ac.uk/fashion/about/lcf-careers/">&laquo; Back to LCF Careers</a></li>
+			<li><a href="http://www.arts.ac.uk/fashion/about/lcf-careers/">LCF Careers</a></li>
 	  	</ul>
 	  </div>
 	</div>
@@ -170,44 +164,44 @@
 			<thead>
 				<tr>
 					<th>Date</th>
-					<th class="align-center">Job seeker sign ups</th>
-					<th class="align-center">Job seeker logins</th>
-					<th class="align-center">Jobs posted</th>
-					<th class="align-center">Job applications</th>
-					<th class="align-center">Vacancies filled</th>
+					<th class="numeric">Job seeker sign ups</th>
+					<th class="numeric">Job seeker logins</th>
+					<th class="numeric">Jobs posted</th>
+					<th class="numeric">Job applications</th>
+					<th class="numeric">Vacancies filled</th>
 				</tr>
 			</thead>
 			<tr>
-				<td>April 2014</td>
-				<td class="align-center">64</td>
-				<td class="align-center">88</td>
-				<td class="align-center">34</td>
-				<td class="align-center">104</td>
-				<td class="align-center">32</td>
+				<td data-label="date">April 2014</td>
+				<td data-label="job-seeker-sign-ups" class="numeric">64</td>
+				<td data-label="job-seeker-logins" class="numeric">88</td>
+				<td data-label="jobs-posted" class="numeric">34</td>
+				<td data-label="job-applications" class="numeric">104</td>
+				<td data-label="vacancies-filled" class="numeric">32</td>
 			</tr>
 			<tr>
-				<td>March 2014</td>
-				<td class="align-center">44</td>
-				<td class="align-center">78</td>
-				<td class="align-center">20</td>
-				<td class="align-center">88</td>
-				<td class="align-center">19</td>
+				<td data-label="date">March 2014</td>
+				<td data-label="job-seeker-sign-ups" class="numeric">44</td>
+				<td data-label="job-seeker-logins" class="numeric">78</td>
+				<td data-label="jobs-posted" class="numeric">20</td>
+				<td data-label="job-applications" class="numeric">88</td>
+				<td data-label="vacancies-filled" class="numeric">19</td>
 			</tr>
 			<tr>
-				<td>February 2014</td>
-				<td class="align-center">38</td>
-				<td class="align-center">68</td>
-				<td class="align-center">24</td>
-				<td class="align-center">67</td>
-				<td class="align-center">18</td>
+				<td data-label="date">February 2014</td>
+				<td data-label="job-seeker-sign-ups" class="numeric">38</td>
+				<td data-label="job-seeker-logins" class="numeric">68</td>
+				<td data-label="jobs-posted" class="numeric">24</td>
+				<td data-label="job-applications" class="numeric">67</td>
+				<td data-label="vacancies-filled" class="numeric">18</td>
 			</tr>
 			<tr>
-				<td>January 2014</td>
-				<td class="align-center">30</td>
-				<td class="align-center">57</td>
-				<td class="align-center">12</td>
-				<td class="align-center">45</td>
-				<td class="align-center">7</td>
+				<td data-label="date">January 2014</td>
+				<td data-label="job-seeker-sign-ups" class="numeric">30</td>
+				<td data-label="job-seeker-logins" class="numeric">57</td>
+				<td data-label="jobs-posted" class="numeric">12</td>
+				<td data-label="job-applications" class="numeric">45</td>
+				<td data-label="vacancies-filled" class="numeric">7</td>
 			</tr>
 		</table>
 	</div>
@@ -454,13 +448,11 @@
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/bootstrap-sass/vendor/assets/javascripts/bootstrap.min.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/bootstrap-datepicker.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/job-data.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/app.js"></script>
-
-	<!-- Grunt live-reload, will be removed for production -->
+	<script src="http://strangerpixel.com/firstmove-foundation/js/lcf-careers-live.min.js"></script>
+	<!-- Remove the following scripts for production -->
+	<script src="http://strangerpixel.com/firstmove-foundation/source/js/job-data.js"></script>
+	<script src="http://strangerpixel.com/firstmove-foundation/source/js/dev.js"></script>
 	<script src="http://localhost:9000/livereload.js"></script>
-  </body>
+
+</body>
 </html>

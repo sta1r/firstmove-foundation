@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<!--[if lt IE 7]>  <html lang="en" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html lang="en" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html lang="en" class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html lang="en" class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html lang="en"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" class="modern-browsers"> <!--<![endif]-->
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +15,7 @@
 
 	<title>LCF FirstMove - Front End Templates</title>
 
-	<!-- <link href="http://d27lwoqz7s24cy.cloudfront.net/assets/css/screen.min.css" rel="stylesheet">  -->
-
-	<!-- Bootstrap core CSS -->
-	<!-- <link href="http://strangerpixel.com/firstmove-foundation/css/bootstrap-select.css" rel="stylesheet"> -->
-	<!-- <link href="http://localhost:9000/assets/css/vendor-forms.css" rel="stylesheet"> -->
+	<!-- UAL Bootstrap Theme -->
 	<link href="http://strangerpixel.com/firstmove-foundation/css/ual-theme.css" rel="stylesheet">
 	
 	<!--
@@ -42,26 +44,18 @@
 	 * 
 	 * © 2013 MyFonts Inc
 	*/
-	Uncomment below to reference MyFonts Kit the right way. Note - font paths need to be updated on arts.ac.uk.
+	Uncomment below to reference MyFonts Kit the right way. Note - font paths need to be updated on arts.ac.uk. IF it's OK to reference from within SASS, use the swiss-721 file and loud comments to preserve the license info.
 	<link rel="stylesheet" type="text/css" href="MyFontsWebfontsKit.css">
 	-->
-	<!-- Bootstrap theme 
-	<link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
-
-	<!-- Custom styles for this template 
-	<link href="theme.css" rel="stylesheet">-->
-
-	<!-- Just for debugging purposes. Don't actually copy this line! -->
-	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-  </head>
+</head>
 
-  <body role="document">
+<body role="document">
 	
 	<div class="navbar navbar-inverse navbar-top" role="navigation">
 	  <div class="container">
@@ -72,7 +66,7 @@
 		  </div>
 		</div>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="http://www.arts.ac.uk/fashion/about/lcf-careers/">&laquo; Back to LCF Careers</a></li>
+			<li><a href="http://www.arts.ac.uk/fashion/about/lcf-careers/">LCF Careers</a></li>
 	  	</ul>
 	  </div>
 	</div>
@@ -218,24 +212,24 @@
 
 										<fieldset class="add-bottom">
 								<legend>Student information</legend>
-								<div class="form-group">
+								<div class="form-group required">
 									<label for="LCFStudentNumber">LCF student number</label>
 									<input id="LCFStudentNumber" type="text" class="form-control" placeholder="e.g. ABC12345678" />
 								</div>
-								<div class="form-group">
+								<div class="form-group required">
 									<label for="graduationYear">Graduation year</label>
 									<input id="graduationYear" type="text" class="form-control" placeholder="e.g. 2015" />
 								</div>
-								<div class="form-group">
+								<div class="form-group required">
 									<label>Course</label>
 									<input id="LCFCourse" type="text" class="form-control" placeholder="" />
 								</div>
-								<div class="form-group populate dropdown-list" data-populate="lcf_schools">
+								<div class="form-group required populate dropdown-list" data-populate="lcf_schools">
 									<label>School</label>
 									<select class="form-control">
 									</select>
 								</div>
-								<div class="form-group populate dropdown-list" data-populate="lcf_study_levels">
+								<div class="form-group required populate dropdown-list" data-populate="lcf_study_levels">
 									<label>Level</label>
 									<select class="form-control">
 									</select>
@@ -267,7 +261,7 @@
 		<div class="container">
 			<div class="row">
 		  		<div class="col-md-12">
-					<p></p>
+					<p>Currently a successful submission redirects to the account-edit screen, however it may be just as good (and arguably clearer) to display a stand-alone success page.</p>
 				</div>
 			</div>
 		</div>
@@ -304,6 +298,10 @@
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
+		  	
+		  	<li>
+		  		<a id="toggle-dev-notes" href="#dev-notes"><span class="glyphicon glyphicon-question-sign"></span></a>
+		  	</li>
 		  	
 		  	<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
@@ -483,13 +481,11 @@
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/bootstrap-sass/vendor/assets/javascripts/bootstrap.min.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/bootstrap-datepicker.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/job-data.js"></script>
-	<script src="http://strangerpixel.com/firstmove-foundation/js/app.js"></script>
-
-	<!-- Grunt live-reload, will be removed for production -->
+	<script src="http://strangerpixel.com/firstmove-foundation/js/lcf-careers-live.min.js"></script>
+	<!-- Remove the following scripts for production -->
+	<script src="http://strangerpixel.com/firstmove-foundation/source/js/job-data.js"></script>
+	<script src="http://strangerpixel.com/firstmove-foundation/source/js/dev.js"></script>
 	<script src="http://localhost:9000/livereload.js"></script>
-  </body>
+
+</body>
 </html>
