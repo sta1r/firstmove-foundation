@@ -11253,7 +11253,6 @@ return jQuery;
 	});
 
 
-
 	// DATEPICKER
 	$('.datepicker').datepicker({
 		format: "dd/mm/yyyy"
@@ -11328,6 +11327,5 @@ return jQuery;
 			$('#durationSelect').show();
 		}
 	});
-
 
 });

@@ -36,7 +36,6 @@ jQuery(document).ready( function($) {
 	});
 
 
-
 	// DATEPICKER
 	$('.datepicker').datepicker({
 		format: "dd/mm/yyyy"
@@ -111,6 +110,5 @@ jQuery(document).ready( function($) {
 			$('#durationSelect').show();
 		}
 	});
-
 
 });
