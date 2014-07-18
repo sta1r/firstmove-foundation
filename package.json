@@ -1,15 +1,22 @@
 {
-  "name": "firstmove-foundation",
+  "name": "lcf-careers-live",
   "version": "0.0.1",
-  "description": "Front-end prototypes for the FirstMove rebuild",
+  "description": "Front-end prototypes for LCF Careers Live",
   "author": "Alastair Mucklow",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strangerpixel/firstmove-foundation.git"
+  },
   "devDependencies": {
     "node-sass": "~0.9.3",
     "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.4.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-uglify": "~0.5.0",
     "grunt-sass": "~0.8.0",
     "grunt-shell": "~0.6.4",
-    "grunt-concurrent": "~0.5.0"
+    "grunt-concurrent": "~0.5.0",
+    "grunt-contrib-jshint": "~0.10.0"
   }
 }
