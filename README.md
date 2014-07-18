@@ -25,4 +25,4 @@ While you're working on your project, run:
 
 `grunt`
 
-The `watch` task watches for changes to scss files and html inside the `/templates`, `/_layouts` and `/_includes` directories.
+The `watch` task watches for changes to scss files (in /scss), js files (in /source/js) and html inside the `/templates`, `/_layouts` and `/_includes` directories.
