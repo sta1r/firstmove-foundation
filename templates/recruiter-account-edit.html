@@ -19,7 +19,8 @@ notes: Only admins can view and edit the 'admin' tab
 			<li class="active"><a href="#my-jobs" data-toggle="tab">My jobs</a></li>
 			<li><a href="#personal-details" data-toggle="tab">Personal details</a></li>
 			<li><a href="#company-details" data-toggle="tab">Company details</a></li>
-			<li><a href="#settings" data-toggle="tab">Settings</a></li>
+			<li><a href="#notifications" data-toggle="tab">Notifications</a></li>
+			<li><a href="#password" data-toggle="tab">Password</a></li>
 			<li class="admin-control"><a href="#admin-notes" data-toggle="tab">Admin</a></li>
 		</ul>
 	</div>
@@ -138,11 +139,10 @@ notes: Only admins can view and edit the 'admin' tab
 				</div>
 		  	</div>
 
-		  	<div class="tab-pane" id="settings">
+			<div class="tab-pane" id="notifications">
 		  		<div class="row">
 			  		<div class="col-md-6">
 						<form action="#updated">
-							{% include _field-password-edit.html %}
 							<fieldset class="add-bottom">
 								<legend>Notifications</legend>
 								<div class="checkbox">
@@ -160,6 +160,17 @@ notes: Only admins can view and edit the 'admin' tab
 							<h4>Data protection</h4>
 							<p>We will only use your details to contact you about your posted jobs and your account. If you agree to receive additional notifications, we will send you email periodically. We will not use your details for any other purpose or pass on your details to any third party unless you specifically ask us to. See our <a href="#">privacy policy</a> for more information.</p>
 						</div>
+					</div>
+				</div>
+			</div>
+
+		  	<div class="tab-pane" id="password">
+		  		<div class="row">
+			  		<div class="col-md-6">
+						<form action="#updated">
+							{% include _field-password-edit.html %}
+							<button type="submit" class="btn btn-primary updated">Update</button>
+						</form>
 					</div>
 				</div>
 			</div>
