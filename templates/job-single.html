@@ -5,14 +5,9 @@ persona: all
 notes: Job seekers not logged in will be directed to <a href="sign-in.html">sign in</a>. Once a job has expired, recruiters should see a <a href="#" class="btn btn-sm btn-success">Post as new</a> button rather than an <a href="#" class="btn btn-sm btn-primary">Edit this job</a> button.
 ---
 
-<div class="row hidden-control recruiter-control">
-	<div class="col-md-4">
-		<a href="recruiter-edit-job.html" class="btn btn-primary">Edit this job</a>
-	</div>
-</div>
-
 <div class="page-header populate" data-populate="job">
 	<h1 data-id="jobTitle"></h1>
+	<div class="pull-right hidden-control recruiter-control"><p><a href="recruiter-edit-job.html">Edit this job</a></p></div>
 </div>
 
 <div class="row populate" data-populate="job">
@@ -30,6 +25,6 @@ notes: Job seekers not logged in will be directed to <a href="sign-in.html">sign
 			{% include _job-details-mini.html %}
 		</div>
 		
-		<a href="job-apply.html" class="btn btn-primary btn-sm btn-block apply-button">Apply for this job</a>
+		<a href="job-apply.html" class="btn btn-primary btn-block apply-button">Apply for this job</a>
 	</div>
 </div>
