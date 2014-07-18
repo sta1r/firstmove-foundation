@@ -42,7 +42,7 @@ $pagination-color: $black;
 
 // Components
 $text-color: $black;
-$breadcrumb-bg: $gray-lighter;
+$breadcrumb-bg: #FFF;
 $breadcrumb-padding-vertical: 8px !default;
 $breadcrumb-padding-horizontal: 0;
 $btn-primary-bg: $black;
@@ -161,7 +161,7 @@ em {
 }
 
 .breadcrumb-bar {
-	background-color: $gray-lighter;
+	//background-color: $gray-lighter;
 }
 
 .breadcrumb {
@@ -171,6 +171,11 @@ em {
 .admin-navbar {
 	background-color: $gray;
 	margin-bottom: 0;
+}
+
+// Title
+.title-bar {
+	background-color: $gray-lighter;
 }
 
 // Control bar

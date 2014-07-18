@@ -15,8 +15,36 @@
 	<!-- <link href="http://strangerpixel.com/firstmove-foundation/css/bootstrap-select.css" rel="stylesheet"> -->
 	<!-- <link href="http://localhost:9000/assets/css/vendor-forms.css" rel="stylesheet"> -->
 	<link href="http://strangerpixel.com/firstmove-foundation/css/ual-theme.css" rel="stylesheet">
-	<!-- UAL screen css -->
-
+	
+	<!--
+	/* @license
+	 * MyFonts Webfont Build ID 2590056, 2013-06-27T08:49:50-0400
+	 * 
+	 * The fonts listed in this notice are subject to the End User License
+	 * Agreement(s) entered into by the website owner. All other parties are 
+	 * explicitly restricted from using the Licensed Webfonts(s).
+	 * 
+	 * You may obtain a valid license at the URLs below.
+	 * 
+	 * Webfont: Swiss 721 Light by Bitstream
+	 * URL: http://www.myfonts.com/fonts/bitstream/swiss-721/light/
+	 * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+	 * 
+	 * Webfont: Swiss 721 Italic by Bitstream
+	 * URL: http://www.myfonts.com/fonts/bitstream/swiss-721/italic/
+	 * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+	 * 
+	 * Webfont: Swiss 721 Bold by Bitstream
+	 * URL: http://www.myfonts.com/fonts/bitstream/swiss-721/bold/
+	 * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+	 * 
+	 * License: http://www.myfonts.com/viewlicense?type=web&buildid=2590056
+	 * 
+	 * © 2013 MyFonts Inc
+	*/
+	Uncomment below to reference MyFonts Kit the right way. Note - font paths need to be updated on arts.ac.uk.
+	<link rel="stylesheet" type="text/css" href="MyFontsWebfontsKit.css">
+	-->
 	<!-- Bootstrap theme 
 	<link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
 
@@ -35,8 +63,28 @@
 
   <body role="document">
 	
-	<!-- Main navbar -->
 	<div class="navbar navbar-inverse navbar-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <div class="navbar-brand">
+		  	<img class="hidden-xs" src="http://strangerpixel.com/firstmove-foundation/img/ual_lockup_lcf_white.png" alt="LCF Careers">
+		  	<img class="visible-xs" src="http://strangerpixel.com/firstmove-foundation/img/ual_mobile_logo.png" alt="LCF Careers">
+		  </div>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="http://www.arts.ac.uk/fashion/about/lcf-careers/">&laquo; Back to LCF Careers</a></li>
+	  	</ul>
+	  </div>
+	</div>
+
+	<div class="title-bar">
+		<div class="container">
+			<h1>LCF Careers Live</h1>
+		</div>
+	</div>
+
+	<!-- App navbar -->
+	<div class="navbar navbar-default" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
 		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -45,14 +93,19 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <div class="navbar-brand">
-		  	<img class="hidden-xs" src="http://strangerpixel.com/firstmove-foundation/img/ual_lockup_lcf_white.png" alt="LCF Careers">
-		  	<img class="visible-xs" src="http://strangerpixel.com/firstmove-foundation/img/ual_mobile_logo.png" alt="LCF Careers">
-		  </div>
 		</div>
 		<div class="navbar-collapse collapse">
 			
-		  <div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active state--logged-out"><a href="sign-in.html">Sign in</a></li>
+				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter#personal-details">View account</a></li>
+				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
+				<li class="recruiter-control"><a href="recruiter-post-job.html">Post a job</a></li>
+				<li class="state--logged-in"><a href="sign-in.html">Sign out</a></li>
+		  	</ul>
+		  	
+		  	<div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
 	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
 </div>
 
@@ -108,7 +161,7 @@
 		<ul class="job-list no-bullet">
 			
 	<li class="job-item full-width add-bottom">
-		<h3><a href="templates/job-single.html">Part Time Sales Person</a></h3>
+		<h3><a href="templates/sign-in.html">Part Time Sales Person</a></h3>
 		<h4>Sweaty Betty</h4>
 
 		<p class="meta"><span class="job-type">Graduate job</span> | <span class="job-contract-length">Contract: Permanent</span> | <span class="salary">Salary: &pound;7.00</span> | <span class="location">West London</span></p>
@@ -116,7 +169,7 @@
 		<p class="admin-control"><a href="templates/recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
 	</li>
 	<li class="job-item full-width add-bottom">
-		<h3><a href="templates/job-single.html">Photographic & Web Assistant</a></h3>
+		<h3><a href="templates/sign-in.html">Photographic & Web Assistant</a></h3>
 		<h4>This Old Thing London (Charli Evans)</h4>
 		
 		<p class="meta"><span class="job-type">Long Term Work Placement</span> | <span class="job-contract-length">Contract: Negotiable</span> | <span class="salary">Salary: Negotiable</span> | West London</p>
@@ -124,7 +177,7 @@
 		<p class="admin-control"><a href="templates/recruiter-edit-job.html" class="btn btn-default">Edit</a></p>	
 	</li>
 	<li class="job-item full-width add-bottom">
-		<h3><a href="templates/job-single.html">WGSN Editorial Intern</a></h3>
+		<h3><a href="templates/sign-in.html">WGSN Editorial Intern</a></h3>
 		<h4>WGSN</h4>
 		
 		<p class="meta"><span class="job-type">Short Term Work Experience</span> | <span class="job-contract-length">Negotiable</span> | <span class="salary">Salary: Travel and Expenses</span> | <span class="location">Greater London</span></p>
@@ -132,7 +185,7 @@
 		<p class="admin-control"><a href="templates/recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
 	</li>
 	<li class="job-item full-width add-bottom">
-		<h3><a href="templates/job-single.html">Seamstress</a></h3>
+		<h3><a href="templates/sign-in.html">Seamstress</a></h3>
 		<h4>Zaeem Jamal</h4>
 		
 		<p class="meta"><span class="job-type">Part time permanent</span> | <span class="job-contract-length">6 months</span> | <span class="salary">Salary: £18,000 - £20,000 per year</span> | <span class="location">Shoreditch, London, UK</span></p>
@@ -140,7 +193,7 @@
 		<p class="admin-control"><a href="templates/recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
 	</li>
 	<li class="job-item full-width add-bottom">
-		<h3><a href="templates/job-single.html">Showroom Administrator/Assistant to Director</a></h3>
+		<h3><a href="templates/sign-in.html">Showroom Administrator/Assistant to Director</a></h3>
 		<h4>L'Apartement (Francesca Carrillo)</h4>
 		
 		<p class="meta"><span class="job-type">Full time permanent</span> | <span class="salary">Salary: £22,000 - £24,000 per year</span> | <span class="location">Greater London</span></p>
@@ -150,7 +203,7 @@
 
 			
 	<li class="job-item full-width add-bottom">
-		<h3><a href="templates/job-single.html">Part Time Sales Person</a></h3>
+		<h3><a href="templates/sign-in.html">Part Time Sales Person</a></h3>
 		<h4>Sweaty Betty</h4>
 
 		<p class="meta"><span class="job-type">Graduate job</span> | <span class="job-contract-length">Contract: Permanent</span> | <span class="salary">Salary: &pound;7.00</span> | <span class="location">West London</span></p>
@@ -158,7 +211,7 @@
 		<p class="admin-control"><a href="templates/recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
 	</li>
 	<li class="job-item full-width add-bottom">
-		<h3><a href="templates/job-single.html">Photographic & Web Assistant</a></h3>
+		<h3><a href="templates/sign-in.html">Photographic & Web Assistant</a></h3>
 		<h4>This Old Thing London (Charli Evans)</h4>
 		
 		<p class="meta"><span class="job-type">Long Term Work Placement</span> | <span class="job-contract-length">Contract: Negotiable</span> | <span class="salary">Salary: Negotiable</span> | West London</p>
@@ -166,7 +219,7 @@
 		<p class="admin-control"><a href="templates/recruiter-edit-job.html" class="btn btn-default">Edit</a></p>	
 	</li>
 	<li class="job-item full-width add-bottom">
-		<h3><a href="templates/job-single.html">WGSN Editorial Intern</a></h3>
+		<h3><a href="templates/sign-in.html">WGSN Editorial Intern</a></h3>
 		<h4>WGSN</h4>
 		
 		<p class="meta"><span class="job-type">Short Term Work Experience</span> | <span class="job-contract-length">Negotiable</span> | <span class="salary">Salary: Travel and Expenses</span> | <span class="location">Greater London</span></p>
@@ -174,7 +227,7 @@
 		<p class="admin-control"><a href="templates/recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
 	</li>
 	<li class="job-item full-width add-bottom">
-		<h3><a href="templates/job-single.html">Seamstress</a></h3>
+		<h3><a href="templates/sign-in.html">Seamstress</a></h3>
 		<h4>Zaeem Jamal</h4>
 		
 		<p class="meta"><span class="job-type">Part time permanent</span> | <span class="job-contract-length">6 months</span> | <span class="salary">Salary: £18,000 - £20,000 per year</span> | <span class="location">Shoreditch, London, UK</span></p>
@@ -182,7 +235,7 @@
 		<p class="admin-control"><a href="templates/recruiter-edit-job.html" class="btn btn-default">Edit</a></p>
 	</li>
 	<li class="job-item full-width add-bottom">
-		<h3><a href="templates/job-single.html">Showroom Administrator/Assistant to Director</a></h3>
+		<h3><a href="templates/sign-in.html">Showroom Administrator/Assistant to Director</a></h3>
 		<h4>L'Apartement (Francesca Carrillo)</h4>
 		
 		<p class="meta"><span class="job-type">Full time permanent</span> | <span class="salary">Salary: £22,000 - £24,000 per year</span> | <span class="location">Greater London</span></p>

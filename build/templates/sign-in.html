@@ -15,8 +15,36 @@
 	<!-- <link href="http://strangerpixel.com/firstmove-foundation/css/bootstrap-select.css" rel="stylesheet"> -->
 	<!-- <link href="http://localhost:9000/assets/css/vendor-forms.css" rel="stylesheet"> -->
 	<link href="http://strangerpixel.com/firstmove-foundation/css/ual-theme.css" rel="stylesheet">
-	<!-- UAL screen css -->
-
+	
+	<!--
+	/* @license
+	 * MyFonts Webfont Build ID 2590056, 2013-06-27T08:49:50-0400
+	 * 
+	 * The fonts listed in this notice are subject to the End User License
+	 * Agreement(s) entered into by the website owner. All other parties are 
+	 * explicitly restricted from using the Licensed Webfonts(s).
+	 * 
+	 * You may obtain a valid license at the URLs below.
+	 * 
+	 * Webfont: Swiss 721 Light by Bitstream
+	 * URL: http://www.myfonts.com/fonts/bitstream/swiss-721/light/
+	 * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+	 * 
+	 * Webfont: Swiss 721 Italic by Bitstream
+	 * URL: http://www.myfonts.com/fonts/bitstream/swiss-721/italic/
+	 * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+	 * 
+	 * Webfont: Swiss 721 Bold by Bitstream
+	 * URL: http://www.myfonts.com/fonts/bitstream/swiss-721/bold/
+	 * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
+	 * 
+	 * License: http://www.myfonts.com/viewlicense?type=web&buildid=2590056
+	 * 
+	 * © 2013 MyFonts Inc
+	*/
+	Uncomment below to reference MyFonts Kit the right way. Note - font paths need to be updated on arts.ac.uk.
+	<link rel="stylesheet" type="text/css" href="MyFontsWebfontsKit.css">
+	-->
 	<!-- Bootstrap theme 
 	<link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
 
@@ -35,8 +63,28 @@
 
   <body role="document">
 	
-	<!-- Main navbar -->
 	<div class="navbar navbar-inverse navbar-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <div class="navbar-brand">
+		  	<img class="hidden-xs" src="http://strangerpixel.com/firstmove-foundation/img/ual_lockup_lcf_white.png" alt="LCF Careers">
+		  	<img class="visible-xs" src="http://strangerpixel.com/firstmove-foundation/img/ual_mobile_logo.png" alt="LCF Careers">
+		  </div>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="http://www.arts.ac.uk/fashion/about/lcf-careers/">&laquo; Back to LCF Careers</a></li>
+	  	</ul>
+	  </div>
+	</div>
+
+	<div class="title-bar">
+		<div class="container">
+			<h1>LCF Careers Live</h1>
+		</div>
+	</div>
+
+	<!-- App navbar -->
+	<div class="navbar navbar-default" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
 		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -45,15 +93,11 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <div class="navbar-brand">
-		  	<img class="hidden-xs" src="http://strangerpixel.com/firstmove-foundation/img/ual_lockup_lcf_white.png" alt="LCF Careers">
-		  	<img class="visible-xs" src="http://strangerpixel.com/firstmove-foundation/img/ual_mobile_logo.png" alt="LCF Careers">
-		  </div>
 		</div>
 		<div class="navbar-collapse collapse">
 			
 			<ul class="nav navbar-nav navbar-right">
-				<li class="state--logged-out"><a href="sign-in.html">Sign in</a></li>
+				<li class="active state--logged-out"><a href="sign-in.html">Sign in</a></li>
 				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
 				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter#personal-details">View account</a></li>
 				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
@@ -61,7 +105,7 @@
 				<li class="state--logged-in"><a href="sign-in.html">Sign out</a></li>
 		  	</ul>
 		  	
-		  <div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
+		  	<div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
 	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
 </div>
 
@@ -78,11 +122,6 @@
 
 	<div class="breadcrumb-bar">
 		<div class="container">
-			
-			<ol class="breadcrumb">
-				<li><a href="http://strangerpixel.com/firstmove-foundation">Home</a></li>
-			  	<li class="active">Sign In</li>
-			</ol>
 			
 		</div>
 	</div>
@@ -121,7 +160,7 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-12">
-						<a id="btn-login" href="jobs-list.html?logged-in=true" class="btn btn-primary">Sign in</a>
+						<a id="btn-login" href="../index.html?logged-in=true" class="btn btn-primary">Sign in</a>
 					</div>
 				</div>
 
