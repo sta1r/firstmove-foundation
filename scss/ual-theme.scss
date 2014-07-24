@@ -117,6 +117,7 @@ body {
 }
 
 .container[role="main"] {
+	min-height: 500px;
 	margin-bottom: 60px;
 }
 
@@ -330,6 +331,10 @@ footer {
 	}
 }
 
+.panel tr td:first-child {
+	padding-left: 16px;
+}
+
 // DEV dev-notes
 .dev-footer {
 	background-color: $state-info-bg;
@@ -351,7 +356,9 @@ footer {
 	color: $gold;
 }
 
-
+.job-dashboard .glyphicon-ok {
+	cursor: pointer;
+}
 
 // Small screens 768px and up
 @media (min-width: $screen-sm-min) {
