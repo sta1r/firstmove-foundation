@@ -101,6 +101,32 @@ jQuery(document).ready( function($) {
 		$(this).find('.glyphicon').toggleClass('active');
 	});
 
+	// Mark as appointed
+	var applicants = $('.job-dashboard .data-table tr');
+	var response = '';
+
+	applicants.each( function(i) {
+		$(this).find('.glyphicon-ok').click(function(e) {
+			e.preventDefault();
+			if ($(this).is('.active')) {
+				response = confirm('Are you sure you want to un-mark this applicant as appointed?');
+				if (response) {
+					$('.glyphicon-ok').removeClass('active');
+				}
+			} else {
+				response = confirm('Are you sure you want to mark this applicant as appointed?');
+				if (response) {
+					$('.glyphicon-ok').removeClass('active');
+					$(this).toggleClass('active');
+				}
+			}
+			
+			
+			
+		});
+	});
+	
+
 	// Duration field
 	$('#jobTypes').change( function() {
 		console.log($(this).val());
