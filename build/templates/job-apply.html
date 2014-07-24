@@ -11,9 +11,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="author" content="Alastair Mucklow (LCF) and Rob Lacey (GRDD)">
+	
+	<!-- Remove for production -->
+	<meta name="robots" content="noindex, nofollow">
 
-	<title>LCF FirstMove - Front End Templates</title>
+	<title>LCF Careers Live</title>
 
 	<!-- UAL Bootstrap Theme -->
 	<link href="http://strangerpixel.com/firstmove-foundation/css/ual-theme.css" rel="stylesheet">
@@ -91,7 +94,7 @@
 		<div class="navbar-collapse collapse">
 			
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active state--logged-out"><a href="sign-in.html">Sign in</a></li>
+				<li class="active state--logged-out"><a href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign in</a></li>
 				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
 				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter#personal-details">View account</a></li>
 				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
@@ -183,12 +186,12 @@
 	<h3 class="panel-title">Job details</h3>
 </div>
 <table class="table">
-	<tr><td>Company</td><td data-id="companyName"><a href=""></a></td></tr>
-	<tr><td>Location</td><td data-id="jobLocation"></td></tr>
-	<tr><td>Job type</td><td data-id="jobType"></td></tr>
-	<tr><td>Duration</td><td data-id="jobDuration"></td></tr>
-	<tr><td>Salary</td><td data-id="jobSalary"></td></tr>
-	<tr><td>Deadline</td><td data-id="jobApplicationDeadline"></td></tr>
+	<tr><td data-label="company"><strong>Company</strong></td><td data-id="companyName"><a href=""></a></td></tr>
+	<tr><td data-label="location"><strong>Location</strong></td><td data-id="jobLocation"></td></tr>
+	<tr><td data-label="type"><strong>Job type</strong></td><td data-id="jobType"></td></tr>
+	<tr><td data-label="duration"><strong>Duration</strong></td><td data-id="jobDuration"></td></tr>
+	<tr><td data-label="salary"><strong>Salary</strong></td><td data-id="jobSalary"></td></tr>
+	<tr><td data-label="deadline"><strong>Deadline</strong></td><td data-id="jobApplicationDeadline"></td></tr>
 </table>
 			<div class="panel-footer"><a href="job-single.html">&larr; Return to full listing</a></div>
 		</div>

@@ -11,9 +11,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="author" content="Alastair Mucklow (LCF) and Rob Lacey (GRDD)">
+	
+	<!-- Remove for production -->
+	<meta name="robots" content="noindex, nofollow">
 
-	<title>LCF FirstMove - Front End Templates</title>
+	<title>LCF Careers Live</title>
 
 	<!-- UAL Bootstrap Theme -->
 	<link href="http://strangerpixel.com/firstmove-foundation/css/ual-theme.css" rel="stylesheet">
@@ -91,7 +94,7 @@
 		<div class="navbar-collapse collapse">
 			
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active state--logged-out"><a href="sign-in.html">Sign in</a></li>
+				<li class="active state--logged-out"><a href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign in</a></li>
 				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
 				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter#personal-details">View account</a></li>
 				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
@@ -170,34 +173,41 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="control pull-left">
-						<p class="label">Select</p>
+					<p class="label">Select</p>
+				</div>
+				<div class="col-md-3">
+					<div class="checkbox-inline">
+						<label>
+  							<input type="checkbox" id="flagged" value="flagged"> Flagged
+						</label>
+					</div>
+				</div>
+				<div class="col-md-3">
 						<div class="checkbox-inline">
 							<label>
-	  							<input type="checkbox" id="flagged" value="flagged"> Flagged
-							</label>
-						</div>
- 						<div class="checkbox-inline">
- 							<label>
-	  							<input type="checkbox" id="marketable" value="marketable"> Marketing permitted
-							</label>
-						</div>
-						<div class="checkbox-inline">
- 							<label>
-	  							<input type="checkbox" id="ldap" value="ldap"> LDAP accounts
-							</label>
-						</div>
-						<div class="checkbox-inline">
- 							<label>
-	  							<input type="checkbox" id="non-ldap" value="non-ldap"> Non-LDAP accounts
-							</label>
-						</div>
+  							<input type="checkbox" id="marketable" value="marketable"> Marketing permitted
+						</label>
 					</div>
-					<div class="control pull-left">
-						<p class="label">With selection</p>
-						<a href="#" class="btn btn-primary btn-sm">Export</a>
-						<a href="admin-bulk-email.html" class="btn btn-default btn-sm">Bulk email</a>
+				</div>
+				<div class="col-md-3">
+					<div class="checkbox-inline">
+							<label>
+  							<input type="checkbox" id="ldap" value="ldap"> LDAP accounts
+						</label>
 					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="checkbox-inline">
+							<label>
+  							<input type="checkbox" id="non-ldap" value="non-ldap"> Non-LDAP accounts
+						</label>
+					</div>
+				</div>
+
+				<div class="control col-md-12">
+					<p class="label">With selection</p>
+					<a href="#" class="btn btn-primary btn-sm">Export</a>
+					<a href="admin-bulk-email.html" class="btn btn-default btn-sm">Bulk email</a>
 				</div>
 			</div>
 		</div>

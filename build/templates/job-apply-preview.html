@@ -11,9 +11,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="author" content="Alastair Mucklow (LCF) and Rob Lacey (GRDD)">
+	
+	<!-- Remove for production -->
+	<meta name="robots" content="noindex, nofollow">
 
-	<title>LCF FirstMove - Front End Templates</title>
+	<title>LCF Careers Live</title>
 
 	<!-- UAL Bootstrap Theme -->
 	<link href="http://strangerpixel.com/firstmove-foundation/css/ual-theme.css" rel="stylesheet">
@@ -91,7 +94,7 @@
 		<div class="navbar-collapse collapse">
 			
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active state--logged-out"><a href="sign-in.html">Sign in</a></li>
+				<li class="active state--logged-out"><a href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign in</a></li>
 				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
 				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter#personal-details">View account</a></li>
 				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
@@ -136,18 +139,15 @@
 		<header class="populate" data-populate="job">
 			<h2><span data-id="jobTitle"></span> at <span data-id="companyName"></span></h2>
 		</header>
-		<div class="well super-size">
-			
-			<ul class="populate" data-populate="job_seeker">
-				<li>Name: <span data-id="fullName"></span></li>
-				<li>Email address: <span data-id="emailAddress"></span></li>
-			</ul>
+		<div class="well super-size populate" data-populate="job_seeker">
+
+			<p><strong>Name:</strong> <span data-id="fullName"></span><br>
+				<strong>Email address:</strong> <span data-id="emailAddress"></span></p>
 
 			<p>I'm a designer of engaging interactive experiences and I love it. Merging digital creative and all technical aspects is my jam. I'm intelligent, I have experience, I'm up on trends, I know what's possible but want to push myself and my creative further than I could anywhere else. I want to be a part of something bigger - and do it with a handpicked team that is just as talented, proactive and progressive as I am.  I am an excellent communicator, enjoy presenting and working with excellent clients, and importantly mentoring creatives and nurturing a talented team. I am able to collaborate with technologists to create enhanced solutions.</p>
 
-			<ul>
-				<li>CV: dmitri-stavrou-CV.pdf</li>
-			</ul>
+			<p><strong>CV:</strong> dmitri-stavrou-CV.pdf</p>
+
 		</div>
 		<form role="form" action="job-apply-success.html">
 			<a href="job-apply.html" class="btn btn-default">Edit</a>
