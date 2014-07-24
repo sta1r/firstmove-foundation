@@ -29,7 +29,7 @@ jQuery(document).ready( function($) {
 
         	object.forEach(function(item) {
 
-        		inlineCheckboxes += '<div class="col-md-3"><div class="checkbox-inline"><label><input type="checkbox">' + item.name + '</label></div></div>';
+        		inlineCheckboxes += '<div class="col-md-3 col-sm-6"><div class="checkbox-inline"><label><input type="checkbox">' + item.name + '</label></div></div>';
 
         	});
 
@@ -181,11 +181,11 @@ jQuery(document).ready( function($) {
 	// PUSH DUMMY STUDENTS INTO TABLE ROWS
 	if ($('#students-list').length) {
 		
-		var output = '<table class="table table-striped"><thead><tr><th>Flag</th><th><a href="#" title="Click to sort">Name</a></th><th>Course</th><th>Email address</th><th><a href="#" title="Click to sort">Last logged in</a></th><th>Actions</th></tr></thead><tbody>';
+		var output = '<table class="table table-striped data-table"><thead><tr><th>Flag</th><th><a href="#" title="Click to sort">Name</a></th><th>Course</th><th>Email address</th><th><a href="#" title="Click to sort">Last logged in</a></th><th>Actions</th></tr></thead><tbody>';
 		
 		for (i = 0; i < 20; i++) {
 			
-			output += '<tr><td data-label="flag"><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td data-label="name">Dave Jones</td><td data-label="course">BA Fashion Management</td><td data-label="email-address"><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td data-label="last-logged-in">10/5/2014</td><td data-label="actions"><a class="btn btn-info btn-sm" href="admin-view-job-seeker.html">View detail</a></td></tr>';
+			output += '<tr><td data-label="flag"><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td data-label="name">Dave Jones</td><td data-label="course">BA Fashion Management</td><td data-label="email-address"><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td data-label="last-logged-in">10 May 2014</td><td data-label="actions"><a class="btn btn-info btn-sm" href="admin-view-job-seeker.html">View detail</a></td></tr>';
 			
 		}
 		
@@ -198,11 +198,11 @@ jQuery(document).ready( function($) {
 	// PUSH DUMMY RECRUITERS INTO TABLE ROWS
 	if ($('#recruiters-list').length) {
 		
-		var output = '<table class="table table-striped"><thead><tr><th>Flag</th><th><a href="#" title="Click to sort">Name</a></th><th>Company</th><th>Email address</th><th><a href="#" title="Click to sort">Last logged in</a></th><th>Actions</th></tr></thead><tbody>';
+		var output = '<table class="table table-striped data-table"><thead><tr><th>Flag</th><th><a href="#" title="Click to sort">Name</a></th><th>Company</th><th>Email address</th><th><a href="#" title="Click to sort">Last logged in</a></th><th>Actions</th></tr></thead><tbody>';
 		
 		for (i = 0; i < 20; i++) {
 			
-			output += '<tr><td data-label="flag"><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td data-label="name">Adam Watling</td><td data-label="company">Wingman Industries</td><td data-label="email-address"><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td data-label="last-logged-in">10/5/2014</td><td data-label="actions"><a class="btn btn-info btn-sm" href="admin-view-recruiter.html?logged-in=admin">View detail</a></td></tr>';
+			output += '<tr><td data-label="flag"><a href="#" class="flag"><span class="glyphicon glyphicon-flag"></span></a></td><td data-label="name">Adam Watling</td><td data-label="company">Wingman Industries</td><td data-label="email-address"><a href="mailto:davatron4000@hotmail.com">davatron4000@hotmail.com</a></td><td data-label="last-logged-in">10 Jul 2014</td><td data-label="actions"><a class="btn btn-info btn-sm" href="admin-view-recruiter.html?logged-in=admin">View detail</a></td></tr>';
 			
 		}
 		
@@ -218,7 +218,7 @@ jQuery(document).ready( function($) {
 
 	if (tabular_jobs.length) {
 		
-		var output = '<table class="table table-striped"><thead><tr><th>Status</th><th>Date posted</th><th>Company</th><th>Role</th><th>Views</th><th>Applications</th><th>Vacancy filled by us?</th><th>Actions</th></tr></thead><tbody>';
+		var output = '<table class="table table-striped data-table"><thead><tr><th>Status</th><th>Date posted</th><th>Company</th><th>Role</th><th>Views</th><th>Applications</th><th>Vacancy filled by us?</th><th>Actions</th></tr></thead><tbody>';
 		
 		for (i = 0; i < tabular_jobs_count; i++) {
 			
