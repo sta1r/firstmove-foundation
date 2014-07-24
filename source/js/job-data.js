@@ -23,8 +23,8 @@ var job_data = {
         "personalStatement": "Dmitri Stavrou made a real splash at this year's London Fashion Week. The young designer came out firing with a collection full of shimmering fabrics, fringes and trendy designs. The collection is absolutely brilliant. One look included a metallic gold trench coat that I would love to call my own. Dimitri Stavrou is definitely a designer to keep a close eye on in the years to come - Fashion Indie, 2009",
         "adminKeywords": "mentor, power user, video skills",
         "adminNotes": "This kid is incredible.",
-        "activeSince": "20/9/2010",
-        "lastLoggedIn": "10/5/2014",
+        "activeSince": "20 Sept 2010",
+        "lastLoggedIn": "10 May 2014",
         "applicationsSubmitted": "5",
         "appointments": "1"
     },
@@ -45,8 +45,8 @@ var job_data = {
         "companyURL": "http://www.ingman.io",
         "adminKeywords": "speaker, available, youthful, tends to play up front",
         "adminNotes": "Need to have a word with Adam.",
-        "activeSince": "20/9/2010",
-        "lastLoggedIn": "20/5/2014",
+        "activeSince": "20 Sept 2010",
+        "lastLoggedIn": "20 May 2014",
         "jobsPosted": "4"
     },
 
@@ -63,7 +63,7 @@ var job_data = {
         "jobApplicationDeadline": "11 August 2014",
         "jobLocation": "Shoreditch, London, UK",
         "jobStatus": "Live",
-        "jobPosted": "20 April 2014",
+        "jobPosted": "20 Apr 2014",
         "jobLastModified": "1 May 2014",
         "jobViews": "4"
     },
