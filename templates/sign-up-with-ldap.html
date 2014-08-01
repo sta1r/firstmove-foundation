@@ -1,6 +1,6 @@
 ---
 layout: admin-bootstrap
-title: Sign Up
+title: Sign Up (LDAP enabled)
 persona: all
 breadcrumb: false
 ---
@@ -27,32 +27,46 @@ breadcrumb: false
 					</div>
 				</div>
 
-				<div class="alert alert-info sign-up-optional sign-up-notice" role="alert">Please note LCF Careers Live is not a public service. It is open to current and past students from London College of Fashion.</div>
-				
-				<div class="form-group sign-up-optional sign-up-student-number">
-					<label for="LCFStudentNumber" class="col-md-3 control-label">LCF student number</label>
+				<div class="alert alert-info sign-up-optional sign-up-ldap" role="alert">Please note LCF Careers Live is not a public service. It is open to current and past students from London College of Fashion.</div>
+
+				<div class="form-group sign-up-optional sign-up-ldap">
+					<label class="col-md-3 control-label">I have an arts.ac.uk email address:</label>
 					<div class="col-md-9">
-						<input type="text" class="form-control" id="LCFStudentNumber" placeholder="e.g. ABC12345678">
+						<label class="radio-inline">
+							<input type="radio" name="LDAPCheck" id="LDAPAccountYes" value="yes"> Yes
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="LDAPCheck" id="LDAPAccountNo" value="no"> No
+						</label>
+						<span class="help-block">If you have an arts.ac.uk email address, please use this to sign up.</span>
 					</div>
 				</div>
-
+			
 				<div class="form-group sign-up-optional sign-up-email">
 					<label for="email" class="col-md-3 control-label">Email</label>
 					<div class="col-md-9">
-						<input type="text" class="form-control" id="email">
+						<input type="text" class="form-control" name="email">
+					</div>
+				</div>
+
+				<div class="form-group sign-up-optional sign-up-ldap-password">
+					<label for="LDAPPassword" class="col-md-3 control-label">Password</label>
+					<div class="col-md-9">
+						<input type="password" class="form-control" name="LDAPPassword">
+						<span class="help-block">Your University network password</span>
 					</div>
 				</div>
 
 				<div class="form-group sign-up-optional sign-up-normal-password">
 					<label for="normalPassword" class="col-md-3 control-label">Password</label>
 					<div class="col-md-9">
-						<input type="password" class="form-control" id="normalPassword">
+						<input type="password" class="form-control" name="normalPassword">
 					</div>
 				</div>
 				<div class="form-group sign-up-optional sign-up-normal-password">
 					<label for="normalPasswordConfirm" class="col-md-3 control-label">Re-enter password</label>
 					<div class="col-md-9">
-						<input type="password" class="form-control" id="normalPasswordConfirm" >
+						<input type="password" class="form-control" name="normalPasswordConfirm" >
 					</div>
 				</div>
 

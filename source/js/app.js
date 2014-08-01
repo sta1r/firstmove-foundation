@@ -66,6 +66,8 @@ jQuery(document).ready( function($) {
 
 		//console.log($(this).attr('id') + ' is ' + $(this).attr('checked'));
 
+		/* Only if /sign-up-with-ldap.html is restored */
+		/*
 		if ($('#accountJobSeeker').is(':checked')) {
 			$('.sign-up-ldap').show();
 			$('.sign-up-email').hide();
@@ -79,6 +81,16 @@ jQuery(document).ready( function($) {
 				$('.sign-up-ldap-password').hide();
 				$('.sign-up-normal-password').show();
 			}
+			$('#job-seeker-sign-up-button').show();
+			$('#recruiter-sign-up-button').hide();
+		}
+		*/
+
+		if ($('#accountJobSeeker').is(':checked')) {
+			$('.sign-up-notice').show();
+			$('.sign-up-student-number').show();
+			$('.sign-up-email').show();
+			$('.sign-up-normal-password').show();
 			$('#job-seeker-sign-up-button').show();
 			$('#recruiter-sign-up-button').hide();
 		}
