@@ -203,6 +203,10 @@ em {
 }
 
 // Elements
+input[type="radio"], input[type="checkbox"] {
+	margin-top: 2px;
+}
+
 .form-control {
 	height: 33px;
 }
@@ -248,7 +252,6 @@ ul.no-bullet {
 .align-center {
 	text-align: center;
 }
-
 
 .admin-header {
 	background-color: $gray-darker;
@@ -299,7 +302,6 @@ footer {
 	}
 }
 
-
 // Lists
 .job-item {
 	border-top: 1px solid $gray-lighter;
@@ -333,6 +335,13 @@ footer {
 
 .panel tr td:first-child {
 	padding-left: 16px;
+}
+
+// Tables
+td {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  	overflow: hidden;
 }
 
 // DEV dev-notes
