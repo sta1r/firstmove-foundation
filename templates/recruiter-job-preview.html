@@ -10,20 +10,12 @@ persona: recruiter
 
 <div class="row populate" data-populate="job">
 	
-	<div class="col-md-7 add-bottom">
+	<div class="col-md-7">
 		<div class="row">
 			<div class="col-md-12 add-bottom">
 				<h2 data-id="jobTitle"></h2>
 				<p class="lead" data-id="jobSummary"></p>
 				<p data-id="jobDescription"></p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<form role="form" action="recruiter-post-success.html">
-					<a href="recruiter-edit-job.html?logged-in=recruiter" class="btn btn-default">Edit</a>
-					<button type="submit" class="btn btn-primary">Post job</button>
-				</form>
 			</div>
 		</div>
 	</div>
@@ -41,7 +33,13 @@ persona: recruiter
 				<tr><td><a href="#">Extended-job-description.pdf</a></td></tr>
 			</table>
 		</div>
+	</div>
 
+	<div class="col-md-12">
+		<form role="form" action="recruiter-post-success.html">
+			<a href="recruiter-edit-job.html?logged-in=recruiter" class="btn btn-default">Edit</a>
+			<button type="submit" class="btn btn-primary">Post job</button>
+		</form>
 	</div>
 		
 
