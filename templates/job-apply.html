@@ -36,12 +36,9 @@ notes: Basic TinyMCE editor (simply to process line breaks as p tags) required f
 					<textarea class="form-control" rows="4"></textarea>
 					<span class="help-block">Please add any links to websites that support your application. One link per line.</span>
 				</div>
-				<div class="form-group">
-				    <label for="CVUpload">CV attachment</label>
-				    <input type="file" id="CVUpload">
-				    <p class="help-block">1MB limit. Accepted file formats: .pdf, .doc, .docx, .txt, .rtf</p>
-				</div>
 			</fieldset>
+
+			{% include _file-attachments-upload.html %}
 
 			<button type="submit" class="btn btn-primary">Preview and apply</button>
 
