@@ -11,7 +11,16 @@ notes: Please use this as the template for all form error messages.
 
 <div class="row">
 	<div class="col-sm-6">
-		<div class="alert alert-danger populate" data-populate="recruiter"><strong>Error!</strong> The email address <span data-id="emailAddress"></span> already has an account in this system.</div>
-		<p>Your job has been saved - however please <a href="sign-in.html">sign in</a> to continue.</p>
+		<div class="alert alert-danger populate" data-populate="recruiter">
+			<p><strong>You have the following errors in your submission:</strong></p><br>
+			<ul class="add-bottom">
+				<li>The email address <span data-id="emailAddress"></span> already has an account in this system.</li>
+				<li>You must fill out the Job Title field.</li>
+				<li>You have exceeded the file size limits for an individual file attachment.</li>
+			</ul>
+			<br>
+			<p>Please go back and fix these errors, then re-submit the form. Thanks!</p>
+		</div>
+
 	</div>
 </div>
