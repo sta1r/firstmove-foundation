@@ -95,11 +95,10 @@
 			
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active state--logged-out"><a href="{{ site.url }}/templates/sign-in.html">Sign in</a></li>
-				<li class="admin-control"><a href="{{ site.url }}/templates/admin-dashboard.html?logged-in=admin">View dashboard</a></li>
-				<li class="job_seeker-control"><a href="{{ site.url }}/templates/job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
-				<li class="recruiter-control"><a href="{{ site.url }}/templates/recruiter-account-edit.html?logged-in=recruiter#contact-details">View account</a></li>
-				<li class="recruiter-control"><a href="{{ site.url }}/templates/recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
-				<li class="recruiter-control"><a href="{{ site.url }}/templates/recruiter-post-job.html">Post a job</a></li>
+				<li class="admin-control{% if page.title == 'Admin - Dashboard' %} active{% endif %}"><a href="{{ site.url }}/templates/admin-dashboard.html?logged-in=admin">View dashboard</a></li>
+				<li class="job_seeker-control{% if page.title == 'Job Seeker - Account Edit' %} active{% endif %}"><a href="{{ site.url }}/templates/job-seeker-account-edit.html?logged-in=job_seeker">View dashboard</a></li>
+				<li class="recruiter-control{% if page.title == 'Recruiter - Account Edit' %} active{% endif %}"><a href="{{ site.url }}/templates/recruiter-account-edit.html?logged-in=recruiter#contact-details">View dashboard</a></li>
+				<li class="recruiter-control{% if page.title == 'Recruiter - Post New Job' %} active{% endif %}"><a href="{{ site.url }}/templates/recruiter-post-job.html">Post a job</a></li>
 				<li class="state--logged-in"><a href="{{ site.url }}/templates/sign-in.html">Sign out</a></li>
 		  	</ul>
 		  	
@@ -172,8 +171,8 @@
 		  	</li>
 		  	{% endif %}
 		  	<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
-			  	<ul class="dropdown-menu">
+				<a href="#" role="button" data-toggle="dropdown">Status <span class="caret"></span></a>
+			  	<ul class="dropdown-menu" role="menu">
 					<li><a href="?logged-in=true">Logged in (generic)</a></li>
 					<li><a href="?logged-in=job_seeker">Logged in as Job Seeker</a></li>
 					<li><a href="?logged-in=recruiter">Logged in as Recruiter</a></li>
@@ -181,18 +180,6 @@
 					<li><a href="?">Log out</a></li>
 			  	</ul>
 			</li>
-			<!-- <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
-			  	<ul class="dropdown-menu">
-					{% for p in site.pages order:ascending %}
-						{% if p.menu != false %}
-						<li>
-				  			<a {% if p.url == page.url %}class="active"{% endif %} href="{{ site.url }}{{ p.url }}">{{ p.title }}</a>
-						</li>
-						{% endif %}
-					{% endfor %}
-			  </ul>
-			</li> -->
 			<li><a href="{{ site.url }}/contents.html">Contents</a></li>
 		  </ul>
 		</div><!--/.nav-collapse -->
