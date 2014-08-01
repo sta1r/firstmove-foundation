@@ -17,7 +17,7 @@ notes: Only admins can view and edit the 'admin' tab
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="#my-jobs" data-toggle="tab">My jobs</a></li>
-			<li><a href="#personal-details" data-toggle="tab">Personal details</a></li>
+			<li><a href="#contact-details" data-toggle="tab">Contact details</a></li>
 			<li><a href="#company-details" data-toggle="tab">Company details</a></li>
 			<li><a href="#notifications" data-toggle="tab">Notifications</a></li>
 			<li><a href="#password" data-toggle="tab">Password</a></li>
@@ -114,11 +114,11 @@ notes: Only admins can view and edit the 'admin' tab
 				</table>
 			</div>
 
-		  	<div class="tab-pane" id="personal-details">
+		  	<div class="tab-pane" id="contact-details">
 		  		<div class="row">
 			  		<div class="col-md-6">
 						<form action="#updated" class="populate" data-populate="recruiter">
-							{% include _personal-details.html %}
+							{% include _contact-details.html %}
 							<button type="submit" class="btn btn-primary updated">Update</button>
 						</form>
 					</div>
@@ -184,7 +184,7 @@ notes: Only admins can view and edit the 'admin' tab
 						</form>
 					</div>
 					<div class="col-md-4 col-md-offset-2">
-						<div class="panel panel-default personal-details-widget">
+						<div class="panel panel-default contact-details-widget">
 							<div class="panel-heading">
 								<h3 class="panel-title">Last updated</h3>
 							</div>

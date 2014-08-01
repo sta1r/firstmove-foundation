@@ -16,7 +16,7 @@ notes: Your jobs tab - if no jobs have been applied for, display text "You have 
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="#my-jobs" data-toggle="tab">Your jobs and placements</a></li>
-			<li><a href="#personal-details" data-toggle="tab">Personal details</a></li>
+			<li><a href="#contact-details" data-toggle="tab">Contact details</a></li>
 			<li><a href="#student-information" data-toggle="tab">Student information</a></li>
 			<li><a href="#biographical-details" data-toggle="tab">Biography</a></li>
 			<li><a href="#notifications" data-toggle="tab">Notifications</a></li>
@@ -76,11 +76,11 @@ notes: Your jobs tab - if no jobs have been applied for, display text "You have 
 				</table>
 			</div>
 
-		  	<div class="tab-pane" id="personal-details">
+		  	<div class="tab-pane" id="contact-details">
 		  		<div class="row">
 			  		<div class="col-md-6">
 						<form action="#updated" class="populate" data-populate="job_seeker">
-							{% include _personal-details.html %}
+							{% include _contact-details.html %}
 							<button type="submit" class="btn btn-primary updated">Update</button>
 						</form>
 					</div>
@@ -179,7 +179,7 @@ notes: Your jobs tab - if no jobs have been applied for, display text "You have 
 						</form>
 					</div>
 					<div class="col-md-4 col-md-offset-2">
-						<div class="panel panel-default personal-details-widget">
+						<div class="panel panel-default contact-details-widget">
 							<div class="panel-heading">
 								<h3 class="panel-title">Last updated</h3>
 							</div>
