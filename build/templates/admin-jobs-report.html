@@ -147,6 +147,14 @@
 		<div class="well clearfix">
 			<div class="row">
 				<div class="col-md-12 add-bottom">
+					<div class="control">
+						<p class="label">Job search</p>
+						<input type="search" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 add-bottom">
 					<div class="control pull-left populate dropdown-list" data-populate="job_types">
 						<p class="label">Filter by type</p>
 						<select class="form-control input-sm">
@@ -168,23 +176,21 @@
 						    <input type="text" class="input-sm form-control" name="end" />
 						</div>
 					</div>
-					<div class="control control-search pull-left">
-						<p class="label">Job search</p>
-					    <div class="input-group input-group-sm">
-					      <input type="search" class="form-control" placeholder="Debenhams">
-					      <span class="input-group-btn">
-					        <button class="btn btn-default" type="button">Search</button>
-					      </span>
-					    </div><!-- /input-group -->
-					</div>
-					<div class="control pull-right">
-						<p class="label" class="label">With selection</p>
-						<a href="#" class="btn btn-primary btn-sm">Export</a>
-					</div>
 				</div>
 			</div>
 			<div class="row populate form-categories-inline" data-populate="job_categories">
 				<div class="col-md-12"><p class="label">Categories</p></div>	
+			</div>
+			<div class="row">
+				<div class="control col-md-12 add-bottom">
+					<button class="btn btn-primary" type="button">Search</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="control col-md-12">
+					<p class="label">With selection</p>
+					<a href="#" class="btn btn-default btn-sm">Export</a>
+				</div>
 			</div>
 		</div>
 	</div>

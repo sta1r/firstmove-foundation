@@ -203,6 +203,10 @@ em {
 }
 
 // Forms
+.control-bar input[type="search"] {
+	width: 100%;
+}
+
 input[type="radio"], input[type="checkbox"] {
 	margin-top: 2px;
 }
@@ -483,12 +487,15 @@ td {
 			td[data-label="company"]:before { content: "Company"; }
 			td[data-label="course"]:before { content: "Course"; }
 			td[data-label="date"]:before { content: "Date"; }
+			td[data-label="date-applied"]:before { content: "Date applied"; }
 			td[data-label="date-posted"]:before { content: "Date posted"; }
 			td[data-label="deadline"]:before { content: "Deadline"; }
 			td[data-label="duration"]:before { content: "Duration"; }
 			td[data-label="email-address"]:before { content: "Email address"; }
 			td[data-label="filled-check"]:before { content: "Vacancy filled by us?"; }
 			td[data-label="flag"]:before { content: "Flag"; }
+			td[data-label="flag-accepted"]:before { content: "Accepted?"; }
+			td[data-label="flag-offered"]:before { content: "Offered?"; }
 			td[data-label="job-applications"]:before { content: "Job applications"; }
 			td[data-label="job-seeker-sign-ups"]:before { content: "Job seeker sign ups"; }
 			td[data-label="job-seeker-logins"]:before { content: "Job seeker logins"; }
@@ -524,6 +531,17 @@ td {
 		&.active > a, &.active > a:hover {
 			border-bottom-color: $nav-tabs-border-color;
 		}
+	}
+
+	.checkbox-inline {
+		display: block;
+		&+.checkbox-inline {
+			margin-left: 0;
+		}
+	}
+
+	.control.pull-left {
+		float: none !important;
 	}
 
 }
