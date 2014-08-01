@@ -11246,12 +11246,15 @@ return jQuery;
 	/* -----------------------------
 	** Alerts and warnings
 	*/
-	$('button[data-function="alert"]').click(function(e){
-		console.log('clicked');
+	$('a[data-function="alert"]').click(function(e){
 		e.preventDefault();
-		alert($(this).data('alert'));
+		response = confirm($(this).data('alert'));
+		if (response) {
+			// continue to destination
+			window.location = $(this).attr('href');
+			window.location.reload(); // this possibly isn't great 
+		}
 	});
-
 
 	// DATEPICKER
 	$('.datepicker').datepicker({
@@ -11311,6 +11314,21 @@ return jQuery;
 	/* -------------
 	** Miscellaneous
 	*/
+
+	// Toggle categories
+	$('#btn-toggle-categories').click( function() {
+		var button = $(this);
+		if (button.is('.active')) {
+			button.parent().next('.list-categories').hide();
+			button.text('Show categories');
+			button.removeClass('active');
+		} else {
+			button.parent().next('.list-categories').show();
+			button.text('Hide categories');
+			button.addClass('active');
+		}
+	});
+
 
 	// Add a flag 
 	$('.flag').click(function(e) {

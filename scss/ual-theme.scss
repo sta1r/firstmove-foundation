@@ -393,6 +393,16 @@ footer {
 	td.numeric, th.numeric {
 		text-align: center;
 	}
+
+	.show-categories {
+		display: none;
+	}
+
+	.main-jobs-listing {
+		.list-categories {
+			display: block !important;
+		}
+	}
 }
 
 // Tablet and below
@@ -465,6 +475,12 @@ footer {
 			td[data-label="vacancies-filled"]:before { content: "Vacancies filled"; }
 			td[data-label="views"]:before { content: "Views"; }
 
+		}
+	}
+
+	.main-jobs-listing {
+		.list-categories {
+			display: none;
 		}
 	}
 }
