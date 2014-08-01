@@ -156,7 +156,6 @@ jQuery(document).ready( function($) {
 	});
 	
 
-
 	/* -------------
 	** Miscellaneous
 	*/

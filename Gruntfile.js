@@ -37,7 +37,8 @@ module.exports = function(grunt) {
           'jquery/dist/jquery.js', 
           'bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
           'bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
-          'bootstrap-sass-official/assets/javascripts/bootstrap/tab.js'
+          'bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
+          'bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js'
         ],
         dest: 'source/js'
       },
@@ -59,7 +60,8 @@ module.exports = function(grunt) {
         src: ['source/js/jquery/dist/jquery.js',
           'source/js/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
           'source/js/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
-          'source/js/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js', 
+          'source/js/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
+          'source/js/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
           'source/js/bootstrap-datepicker.js',
           'source/js/app.js'
         ],

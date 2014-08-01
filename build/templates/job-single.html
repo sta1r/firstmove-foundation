@@ -96,23 +96,22 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active state--logged-out"><a href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign in</a></li>
 				<li class="admin-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/admin-dashboard.html?logged-in=admin">View dashboard</a></li>
-				<li class="job_seeker-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
-				<li class="recruiter-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-account-edit.html?logged-in=recruiter#contact-details">View account</a></li>
-				<li class="recruiter-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
+				<li class="job_seeker-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html?logged-in=job_seeker">View dashboard</a></li>
+				<li class="recruiter-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-account-edit.html?logged-in=recruiter#contact-details">View dashboard</a></li>
 				<li class="recruiter-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job.html">Post a job</a></li>
 				<li class="state--logged-in"><a href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign out</a></li>
 		  	</ul>
 		  	
 		  	<div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
-	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
+	<p class="navbar-text navbar-left"><small>You are signed in as <span data-id="fullName"></span></small></p>
 </div>
 
 <div class="pull-right account-status hidden-control admin-control">
-	<p class="navbar-text navbar-right"><small>You are signed in as admin</small></p>
+	<p class="navbar-text navbar-left"><small>You are signed in as admin</small></p>
 </div>
 
 <div class="pull-right account-status hidden-control job_seeker-control populate" data-populate="job_seeker">
-	<p class="navbar-text navbar-right"><small>You are signed in as <span data-id="fullName"></span></small></p>
+	<p class="navbar-text navbar-left"><small>You are signed in as <span data-id="fullName"></span></small></p>
 </div>
 		</div><!--/.nav-collapse -->
 	  </div>
@@ -171,7 +170,7 @@
 		<div class="container">
 			<div class="row">
 		  		<div class="col-md-12">
-					<p>Job seekers not logged in will be directed to <a href="sign-in.html">sign in</a>. Once a job has expired, recruiters should see a <a href="#" class="btn btn-sm btn-success">Post as new</a> button rather than an <a href="#" class="btn btn-sm btn-primary">Edit this job</a> button.</p>
+					<p>Job seekers not logged in will be directed to <a href="sign-in.html">sign in</a>. Once a job has expired, recruiters should see a <a href="#" class="btn btn-sm btn-success">Post as new</a> button rather than an <a href="#">Edit this job</a> link.</p>
 				</div>
 			</div>
 		</div>
@@ -214,8 +213,8 @@
 		  	</li>
 		  	
 		  	<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Status <b class="caret"></b></a>
-			  	<ul class="dropdown-menu">
+				<a href="#" role="button" data-toggle="dropdown">Status <span class="caret"></span></a>
+			  	<ul class="dropdown-menu" role="menu">
 					<li><a href="?logged-in=true">Logged in (generic)</a></li>
 					<li><a href="?logged-in=job_seeker">Logged in as Job Seeker</a></li>
 					<li><a href="?logged-in=recruiter">Logged in as Recruiter</a></li>
@@ -223,176 +222,6 @@
 					<li><a href="?">Log out</a></li>
 			  	</ul>
 			</li>
-			<!-- <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Templates <b class="caret"></b></a>
-			  	<ul class="dropdown-menu">
-					
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/index.html">Jobs List</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-activity-report.html">Admin - Activity Report</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-bulk-email.html">Admin - Bulk Email</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-dashboard.html">Admin - Dashboard</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-field-spec.html">Admin - Editable fields</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-job-seeker-report.html">Admin - Job Seekers Report</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-jobs-report.html">Admin - Jobs Report</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-recruiter-report.html">Admin - Recruiters Report</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-job-seeker.html">Admin - View Job Seeker</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/admin-view-recruiter.html">Admin - View Recruiter</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply-preview.html">Apply - Preview</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply-success.html">Apply - Success</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-apply.html">Apply for a job</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-create.html">Job Seeker - Create Account</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html">Job Seeker - Account Edit</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a class="active" href="http://strangerpixel.com/firstmove-foundation/templates/job-single.html">Job Page</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-account-edit.html">Recruiter - Account Edit</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-application-view.html">Application View</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-edit-job.html">Recruiter - Edit Job</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-job-dashboard.html">Recruiter - Job Dashboard</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-job-preview.html">Recruiter - Job Preview</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job-error.html">Recruiter - Post New Job Error</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job.html">Recruiter - Post New Job</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-success.html">Recruiter - Post Job Success</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign In</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-up-with-ldap.html">Sign Up (LDAP enabled)</a>
-						</li>
-						
-					
-						
-						<li>
-				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-up.html">Sign Up</a>
-						</li>
-						
-					
-			  </ul>
-			</li> -->
 			<li><a href="http://strangerpixel.com/firstmove-foundation/contents.html">Contents</a></li>
 		  </ul>
 		</div><!--/.nav-collapse -->
