@@ -14,15 +14,14 @@ notes: Profile search indexes (at least) firstname, lastname, email, course, adm
 		<div class="well clearfix">
 			<div class="row">
 				<div class="col-md-12 add-bottom">
-					<div class="control control-search pull-left">
+					<div class="control">
 						<p class="label">Profile search</p>
-					    <div class="input-group input-group-sm">
-					      <input type="search" class="form-control">
-					      <span class="input-group-btn">
-					        <button class="btn btn-default" type="button">Search</button>
-					      </span>
-					    </div>
-					</div>	
+					    <input type="search" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">	
 					<div class="control pull-left populate dropdown-list" data-populate="lcf_schools">
 						<p class="label">Filter by school</p>
 						<select class="form-control input-sm">
@@ -50,29 +49,23 @@ notes: Profile search indexes (at least) firstname, lastname, email, course, adm
 				<div class="col-md-12">
 					<p class="label">Select</p>
 				</div>
-				<div class="control">
-					<div class="col-md-3">
+				<div class="col-md-12">
+					<div class="control">
 						<div class="checkbox-inline">
 							<label>
 	  							<input type="checkbox" id="flagged" value="flagged"> Flagged
 							</label>
 						</div>
-					</div>
-					<div class="col-md-3">
-							<div class="checkbox-inline">
-								<label>
-	  							<input type="checkbox" id="marketable" value="marketable"> Marketing permitted
+						<div class="checkbox-inline">
+							<label>
+	  						<input type="checkbox" id="marketable" value="marketable"> Marketing permitted
 							</label>
 						</div>
-					</div>
-					<div class="col-md-3">
 						<div class="checkbox-inline">
 								<label>
 	  							<input type="checkbox" id="ldap" value="ldap"> LDAP accounts
 							</label>
 						</div>
-					</div>
-					<div class="col-md-3">
 						<div class="checkbox-inline">
 								<label>
 	  							<input type="checkbox" id="non-ldap" value="non-ldap"> Non-LDAP accounts
@@ -80,9 +73,16 @@ notes: Profile search indexes (at least) firstname, lastname, email, course, adm
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="row">
+				<div class="control col-md-12 add-bottom">
+					<button class="btn btn-primary" type="button">Search</button>
+				</div>
+			</div>
+			<div class="row">
 				<div class="control col-md-12">
 					<p class="label">With selection</p>
-					<a href="#" class="btn btn-primary btn-sm">Export</a>
+					<a href="#" class="btn btn-default btn-sm">Export</a>
 					<a href="admin-bulk-email.html" class="btn btn-default btn-sm">Bulk email</a>
 				</div>
 			</div>
