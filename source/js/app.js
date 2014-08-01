@@ -108,7 +108,7 @@ jQuery(document).ready( function($) {
 	/* -------------
 	** Mark as...
 	*/
-	function markAs(element, select_type, positive_message, negative_message) {
+	function markAs(element, positive_message, negative_message) {
 
 		if (element.is('.active')) {
 			response = confirm(negative_message);
@@ -118,9 +118,6 @@ jQuery(document).ready( function($) {
 		} else {
 			response = confirm(positive_message);
 			if (response == true) {
-				if (select_type == 'single') {
-					$('.glyphicon-ok').removeClass('active');
-				}
 				element.addClass('active');
 			}
 		}
@@ -135,7 +132,7 @@ jQuery(document).ready( function($) {
 	applicants.each( function(i) {
 		$(this).find('.glyphicon-ok').click(function(e) {
 			e.preventDefault();
-			markAs( $(this), 'single', applicant_message_positive, applicant_message_negative);
+			markAs( $(this), applicant_message_positive, applicant_message_negative);
 		});
 	});
 
@@ -151,9 +148,9 @@ jQuery(document).ready( function($) {
 			e.preventDefault();
 			var flag = $(this);
 			if (flag.hasClass('offered-flag')) { // offered
-				markAs( flag, 'multiple', offered_message_positive, offered_message_negative);
+				markAs( flag, offered_message_positive, offered_message_negative);
 			} else { // accepted
-				markAs( flag, 'multiple', accepted_message_positive, accepted_message_negative);
+				markAs( flag, accepted_message_positive, accepted_message_negative);
 			}
 		});
 	});
