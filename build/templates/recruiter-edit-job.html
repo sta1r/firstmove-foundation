@@ -95,12 +95,12 @@
 			
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active state--logged-out"><a href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign in</a></li>
-				<li class="admin-control"><a href="admin-dashboard.html?logged-in=admin">View dashboard</a></li>
-				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
-				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter#contact-details">View account</a></li>
-				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
-				<li class="recruiter-control"><a href="recruiter-post-job.html">Post a job</a></li>
-				<li class="state--logged-in"><a href="sign-in.html">Sign out</a></li>
+				<li class="admin-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/admin-dashboard.html?logged-in=admin">View dashboard</a></li>
+				<li class="job_seeker-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
+				<li class="recruiter-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-account-edit.html?logged-in=recruiter#contact-details">View account</a></li>
+				<li class="recruiter-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
+				<li class="recruiter-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job.html">Post a job</a></li>
+				<li class="state--logged-in"><a href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign out</a></li>
 		  	</ul>
 		  	
 		  	<div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
@@ -148,10 +148,10 @@
 		<form role="form" action="recruiter-job-preview.html">
 			<fieldset class="form-horizontal add-bottom populate" data-populate="job">
 					<legend>Job details</legend>
-	<div class="form-group required">
+	<div class="form-group required has-error">
 		<div class="col-sm-12">
 			<label>Job title</label>
-			<input type="text" class="form-control" id="jobTitle" placeholder="" />
+			<input type="text" class="form-control" id="jobTitle" placeholder="Example of form-group with '.has-error' class" />
 		</div>
 	</div>
 	<div class="form-group required">
@@ -226,13 +226,61 @@
 	</div>
 	
 	<div class="form-group required">
+		<label class="col-md-12">Application deadline</label>
+		<div class="col-sm-3">
+			<select class="form-control">
+				<option value="">Day</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="31">31</option>
+			</select>
+		</div>
+		<div class="col-sm-3">
+			<select class="form-control">
+				<option value="">Month</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+			</select>
+		</div>
+		<div class="col-sm-3">
+			<select class="form-control">
+				<option value="">Year</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+				<option value="2016">2016</option>
+				<option value="2017">2017</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- <div class="form-group required">
 		<div class="col-sm-12">
 			<label>Application deadline</label>
 			<div class="input-group date application-deadline-datepicker datepicker">
-					<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+				<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 			</div>
 		</div>
-	</div>
+	</div> -->
 			</fieldset>
 			<fieldset class="form-horizontal add-bottom populate" data-populate="recruiter">
 					<legend>Company details</legend>
@@ -496,6 +544,12 @@
 						
 						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign In</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-up-with-ldap.html">Sign Up (LDAP enabled)</a>
 						</li>
 						
 					

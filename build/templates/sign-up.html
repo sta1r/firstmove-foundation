@@ -95,12 +95,12 @@
 			
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active state--logged-out"><a href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign in</a></li>
-				<li class="admin-control"><a href="admin-dashboard.html?logged-in=admin">View dashboard</a></li>
-				<li class="job_seeker-control"><a href="job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
-				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter#contact-details">View account</a></li>
-				<li class="recruiter-control"><a href="recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
-				<li class="recruiter-control"><a href="recruiter-post-job.html">Post a job</a></li>
-				<li class="state--logged-in"><a href="sign-in.html">Sign out</a></li>
+				<li class="admin-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/admin-dashboard.html?logged-in=admin">View dashboard</a></li>
+				<li class="job_seeker-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/job-seeker-account-edit.html?logged-in=job_seeker">View account</a></li>
+				<li class="recruiter-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-account-edit.html?logged-in=recruiter#contact-details">View account</a></li>
+				<li class="recruiter-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-account-edit.html?logged-in=recruiter" >View your jobs</a></li>
+				<li class="recruiter-control"><a href="http://strangerpixel.com/firstmove-foundation/templates/recruiter-post-job.html">Post a job</a></li>
+				<li class="state--logged-in"><a href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign out</a></li>
 		  	</ul>
 		  	
 		  	<div class="pull-right account-status hidden-control recruiter-control populate" data-populate="recruiter">
@@ -148,46 +148,32 @@
 					</div>
 				</div>
 
-				<div class="alert alert-info sign-up-optional sign-up-ldap" role="alert">Please note LCF Careers Live is not a public service. It is open to current and past students from London College of Fashion.</div>
-
-				<div class="form-group sign-up-optional sign-up-ldap">
-					<label class="col-md-3 control-label">I have an arts.ac.uk email address:</label>
+				<div class="alert alert-info sign-up-optional sign-up-notice" role="alert">Please note LCF Careers Live is not a public service. It is open to current and past students from London College of Fashion.</div>
+				
+				<div class="form-group sign-up-optional sign-up-student-number">
+					<label for="LCFStudentNumber" class="col-md-3 control-label">LCF student number</label>
 					<div class="col-md-9">
-						<label class="radio-inline">
-							<input type="radio" name="LDAPCheck" id="LDAPAccountYes" value="yes"> Yes
-						</label>
-						<label class="radio-inline">
-							<input type="radio" name="LDAPCheck" id="LDAPAccountNo" value="no"> No
-						</label>
-						<span class="help-block">If you have an arts.ac.uk email address, please use this to sign up.</span>
+						<input type="text" class="form-control" id="LCFStudentNumber" placeholder="e.g. ABC12345678">
 					</div>
 				</div>
-			
+
 				<div class="form-group sign-up-optional sign-up-email">
 					<label for="email" class="col-md-3 control-label">Email</label>
 					<div class="col-md-9">
-						<input type="text" class="form-control" name="email">
-					</div>
-				</div>
-
-				<div class="form-group sign-up-optional sign-up-ldap-password">
-					<label for="LDAPPassword" class="col-md-3 control-label">Password</label>
-					<div class="col-md-9">
-						<input type="password" class="form-control" name="LDAPPassword">
-						<span class="help-block">Your University network password</span>
+						<input type="text" class="form-control" id="email">
 					</div>
 				</div>
 
 				<div class="form-group sign-up-optional sign-up-normal-password">
 					<label for="normalPassword" class="col-md-3 control-label">Password</label>
 					<div class="col-md-9">
-						<input type="password" class="form-control" name="normalPassword">
+						<input type="password" class="form-control" id="normalPassword">
 					</div>
 				</div>
 				<div class="form-group sign-up-optional sign-up-normal-password">
 					<label for="normalPasswordConfirm" class="col-md-3 control-label">Re-enter password</label>
 					<div class="col-md-9">
-						<input type="password" class="form-control" name="normalPasswordConfirm" >
+						<input type="password" class="form-control" id="normalPasswordConfirm" >
 					</div>
 				</div>
 
@@ -412,6 +398,12 @@
 						
 						<li>
 				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-in.html">Sign In</a>
+						</li>
+						
+					
+						
+						<li>
+				  			<a  href="http://strangerpixel.com/firstmove-foundation/templates/sign-up-with-ldap.html">Sign Up (LDAP enabled)</a>
 						</li>
 						
 					

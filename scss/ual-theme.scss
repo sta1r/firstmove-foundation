@@ -7,7 +7,7 @@
 @import "vendor/swiss-721";
 
 /* not using these yet - big overhead and Compass dependency for not much gain */
-// @import	"plugins/retina-sprites/retina";
+// @import  "plugins/retina-sprites/retina";
 // @import "plugins/retina-sprites/sprite";
 // @import "vendor/sprites";
 
@@ -202,7 +202,7 @@ em {
 	}
 }
 
-// Elements
+// Forms
 input[type="radio"], input[type="checkbox"] {
 	margin-top: 2px;
 }
@@ -215,6 +215,17 @@ input[type="radio"], input[type="checkbox"] {
 	padding-top: .4em;
 }
 
+/* bootstrap safari fix */
+form > fieldset {
+  & > legend {
+	margin-bottom: 0;
+  }
+  & > div.form-group:first-of-type > * {
+	margin-top : 20px;
+  }
+}
+
+// Elements
 .badge {
 	padding-top: 5px;
 }
@@ -341,7 +352,7 @@ footer {
 td {
 	text-overflow: ellipsis;
 	white-space: nowrap;
-  	overflow: hidden;
+	overflow: hidden;
 }
 
 // DEV dev-notes
@@ -392,7 +403,7 @@ td {
 	}
 }
 
-// Medium screens 
+// Medium screens and up
 @media (min-width: $screen-md-min) {
 
 	.control-search {
@@ -445,6 +456,14 @@ td {
 				padding-left: 50%; 
 			}
 
+			// fixes bug in iOS where rows without backgrounds don't display the correct value in content :before
+			> tbody > tr:nth-child(even) {
+				> td,
+				> th {
+					background-color: #FFF;
+				}
+			}
+
 			td:before { 
 				/* Now like a table header */
 				position: absolute;
@@ -492,4 +511,19 @@ td {
 			display: none;
 		}
 	}
+
+
+}
+
+// Small screens
+@media only (max-width: $screen-sm-min) {
+	
+	// nicer tabs on small screens
+	.nav-tabs > li {
+		float:none;
+		&.active > a, &.active > a:hover {
+			border-bottom-color: $nav-tabs-border-color;
+		}
+	}
+
 }

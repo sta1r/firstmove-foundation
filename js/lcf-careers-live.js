@@ -11281,8 +11281,8 @@ return jQuery;
 			$(this).attr("checked", "");
 		}
 
-		//console.log($(this).attr('id') + ' is ' + $(this).attr('checked'));
-
+		/* Only if /sign-up-with-ldap.html is restored */
+		/*
 		if ($('#accountJobSeeker').is(':checked')) {
 			$('.sign-up-ldap').show();
 			$('.sign-up-email').hide();
@@ -11299,6 +11299,16 @@ return jQuery;
 			$('#job-seeker-sign-up-button').show();
 			$('#recruiter-sign-up-button').hide();
 		}
+		*/
+
+		if ($('#accountJobSeeker').is(':checked')) {
+			$('.sign-up-notice').show();
+			$('.sign-up-student-number').show();
+			$('.sign-up-email').show();
+			$('.sign-up-normal-password').show();
+			$('#job-seeker-sign-up-button').show();
+			$('#recruiter-sign-up-button').hide();
+		}
 
 		if ($('#accountRecruiter').is(':checked')) {
 			$('.sign-up-ldap').hide();
@@ -11310,6 +11320,62 @@ return jQuery;
 		}
 
 	});
+
+
+	/* -------------
+	** Mark as...
+	*/
+	function markAs(element, select_type, positive_message, negative_message) {
+
+		if (element.is('.active')) {
+			response = confirm(negative_message);
+			if (response == true) {
+				element.removeClass('active');
+			}
+		} else {
+			response = confirm(positive_message);
+			if (response == true) {
+				if (select_type == 'single') {
+					$('.glyphicon-ok').removeClass('active');
+				}
+				element.addClass('active');
+			}
+		}
+	}
+
+
+	// Mark as appointed
+	var applicants = $('.job-dashboard .data-table tr');
+	var applicant_message_positive = 'Are you sure you want to mark this applicant as appointed?';
+	var applicant_message_negative = 'Are you sure you want to un-mark this applicant as appointed?';
+
+	applicants.each( function(i) {
+		$(this).find('.glyphicon-ok').click(function(e) {
+			e.preventDefault();
+			markAs( $(this), 'single', applicant_message_positive, applicant_message_negative);
+		});
+	});
+
+	// Mark as offered, mark as accepted
+	var job_seeker_jobs = $('.job-seeker-jobs .data-table td');
+	var offered_message_positive = 'Are you sure you want to mark this role as offered?';
+	var offered_message_negative = 'Are you sure you want to un-mark this role as offered?';
+	var accepted_message_positive = 'Are you sure you want to mark this role as accepted?';
+	var accepted_message_negative = 'Are you sure you want to un-mark this role as accepted?'
+
+	job_seeker_jobs.each( function(i) {
+		$(this).find('.glyphicon-ok').click(function(e) {
+			e.preventDefault();
+			var flag = $(this);
+			if (flag.hasClass('offered-flag')) { // offered
+				markAs( flag, 'multiple', offered_message_positive, offered_message_negative);
+			} else { // accepted
+				markAs( flag, 'multiple', accepted_message_positive, accepted_message_negative);
+			}
+		});
+	});
+	
+
 
 	/* -------------
 	** Miscellaneous
@@ -11336,31 +11402,6 @@ return jQuery;
 		$(this).find('.glyphicon').toggleClass('active');
 	});
 
-	// Mark as appointed
-	var applicants = $('.job-dashboard .data-table tr');
-	var response = '';
-
-	applicants.each( function(i) {
-		$(this).find('.glyphicon-ok').click(function(e) {
-			e.preventDefault();
-			if ($(this).is('.active')) {
-				response = confirm('Are you sure you want to un-mark this applicant as appointed?');
-				if (response) {
-					$('.glyphicon-ok').removeClass('active');
-				}
-			} else {
-				response = confirm('Are you sure you want to mark this applicant as appointed?');
-				if (response) {
-					$('.glyphicon-ok').removeClass('active');
-					$(this).toggleClass('active');
-				}
-			}
-			
-			
-			
-		});
-	});
-	
 
 	// Duration field
 	$('#jobTypes').change( function() {
