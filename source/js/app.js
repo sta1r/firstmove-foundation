@@ -184,7 +184,6 @@ jQuery(document).ready( function($) {
 
 	// Duration field
 	$('#jobTypes').change( function() {
-		console.log($(this).val());
 		if ($(this).val() === 'full-time' || $(this).val() === 'part-time') {
 			$('#durationSelect').hide();
 		} else {
